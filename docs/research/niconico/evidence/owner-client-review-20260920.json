@@ -1,0 +1,171 @@
+{
+  "reviewed_at": "2026-09-20T04:54:34+09:00",
+  "scope": "R09 owner model comparison; no product modifications",
+  "new_niconico_requests": 0,
+  "evidence_kind": "reaggregation of previous sanitized captures and static evidence; current public code read",
+  "inputs": [
+    {
+      "file": "evidence/ios-capture-20260913.json",
+      "sha256": "9c522b35b8e36eca3de0d7bb9c8eedbc1200f5c1fe57c08c0215f50eb1600c63",
+      "distribution": "not included; aggregate only"
+    },
+    {
+      "file": "evidence/browser3-traffic-20260913.json",
+      "sha256": "6e13e78069843db00376506ddb40cadd6e75119e0b901d9379774fa558744dd2",
+      "distribution": "not included; aggregate only"
+    },
+    {
+      "file": "evidence/followup-android-evidence.json",
+      "sha256": "6520b51500905939b60f676c73e783ac87a86f555f29cf0f6d07faefc754d49c",
+      "distribution": "not included; aggregate only"
+    },
+    {
+      "file": "evidence/followup-ios-evidence.json",
+      "sha256": "87ea2c42015baa98b7243716058d3dfe7362ab8d1abe02e6702ca1f27dee4a2c",
+      "distribution": "not included; aggregate only"
+    }
+  ],
+  "web_tag": {
+    "requests": 14,
+    "item_occurrences": 448,
+    "page_item_counts": [
+      32
+    ],
+    "hidden": {
+      "count": 101,
+      "id_present": 101,
+      "type_user_count": 101,
+      "visibility_hidden_count": 101,
+      "name_null_count": 101,
+      "icon_null_count": 101
+    },
+    "owner_type_counts": {
+      "user": 337,
+      "channel": 10,
+      "hidden": 101
+    },
+    "item_tags_present_count": 0,
+    "cookie_present_requests": 14,
+    "capture_request_start_min": "2026-09-13T04:23:22.705+09:00",
+    "capture_request_start_max": "2026-09-13T04:29:14.887+09:00"
+  },
+  "web_nvapi_related": {
+    "requests": 5,
+    "item_occurrences": 10,
+    "page_item_counts": [
+      2
+    ],
+    "hidden": {
+      "count": 2,
+      "id_present": 2,
+      "type_user_count": 2,
+      "visibility_hidden_count": 2,
+      "name_null_count": 2,
+      "icon_null_count": 2
+    },
+    "owner_type_counts": {
+      "user": 8,
+      "channel": 0,
+      "hidden": 2
+    },
+    "item_tags_present_count": 0,
+    "cookie_present_requests": 5,
+    "capture_request_start_min": "2026-09-13T04:23:23.227+09:00",
+    "capture_request_start_max": "2026-09-13T04:28:52.011+09:00"
+  },
+  "ios_search": {
+    "requests": 30,
+    "item_occurrences": 685,
+    "owner_id_present_count": 685,
+    "hidden": {
+      "count": 387,
+      "id_present": 387,
+      "type_user_count": 387,
+      "visibility_hidden_count": 387,
+      "name_null_count": 387,
+      "icon_null_count": 387
+    },
+    "page_sizes": [
+      10,
+      15,
+      25
+    ],
+    "cookie_present_requests": 30,
+    "capture_request_start_min": "2026-09-12T23:16:55.472+09:00",
+    "capture_request_start_max": "2026-09-12T23:41:16.695+09:00",
+    "client_version": "not independently bound to these captures",
+    "endpoint": "https://nvapi.nicovideo.jp/v2/search/video"
+  },
+  "android_static": {
+    "version": "9.14.0 (471)",
+    "package_sha256": "91a35446fb206dc0b5babbdb4697128779a5049ec7bd4859dfa1e4fa50cf72b5",
+    "dex": "classes6.dex",
+    "parser": {
+      "method": "Lfd/b;->a",
+      "code_offset": "0x222e00",
+      "referenced_json_fields": [
+        "ownerType",
+        "id",
+        "name",
+        "iconUrl"
+      ]
+    },
+    "owner_type_enum": [
+      "user",
+      "channel",
+      "hidden"
+    ],
+    "nullable_string_helper": "Lmf/a;->j",
+    "limitation": "recorded symbol/instruction references, not complete control-flow proof; runtime and caller semantics unverified"
+  },
+  "ios_static": {
+    "version": "12.37 (276)",
+    "package_sha256": "9db22e20812a7b7dd71832a7c96970dca787375341ca96f1cac3049d858dcf8b",
+    "framework_sha256": "6c95e7ad3b11f835fb8fae2e0db183c8ae54398d3d4ed10c8217ba3d6c2ae082",
+    "model": "NicoOpenApi_NVApi.OwnerInfo",
+    "fields": [
+      "ownerType",
+      "type",
+      "visibility",
+      "id",
+      "name",
+      "iconUrl"
+    ],
+    "optional_string_fields": [
+      "id",
+      "name",
+      "iconUrl"
+    ],
+    "cryptid": 1,
+    "limitation": "symbols only; encrypted main code not decrypted or executed; not capture-version proof"
+  },
+  "external_sources": [
+    {
+      "author": "niconicolibs",
+      "repository": "https://github.com/niconicolibs/niconico.py",
+      "commit": "9d9c62f61f88ce640b4914007a25ddbb5d756582",
+      "file": "niconico/objects/video/__init__.py",
+      "lines": "32-40",
+      "file_sha256": "71ce4e6bb641a985259c558cf47ddad9bef9da94a2f19f0b63863adbfdfd1460",
+      "finding": "Owner separates ownerType/type/visibility; id/name/iconUrl nullable; type permits unknown",
+      "verified": "CONFIRMED-CODE; no library execution"
+    },
+    {
+      "author": "kongyo2",
+      "repository": "https://github.com/kongyo2/niconicojs",
+      "commit": "e15fc91920567804685a6c45ebc08c2a8639f52e",
+      "file": "src/types.ts",
+      "lines": "19-27",
+      "file_sha256": "f0a9f91a12abee32c8a5433bd3566488dbe26ce87a08da54a5c4dbde8eaca6b2",
+      "finding": "Owner declares id/name/iconUrl as string, unlike null name/iconUrl in historical hidden captures; runtime behavior not tested",
+      "verified": "CONFIRMED-CODE; no TypeScript build/runtime test"
+    }
+  ],
+  "limits": [
+    "Occurrences are not distinct videos or owners.",
+    "Historical logged-in captures are not an anonymous or general-member replay.",
+    "No Android live response comparison and no matched-video cross-client trial.",
+    "No uploader IDs, names, search terms, raw headers or tokens included.",
+    "Input hashes identify local evidence but do not allow independent recomputation without the source aggregates."
+  ]
+}

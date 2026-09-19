@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "NICO-OWNER-20260920-CLIENT-CONTRACT",
+  "title": "投稿者IDの保持と投稿者種別・表示状態を分離して扱う",
+  "status": "static",
+  "platform": "Web / iOS / Android model comparison",
+  "app_version": "iOS model 12.37 (276); Android static 9.14.0 (471); traffic versions not independently identified",
+  "observed_at": "2026-09-20T04:54:34+09:00",
+  "observed_at_precision": "review date; historical capture times and fixed revisions in evidence",
+  "claim": "過去検索記録のhiddenはWeb101件・iOS387件ともtype:user、IDあり、name/iconUrl:null。Androidの調査済みパーサー参照項目はownerType/id/name/iconUrlでtype/visibilityがない。ID保持と名前の利用可否・種類の確定は別に扱う。",
+  "evidence": [
+    "S-OWNER-CLIENT-REVIEW-20260920"
+  ],
+  "evidence_level": [
+    "CONFIRMED-CODE",
+    "historical traffic reanalysis; not new CONFIRMED-LIVE"
+  ],
+  "request": {
+    "method": "GET",
+    "endpoints": [
+      "https://www.nicovideo.jp/tag/{query}?responseType=json",
+      "https://nvapi.nicovideo.jp/v2/search/video"
+    ],
+    "android_endpoint": "not established by owner parser"
+  },
+  "response": {
+    "owner_fields": [
+      "ownerType",
+      "type",
+      "visibility",
+      "id",
+      "name",
+      "iconUrl"
+    ],
+    "hidden_name": "null in selected historical records",
+    "android_type_inference": "unconfirmed without caller/raw response"
+  },
+  "authentication": "Historical Web/iOS capture rows have Cookie present; no cookie values retained. Anonymous/general-member/Android conditions not re-tested.",
+  "unconfirmed": [
+    "Current hidden response and Android runtime",
+    "Matching identical videos across all clients",
+    "Account-deletion reason",
+    "Runtime behavior of OSS nullable mismatch"
+  ],
+  "supersedes": []
+}

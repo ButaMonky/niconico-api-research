@@ -1,6 +1,6 @@
 # 調査単位ごとの次作業指示文
 
-これは次の担当者へ渡せる指示文。完了状況は[TASKS](TASKS.md)を優先し、完了した通信を繰り返さない。推奨は各タスクに記載。利用者は2026-09-20に今回のAstra高を許可した。GitHub反映の環境上の保留と調査自体の完了は別管理。
+これは次の担当者へ渡せる指示文。このworkは解析・まとめ専用。本体開発の指示は別workへ渡し、ここでは実行しない。完了状況は[TASKS](TASKS.md)を優先し、完了した通信を繰り返さない。推奨は各タスクに記載。利用者は2026-09-20に今回のAstra高を許可した。GitHub反映の環境上の保留と調査自体の完了は別管理。
 
 ## R02完了 → R03（Astra中）
 
@@ -22,6 +22,10 @@
 
 「SPA-DATA-LIFECYCLE.mdを読み、ブラウザ実行が安全ポリシーで拒否された範囲を回避せず、CORS/拡張機能の未検証条件をBROWSER-REQUEST-CONDITIONS.mdへ保存してください。その後R00〜R06の証拠から、NGスクリプト向けに既取得owner再利用・snapshot一括・必要時単独タグ取得を比較し、通信数、正確性、unknown、キャッシュ、フォールバック、実装前確認事項をIMPLEMENTATION-HANDOFF.mdへまとめてください。本体変更は別作業、GitHub反映は最後です。」
 
-## R08完了 → NG開発への引き渡し（Astra高推奨）
+## 別work専用：R08からNG開発への引き渡し（Astra高推奨）
 
 「研究資料のSTART-HERE.md、IMPLEMENTATION-HANDOFF.md、IMPORTANT-FINDINGS.mdと最新Git/AGENTSを確認してください。ニコランNGの別開発branchで、まずOwnerEvidenceのhidden/type user/有効IDを保持できる正規化条件と、投稿者のみのルールが詳細取得完了に依存しない項目別readinessを設計・実装してください。既存のカードID照合・投稿者競合・三値AND/OR/NOTを維持し、owner取得だけでthumbInfoDoneを立てないでください。未知型・型矛盾・無効ID、タグ未取得、snapshot欠落、ロックタグ、SPAの古い応答を検証してください。取得済みownerで不要な通信を省く段階までを最初の単位とし、snapshot一括補完はその後に分けてください。研究branchへ本体変更を混ぜず、通信数は実測と計算を区別してください。ブラウザ安全ポリシー拒否は回避せず未検証範囲を残し、GitHub反映は最後にまとめてください。」
+
+## このworkの次解析：R09完了 → R11（Astra高、今回の設定）
+
+「最新Git/AGENTSとTASKS.md、CLIENT-METADATA-DIFFERENCES.mdを確認してください。このworkでは解析とまとめだけを行い、本体は変更しません。広告一括APIの80件全返却、100指定62返却、600成功/700失敗の報告を、既存資料と原根拠の有無から比較してください。指定数と返却数、タグ・投稿者フィールド、URL長、HTTP失敗とブラウザエラーを分け、大量の再通信や既知結果の重複を避けてADS-BATCH-EVIDENCE.mdへ保存してください。公開資料はniconico-api-research、共有概要は指定outputsへ反映し、最後に結果と次の解析指示文を示してください。」

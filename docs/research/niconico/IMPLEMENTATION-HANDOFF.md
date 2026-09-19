@@ -83,3 +83,7 @@ SPAではpageKeyに検索条件を含め、世代番号とvideoIdで応答を照
 優先する開発単位は「hidden正規化の条件確認と項目別readiness」。次に「取得済みownerで不要な詳細要求を省く」、その後「必要時だけsnapshotの指定ID補完」。本体変更は研究branchへ混ぜず、別の開発branchで既存検証を使って進める。[次作業指示文](NEXT-TASK-PROMPTS.md)を参照。
 
 コメントアート、旧機種、全いいね、アプリ総当たりはこの最初の開発単位に必要ないため後回し。GitHub反映は最後にまとめ、共有ZIPと相対リンク付き資料をAI間引き継ぎの基準とする。
+
+## R09の追補（2026-09-20）
+
+[ownerのクライアント比較](CLIENT-METADATA-DIFFERENCES.md)を追加。IDが保持できても、hiddenの名前nullを空文字の既知値へ変換せず、名前条件を判定できる状態と分離する。Androidの限定モデルからtype=userを推定しない。本資料の実装指示は別work向けで、この解析workでは本体を変更しない。

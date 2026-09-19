@@ -75,5 +75,13 @@
     "kind": "local-product-code-and-offline-synthetic-check",
     "observed_at": "2026-09-20",
     "sha256": "3db27bd87bfcbaea2906807a84e8ddd19fc049ff894b0cb4861782b70736d48a"
+  },
+  {
+    "id": "S-OWNER-CLIENT-REVIEW-20260920",
+    "file": "evidence/owner-client-review-20260920.json",
+    "label": "Owner model comparison from allowlisted aggregates and fixed public revisions",
+    "kind": "sanitized-reanalysis-and-static-review",
+    "sha256": "c418779e6955a463b07ea9053bc9fb2fe99896a19da0b16c0c27fedf518324b5",
+    "reviewed_at": "2026-09-20T04:54:34+09:00"
   }
 ]

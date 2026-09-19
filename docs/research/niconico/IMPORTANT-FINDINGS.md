@@ -9,3 +9,5 @@
 - **検索初期HTMLの32動画はowner IDを保持、タグ一覧なし**。読み込み後の取得タイミングは未実測：[既取得データ再利用](BROWSER-DATA-REUSE.md)。
 
 - **現行NGの改善箇所を合成入力で特定**：hidden/type userのIDが正規化で落ちる。投稿者だけの複合ルールも詳細完了を待つ。[最優先の開発検討点](IMPLEMENTATION-HANDOFF.md)。
+
+- **IDが既知でも名前や種別が既知とは限らない。** 過去Web/iOSのhiddenは名前・画像がnull。Androidの限定モデルではtypeを保持する根拠が足りず、OSSの非null型も応答保証にならない。[owner比較と解釈条件](CLIENT-METADATA-DIFFERENCES.md)（R09、2026-09-20）。
