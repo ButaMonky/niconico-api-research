@@ -33,3 +33,7 @@ NG実装向けの優先入口：[重要な確認結果](IMPORTANT-FINDINGS.md)�
 ## 最新：R11広告比較・Zenzaの新規候補（2026-09-20）
 
 [広告一括の根拠比較](ADS-BATCH-EVIDENCE.md)と[Zenzaのnvapi・キャッシュ](ZENZA-NVAPI-AND-CACHE.md)。新規ニコニコ通信は匿名・キーなしタグGET1回で400。キャッシュのupdatedAtと取得日時の不一致をコード・合成実行で確認した。次はR21のplaylist/request。
+
+## 最新：R21の新規一括候補
+
+[playlist/requestの匿名2動画一括取得](PLAYLIST-REQUEST-BULK.md)。投稿者ID/typeはthumbinfoと一致、タグなし。R11後の新規通信4。次はR22の件数条件。研究repoをNGに限らない総合資料集へ広げる長期方針は[公開基準](PUBLICATION-GUIDE.md)に記録。

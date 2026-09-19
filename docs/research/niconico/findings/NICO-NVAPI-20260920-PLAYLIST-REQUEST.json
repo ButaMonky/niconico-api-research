@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "NICO-NVAPI-20260920-PLAYLIST-REQUEST",
+  "title": "playlist/requestは匿名で2動画の投稿者を一括返却",
+  "status": "traffic",
+  "platform": "Direct HTTP using Web form contract; not browser execution",
+  "app_version": null,
+  "observed_at": "2026-09-20T05:31:16+09:00",
+  "claim": "POST /v1/playlist/requestへフォームのwatchIds CSVとtitleを送信。認証なしで2指定2返却。逆順の2回目も指定順で返り、投稿者ID・typeは別途thumbinfoの2件と一致。contentにtags/tagはない。上限・永続副作用・hidden等は未確認。",
+  "evidence": [
+    "S-PLAYLIST-REQUEST-20260920"
+  ],
+  "evidence_level": [
+    "CONFIRMED-LIVE"
+  ],
+  "request": {
+    "method": "POST",
+    "endpoint": "https://nvapi.nicovideo.jp/v1/playlist/request",
+    "content_type": "application/x-www-form-urlencoded",
+    "fields": [
+      "title",
+      "watchIds (CSV)"
+    ],
+    "header_names": [
+      "User-Agent",
+      "Accept",
+      "Accept-Encoding",
+      "Content-Type",
+      "X-Frontend-Id",
+      "X-Frontend-Version",
+      "X-Request-With",
+      "Origin"
+    ]
+  },
+  "response": {
+    "items": "data.items[].watchId/content",
+    "owner": "data.items[].content.owner",
+    "owner_fields": [
+      "ownerType",
+      "type",
+      "visibility",
+      "id",
+      "name",
+      "iconUrl"
+    ],
+    "batch_max_confirmed": 2,
+    "server_limit": null,
+    "tags_present_in_test": false,
+    "owner_id_and_type_matches_thumbinfo": 2
+  },
+  "authentication": "No Cookie/Authorization/key. Anonymous success; not general-member session or browser CORS confirmation.",
+  "unconfirmed": [
+    "Maximum batch size and pagination",
+    "Server-side persistence/side effects",
+    "Hidden/channel/deleted/short video behavior",
+    "Independent watch-page ownership accuracy",
+    "Other request formats or absent required fields"
+  ],
+  "supersedes": [],
+  "clarifies": [
+    "NICO-20260913-PLAYLIST-OWNER",
+    "NICO-FOLLOWUP-20260913-PLAYLIST-FORM"
+  ]
+}

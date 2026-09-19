@@ -99,5 +99,13 @@
     "kind": "sanitized-research-summary",
     "sha256": "360a71205c069945c3ada86f535b620369268ca66094545e6da45f7c40afd222",
     "reviewed_at": "2026-09-20T05:17:33+09:00"
+  },
+  {
+    "id": "S-PLAYLIST-REQUEST-20260920",
+    "file": "evidence/playlist-request-20260920.json",
+    "label": "Anonymous two-video playlist metadata and paired owner equality",
+    "kind": "sanitized-live-probe-and-prior-static-reference",
+    "reviewed_at": "2026-09-20T05:34:46+09:00",
+    "sha256": "e92adea3844012b7c0a8a94dcdb461be2e46f76405eb209ec349e97ded768b17"
   }
 ]

@@ -52,3 +52,7 @@ niconico.py / niconicojsの対象commitはR03から変更なし。Ownerのnullab
 ## ZenzaWatchの固定ソース（2026-09-20）
 
 作者segabito / kphrx。URLは[本家](https://github.com/segabito/ZenzaWatch)と[派生版](https://github.com/kphrx/ZenzaWatch)。revisionはそれぞれ267bc5cabfa2dda635c28f91b208d9e3093f6fcf / 1dd027d324564f0c0299cc3242073623b633c5fc。NVApi.jsの比較と、派生版のplaylist・タグ・watch/キャッシュ経路を確認。[ファイル単位の台帳](evidence/zenza-nvapi-cache-20260920.json)にURL/hash/確認時刻。[解析結果](ZENZA-NVAPI-AND-CACHE.md)はCONFIRMED-CODE、合成再生、タグ匿名GET失敗を分離。利用者の導入版ではない。横断読解用のsparse cloneはローカルのみで配布しない。
+
+## R21の外部資料確認（2026-09-20）
+
+niconicolibs/apiは既参照commit 7ee4782f7f4f7c351da4b00145b361291e22544aのspec/nvapi/nvapi.yamlにplaylist/request項目なし。API不存在の根拠にはしない。今回の契約は既存の公式Web/Android静的記録と新規実通信から確認。[証拠](evidence/playlist-request-20260920.json)に固定URL/hash・入力findingを記録。GitHubの完全一致公開コード検索も0件だったが、網羅検索とは扱わない。
