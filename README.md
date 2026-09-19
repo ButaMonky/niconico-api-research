@@ -10,6 +10,7 @@
 - [重要な確認結果](docs/research/niconico/IMPORTANT-FINDINGS.md)
 - [API・機能一覧](docs/research/niconico/API-CATALOG.md)
 - [NG開発への引き渡し](docs/research/niconico/IMPLEMENTATION-HANDOFF.md)
+- [投稿者情報のWeb・iOS・Android比較](docs/research/niconico/CLIENT-METADATA-DIFFERENCES.md)
 - [タスク一覧・優先順位・推奨思考レベル](docs/research/niconico/TASKS.md)
 - [次の担当者への指示文](docs/research/niconico/NEXT-TASK-PROMPTS.md)
 - [外部OSS・記事の出典台帳](docs/research/niconico/EXTERNAL-SOURCES.md)
@@ -32,7 +33,7 @@ NG本体については、取得済みownerを保持する正規化条件と、�
 
 `CONFIRMED-LIVE` は実通信、`CONFIRMED-CODE` は参照コード、`REPORTED` は報告、`LEGACY` は過去仕様、`HYPOTHESIS` は仮説、`FAILED` は記載条件での失敗です。値が返ることと、現在の正しい値であることを分けます。hiddenを退会済みとは断定しません。
 
-今回の選択版は10 findings / 11 evidence sources。過去の全研究を収録したものではありません。コメント・過去ログ・アプリ差・旧機種API等は、未確認の調査候補を含みます。[検証記録](docs/research/niconico/VERIFICATION-NG-HANDOFF-20260920.md)と各資料の制約も参照してください。
+今回の選択版は11 findings / 12 evidence sources。過去の全研究を収録したものではありません。コメント・過去ログ・アプリ差・旧機種API等は、未確認の調査候補を含みます。[検証記録](docs/research/niconico/VERIFICATION-NG-HANDOFF-20260920.md)と各資料の制約も参照してください。
 
 ## 検証と更新
 

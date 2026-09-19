@@ -44,3 +44,7 @@
 ## R03追記：任意動画metadata（2026-09-20）
 
 上記キューのniconico.pyとniconicojsは今回確認を進めた。固定commitはそれぞれ`9d9c62f61f88ce640b4914007a25ddbb5d756582`、`e15fc91920567804685a6c45ebc08c2a8639f52e`。作者、URL、ファイル別hash/時刻、コード確認と作者報告の区別は[OSS確認記録](evidence/bulk-oss-review-20260920.json)。両方とも複数取得の内部は個別GET。今回4 GETの独立試験では単独成功、CSV失敗、反復一部返却。詳細は[候補判定](BULK-METADATA-CANDIDATES.md)。ライブラリ自体は未実行。他の未調査機能を確認済みにはしない。
+
+## R09：owner型の追加照合（2026-09-20）
+
+niconico.py / niconicojsの対象commitはR03から変更なし。Ownerのnullable項目とtype/visibilityを追加確認し、コード宣言と過去通信の違いを[クライアント比較](CLIENT-METADATA-DIFFERENCES.md)へ記録した。参照行・ファイルhash・作者・revisionは同資料と集計証拠。ライブラリの導入や実行はしていない。
