@@ -17,3 +17,7 @@
 [watch-infoのタグ・投稿者保存経路とthumb-infoの期限判定](ZENZA-NVAPI-AND-CACHE.md)を確認。読出しでもupdatedAtが変わり、7日前の内容が24時間以内と判定されるコード経路を合成データで再現。追加0通信の候補だが、最新タグ保証には使えない。実ユーザーDB・実ブラウザは未確認。
 
 [R11広告比較](ADS-BATCH-EVIDENCE.md)：80全返却実測と100→62/600成功/700 fetch失敗報告を分離。decorationの応答項目にタグ・投稿者がないため、metadata一括補完の代用品と扱わない。
+
+## 新規実通信：任意動画IDから投稿者を一括取得（2026-09-20）
+
+[POST playlist/request](PLAYLIST-REQUEST-BULK.md)は匿名で2動画を全返却。投稿者IDとtypeはthumbinfoと2/2一致。タグはない。任意IDの最新側metadata補完候補として優先するが、上限・hidden等・副作用・ブラウザCORSは未確認。100件成功とはまだ書かない。
