@@ -41,3 +41,7 @@ NG実装向けの優先入口：[重要な確認結果](IMPORTANT-FINDINGS.md)�
 ## 最新：投稿者100件の別一括経路を確認
 
 [playlist/request](PLAYLIST-REQUEST-BULK.md)は認証なしで100指定100返却・全件owner IDあり。タグなし。既存snapshot・ブラウザ情報再利用等を含む[これまでの成果一覧](RESEARCH-COVERAGE.md)も参照。次は新着補完のR23。
+
+## 最新追補：R23〜R25
+
+[一括ownerの新着・channel・失敗条件](PLAYLIST-ACCURACY-AND-FAILURES.md)、[NG更新着手の判断](NG-UPDATE-READINESS.md)、[検証記録](VERIFICATION-R23-R25-20260920.md)。公開選択版は19 findings / 19 sources。過去の件数表示は当時の履歴。次の解析はR12、本体変更・Zenza追加解析は行わない。

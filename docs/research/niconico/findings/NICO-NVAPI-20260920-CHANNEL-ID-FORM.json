@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "NICO-NVAPI-20260920-CHANNEL-ID-FORM",
+  "title": "一括channel IDはch付きでsnapshot数値と表現が違う",
+  "status": "traffic",
+  "platform": "anonymous direct HTTP",
+  "app_version": null,
+  "observed_at": "2026-09-20T06:13:51+09:00",
+  "claim": "channel2件とuser1件を混ぜても3件全返却。channel IDはplaylistがch付き、snapshotは数値で直接文字列比較は2/2不一致。種別をchannelと確認した数値部分比較は2/2一致。",
+  "evidence": [
+    "S-PLAYLIST-CHANNEL-20260920"
+  ],
+  "evidence_level": [
+    "CONFIRMED-LIVE"
+  ],
+  "request": {
+    "method": "POST",
+    "endpoint": "https://nvapi.nicovideo.jp/v1/playlist/request",
+    "content_type": "application/x-www-form-urlencoded",
+    "fields": [
+      "title",
+      "watchIds CSV"
+    ]
+  },
+  "response": {
+    "returned": 3,
+    "channel_count": 2,
+    "user_count": 1,
+    "channel_exact_id_equal": 0,
+    "channel_numeric_part_equal": 2,
+    "tags_present": 0
+  },
+  "authentication": "No Cookie/Authorization/key; browser CORS and logged-in membership untested.",
+  "unconfirmed": [
+    "Only two visible channels and one user control.",
+    "No account-deletion or hidden inference.",
+    "channelId gte 1 query failed as a whole; exact offending parameter not isolated.",
+    "No watch-page/independent account ownership control; no persistence/CORS/member test."
+  ],
+  "supersedes": [],
+  "clarifies": [
+    "NICO-NVAPI-20260920-PLAYLIST-BATCH-100"
+  ]
+}

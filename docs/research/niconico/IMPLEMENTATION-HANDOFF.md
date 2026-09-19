@@ -99,3 +99,7 @@ SPAではpageKeyに検索条件を含め、世代番号とvideoIdで応答を照
 ## R22：投稿者一括の確認済み規模を100件へ拡張
 
 [100動画の実通信](PLAYLIST-REQUEST-BULK.md)は1 POSTで全返却、158101bytes/802.91msの単発観測。個別100件からの大幅削減候補。ただし本体の実通信削減を測った結果ではない。既取得情報を優先し、タグには別経路、欠落はunknown。新着/hidden/channel・副作用・ブラウザ実行は未確認。
+
+## R25後の引き渡し追加
+
+[更新着手の判定と受入条件](NG-UPDATE-READINESS.md)を先に読む。既取得owner保持・項目別状態管理を最初の単位とし、一括owner、snapshotタグ補完は段階を分ける。新しいchannelのID表記差、200部分返却、重複、不正ID全体失敗を[実測資料](PLAYLIST-ACCURACY-AND-FAILURES.md)へ追加。本体未変更。

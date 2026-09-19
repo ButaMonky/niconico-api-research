@@ -117,3 +117,7 @@ python docs/research/niconico/tools/probe_playlist_batch.py --live --output <sum
 ```
 
 100件全返却を確認できたため、101件やさらに大きい件数は試さず終了。次は最大値探索より、新着・hidden・チャンネルなどNG判定で重要な条件を少数比較する。ブラウザ実装やZenza改修版への適用は別作業。
+
+## R23〜R25追補
+
+[精度・欠落の詳細](PLAYLIST-ACCURACY-AND-FAILURES.md)で新着3件、channel2件と通常1件、不正ID・重複・部分返却を検証。100件成功の反復・上限探索はしていない。[NG更新着手判断](NG-UPDATE-READINESS.md)へ条件を統合。

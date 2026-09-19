@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "NICO-NVAPI-20260920-BATCH-FAILURE-STATES",
+  "title": "不正IDは全体400、欠落でもtotalCount2、重複は保持",
+  "status": "traffic",
+  "platform": "anonymous direct HTTP",
+  "app_version": null,
+  "observed_at": "2026-09-20T06:13:51+09:00",
+  "claim": "sm9+sm0とsm9+形式不正は400 INVALID_PARAMETER。sm9+sm1は200/totalCount2だがitems1、sm1欠落。sm9重複指定は2件返却・異なるID1。返却件数やtotalCountだけで完了判定できない。",
+  "evidence": [
+    "S-PLAYLIST-FAILURES-20260920"
+  ],
+  "evidence_level": [
+    "CONFIRMED-LIVE"
+  ],
+  "request": {
+    "method": "POST",
+    "endpoint": "https://nvapi.nicovideo.jp/v1/playlist/request",
+    "content_type": "application/x-www-form-urlencoded",
+    "fields": [
+      "title",
+      "watchIds CSV"
+    ]
+  },
+  "response": {
+    "invalid_cases_http_status": [
+      400,
+      400
+    ],
+    "partial_case": {
+      "http_status": 200,
+      "totalCount": 2,
+      "items": 1,
+      "missing": 1
+    },
+    "duplicate_case": {
+      "http_status": 200,
+      "totalCount": 2,
+      "items": 2,
+      "unique_ids": 1
+    }
+  },
+  "authentication": "No Cookie/Authorization/key; browser CORS and logged-in membership untested.",
+  "unconfirmed": [
+    "sm1 omission does not establish deletion/private status or its reason.",
+    "sm0 rejection cannot establish handling of every nonexistent ID.",
+    "totalCount is not generally defined by this sample; it does not equal returned item count in one observed response.",
+    "No rate limit, generic error recovery or browser runtime test."
+  ],
+  "supersedes": [],
+  "clarifies": [
+    "NICO-NVAPI-20260920-PLAYLIST-BATCH-100"
+  ]
+}

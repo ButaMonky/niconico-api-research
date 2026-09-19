@@ -33,7 +33,7 @@ NG本体については、取得済みownerを保持する正規化条件と、�
 
 `CONFIRMED-LIVE` は実通信、`CONFIRMED-CODE` は参照コード、`REPORTED` は報告、`LEGACY` は過去仕様、`HYPOTHESIS` は仮説、`FAILED` は記載条件での失敗です。値が返ることと、現在の正しい値であることを分けます。hiddenを退会済みとは断定しません。
 
-今回の選択版は16 findings / 16 evidence sources。過去の全研究を収録したものではありません。コメント・過去ログ・アプリ差・旧機種API等は、未確認の調査候補を含みます。[検証記録](docs/research/niconico/VERIFICATION-NG-HANDOFF-20260920.md)と各資料の制約も参照してください。
+今回の選択版は19 findings / 19 evidence sources。過去の全研究を収録したものではありません。コメント・過去ログ・アプリ差・旧機種API等は、未確認の調査候補を含みます。[検証記録](docs/research/niconico/VERIFICATION-NG-HANDOFF-20260920.md)と各資料の制約も参照してください。
 
 ## 検証と更新
 
@@ -54,3 +54,5 @@ python docs/research/niconico/tools/export.py
 新規候補：[匿名で任意2動画の投稿者を一括取得](docs/research/niconico/PLAYLIST-REQUEST-BULK.md)。長期的にはZenza等にも使えるニコニコ全体の仕組みを対象とし、過去成果・外部解析を監査後に段階的に統合します。
 
 R22：[投稿者100件を匿名1 POSTで全取得](docs/research/niconico/PLAYLIST-REQUEST-BULK.md)。[これまでの成果と収録範囲](docs/research/niconico/RESEARCH-COVERAGE.md)も参照してください。
+
+R23〜R25：[新着・チャンネルID・不正ID・部分返却](docs/research/niconico/PLAYLIST-ACCURACY-AND-FAILURES.md)。[ランキングNGの更新着手判断](docs/research/niconico/NG-UPDATE-READINESS.md)を追加しました。本体は変更していません。

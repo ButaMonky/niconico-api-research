@@ -25,3 +25,7 @@
 ## 重要：投稿者100件を匿名1 POSTで取得（R22）
 
 [playlist/request追加検証](PLAYLIST-REQUEST-BULK.md)で100指定100返却、全件owner ID/type user/visibility visible。新規2 POSTのみ。タグなし、100件の独立精度照合・特殊動画・CORS・永続副作用・件数上限は未確認。R21の「確認済み2件」から範囲を拡張した。
+
+## R23〜R25：一括ownerを安全に利用する新条件
+
+**200・totalCount=2でも返却は1件だった。** 全返却はID集合で確認する。channel owner.idの`ch`とsnapshot数値ID、重複2行/1動画、不正ID混在で全体400、新着3件補完も確認。[根拠と条件](PLAYLIST-ACCURACY-AND-FAILURES.md)。[ランキングNGの更新着手に必要な解析は揃った](NG-UPDATE-READINESS.md)が、製品・ブラウザ検証は別。
