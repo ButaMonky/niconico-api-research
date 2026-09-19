@@ -1,0 +1,196 @@
+{
+  "checked_at": "2026-09-20T05:42:51+09:00",
+  "seed_evidence": "evidence/snapshot-boundary-20260920.json",
+  "seed_sha256": "04578487edb3768b1bd4e06930f3e48d3bb8fe0c00dd3e0890fc911ba3803674",
+  "authentication": "anonymous; no Cookie/Authorization/key; no logged-in membership test",
+  "headers": {
+    "User-Agent": "NiconicoResearch/20260920",
+    "Accept": "application/json",
+    "Accept-Encoding": "identity",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "X-Frontend-Id": "6",
+    "X-Frontend-Version": "0",
+    "X-Request-With": "https://www.nicovideo.jp",
+    "Origin": "https://www.nicovideo.jp"
+  },
+  "body_structure": {
+    "title": "Metadata research",
+    "watchIds": "CSV; first 20 then first 100 IDs from seed evidence"
+  },
+  "requests": [
+    {
+      "method": "POST",
+      "endpoint": "https://nvapi.nicovideo.jp/v1/playlist/request",
+      "specified": 20,
+      "unique_input": 20,
+      "request_body_bytes": 286,
+      "http_status": 200,
+      "response_bytes": 31379,
+      "elapsed_ms": 353.59,
+      "body_sha256": "a141998ea2ad3744a8b76d9cc6d236f3903e8c2c4bd554b9c14d7d1f4498e39b",
+      "response_headers": {
+        "Content-Type": "application/json",
+        "Cache-Control": "private, no-cache"
+      },
+      "meta_status": 200,
+      "data_keys": [
+        "id",
+        "items",
+        "meta",
+        "totalCount"
+      ],
+      "total_count": 20,
+      "returned": 20,
+      "distinct_returned": 20,
+      "missing": 0,
+      "extra": 0,
+      "requested_order_returned": true,
+      "content_id_matches_watch_id": 20,
+      "owner_id_present": 20,
+      "owner_name_null": 0,
+      "tag_fields_present": {
+        "tag": 0,
+        "tags": 0,
+        "tagList": 0
+      },
+      "content_key_union": [
+        "9d091f87",
+        "acf68865",
+        "contentType",
+        "count",
+        "duration",
+        "id",
+        "isChannelVideo",
+        "isMuted",
+        "isPaymentRequired",
+        "latestCommentSummary",
+        "owner",
+        "playbackPosition",
+        "registeredAt",
+        "requireSensitiveMasking",
+        "shortDescription",
+        "thumbnail",
+        "title",
+        "type",
+        "videoLive"
+      ],
+      "owner_ownerType_counts": {
+        "user": 20
+      },
+      "owner_type_counts": {
+        "user": 20
+      },
+      "owner_visibility_counts": {
+        "visible": 20
+      },
+      "playlist_identity_shape": {
+        "value_retained": false,
+        "type": "dict",
+        "keys": [
+          "type",
+          "value"
+        ],
+        "type_is_request": true,
+        "context_keys": [],
+        "context_watch_ids_equal_request": false,
+        "context_title_equal_request": false
+      }
+    },
+    {
+      "method": "POST",
+      "endpoint": "https://nvapi.nicovideo.jp/v1/playlist/request",
+      "specified": 100,
+      "unique_input": 100,
+      "request_body_bytes": 1314,
+      "http_status": 200,
+      "response_bytes": 158101,
+      "elapsed_ms": 802.91,
+      "body_sha256": "89664dbf304f6c8273e803d3106473f94a4d2c3f3b34ced1f184964bf2907cce",
+      "response_headers": {
+        "Content-Type": "application/json",
+        "Cache-Control": "private, no-cache"
+      },
+      "meta_status": 200,
+      "data_keys": [
+        "id",
+        "items",
+        "meta",
+        "totalCount"
+      ],
+      "total_count": 100,
+      "returned": 100,
+      "distinct_returned": 100,
+      "missing": 0,
+      "extra": 0,
+      "requested_order_returned": true,
+      "content_id_matches_watch_id": 100,
+      "owner_id_present": 100,
+      "owner_name_null": 0,
+      "tag_fields_present": {
+        "tag": 0,
+        "tags": 0,
+        "tagList": 0
+      },
+      "content_key_union": [
+        "9d091f87",
+        "acf68865",
+        "contentType",
+        "count",
+        "duration",
+        "id",
+        "isChannelVideo",
+        "isMuted",
+        "isPaymentRequired",
+        "latestCommentSummary",
+        "owner",
+        "playbackPosition",
+        "registeredAt",
+        "requireSensitiveMasking",
+        "shortDescription",
+        "thumbnail",
+        "title",
+        "type",
+        "videoLive"
+      ],
+      "owner_ownerType_counts": {
+        "user": 100
+      },
+      "owner_type_counts": {
+        "user": 100
+      },
+      "owner_visibility_counts": {
+        "visible": 100
+      },
+      "playlist_identity_shape": {
+        "value_retained": false,
+        "type": "dict",
+        "keys": [
+          "type",
+          "value"
+        ],
+        "type_is_request": true,
+        "context_keys": [],
+        "context_watch_ids_equal_request": false,
+        "context_title_equal_request": false
+      },
+      "overlap_owner_id_type_equal": {
+        "compared": 20,
+        "equal": 20
+      }
+    }
+  ],
+  "retries": 0,
+  "browser_cors_tested": false,
+  "raw_saved": false,
+  "side_effects_independently_tested": false,
+  "success": true,
+  "evidence_level": "CONFIRMED-LIVE",
+  "limitations": [
+    "100 is a confirmed sample size, not the server maximum.",
+    "All sampled owners are user/visible; hidden/channel/deleted/new-upload cases not tested.",
+    "20 overlapping owner values match across two batches; this is internal consistency, not another independent source.",
+    "Independent thumbinfo equality remains the two-video R21 sample only.",
+    "Opaque data.id.value not read or retained; no proof of statelessness or non-persistence.",
+    "No general-member session or browser CORS test."
+  ]
+}

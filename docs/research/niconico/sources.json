@@ -107,5 +107,13 @@
     "kind": "sanitized-live-probe-and-prior-static-reference",
     "reviewed_at": "2026-09-20T05:34:46+09:00",
     "sha256": "e92adea3844012b7c0a8a94dcdb461be2e46f76405eb209ec349e97ded768b17"
+  },
+  {
+    "id": "S-PLAYLIST-BATCH-20260920",
+    "file": "evidence/playlist-batch-20260920.json",
+    "label": "Anonymous 20/100 playlist request experiment",
+    "kind": "sanitized-live-measurement",
+    "reviewed_at": "2026-09-20T05:45:28+09:00",
+    "sha256": "7d9cdaf33dd685cfbf9448786973af85d508fff0074d589abab2d3ba3d1da0a0"
   }
 ]

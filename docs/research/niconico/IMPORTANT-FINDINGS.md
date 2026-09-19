@@ -21,3 +21,7 @@
 ## 新規実通信：任意動画IDから投稿者を一括取得（2026-09-20）
 
 [POST playlist/request](PLAYLIST-REQUEST-BULK.md)は匿名で2動画を全返却。投稿者IDとtypeはthumbinfoと2/2一致。タグはない。任意IDの最新側metadata補完候補として優先するが、上限・hidden等・副作用・ブラウザCORSは未確認。100件成功とはまだ書かない。
+
+## 重要：投稿者100件を匿名1 POSTで取得（R22）
+
+[playlist/request追加検証](PLAYLIST-REQUEST-BULK.md)で100指定100返却、全件owner ID/type user/visibility visible。新規2 POSTのみ。タグなし、100件の独立精度照合・特殊動画・CORS・永続副作用・件数上限は未確認。R21の「確認済み2件」から範囲を拡張した。

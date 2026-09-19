@@ -1,5 +1,7 @@
 # 任意動画IDから投稿者を一括取得：playlist/request
 
+最新のR22では100動画を1 POSTで全返却。詳細は末尾の「R22追加」。以下のR21本文は2件確認時の履歴として保持する。
+
 確認：2026-09-20 05:31〜05:33 JST、R21。**匿名の1 POSTで指定した2動画の情報・投稿者IDを両方取得できた。別の要求では投稿者IDと種別をgetthumbinfoと比較し、2/2一致した。** タグは返ったcontentオブジェクトにない。任意ID集合の投稿者補完として新しい実通信結果だが、100件対応・最新値の全面保証・実装採用決定ではない。
 
 ## 要求と応答
@@ -87,3 +89,31 @@ python docs/research/niconico/tools/probe_playlist_request.py --live --output <s
 ```
 
 2026-09-20：少数2件で一括取得と別取得元との一致を確認したためR21を一区切り。副作用・最大件数は未解決として残す。次は20件から必要に応じ100件までの限定した件数試験。既存2動画成功を漫然と繰り返さない。
+
+## R22追加：100動画を1 POSTで全返却（2026-09-20 05:42 JST）
+
+**上のR21の「2件まで確認済み」は当時の記録。R22では100指定100返却、全100件の投稿者IDを確認した。** 最大100件という意味ではない。
+
+| 条件 | body bytes | HTTP/meta | 返却 / owner ID | 欠落 / 余分 | response bytes | 時間 |
+|---|---:|---|---|---|---:|---:|
+| 20異なるID | 286 | 200 / 200 | 20 / 20 | 0 / 0 | 31379 | 353.59 ms |
+| 100異なるID | 1314 | 200 / 200 | 100 / 100 | 0 / 0 | 158101 | 802.91 ms |
+
+新規通信は上記2 POSTだけ、認証・再試行・追加の動画探索なし。既存snapshot検証の公開ID一覧から先頭20/100件を使用し、入力証拠のhashを[新しい証拠](evidence/playlist-batch-20260920.json)に記録した。タグを返すsnapshotと同じ100対象を比較できるが、snapshot側の通信を再実行したわけではない。
+
+両要求で指定順に返り、全content.idとwatchIdが一致。全ownerはownerType=user / type=user / visibility=visible、nameのnull0。重なる20件のowner ID/typeは2つのバッチ間で20/20一致。これは同じAPI内の整合性であり、100件すべてを別取得元で精度確認した結果ではない。独立したthumbinfoとの一致確認はR21の2件に留まる。
+
+今回の全contentにtag/tags/tagListフィールドなし。よって、**投稿者だけを補完する100件単位の候補**が増えた。タグが必要なルールにはsnapshotや必要時個別取得が残る。個別100取得との比較ではmetadata要求を100→1にできる設計候補だが、現在のNG本体が常に100通信しているという実測でも、本体での削減実測でもない。取得済みownerが揃うなら追加0が優先。
+
+応答はAccept-Encoding=identityで測った本文サイズ。Cache-Controlはprivate, no-cache。圧縮、回線、ブラウザOPTIONSを含む総転送量・反復性能・レート上限は未検証。平均応答時間や安定した処理速度として使わない。
+
+data.idは`type`/`value`キーを持つオブジェクトで、type=requestを確認。valueは保存せず、内部構造も調査していない。診断のcontext関連falseは、調べた直下にcontextがないというだけで、valueの内部に要求情報がないことや永続性を証明しない。サーバーの保持・副作用は引き続き未確認。
+
+[診断](tools/probe_playlist_batch.py)は既定で通信しない。`--live`で20→100の最大2 POST、初回HTTP/APIエラー・欠落・owner不足で停止。旧診断probe_playlist_request.pyが必要な共通定義を提供するため、toolsフォルダを揃える。
+
+```sh
+python docs/research/niconico/tools/probe_playlist_batch.py
+python docs/research/niconico/tools/probe_playlist_batch.py --live --output <summary.json>
+```
+
+100件全返却を確認できたため、101件やさらに大きい件数は試さず終了。次は最大値探索より、新着・hidden・チャンネルなどNG判定で重要な条件を少数比較する。ブラウザ実装やZenza改修版への適用は別作業。
