@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-19T19:12:58.965Z",
+  "repository_revision": "c3d8625e50dc5215696a9cfd3007ae7047f0dcd7",
+  "evidence_level": "CONFIRMED-CODE",
+  "execution": "offline synthetic inputs only; not production browser behavior",
+  "files": [
+    {
+      "path": "src/data/owner-evidence.js",
+      "sha256": "f1d96d8116447f99febf1605cd3ef0ec1736dbc470d21250668903c4b202d895"
+    },
+    {
+      "path": "src/ng/logic-rules.js",
+      "sha256": "13fdba11b2524b647bd6cc86883024109956171b089f07d24ff179e2053adf70"
+    },
+    {
+      "path": "src/legacy/main-prefix.js",
+      "sha256": "960db5631c05d186608d07687041950811557c779502269d8171dfbaf9b5466b"
+    },
+    {
+      "path": "src/data/thumb-info-source.js",
+      "sha256": "9cec2ae16efa288c2fce3634cd6b6d3ddeed420933b4f65eeb727b302d23677f"
+    },
+    {
+      "path": "src/nico/list-page.js",
+      "sha256": "2ea9021200fa0f27b14a1d6a83ecca10f8a920dafd52717cb2476238161e658a"
+    },
+    {
+      "path": "src/legacy/thumb-info-listener.js",
+      "sha256": "b96656288b0b788c1111d2eabbb593bb285fd392a17264e5ca8e449a18c57c54"
+    },
+    {
+      "path": "src/core/config.js",
+      "sha256": "ff1115fb8bbda6a64c091700992bf43f3888bd16f5b87109cbfb4cd240ea59eb"
+    },
+    {
+      "path": "src/autofill/legacy-controller.js",
+      "sha256": "03aadf05cd41667bed2a2a908d027744d07f621d15d3f028da3a0e4dc1f5fd0f"
+    }
+  ],
+  "hidden_owner_normalization": {
+    "synthetic_user_accepted": true,
+    "synthetic_hidden_user_accepted": false
+  },
+  "owner_rule_readiness": {
+    "before_thumb_complete": null,
+    "after_thumb_complete": true
+  },
+  "privacy": "Synthetic ID 1 only in local inputs; output excludes identifiers and personal paths."
+}

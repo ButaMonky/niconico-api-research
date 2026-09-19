@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "platform": "public Web API / Python urllib",
+  "app_version": "Python3.12; probe_video_lookup 20260920",
+  "observed_at": "2026-09-20T03:54:01+09:00",
+  "status": "traffic",
+  "evidence_level": "CONFIRMED-LIVE",
+  "evidence": [
+    "S-VIDEO-LOOKUP-ENCODING-20260920",
+    "S-VIDEO-LOOKUP-CONTROL-20260920",
+    "S-BULK-OSS-20260920"
+  ],
+  "authentication": "No Cookie/session; logged-in general-member behavior not tested",
+  "supersedes": [],
+  "related_document": "BULK-METADATA-CANDIDATES.md",
+  "request": {
+    "endpoint": "https://nvapi.nicovideo.jp/v1/videos",
+    "method": "GET",
+    "body": null,
+    "query_cases": [
+      "watchIds=A%2CB",
+      "watchIds=A",
+      "watchIds=B",
+      "watchIds=A&watchIds=B"
+    ],
+    "header_names": [
+      "User-Agent",
+      "Accept",
+      "Accept-Encoding",
+      "X-Frontend-Id",
+      "X-Frontend-Version",
+      "Origin",
+      "Referer"
+    ]
+  },
+  "unconfirmed": [
+    "other ID encodings or authenticated conditions",
+    "hidden/channel/missing videos",
+    "server-wide batch maximum",
+    "browser CORS and current watch-page owner correctness"
+  ],
+  "id": "NICO-METADATA-20260920-VIDEOS-BULK-FAILED",
+  "title": "v1/videosのCSV2件は400・反復2件は後方1件のみ返却",
+  "claim": "公開通常動画2件・認証なしでCSV2件が400。各単独指定は200。反復指定は後方1件のみで、その本文hashとownerが単独取得に一致。4 GETで条件を切り分け。一括取得候補の静的コードを動作保証にしない。",
+  "hypothesis_result": "FAILED for tested batch shapes",
+  "response": {
+    "csv_two_http": 400,
+    "single_http": [
+      200,
+      200
+    ],
+    "repeated_requested": 2,
+    "repeated_returned": 1,
+    "repeated_position_zero_based": 1,
+    "repeated_body_equal_single_b": true,
+    "single_owner_id_present": 2,
+    "tag_or_tags_key_present": 0
+  },
+  "clarifies": [
+    "NICO-FOLLOWUP-20260913-VIDEOS"
+  ]
+}

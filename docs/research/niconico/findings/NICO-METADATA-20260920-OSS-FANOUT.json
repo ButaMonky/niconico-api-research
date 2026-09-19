@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "platform": "public Python / TypeScript implementations",
+  "app_version": "niconico.py 9d9c62f; niconicojs e15fc91",
+  "observed_at": "2026-09-20",
+  "status": "static",
+  "evidence_level": "CONFIRMED-CODE",
+  "evidence": [
+    "S-BULK-OSS-20260920"
+  ],
+  "authentication": "No Cookie/session; logged-in general-member behavior not tested",
+  "supersedes": [],
+  "related_document": "BULK-METADATA-CANDIDATES.md",
+  "request": {
+    "method": "GET",
+    "endpoint": "https://nvapi.nicovideo.jp/v1/videos",
+    "query": {
+      "watchIds": "one ID per request"
+    }
+  },
+  "unconfirmed": [
+    "latency when libraries run",
+    "all failure/nullable behavior",
+    "other batch API candidates"
+  ],
+  "id": "NICO-METADATA-20260920-OSS-FANOUT",
+  "title": "OSS2組の複数動画関数は各動画への個別要求",
+  "claim": "niconico.pyはループ、niconicojsは既定並列4で単独GETを繰り返す。入力N件の通常経路はN要求で、1要求の一括取得ではない。コードを実行して測った性能値ではない。",
+  "response": {
+    "owner_model": true,
+    "explicit_tags_model": false,
+    "base_requests_for_100_ids": 100,
+    "additional_retry_requests_possible": true
+  }
+}

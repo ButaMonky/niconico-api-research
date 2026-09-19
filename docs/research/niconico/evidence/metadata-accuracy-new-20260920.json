@@ -1,0 +1,119 @@
+{
+  "checked_at": "2026-09-19T19:00:52.227221+00:00",
+  "authentication": "none; no cookies or account session",
+  "general_member_session_tested": false,
+  "selection": "two newest tag=VOCALOID public search videos; researcher-chosen query, not user history",
+  "requests": [
+    {
+      "label": "version_before",
+      "started_at": "2026-09-19T19:00:52.227221+00:00",
+      "url_bytes": 60,
+      "http_status": 200,
+      "body_bytes": 45,
+      "elapsed_ms": 309.58,
+      "body_sha256": "6a734c1bd446925fabc8651b90fb14928ed1eabc2b97500e3e788d2c198e2922"
+    },
+    {
+      "label": "newest_search",
+      "started_at": "2026-09-19T19:00:53.537939+00:00",
+      "url_bytes": 132,
+      "http_status": 200,
+      "body_bytes": 3648,
+      "elapsed_ms": 225.78,
+      "body_sha256": "31d82c51254f992ac7eccdfa0c1c056510e6df49f813c9778cb27f22bea69c1e"
+    },
+    {
+      "label": "snapshot_id_batch",
+      "started_at": "2026-09-19T19:00:54.764559+00:00",
+      "url_bytes": 294,
+      "http_status": 200,
+      "body_bytes": 92,
+      "elapsed_ms": 138.8,
+      "body_sha256": "3132b936fe058ef63c4a953c2cb5aa05e00f31151acaa63bc1e16649cdf4bf7b"
+    },
+    {
+      "label": "thumbinfo_0",
+      "started_at": "2026-09-19T19:00:55.903517+00:00",
+      "url_bytes": 52,
+      "http_status": 200,
+      "body_bytes": 1407,
+      "elapsed_ms": 371.23,
+      "body_sha256": "2170f29594cac13c36941af9ff14374181354a9e853e9a0610374aa366ba7191"
+    },
+    {
+      "label": "thumbinfo_1",
+      "started_at": "2026-09-19T19:00:57.275312+00:00",
+      "url_bytes": 52,
+      "http_status": 200,
+      "body_bytes": 1288,
+      "elapsed_ms": 335.01,
+      "body_sha256": "89ece609180d9ae4a7c01d6cf1ee758a03c53610cbd54cf471144ca2345187f5"
+    },
+    {
+      "label": "version_after",
+      "started_at": "2026-09-19T19:00:58.612836+00:00",
+      "url_bytes": 60,
+      "http_status": 200,
+      "body_bytes": 45,
+      "elapsed_ms": 492.39,
+      "body_sha256": "6a734c1bd446925fabc8651b90fb14928ed1eabc2b97500e3e788d2c198e2922"
+    }
+  ],
+  "observations": [
+    {
+      "position": 0,
+      "registered_at": "2026-09-20T02:56:13+09:00",
+      "posted_after_index_version": true,
+      "search_owner_type": "user",
+      "search_owner_id_present": true,
+      "search_tag_key_present": false,
+      "thumb_tag_count": 5,
+      "thumb_locked_tag_count": 5,
+      "thumb_user_id_present": true,
+      "thumb_channel_id_present": false,
+      "search_thumb_owner_match": true,
+      "snapshot_present": false,
+      "snapshot_tag_set_match": null,
+      "snapshot_owner_match": null,
+      "ng_decision_if_snapshot_missing": "unknown; preserve pending state and fall back"
+    },
+    {
+      "position": 1,
+      "registered_at": "2026-09-20T02:48:47+09:00",
+      "posted_after_index_version": true,
+      "search_owner_type": "user",
+      "search_owner_id_present": true,
+      "search_tag_key_present": false,
+      "thumb_tag_count": 6,
+      "thumb_locked_tag_count": 5,
+      "thumb_user_id_present": true,
+      "thumb_channel_id_present": false,
+      "search_thumb_owner_match": true,
+      "snapshot_present": false,
+      "snapshot_tag_set_match": null,
+      "snapshot_owner_match": null,
+      "ng_decision_if_snapshot_missing": "unknown; preserve pending state and fall back"
+    }
+  ],
+  "stopped_reason": null,
+  "snapshot_version_before": "2026-09-19T07:07:12+09:00",
+  "public_research_video_ids": [
+    "sm46820720",
+    "sm46820753"
+  ],
+  "snapshot_requested": 2,
+  "snapshot_returned": 0,
+  "snapshot_version_after": "2026-09-19T07:07:12+09:00",
+  "version_unchanged": true,
+  "schema_version": 1,
+  "request_headers": {
+    "User-Agent": "NicoNGResearch/20260920",
+    "Accept-Encoding": "identity",
+    "X-Frontend-Id": "6",
+    "X-Frontend-Version": "0"
+  },
+  "automatic_retries": 0,
+  "redirects_followed": false,
+  "privacy": "Public research video IDs and registration times retained; tag names, uploader identities, titles, descriptions and raw bodies excluded.",
+  "retest_reason": "Newly selected 2026-09-20 public samples; prior comparisons did not establish these IDs missing while individual tag/owner fallback succeeds."
+}

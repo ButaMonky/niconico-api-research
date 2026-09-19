@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "NICO-METADATA-20260920-CONTRIBUTION-REVIEW",
+  "title": "検索100件・広告部分返却・投稿者欠落の提供報告を条件付き統合",
+  "status": "reported",
+  "evidence_level": "REPORTED",
+  "platform": "Web / public metadata API / supplied report",
+  "app_version": "Web nvpc_next distribution dated 2026-09-16 per provider; build hash unavailable",
+  "observed_at": "2026-09-20",
+  "source_observed_dates": [
+    "2026-09-16",
+    "2026-09-17"
+  ],
+  "claim": "5件のmetadata関連contributionを確認し、6観察を報告として保存。検索100件と広告100指定62返却を分離。pageSize100/page50の境界報告から一般的な5000件上限を確定しない。投稿者欠落・404から退会を確定しない。今回の実通信0。",
+  "evidence": [
+    "S-COMMUNITY-METADATA-REVIEW-20260920"
+  ],
+  "request": {
+    "method": "GET",
+    "endpoint_details": "evidence/community-metadata-review-20260920.json#observations"
+  },
+  "response": {
+    "summary_count": 6,
+    "independent_live_reproduction": false
+  },
+  "authentication": "Endpoint-specific report conditions are in observations; Cookie present does not prove required.",
+  "unconfirmed": [
+    "raw traffic and exact requested/returned ID sets",
+    "search page-count versus item-count limit",
+    "decoration missing reasons and fresh owner correctness",
+    "600/700 original records"
+  ],
+  "supersedes": [],
+  "related_document": "COMMUNITY-CONTRIBUTIONS-REVIEW.md"
+}

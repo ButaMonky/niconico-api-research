@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "status": "traffic",
+  "evidence_level": "CONFIRMED-LIVE",
+  "platform": "public metadata API / Python urllib",
+  "app_version": "Python3.12.10; probe20260920",
+  "observed_at": "2026-09-20T02:54:35+09:00",
+  "evidence": [
+    "S-SNAPSHOT-BOUNDARY-20260920",
+    "S-SNAPSHOT-BOUNDARY-SOURCES-20260920"
+  ],
+  "authentication": "None; no logged-in general-member session tested",
+  "request": {
+    "method": "GET",
+    "endpoint": "https://snapshot.search.nicovideo.jp/api/v2/snapshot/video/contents/search",
+    "host": "snapshot.search.nicovideo.jp",
+    "path": "/api/v2/snapshot/video/contents/search",
+    "headers": {
+      "User-Agent": "NicoNGResearch/20260920",
+      "Accept": "application/json",
+      "Accept-Encoding": "identity"
+    },
+    "body": null,
+    "query": {
+      "q": "",
+      "targets": "title",
+      "fields": "contentId,tags,userId,channelId",
+      "_sort": "-viewCounter",
+      "_offset": 0,
+      "_limit": 100,
+      "_context": "NicoNGResearch",
+      "filters[contentId][0..n]": "one public video ID per indexed parameter"
+    }
+  },
+  "supersedes": [],
+  "related_document": "SNAPSHOT-BATCH-BOUNDARY-20260920.md",
+  "id": "NICO-SNAPSHOT-20260920-BATCH100",
+  "title": "タグ・投稿者100動画の指定ID一括取得を確認",
+  "claim": "公開索引から選んだ100動画を1 GETで全返却。全件tags非空文字列・userId整数、channelIdはnull。指定IDの欠落・余分0。同じ索引の取得元と3項目全一致。視聴ページの最新値は再照合していない。",
+  "response": {
+    "requested": 100,
+    "returned": 100,
+    "http_status": 200,
+    "body_status": 200,
+    "missing": 0,
+    "unexpected": 0,
+    "tags_nonempty": 100,
+    "userId_integer": 100,
+    "channelId_null": 100,
+    "seed_fields_match": 100,
+    "url_ascii_bytes": 4374,
+    "response_body_bytes": 27179,
+    "elapsed_ms_single_trial": 367.23
+  },
+  "unconfirmed": [
+    "Live watch-page freshness and newly uploaded/unindexed videos",
+    "Deleted/private/channel/hidden uploader cases",
+    "Browser CORS and application integration",
+    "Sustained latency/rate limits and maximum URL length"
+  ],
+  "batch": {
+    "supported": true,
+    "max_confirmed_returned_per_request": 100,
+    "max_confirmed_filter_ids": 101
+  },
+  "first_confirmed": "2026-09-20",
+  "last_confirmed": "2026-09-20",
+  "clarifies": [
+    "NICO-SNAPSHOT-LIVE-20260914-BATCH"
+  ]
+}

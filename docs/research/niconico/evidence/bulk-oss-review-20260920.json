@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "checked_date": "2026-09-20",
+  "timezone": "Asia/Tokyo",
+  "sources": [
+    {
+      "repository": "kongyo2/niconicojs",
+      "commit": "e15fc91920567804685a6c45ebc08c2a8639f52e",
+      "path": "src/videos.ts",
+      "url": "https://raw.githubusercontent.com/kongyo2/niconicojs/e15fc91920567804685a6c45ebc08c2a8639f52e/src/videos.ts",
+      "sha256": "2ca36046ded2486d7629123f5761ffdc77ada64786b71a1e4525908568fab287",
+      "checked_at": "2026-09-19T18:51:42.538853+00:00"
+    },
+    {
+      "repository": "kongyo2/niconicojs",
+      "commit": "e15fc91920567804685a6c45ebc08c2a8639f52e",
+      "path": "src/types.ts",
+      "url": "https://raw.githubusercontent.com/kongyo2/niconicojs/e15fc91920567804685a6c45ebc08c2a8639f52e/src/types.ts",
+      "sha256": "f0a9f91a12abee32c8a5433bd3566488dbe26ce87a08da54a5c4dbde8eaca6b2",
+      "checked_at": "2026-09-19T18:51:43.019278+00:00"
+    },
+    {
+      "repository": "kongyo2/niconicojs",
+      "commit": "e15fc91920567804685a6c45ebc08c2a8639f52e",
+      "path": "src/http.ts",
+      "url": "https://raw.githubusercontent.com/kongyo2/niconicojs/e15fc91920567804685a6c45ebc08c2a8639f52e/src/http.ts",
+      "sha256": "acfeeccc812e6de3722f7de38c7999546ffb44a6266a5507be598c715852e8a3",
+      "checked_at": "2026-09-19T18:51:43.445097+00:00"
+    },
+    {
+      "repository": "kongyo2/niconicojs",
+      "commit": "e15fc91920567804685a6c45ebc08c2a8639f52e",
+      "path": "test/lists-and-videos.test.ts",
+      "url": "https://raw.githubusercontent.com/kongyo2/niconicojs/e15fc91920567804685a6c45ebc08c2a8639f52e/test/lists-and-videos.test.ts",
+      "sha256": "1d5e97b55686ea2b730cc6c1a4bc1f0214185fe3b50c5e84a095cc0e02b516e2",
+      "checked_at": "2026-09-19T18:51:43.854973+00:00"
+    },
+    {
+      "repository": "kongyo2/niconicojs",
+      "commit": "e15fc91920567804685a6c45ebc08c2a8639f52e",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/kongyo2/niconicojs/e15fc91920567804685a6c45ebc08c2a8639f52e/README.md",
+      "sha256": "2cf439c94f28d5cda02413b158e86e5ff3ceede1623857a57e14d3f5285463b6",
+      "checked_at": "2026-09-19T18:51:44.173174+00:00"
+    },
+    {
+      "repository": "niconicolibs/niconico.py",
+      "commit": "9d9c62f61f88ce640b4914007a25ddbb5d756582",
+      "path": "niconico/video/__init__.py",
+      "url": "https://raw.githubusercontent.com/niconicolibs/niconico.py/9d9c62f61f88ce640b4914007a25ddbb5d756582/niconico/video/__init__.py",
+      "sha256": "3a87c7eeee5f268c21067c103126d7bae02f374ef6af03c9110efb341a2bd6ed",
+      "checked_at": "2026-09-19T18:51:44.680448+00:00"
+    },
+    {
+      "repository": "niconicolibs/niconico.py",
+      "commit": "9d9c62f61f88ce640b4914007a25ddbb5d756582",
+      "path": "niconico/objects/nvapi.py",
+      "url": "https://raw.githubusercontent.com/niconicolibs/niconico.py/9d9c62f61f88ce640b4914007a25ddbb5d756582/niconico/objects/nvapi.py",
+      "sha256": "598e428839ea11c3dd632af567ed2021142e78a88a47099f9b4ac0326dc5cad3",
+      "checked_at": "2026-09-19T18:55:23.618974+00:00"
+    },
+    {
+      "repository": "niconicolibs/niconico.py",
+      "commit": "9d9c62f61f88ce640b4914007a25ddbb5d756582",
+      "path": "niconico/objects/video/__init__.py",
+      "url": "https://raw.githubusercontent.com/niconicolibs/niconico.py/9d9c62f61f88ce640b4914007a25ddbb5d756582/niconico/objects/video/__init__.py",
+      "sha256": "71ce4e6bb641a985259c558cf47ddad9bef9da94a2f19f0b63863adbfdfd1460",
+      "checked_at": "2026-09-19T18:55:23.952346+00:00"
+    },
+    {
+      "repository": "niconicolibs/niconico.py",
+      "commit": "9d9c62f61f88ce640b4914007a25ddbb5d756582",
+      "path": "niconico/niconico.py",
+      "url": "https://raw.githubusercontent.com/niconicolibs/niconico.py/9d9c62f61f88ce640b4914007a25ddbb5d756582/niconico/niconico.py",
+      "sha256": "bccc7db92189c5954542923d967ad3f3dfe564347349515abed17171604ba599",
+      "checked_at": "2026-09-19T18:55:24.271189+00:00"
+    }
+  ],
+  "authors": [
+    "niconicolibs contributors",
+    "kongyo2/niconicojs contributors"
+  ],
+  "code_observations": [
+    {
+      "repository": "niconicolibs/niconico.py",
+      "evidence_level": "CONFIRMED-CODE",
+      "functions": [
+        "VideoClient.get_video",
+        "VideoClient.get_videos"
+      ],
+      "request": "GET /v1/videos?watchIds=<ONE_VIDEO_ID>",
+      "bulk_implementation": "for loop calls get_video once per input; omitted results are not returned",
+      "response": "NvAPIResponse[VideosData].data.items[].video -> EssentialVideo.owner",
+      "tags": "no tags field in reviewed EssentialVideo; get_video_tags uses separate /v2/videos/{id}/tags with X-Tag-Edit-Key",
+      "authentication": "no login_required decorator on these readers; shared session may carry login state"
+    },
+    {
+      "repository": "kongyo2/niconicojs",
+      "evidence_level": "CONFIRMED-CODE",
+      "functions": [
+        "createVideosApi.getVideo",
+        "createVideosApi.getVideos",
+        "buildQuery"
+      ],
+      "request": "GET /v1/videos?watchIds=<ONE_VIDEO_ID>",
+      "bulk_implementation": "one getVideo per input; default concurrency 4; HTTP retry layer can increase attempts",
+      "response": "data.items[].watchId/video; EssentialVideo.owner allows null; known tag fields absent but index signature permits unknown fields",
+      "authentication": "optional session in HTTP client; frontend ID/version and origin headers",
+      "query_encoding": "buildQuery(array) repeats parameter; current getVideo sends scalar"
+    },
+    {
+      "repository": "kongyo2/niconicojs",
+      "evidence_level": "REPORTED",
+      "path": "README.md API notes and commit 1a9883e50ec51f3bcde6db281065ecb39ece24ef",
+      "reported_at": "2026-09-08",
+      "claim": "Repeated watchIds yielded only last item; implementation changed to per-ID calls",
+      "limitation": "author report alone did not establish behavior for comma-separated IDs"
+    }
+  ],
+  "local_prior": {
+    "document": "FOLLOWUP-APPS-WEB-20260913.md in local research collection (not distributed here)",
+    "claim": "official Web CSV/explode:false wrapper and iOS list model indicated bulk candidate; no multi-ID live response",
+    "new_relationship": "observed request shapes did not produce bulk result; static wrapper is not a success guarantee"
+  },
+  "privacy": "Selected public source files retained only in ignored local research cache; no repository clone or copied source bundle distributed."
+}

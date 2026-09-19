@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-19T19:04:48.088025+00:00",
+  "authentication": "none; unauthenticated initial HTML GET",
+  "client": "Python3.12 urllib + HTMLParser; not an executed browser DOM",
+  "endpoint": "https://www.nicovideo.jp/tag/VOCALOID?sort=f&order=d",
+  "method": "GET",
+  "request_headers": {
+    "User-Agent": "NicoNGResearch/20260920",
+    "Accept-Encoding": "identity"
+  },
+  "http_status": 200,
+  "body_bytes": 96704,
+  "elapsed_ms": 440.16,
+  "html_sha256": "89afcc0886c122ff4d9bb089a8148cf1fc0f40f6b3c1af346e01bda9dae2bd2e",
+  "server_response_nodes": 1,
+  "data_path": "data.response.$getSearchVideoV2.data.items",
+  "items": 32,
+  "distinct_video_ids": 32,
+  "owner_id_present": 32,
+  "owner_null_or_missing": 0,
+  "owner_type_counts": {
+    "user": 32
+  },
+  "owner_id_type_counts": {
+    "str": 32
+  },
+  "tag_or_tags_fields_present": 0,
+  "html_watch_link_distinct": 0,
+  "item_ids_with_html_watch_link": 0,
+  "html_user_anchor_count": 0,
+  "client_assets": [
+    "https://resource.video.nimg.jp/web/scripts/nvpc_next/assets/manifest-baf86e63.js",
+    "https://resource.video.nimg.jp/web/scripts/nvpc_next/assets/entry.client-BDJkQFwJ.js",
+    "https://resource.video.nimg.jp/web/scripts/nvpc_next/assets/bridge-D5WxNeTE.js"
+  ],
+  "privacy": "IDs, owner values, titles, raw HTML and arbitrary fields omitted; public build asset URLs only.",
+  "request_count_this_measurement": 1,
+  "prior_structure_discovery_gets": 1,
+  "browser_runtime_verification": "Not performed: in-app browser navigation was blocked by site-safety policy; no alternate browser workaround attempted."
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "S-SNAPSHOT-BOUNDARY-20260920",
+    "file": "evidence/snapshot-boundary-20260920.json",
+    "kind": "sanitized-live-public-metadata-check",
+    "observed_at": "2026-09-20",
+    "sha256": "04578487edb3768b1bd4e06930f3e48d3bb8fe0c00dd3e0890fc911ba3803674"
+  },
+  {
+    "id": "S-SNAPSHOT-BOUNDARY-SOURCES-20260920",
+    "file": "evidence/snapshot-boundary-sources-20260920.json",
+    "kind": "revision-pinned-public-source-review",
+    "observed_at": "2026-09-20",
+    "sha256": "0cfee340b7e5792a5cd6f2428d8d25858035b098c7e4b08e48d25258a2d5b150"
+  },
+  {
+    "id": "S-HANDOFF-REVIEW-20260920",
+    "file": "evidence/handoff-review-20260920.json",
+    "kind": "provided-contribution-review",
+    "observed_at": "2026-09-20",
+    "sha256": "cfc084638cf74c6d636992730c608bdcd8a509bf8ce8cfa0c31748729db03a34"
+  },
+  {
+    "id": "S-COMMUNITY-METADATA-REVIEW-20260920",
+    "file": "evidence/community-metadata-review-20260920.json",
+    "kind": "sanitized-provided-summary-review",
+    "observed_at": "2026-09-20",
+    "sha256": "e8badf171e28c6e0b8905097d321a6600c0bbfeaece6ffee76fc6f392bca244b"
+  },
+  {
+    "id": "S-BULK-OSS-20260920",
+    "file": "evidence/bulk-oss-review-20260920.json",
+    "kind": "revision-pinned-public-source-review",
+    "observed_at": "2026-09-20",
+    "sha256": "d0ff88aad3b4106acd5d0a39becb9bc4d8cb7723a9757adf7b590771c7f2dc24"
+  },
+  {
+    "id": "S-VIDEO-LOOKUP-ENCODING-20260920",
+    "file": "evidence/video-lookup-encoding-20260920.json",
+    "kind": "sanitized-live-public-metadata-check",
+    "observed_at": "2026-09-20",
+    "sha256": "6afccfab20f13ae7e9fd32ab49a52b62262072e7427681e0b9da5d5190bf9871"
+  },
+  {
+    "id": "S-VIDEO-LOOKUP-CONTROL-20260920",
+    "file": "evidence/video-lookup-control-20260920.json",
+    "kind": "sanitized-live-public-metadata-check",
+    "observed_at": "2026-09-20",
+    "sha256": "57112e8aaac3bb160ccdbee93bf4a8531e4368e5af7e4e1fa694ed1c696d4ddc"
+  },
+  {
+    "id": "S-METADATA-ACCURACY-20260920",
+    "file": "evidence/metadata-accuracy-new-20260920.json",
+    "kind": "sanitized-live-public-metadata-comparison",
+    "observed_at": "2026-09-20",
+    "sha256": "3267a518c65fa3205e7d9f16ee25ab42fb805775c2f4adb52c099ac4cb9cb2cf"
+  },
+  {
+    "id": "S-BROWSER-INITIAL-20260920",
+    "file": "evidence/browser-initial-data-20260920.json",
+    "kind": "sanitized-public-initial-html-analysis",
+    "observed_at": "2026-09-20",
+    "sha256": "10d8525e7ca3b6060a5a8dfc3754b7aef515eec54134a6c1ce77f009ebbd6ac6"
+  },
+  {
+    "id": "S-SPA-LIFECYCLE-CODE-20260920",
+    "file": "evidence/spa-lifecycle-code-20260920.json",
+    "kind": "public-client-static-review",
+    "observed_at": "2026-09-20",
+    "sha256": "110a6c3a6229f2c244a184021a28ab535737561a071520b1042673a2b8c0be95"
+  },
+  {
+    "id": "S-NG-INTEGRATION-CONTRACT-20260920",
+    "file": "evidence/ng-integration-contract-20260920.json",
+    "kind": "local-product-code-and-offline-synthetic-check",
+    "observed_at": "2026-09-20",
+    "sha256": "3db27bd87bfcbaea2906807a84e8ddd19fc049ff894b0cb4861782b70736d48a"
+  }
+]

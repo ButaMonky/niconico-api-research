@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+local/
+raw/
+captures/
+*.har
+*.log
+.env
+.env.*
+docs/research/niconico/exports/
+.superpowers/

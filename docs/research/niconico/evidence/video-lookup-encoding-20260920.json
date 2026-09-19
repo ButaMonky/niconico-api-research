@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-19T18:54:01.729095+00:00",
+  "endpoint": "https://nvapi.nicovideo.jp/v1/videos",
+  "method": "GET",
+  "headers": {
+    "User-Agent": "NicoNGResearch/20260920",
+    "Accept": "application/json",
+    "Accept-Encoding": "identity",
+    "X-Frontend-Id": "6",
+    "X-Frontend-Version": "0",
+    "Origin": "https://www.nicovideo.jp",
+    "Referer": "https://www.nicovideo.jp/"
+  },
+  "authentication": "none; no Cookie or login session",
+  "general_member_session_tested": false,
+  "public_research_video_ids": [
+    "sm15630734",
+    "sm1097445"
+  ],
+  "automatic_retries": 0,
+  "requests": [
+    {
+      "started_at": "2026-09-19T18:54:01.729095+00:00",
+      "url_ascii_bytes": 68,
+      "http_status": 400,
+      "cache_control": "private, no-cache",
+      "elapsed_ms": 195.91,
+      "response_body_bytes": 55,
+      "response_sha256": "46bc1abbb5dfff3e16553e68ae96f9e7dc1a0f790457200784d1bc15b83fcc94",
+      "body_status": 400,
+      "failure": "http_error",
+      "case": "csv"
+    }
+  ],
+  "stopped_reason": "csv: invalid HTTP/body/schema or transport failure"
+}
