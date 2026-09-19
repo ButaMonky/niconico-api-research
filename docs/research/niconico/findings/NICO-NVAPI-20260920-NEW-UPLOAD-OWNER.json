@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "NICO-NVAPI-20260920-NEW-UPLOAD-OWNER",
+  "title": "snapshot未収録の新着3件をplaylistで投稿者補完",
+  "status": "traffic",
+  "platform": "anonymous direct HTTP",
+  "app_version": null,
+  "observed_at": "2026-09-20T05:59:19+09:00",
+  "claim": "公開新着3動画はsnapshot0件、playlistは3件全返却。後続の対照でowner ID/typeはnvapi検索と3/3一致。thumbinfo2条件とwatch JSONは406、独立した視聴情報照合は未完了。タグ補完の証明ではない。",
+  "evidence": [
+    "S-PLAYLIST-NEW-UPLOADS-20260920"
+  ],
+  "evidence_level": [
+    "CONFIRMED-LIVE",
+    "FAILED for independent controls"
+  ],
+  "request": {
+    "playlist": "POST https://nvapi.nicovideo.jp/v1/playlist/request",
+    "snapshot": "GET ID filters",
+    "search": "GET /v2/search/video; researcher-selected public tag query",
+    "controls": [
+      "getthumbinfo",
+      "watch?responseType=json"
+    ]
+  },
+  "response": {
+    "snapshot_returned": 0,
+    "playlist_returned": 3,
+    "search_owner_id_type_matches": 3,
+    "independent_control_matches": null,
+    "independent_control_http_statuses": [
+      406,
+      406,
+      406
+    ],
+    "tag_fields_present": 0
+  },
+  "authentication": "No Cookie/Authorization/key; not general-member login or browser CORS test.",
+  "unconfirmed": [
+    "Independent ext/watch controls unavailable under observed conditions; no browser workarounds attempted.",
+    "Search and playlist are both nvapi routes; equality is not independent current-watch proof.",
+    "Snapshot version was unchanged across endpoints, but is not a guarantee of per-video refresh time.",
+    "No tag freshness claim; playlist has no tag fields in sample.",
+    "Hidden/channel cases",
+    "Cause of HTTP406",
+    "Server-side persistence/side effects"
+  ],
+  "supersedes": [],
+  "clarifies": [
+    "NICO-NVAPI-20260920-PLAYLIST-BATCH-100"
+  ]
+}

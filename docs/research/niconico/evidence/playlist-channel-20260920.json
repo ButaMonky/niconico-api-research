@@ -1,0 +1,273 @@
+{
+  "reviewed_at": "2026-09-20T06:13:51+09:00",
+  "new_niconico_requests": 3,
+  "range_filter_attempt": {
+    "checked_at": "2026-09-20T06:09:25+09:00",
+    "case": "channel",
+    "authentication": "none; no account credentials",
+    "requests": [
+      {
+        "label": "channel_seed",
+        "endpoint": "https://snapshot.search.nicovideo.jp/api/v2/snapshot/video/contents/search",
+        "method": "GET",
+        "query": {
+          "q": "",
+          "targets": "title",
+          "fields": "contentId,channelId,userId,startTime",
+          "_sort": "-viewCounter",
+          "_limit": 2,
+          "_offset": 0,
+          "_context": "NiconicoResearch",
+          "filters[channelId][gte]": 1
+        },
+        "body_form": null,
+        "headers": {
+          "User-Agent": "NiconicoResearch/20260920",
+          "Accept": "application/json",
+          "Accept-Encoding": "identity"
+        },
+        "http_status": 400,
+        "bytes": 395,
+        "elapsed_ms": 148.92,
+        "body_sha256": "df5dfb54cad1e1cbb5a3b0af159507918077e6a96b1f24e32cb745d32261ce12",
+        "meta_status": 400,
+        "error_code": "QUERY_PARSE_ERROR"
+      }
+    ],
+    "observations": [],
+    "raw_saved": false,
+    "retries": 0,
+    "browser_cors_tested": false,
+    "server_side_effects_verified": false,
+    "success": false,
+    "stopped_reason": "ValueError"
+  },
+  "tag_seed_and_batch": {
+    "checked_at": "2026-09-20T06:10:11+09:00",
+    "case": "channel",
+    "authentication": "none; no account credentials",
+    "requests": [
+      {
+        "label": "channel_seed",
+        "endpoint": "https://snapshot.search.nicovideo.jp/api/v2/snapshot/video/contents/search",
+        "method": "GET",
+        "query": {
+          "q": "アニメ",
+          "targets": "tagsExact",
+          "fields": "contentId,channelId,userId,startTime",
+          "_sort": "-viewCounter",
+          "_limit": 10,
+          "_offset": 0,
+          "_context": "NiconicoResearch"
+        },
+        "body_form": null,
+        "headers": {
+          "User-Agent": "NiconicoResearch/20260920",
+          "Accept": "application/json",
+          "Accept-Encoding": "identity"
+        },
+        "http_status": 200,
+        "bytes": 1105,
+        "elapsed_ms": 362.66,
+        "body_sha256": "67a87342910215a7ed2d31a36f80775362289a6259829b44dff541381165e4be",
+        "meta_status": 200,
+        "error_code": null,
+        "returned": 10,
+        "channel_id_present": 4
+      },
+      {
+        "label": "mixed_channel_user",
+        "endpoint": "https://nvapi.nicovideo.jp/v1/playlist/request",
+        "method": "POST",
+        "query": null,
+        "body_form": {
+          "title": "Metadata research",
+          "watchIds": "so30413239,so23335421,sm9"
+        },
+        "headers": {
+          "User-Agent": "NiconicoResearch/20260920",
+          "Accept": "application/json",
+          "Accept-Encoding": "identity",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "X-Frontend-Id": "6",
+          "X-Frontend-Version": "0",
+          "X-Request-With": "https://www.nicovideo.jp",
+          "Origin": "https://www.nicovideo.jp"
+        },
+        "http_status": 200,
+        "bytes": 5084,
+        "elapsed_ms": 176.9,
+        "body_sha256": "bedf5370b8a39f146922362a3aacb1b76aebec126b059b33897a917edf353b9f",
+        "meta_status": 200,
+        "error_code": null,
+        "input_count": 3,
+        "unique_input": 3,
+        "data_keys": [
+          "id",
+          "items",
+          "meta",
+          "totalCount"
+        ],
+        "total_count": 3,
+        "returned": 3,
+        "distinct_returned_watch_ids": 3,
+        "item_summaries": [
+          {
+            "watch_id": "so30413239",
+            "content_null": false,
+            "content_keys": [
+              "9d091f87",
+              "acf68865",
+              "contentType",
+              "count",
+              "duration",
+              "id",
+              "isChannelVideo",
+              "isMuted",
+              "isPaymentRequired",
+              "latestCommentSummary",
+              "owner",
+              "playbackPosition",
+              "registeredAt",
+              "requireSensitiveMasking",
+              "shortDescription",
+              "thumbnail",
+              "title",
+              "type",
+              "videoLive"
+            ],
+            "content_id_matches_input": true,
+            "owner_id_present": true,
+            "owner_keys": [
+              "iconUrl",
+              "id",
+              "name",
+              "ownerType",
+              "type",
+              "visibility"
+            ],
+            "owner_type": "channel",
+            "owner_visibility": "visible",
+            "tag_fields": []
+          },
+          {
+            "watch_id": "so23335421",
+            "content_null": false,
+            "content_keys": [
+              "9d091f87",
+              "acf68865",
+              "contentType",
+              "count",
+              "duration",
+              "id",
+              "isChannelVideo",
+              "isMuted",
+              "isPaymentRequired",
+              "latestCommentSummary",
+              "owner",
+              "playbackPosition",
+              "registeredAt",
+              "requireSensitiveMasking",
+              "shortDescription",
+              "thumbnail",
+              "title",
+              "type",
+              "videoLive"
+            ],
+            "content_id_matches_input": true,
+            "owner_id_present": true,
+            "owner_keys": [
+              "iconUrl",
+              "id",
+              "name",
+              "ownerType",
+              "type",
+              "visibility"
+            ],
+            "owner_type": "channel",
+            "owner_visibility": "visible",
+            "tag_fields": []
+          },
+          {
+            "watch_id": "sm9",
+            "content_null": false,
+            "content_keys": [
+              "9d091f87",
+              "acf68865",
+              "contentType",
+              "count",
+              "duration",
+              "id",
+              "isChannelVideo",
+              "isMuted",
+              "isPaymentRequired",
+              "latestCommentSummary",
+              "owner",
+              "playbackPosition",
+              "registeredAt",
+              "requireSensitiveMasking",
+              "shortDescription",
+              "thumbnail",
+              "title",
+              "type",
+              "videoLive"
+            ],
+            "content_id_matches_input": true,
+            "owner_id_present": true,
+            "owner_keys": [
+              "iconUrl",
+              "id",
+              "name",
+              "ownerType",
+              "type",
+              "visibility"
+            ],
+            "owner_type": "user",
+            "owner_visibility": "visible",
+            "tag_fields": []
+          }
+        ],
+        "missing_unique_input_count": 0
+      }
+    ],
+    "observations": [
+      {
+        "public_video_id": "so30413239",
+        "playlist_present": true,
+        "snapshot_owner_type": "channel",
+        "playlist_owner_type": "channel",
+        "owner_id_exact_equal": false,
+        "owner_id_numeric_part_equal": true,
+        "owner_id_format": "ch-prefixed",
+        "snapshot_user_id_present": false
+      },
+      {
+        "public_video_id": "so23335421",
+        "playlist_present": true,
+        "snapshot_owner_type": "channel",
+        "playlist_owner_type": "channel",
+        "owner_id_exact_equal": false,
+        "owner_id_numeric_part_equal": true,
+        "owner_id_format": "ch-prefixed",
+        "snapshot_user_id_present": false
+      }
+    ],
+    "raw_saved": false,
+    "retries": 0,
+    "browser_cors_tested": false,
+    "server_side_effects_verified": false,
+    "public_video_ids": [
+      "so30413239",
+      "so23335421",
+      "sm9"
+    ],
+    "success": false
+  },
+  "interpretation": "HTTP200 three returned. success:false in diagnostic means strict source-ID equality failed, not transport or total batch failure. Both channel IDs are ch-prefixed in playlist, numeric in snapshot; numeric parts match for two samples.",
+  "limits": [
+    "Only two visible channels and one user control.",
+    "No account-deletion or hidden inference.",
+    "channelId gte 1 query failed as a whole; exact offending parameter not isolated.",
+    "No watch-page/independent account ownership control; no persistence/CORS/member test."
+  ]
+}

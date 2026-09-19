@@ -43,3 +43,11 @@
 ## 最新：R22完了 → R23（Astra高）
 
 「最新Git/AGENTSとPLAYLIST-REQUEST-BULK.mdのR22、METADATA-ACCURACY.mdを読み、R23としてplaylist/requestが新着動画の投稿者補完に使えるかを調べてください。今はニコニコ本体の解析に集中し、ZenzaWatch固有コードの解析・制作は行いません。通常100件成功は繰り返さず、公開新着動画の最大3件についてsnapshotの現在の収録状態・playlist/requestのowner・必要時の個別情報を少数通信で比較してください。過去の索引欠落2件を使う場合も同じ欠落が続くと仮定せず、今回は新取得元への適用と現時点の一致を確認する調査だと記録してください。ID/種別の不一致・missing/nullを分け、hiddenやchannelを無理に混ぜず別条件へ回してください。本体を変更せず、解析資料・共有概要・次の指示を更新してください。Astra高。」
+
+## R23→R24→R25の終了と次の解析（Astra高）
+
+R23終了後の指示は「channelを少数混在させ、snapshotとのowner型とID表記を比較する」、R24終了後は「不正ID・重複・欠落を少数条件で分け、全体失敗と部分返却を記録する」。いずれもR25まで実施済み。今後そのまま再実行しない。
+
+### 最新：R25完了 → R12
+
+「最新Git/AGENTS、START-HERE.md、NG-UPDATE-READINESS.md、TASKS.mdを読んでください。R23〜R25の結果を再通信で繰り返さず、R12として現行nvcommentの取得要求・応答を独立資料化してください。既存コメント資料と出典台帳から重複を除き、otya128のGist、yt-dlpのNiconico extractor等の参照revisionを固定して差分と新規項目を確認してください。thread/fork/vposMs/commands/userId/nicoruを整理し、コード確認・外部報告・現在の実通信を分けてください。有効なthreadKey/postKeyやCookie、本文・個人識別値を共有しないでください。既存記録で足りれば再通信せず、必要時だけ少数の読取を検討し、投稿や大量過去ログ取得はしません。Zenza固有コード・NG本体を変更せず、解析資料・指定共有outputs・次の指示文を更新してください。Astra高、GitHub反映は最後。」

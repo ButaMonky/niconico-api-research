@@ -1,0 +1,286 @@
+{
+  "reviewed_at": "2026-09-20T06:13:51+09:00",
+  "new_niconico_requests": 4,
+  "invalid_and_duplicate_conditions": {
+    "checked_at": "2026-09-20T06:10:51+09:00",
+    "case": "mixed",
+    "authentication": "none; no account credentials",
+    "requests": [
+      {
+        "label": "unavailable_candidate",
+        "endpoint": "https://nvapi.nicovideo.jp/v1/playlist/request",
+        "method": "POST",
+        "query": null,
+        "body_form": {
+          "title": "Metadata research",
+          "watchIds": "sm9,sm0"
+        },
+        "headers": {
+          "User-Agent": "NiconicoResearch/20260920",
+          "Accept": "application/json",
+          "Accept-Encoding": "identity",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "X-Frontend-Id": "6",
+          "X-Frontend-Version": "0",
+          "X-Request-With": "https://www.nicovideo.jp",
+          "Origin": "https://www.nicovideo.jp"
+        },
+        "http_status": 400,
+        "bytes": 55,
+        "elapsed_ms": 147.71,
+        "body_sha256": "46bc1abbb5dfff3e16553e68ae96f9e7dc1a0f790457200784d1bc15b83fcc94",
+        "meta_status": 400,
+        "error_code": "INVALID_PARAMETER",
+        "input_count": 2,
+        "unique_input": 2
+      },
+      {
+        "label": "malformed",
+        "endpoint": "https://nvapi.nicovideo.jp/v1/playlist/request",
+        "method": "POST",
+        "query": null,
+        "body_form": {
+          "title": "Metadata research",
+          "watchIds": "sm9,not-a-video"
+        },
+        "headers": {
+          "User-Agent": "NiconicoResearch/20260920",
+          "Accept": "application/json",
+          "Accept-Encoding": "identity",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "X-Frontend-Id": "6",
+          "X-Frontend-Version": "0",
+          "X-Request-With": "https://www.nicovideo.jp",
+          "Origin": "https://www.nicovideo.jp"
+        },
+        "http_status": 400,
+        "bytes": 55,
+        "elapsed_ms": 129.45,
+        "body_sha256": "46bc1abbb5dfff3e16553e68ae96f9e7dc1a0f790457200784d1bc15b83fcc94",
+        "meta_status": 400,
+        "error_code": "INVALID_PARAMETER",
+        "input_count": 2,
+        "unique_input": 2
+      },
+      {
+        "label": "duplicates",
+        "endpoint": "https://nvapi.nicovideo.jp/v1/playlist/request",
+        "method": "POST",
+        "query": null,
+        "body_form": {
+          "title": "Metadata research",
+          "watchIds": "sm9,sm9"
+        },
+        "headers": {
+          "User-Agent": "NiconicoResearch/20260920",
+          "Accept": "application/json",
+          "Accept-Encoding": "identity",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "X-Frontend-Id": "6",
+          "X-Frontend-Version": "0",
+          "X-Request-With": "https://www.nicovideo.jp",
+          "Origin": "https://www.nicovideo.jp"
+        },
+        "http_status": 200,
+        "bytes": 3193,
+        "elapsed_ms": 158.88,
+        "body_sha256": "735b90f4c42036fcc7db5c368d2c4754a95577fd805a2e6956f1659056bfe236",
+        "meta_status": 200,
+        "error_code": null,
+        "input_count": 2,
+        "unique_input": 1,
+        "data_keys": [
+          "id",
+          "items",
+          "meta",
+          "totalCount"
+        ],
+        "total_count": 2,
+        "returned": 2,
+        "distinct_returned_watch_ids": 1,
+        "item_summaries": [
+          {
+            "watch_id": "sm9",
+            "content_null": false,
+            "content_keys": [
+              "9d091f87",
+              "acf68865",
+              "contentType",
+              "count",
+              "duration",
+              "id",
+              "isChannelVideo",
+              "isMuted",
+              "isPaymentRequired",
+              "latestCommentSummary",
+              "owner",
+              "playbackPosition",
+              "registeredAt",
+              "requireSensitiveMasking",
+              "shortDescription",
+              "thumbnail",
+              "title",
+              "type",
+              "videoLive"
+            ],
+            "content_id_matches_input": true,
+            "owner_id_present": true,
+            "owner_keys": [
+              "iconUrl",
+              "id",
+              "name",
+              "ownerType",
+              "type",
+              "visibility"
+            ],
+            "owner_type": "user",
+            "owner_visibility": "visible",
+            "tag_fields": []
+          },
+          {
+            "watch_id": "sm9",
+            "content_null": false,
+            "content_keys": [
+              "9d091f87",
+              "acf68865",
+              "contentType",
+              "count",
+              "duration",
+              "id",
+              "isChannelVideo",
+              "isMuted",
+              "isPaymentRequired",
+              "latestCommentSummary",
+              "owner",
+              "playbackPosition",
+              "registeredAt",
+              "requireSensitiveMasking",
+              "shortDescription",
+              "thumbnail",
+              "title",
+              "type",
+              "videoLive"
+            ],
+            "content_id_matches_input": true,
+            "owner_id_present": true,
+            "owner_keys": [
+              "iconUrl",
+              "id",
+              "name",
+              "ownerType",
+              "type",
+              "visibility"
+            ],
+            "owner_type": "user",
+            "owner_visibility": "visible",
+            "tag_fields": []
+          }
+        ],
+        "missing_unique_input_count": 0
+      }
+    ],
+    "observations": [],
+    "raw_saved": false,
+    "retries": 0,
+    "browser_cors_tested": false,
+    "server_side_effects_verified": false,
+    "success": true
+  },
+  "positive_id_condition": {
+    "checked_at": "2026-09-20T06:11:39+09:00",
+    "case": "availability",
+    "authentication": "none; no account credentials",
+    "requests": [
+      {
+        "label": "positive_id_candidate",
+        "endpoint": "https://nvapi.nicovideo.jp/v1/playlist/request",
+        "method": "POST",
+        "query": null,
+        "body_form": {
+          "title": "Metadata research",
+          "watchIds": "sm9,sm1"
+        },
+        "headers": {
+          "User-Agent": "NiconicoResearch/20260920",
+          "Accept": "application/json",
+          "Accept-Encoding": "identity",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "X-Frontend-Id": "6",
+          "X-Frontend-Version": "0",
+          "X-Request-With": "https://www.nicovideo.jp",
+          "Origin": "https://www.nicovideo.jp"
+        },
+        "http_status": 200,
+        "bytes": 1672,
+        "elapsed_ms": 380.96,
+        "body_sha256": "d4754be3240063042b2ced23ffa8b36ea8ff23297b8e9aa9513e50d704e0c92c",
+        "meta_status": 200,
+        "error_code": null,
+        "input_count": 2,
+        "unique_input": 2,
+        "data_keys": [
+          "id",
+          "items",
+          "meta",
+          "totalCount"
+        ],
+        "total_count": 2,
+        "returned": 1,
+        "distinct_returned_watch_ids": 1,
+        "item_summaries": [
+          {
+            "watch_id": "sm9",
+            "content_null": false,
+            "content_keys": [
+              "9d091f87",
+              "acf68865",
+              "contentType",
+              "count",
+              "duration",
+              "id",
+              "isChannelVideo",
+              "isMuted",
+              "isPaymentRequired",
+              "latestCommentSummary",
+              "owner",
+              "playbackPosition",
+              "registeredAt",
+              "requireSensitiveMasking",
+              "shortDescription",
+              "thumbnail",
+              "title",
+              "type",
+              "videoLive"
+            ],
+            "content_id_matches_input": true,
+            "owner_id_present": true,
+            "owner_keys": [
+              "iconUrl",
+              "id",
+              "name",
+              "ownerType",
+              "type",
+              "visibility"
+            ],
+            "owner_type": "user",
+            "owner_visibility": "visible",
+            "tag_fields": []
+          }
+        ],
+        "missing_unique_input_count": 1
+      }
+    ],
+    "observations": [],
+    "raw_saved": false,
+    "retries": 0,
+    "browser_cors_tested": false,
+    "server_side_effects_verified": false,
+    "success": true
+  },
+  "limits": [
+    "sm1 omission does not establish deletion/private status or its reason.",
+    "sm0 rejection cannot establish handling of every nonexistent ID.",
+    "totalCount is not generally defined by this sample; it does not equal returned item count in one observed response.",
+    "No rate limit, generic error recovery or browser runtime test."
+  ]
+}

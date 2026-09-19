@@ -1,0 +1,337 @@
+{
+  "reviewed_at": "2026-09-20T06:07:48+09:00",
+  "new_niconico_requests": 10,
+  "parts": {
+    "version_start": {
+      "checked_at": "2026-09-20T05:56:55+09:00",
+      "endpoint": "https://snapshot.search.nicovideo.jp/api/v2/snapshot/version",
+      "http_status": 200,
+      "version": {
+        "last_modified": "2026-09-19T07:07:12+09:00"
+      },
+      "requests": 1
+    },
+    "initial": {
+      "checked_at": "2026-09-20T05:59:19+09:00",
+      "authentication": "anonymous; no Cookie/Authorization/key; no logged-in member session",
+      "selection": "three newest public tag=VOCALOID results; research query, not personal history",
+      "requests": [
+        {
+          "label": "newest_search",
+          "endpoint": "https://nvapi.nicovideo.jp/v2/search/video",
+          "method": "GET",
+          "query": {
+            "tag": "VOCALOID",
+            "sortKey": "registeredAt",
+            "sortOrder": "desc",
+            "pageSize": 3,
+            "page": 1,
+            "sensitiveContents": "mask"
+          },
+          "http_status": 200,
+          "body_bytes": 5350,
+          "elapsed_ms": 206.02,
+          "body_sha256": "9084dfafad9dc94544e914157104a23fddb1bffbf3bcccea653c5fe30e65daa1",
+          "meta_status": 200
+        },
+        {
+          "label": "snapshot_ids",
+          "endpoint": "https://snapshot.search.nicovideo.jp/api/v2/snapshot/video/contents/search",
+          "method": "GET",
+          "query": {
+            "q": "",
+            "targets": "title",
+            "fields": "contentId,tags,userId,channelId,startTime",
+            "_sort": "-viewCounter",
+            "_offset": 0,
+            "_limit": 100,
+            "_context": "NiconicoResearch",
+            "filters[contentId][0]": "sm46820957",
+            "filters[contentId][1]": "sm46820924",
+            "filters[contentId][2]": "sm46819764"
+          },
+          "http_status": 200,
+          "body_bytes": 92,
+          "elapsed_ms": 150.93,
+          "body_sha256": "995e4ca399591118c3aa1b3a9d7d32b60fe585f1284b3e55a6d0db30b53bf5af",
+          "meta_status": 200
+        },
+        {
+          "label": "playlist_ids",
+          "endpoint": "https://nvapi.nicovideo.jp/v1/playlist/request",
+          "method": "POST",
+          "query": null,
+          "http_status": 200,
+          "body_bytes": 4409,
+          "elapsed_ms": 130.46,
+          "body_sha256": "6d3ef453620a8cd5ed9d2f4fd5efb13e266d2355b8eb266042cc61ee5f9e223d",
+          "body_form": {
+            "title": "Metadata research",
+            "watchIds": "sm46820957,sm46820924,sm46819764"
+          },
+          "meta_status": 200
+        },
+        {
+          "label": "thumbinfo_0",
+          "endpoint": "https://ext.nicovideo.jp/api/getthumbinfo/sm46820957",
+          "method": "GET",
+          "query": null,
+          "http_status": 406,
+          "body_bytes": 407,
+          "elapsed_ms": 136.0,
+          "body_sha256": "6b03399d6b5a453fb5ed494446d4c5ffdbb44eabb2f90fe34fc488b3a5042fc7"
+        }
+      ],
+      "observations": [],
+      "retries": 0,
+      "redirects": false,
+      "raw_saved": false,
+      "browser_cors_tested": false,
+      "request_headers": {
+        "User-Agent": "NiconicoResearch/20260920",
+        "Accept": "application/json",
+        "Accept-Encoding": "identity",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "X-Frontend-Id": "6",
+        "X-Frontend-Version": "0",
+        "X-Request-With": "https://www.nicovideo.jp",
+        "Origin": "https://www.nicovideo.jp"
+      },
+      "reason": "new endpoint applicability to currently selected recent uploads and cross-source owner equality; not repeating a batch boundary",
+      "version_start_input": {
+        "checked_at": "2026-09-20T05:56:55+09:00",
+        "sha256": "be3e06e0338d04687debdfc718d2e167299fe5e866da9362e01eab6696391f71",
+        "prior_requests": 1
+      },
+      "version_before": "2026-09-19T07:07:12+09:00",
+      "public_video_ids": [
+        "sm46820957",
+        "sm46820924",
+        "sm46819764"
+      ],
+      "snapshot_returned": 0,
+      "playlist_returned": 3,
+      "playlist_missing": 0,
+      "playlist_extra": 0,
+      "success": false,
+      "stopped_reason": "ValueError"
+    },
+    "accept_control": {
+      "checked_at": "2026-09-20T06:01:53+09:00",
+      "requests": [
+        {
+          "label": "xml_control",
+          "endpoint": "https://ext.nicovideo.jp/api/getthumbinfo/sm46820957",
+          "method": "GET",
+          "request_headers": {
+            "User-Agent": "NiconicoResearch/20260920",
+            "Accept": "application/xml",
+            "Accept-Encoding": "identity",
+            "X-Frontend-Id": "6",
+            "X-Frontend-Version": "0"
+          },
+          "body_form": null,
+          "http_status": 406,
+          "bytes": 407,
+          "elapsed_ms": 165.6,
+          "body_sha256": "6b03399d6b5a453fb5ed494446d4c5ffdbb44eabb2f90fe34fc488b3a5042fc7"
+        }
+      ],
+      "observations": [],
+      "purpose": "Controlled Accept change after first thumbinfo 406, then continue owner comparison without repeating search/snapshot.",
+      "changed_header": {
+        "Accept_before": "application/json",
+        "Accept_after": "application/xml"
+      },
+      "automatic_retries": 0,
+      "raw_saved": false,
+      "success": false,
+      "stopped_reason": "ValueError"
+    },
+    "watch_control": {
+      "checked_at": "2026-09-20T06:04:15+09:00",
+      "purpose": "Independent public watch-JSON control after two 406 thumbinfo conditions; do not retry thumbinfo",
+      "requests": [
+        {
+          "label": "watch_json",
+          "endpoint": "https://www.nicovideo.jp/watch/sm46820957?responseType=json",
+          "method": "GET",
+          "request_headers": {
+            "User-Agent": "NiconicoResearch/20260920",
+            "Accept": "application/json",
+            "Accept-Encoding": "identity"
+          },
+          "body_form": null,
+          "http_status": 406,
+          "bytes": 393,
+          "elapsed_ms": 217.36,
+          "body_sha256": "36a30c4eeca36b3cabd9d0f460f2678a31e82bf036cc2f71a5b9c238ac5f94d3"
+        }
+      ],
+      "observations": [],
+      "raw_saved": false,
+      "authentication": "none",
+      "automatic_retries": 0,
+      "success": false,
+      "stopped_reason": "ValueError"
+    },
+    "paired": {
+      "checked_at": "2026-09-20T06:05:36+09:00",
+      "reason": "Preserve paired search/playlist equality after initial diagnostic lost transient owner comparisons when separate control failed; no repeat of failed domains.",
+      "requests": [
+        {
+          "label": "paired_search",
+          "endpoint": "https://nvapi.nicovideo.jp/v2/search/video",
+          "method": "GET",
+          "query": {
+            "tag": "VOCALOID",
+            "sortKey": "registeredAt",
+            "sortOrder": "desc",
+            "pageSize": 10,
+            "page": 1,
+            "sensitiveContents": "mask"
+          },
+          "body_form": null,
+          "request_headers": {
+            "User-Agent": "NiconicoResearch/20260920",
+            "Accept": "application/json",
+            "Accept-Encoding": "identity",
+            "X-Frontend-Id": "6",
+            "X-Frontend-Version": "0"
+          },
+          "http_status": 200,
+          "bytes": 14534,
+          "elapsed_ms": 309.02,
+          "body_sha256": "f5a3f74e5a0bf00c633adebbe3fc7cc98883446fa7bfd2550cec92aa0551b8e2"
+        },
+        {
+          "label": "paired_playlist",
+          "endpoint": "https://nvapi.nicovideo.jp/v1/playlist/request",
+          "method": "POST",
+          "query": null,
+          "body_form": {
+            "title": "Metadata research",
+            "watchIds": "sm46820957,sm46820924,sm46819764"
+          },
+          "request_headers": {
+            "User-Agent": "NiconicoResearch/20260920",
+            "Accept": "application/json",
+            "Accept-Encoding": "identity",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "X-Frontend-Id": "6",
+            "X-Frontend-Version": "0",
+            "X-Request-With": "https://www.nicovideo.jp",
+            "Origin": "https://www.nicovideo.jp"
+          },
+          "http_status": 200,
+          "bytes": 4409,
+          "elapsed_ms": 408.83,
+          "body_sha256": "8a144aa1e3d22d2161904589640b25cfd481405f97ad5d6ae76c19864202188d"
+        },
+        {
+          "label": "version_after",
+          "endpoint": "https://snapshot.search.nicovideo.jp/api/v2/snapshot/version",
+          "method": "GET",
+          "query": null,
+          "body_form": null,
+          "request_headers": {
+            "User-Agent": "NiconicoResearch/20260920",
+            "Accept": "application/json",
+            "Accept-Encoding": "identity",
+            "X-Frontend-Id": "6",
+            "X-Frontend-Version": "0"
+          },
+          "http_status": 200,
+          "bytes": 45,
+          "elapsed_ms": 338.96,
+          "body_sha256": "6a734c1bd446925fabc8651b90fb14928ed1eabc2b97500e3e788d2c198e2922"
+        }
+      ],
+      "observations": [
+        {
+          "public_video_id": "sm46820957",
+          "registered_at": "2026-09-20T05:13:28+09:00",
+          "posted_after_index_version": true,
+          "search_present": true,
+          "playlist_present": true,
+          "content_id_matches": true,
+          "owner_id_present": true,
+          "owner_type": "user",
+          "owner_keys": [
+            "iconUrl",
+            "id",
+            "name",
+            "ownerType",
+            "type",
+            "visibility"
+          ],
+          "search_owner_id_equal": true,
+          "search_owner_type_equal": true,
+          "tag_fields_present": [],
+          "independent_control_equal": null
+        },
+        {
+          "public_video_id": "sm46820924",
+          "registered_at": "2026-09-20T04:51:00+09:00",
+          "posted_after_index_version": true,
+          "search_present": true,
+          "playlist_present": true,
+          "content_id_matches": true,
+          "owner_id_present": true,
+          "owner_type": "user",
+          "owner_keys": [
+            "iconUrl",
+            "id",
+            "name",
+            "ownerType",
+            "type",
+            "visibility"
+          ],
+          "search_owner_id_equal": true,
+          "search_owner_type_equal": true,
+          "tag_fields_present": [],
+          "independent_control_equal": null
+        },
+        {
+          "public_video_id": "sm46819764",
+          "registered_at": "2026-09-20T04:30:00+09:00",
+          "posted_after_index_version": true,
+          "search_present": true,
+          "playlist_present": true,
+          "content_id_matches": true,
+          "owner_id_present": true,
+          "owner_type": "user",
+          "owner_keys": [
+            "iconUrl",
+            "id",
+            "name",
+            "ownerType",
+            "type",
+            "visibility"
+          ],
+          "search_owner_id_equal": true,
+          "search_owner_type_equal": true,
+          "tag_fields_present": [],
+          "independent_control_equal": null
+        }
+      ],
+      "raw_saved": false,
+      "authentication": "none",
+      "retries": 0,
+      "version_after": "2026-09-19T07:07:12+09:00",
+      "version_unchanged": true,
+      "success": true
+    }
+  },
+  "diagnostic_correction": {
+    "accept_only_hypothesis": "Not supported: JSON and XML Accept both HTTP406 with identical body hash; cause unresolved.",
+    "lost_partial_observations": "Initial tool appended equality only after thumbinfo success; those in-memory values were not retained. Fixed to preserve primary observations before controls; paired search/playlist comparison performed explicitly, not invented from old response hashes.",
+    "offline_tests": "2 fail before correction, 2 pass after; no claim that real HTTP406 was fixed."
+  },
+  "limits": [
+    "Independent ext/watch controls unavailable under observed conditions; no browser workarounds attempted.",
+    "Search and playlist are both nvapi routes; equality is not independent current-watch proof.",
+    "Snapshot version was unchanged across endpoints, but is not a guarantee of per-video refresh time.",
+    "No tag freshness claim; playlist has no tag fields in sample."
+  ]
+}
