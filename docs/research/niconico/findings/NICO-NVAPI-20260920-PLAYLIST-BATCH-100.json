@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "NICO-NVAPI-20260920-PLAYLIST-BATCH-100",
+  "title": "playlist/requestは100指定100返却・全件owner IDあり",
+  "status": "traffic",
+  "platform": "Direct anonymous HTTP using Web form contract",
+  "app_version": null,
+  "observed_at": "2026-09-20T05:42:51+09:00",
+  "claim": "20→100の2 POSTとも全件返却し欠落・余分0。100件すべてowner ID/type user/visibility visible、tags/tag/tagListなし。100件は158101bytes、802.91msの単発実測。最大件数・鮮度・特殊動画・ブラウザ・副作用は未確認。",
+  "evidence": [
+    "S-PLAYLIST-BATCH-20260920",
+    "S-PLAYLIST-REQUEST-20260920"
+  ],
+  "evidence_level": [
+    "CONFIRMED-LIVE"
+  ],
+  "request": {
+    "method": "POST",
+    "endpoint": "https://nvapi.nicovideo.jp/v1/playlist/request",
+    "content_type": "application/x-www-form-urlencoded",
+    "fields": [
+      "title",
+      "watchIds CSV"
+    ],
+    "specified_counts": [
+      20,
+      100
+    ],
+    "body_bytes": [
+      286,
+      1314
+    ]
+  },
+  "response": {
+    "counts": [
+      20,
+      100
+    ],
+    "missing": [
+      0,
+      0
+    ],
+    "owner_id_present": [
+      20,
+      100
+    ],
+    "tags_present": [
+      0,
+      0
+    ],
+    "batch_max_confirmed": 100,
+    "server_limit": null,
+    "overlap_owner_id_type_matches": 20,
+    "independent_owner_accuracy_sample_from_R21": 2
+  },
+  "authentication": "No Cookie/Authorization/key; logged-in general-member and browser CORS untested.",
+  "unconfirmed": [
+    "100 is a confirmed sample size, not the server maximum.",
+    "All sampled owners are user/visible; hidden/channel/deleted/new-upload cases not tested.",
+    "20 overlapping owner values match across two batches; this is internal consistency, not another independent source.",
+    "Independent thumbinfo equality remains the two-video R21 sample only.",
+    "Opaque data.id.value not read or retained; no proof of statelessness or non-persistence.",
+    "No general-member session or browser CORS test."
+  ],
+  "supersedes": [],
+  "clarifies": [
+    "NICO-NVAPI-20260920-PLAYLIST-REQUEST"
+  ]
+}

@@ -37,3 +37,7 @@ NG実装向けの優先入口：[重要な確認結果](IMPORTANT-FINDINGS.md)�
 ## 最新：R21の新規一括候補
 
 [playlist/requestの匿名2動画一括取得](PLAYLIST-REQUEST-BULK.md)。投稿者ID/typeはthumbinfoと一致、タグなし。R11後の新規通信4。次はR22の件数条件。研究repoをNGに限らない総合資料集へ広げる長期方針は[公開基準](PUBLICATION-GUIDE.md)に記録。
+
+## 最新：投稿者100件の別一括経路を確認
+
+[playlist/request](PLAYLIST-REQUEST-BULK.md)は認証なしで100指定100返却・全件owner IDあり。タグなし。既存snapshot・ブラウザ情報再利用等を含む[これまでの成果一覧](RESEARCH-COVERAGE.md)も参照。次は新着補完のR23。
