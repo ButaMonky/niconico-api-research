@@ -1,0 +1,84 @@
+{
+  "checked_at": "2026-09-20",
+  "timezone": "Asia/Tokyo",
+  "method": "Read only selected public URLs. No full repository clone or source redistribution. API code not executed.",
+  "sources": [
+    {
+      "id": "EXT-SNAPSHOT-OFFICIAL",
+      "author": "ニコニコ運営",
+      "url": "https://site.nicovideo.jp/search-api-docs/snapshot",
+      "revision": "No revision published; HTML SHA256 recorded",
+      "retrieved_body_sha256": "6011c3c8b8e7158c90adc3b86e615128cdcc59e447f921645e5310c2ec02e92b",
+      "evidence_level": "REPORTED",
+      "category": "official documentation",
+      "http_status": 200,
+      "claims": [
+        "GET public snapshot search; User-Agent should identify service/app",
+        "_limit maximum 100; _offset maximum 100000; _context maximum 40 characters",
+        "userId and channelId identify uploader user/channel respectively; tags is a string",
+        "Document says index updated daily at 05:00"
+      ],
+      "live_verification": "Only limit100/101 boundary, batch metadata and version endpoint checked in this run; update schedule and offset maximum not tested"
+    },
+    {
+      "id": "EXT-JAVAKKY-NICOAPICLIENT",
+      "author": "Javakky",
+      "url": "https://github.com/Javakky/NicoApiClient",
+      "revision": "5190ad3b777b83f2f10bea2e1a8b40affebc9d96",
+      "revision_lookup": "GitHub REST commits/master",
+      "client": "third-party Python/public snapshot API",
+      "evidence_level": "CONFIRMED-CODE",
+      "files": [
+        "nicovideo_api_client/constants.py",
+        "nicovideo_api_client/api/v2/limit.py",
+        "nicovideo_api_client/api/v2/request.py",
+        "nicovideo_api_client/api/v2/simple_filter.py"
+      ],
+      "findings": [
+        "Indexed contentId filters are generated from a list",
+        "Requested client limit above100 is split into requests with _limit at most100 and offsets in units of100",
+        "The library accepts only sm-prefixed contentId strings in this code path; this is a client constraint, not a proved service constraint",
+        "The library has retries; the independent research probe has no retries"
+      ],
+      "endpoint": "https://snapshot.search.nicovideo.jp/api/v2/snapshot/video/contents/search",
+      "method": "GET",
+      "request_headers": [
+        "User-Agent"
+      ],
+      "authentication": "No login material set by reviewed request function",
+      "response_fields": [
+        "contentId",
+        "tags",
+        "userId",
+        "channelId"
+      ],
+      "live_verification": "Independent stdlib probe verifies100/101 boundary and pagination. Library not installed or run"
+    },
+    {
+      "id": "EXT-NICONICOLIBS-API",
+      "author": "niconicolibs contributors",
+      "url": "https://github.com/niconicolibs/api",
+      "revision": "7ee4782f7f4f7c351da4b00145b361291e22544a",
+      "revision_lookup": "GitHub REST commits/main",
+      "client": "community nvapi specification / historical watch examples",
+      "evidence_level": "CONFIRMED-CODE",
+      "files": [
+        "spec/nvapi/nvapi.yaml",
+        "spec/nvapi/models/EssentialVideo.yaml",
+        "other/index.html"
+      ],
+      "findings": [
+        "EssentialVideo defines owner.type/visibility/id; no tags property in reviewed model",
+        "Reviewed nvapi paths include GET /v3/users/{userId}/videos and /v1/videos/{videoId}/tags",
+        "No /v1/videos watchIds definition found in the reviewed YAML; does not establish endpoint absence",
+        "Other HTML includes historical DMC/session examples, not proof of current domand behavior"
+      ],
+      "live_verification": false,
+      "unconfirmed": [
+        "Current behavior/authentication/limits of these nvapi paths",
+        "Whether another repository file documents batch metadata"
+      ]
+    }
+  ],
+  "related_document": "SNAPSHOT-BATCH-BOUNDARY-20260920.md"
+}

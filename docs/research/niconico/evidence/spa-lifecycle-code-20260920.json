@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "checked_date": "2026-09-20",
+  "evidence_level": "CONFIRMED-CODE",
+  "source_type": "official public Web client JavaScript, statically read only",
+  "sources": [
+    {
+      "url": "https://resource.video.nimg.jp/web/scripts/nvpc_next/assets/manifest-baf86e63.js",
+      "file": "manifest-baf86e63.js",
+      "checked_at": "2026-09-19T19:08:03.419598+00:00",
+      "sha256": "dc201c75ea8092effb68bf7e96c410fbd3fe3a8ed71b7fe4317898a5398262fb",
+      "bytes": 67860
+    },
+    {
+      "url": "https://resource.video.nimg.jp/web/scripts/nvpc_next/assets/bridge-D5WxNeTE.js",
+      "file": "bridge-D5WxNeTE.js",
+      "checked_at": "2026-09-19T19:08:03.579959+00:00",
+      "sha256": "5086fbbd033a8421683c2f9c27cb8b62ffb2b9494a4710f5708c9e46719eda2d",
+      "bytes": 71393
+    },
+    {
+      "url": "https://resource.video.nimg.jp/web/scripts/nvpc_next/assets/_web._search.tag._keyword._-client-loader-DiqV1NRJ.js",
+      "file": "_web._search.tag._keyword._-client-loader-DiqV1NRJ.js",
+      "checked_at": "2026-09-19T19:08:44.278058+00:00",
+      "sha256": "faa1fac815a226127d3d70a4b1f6fff16005a34e4285d507ea57ddb758c4feaa",
+      "bytes": 75
+    }
+  ],
+  "new_static_asset_gets": 3,
+  "browser_execution": false,
+  "runtime_blocker": "Site-safety policy rejected public Nico browser navigation; no workaround",
+  "observations": [
+    {
+      "id": "tag_loader",
+      "location": "manifest tag/:keyword/* clientLoaderModule and loader export",
+      "result": "tag loader imports export s from bridge; bridge exports Bi as s; direct bridge loader, not cache factory zi"
+    },
+    {
+      "id": "initial_meta",
+      "location": "Bi",
+      "result": "querySelector name=server-response; JSON parse content; remove element on success; fall back if missing/parse failure"
+    },
+    {
+      "id": "route_request",
+      "location": "Bi/Vi",
+      "result": "new URL(request.url), host changed to configured origin host; responseType=json; fetch mode cors, credentials include, request.signal"
+    },
+    {
+      "id": "retry",
+      "location": "Vi",
+      "result": "initial plus up to 2 retries only on caught TypeError if not aborted; wait200/400ms; _retry=1/2; initial attempt deletes _retry; HTTP error status alone is not a thrown fetch TypeError"
+    },
+    {
+      "id": "response_semantics",
+      "location": "Bi",
+      "result": "checks JSON meta.status/meta.code, redirects 301/302 and data.treatAs; fetch HTTP success alone is insufficient"
+    },
+    {
+      "id": "optional_cache",
+      "location": "zi",
+      "result": "separate factory uses caller createCacheKey, stores Promise/url/timestamp, removes rejected Promise; tidy maxCount/lifetimeMs and removeIf optional; does not itself define search TTL/key"
+    },
+    {
+      "id": "client_application_contract",
+      "evidence_level": "HYPOTHESIS",
+      "result": "capture only minimal fields before official consumption when possible; scope async results by page generation and video ID; do not claim actual script integration tested"
+    }
+  ],
+  "unconfirmed": [
+    "Actual forward/back navigation traffic, router cache and cancellation timings",
+    "Whether document-start userscript wins capture timing in target browser/manager",
+    "Main world versus isolated world integration; request interception coverage",
+    "CORS and extension request path"
+  ],
+  "privacy": "Public source URLs and hashes only; whole JavaScript, raw traffic and authentication values not distributed."
+}

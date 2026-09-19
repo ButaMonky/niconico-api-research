@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-09-20",
+  "evidence_level": "REPORTED",
+  "method": "Scoped read of provided summaries and contribution JSON. No original network capture reviewed in this handoff check.",
+  "source_bundle": "niconico-knowledge-20260919-claude-contribution.zip",
+  "source_bundle_sha256": "c802cabf48df8dc568342a9a098d9cb4fabd43067b1ae54fc32b990ac207e362",
+  "contribution_count": 12,
+  "reviewed_contributions": [
+    {
+      "file": "contributions/NICO-WEB-20260917-PAGESIZE-100.json",
+      "sha256": "cb459b9c976843b086458d16799c1be30b453f01e0d3ef1400c5350e4a57a022",
+      "reported_result": {
+        "decoration_requested_ids": 100,
+        "decoration_returned_contents": 62,
+        "http_status": 200,
+        "url_length": 1164
+      },
+      "clarification": "100-ID request succeeded is not the same claim as100 returned videos"
+    },
+    {
+      "file": "contributions/NICO-WEB-20260917-SNAPSHOT-VS-NVAPI.json",
+      "sha256": "3eba962b2d5bd6e01bfc9bf253525558c6aa9f56ce758c3aa7a67a8668e6fcc1",
+      "reported_result": "Top100 search result parity differs by ordering and recency. Already compared by another task; not repeated here.",
+      "clarification": "Search result retrieval is not an arbitrary specified100-ID metadata batch test"
+    }
+  ],
+  "latest_summary_scope": "2026-09-19 supporter credits/gifts; not a new specified-ID all-tags batch verification",
+  "ads_600_700": "No original traffic support identified in reviewed latest handoff material; remains reported, not reproduced",
+  "preserved_unresolved": [
+    "hidden does not establish account deletion",
+    "General-member likes history completeness remains unresolved"
+  ],
+  "integration": "Other contributions retained in source bundle; not blindly promoted into findings. No raw captures copied."
+}

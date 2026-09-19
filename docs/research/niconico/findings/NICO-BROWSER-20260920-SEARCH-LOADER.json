@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "NICO-BROWSER-20260920-SEARCH-LOADER",
+  "title": "現行検索loaderは初期metaを消費し、その後route JSONを要求するコード",
+  "status": "static",
+  "evidence_level": "CONFIRMED-CODE",
+  "platform": "official Web client static JavaScript",
+  "app_version": "manifest-baf86e63 / bridge-D5WxNeTE / tag client-loader-DiqV1NRJ",
+  "observed_at": "2026-09-20",
+  "evidence": [
+    "S-SPA-LIFECYCLE-CODE-20260920"
+  ],
+  "claim": "タグ検索loaderから直接bridge Biへ接続。server-responseはJSON化後remove、読めなければ要求URLにresponseType=jsonを付ける。汎用Promise cache factoryは別であり、この検索loaderにshortsのTTLやpathnameキーを適用する根拠はない。実ブラウザ遷移は環境制約で未確認。",
+  "request": {
+    "method": "GET",
+    "endpoint": "https://www.nicovideo.jp/tag/{keyword}?<search-query>&responseType=json",
+    "credentials": "include in official client code",
+    "signal": "request.signal",
+    "retry": "initial plus at most2 on non-aborted TypeError; not observed live"
+  },
+  "response": {
+    "source": "initial HTML meta or JSON response",
+    "checks": [
+      "meta.status",
+      "meta.code",
+      "data.treatAs"
+    ],
+    "initial_meta_removed": true
+  },
+  "authentication": "Official client includes credentials; not proof that login is necessary for this public route",
+  "unconfirmed": [
+    "Actual forward/back navigation traffic, router cache and cancellation timings",
+    "Whether document-start userscript wins capture timing in target browser/manager",
+    "Main world versus isolated world integration; request interception coverage",
+    "CORS and extension request path"
+  ],
+  "supersedes": [],
+  "related_document": "SPA-DATA-LIFECYCLE.md"
+}

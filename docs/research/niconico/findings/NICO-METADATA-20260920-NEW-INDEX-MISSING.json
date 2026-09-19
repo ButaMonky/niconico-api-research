@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "NICO-METADATA-20260920-NEW-INDEX-MISSING",
+  "title": "新着2動画はsnapshot欠落だが単独タグ・投稿者補完は成功",
+  "status": "traffic",
+  "evidence_level": "CONFIRMED-LIVE",
+  "platform": "public search / snapshot / getthumbinfo",
+  "app_version": "Python3.12 urllib; XML ElementTree; no authenticated client",
+  "observed_at": "2026-09-20T04:00:52+09:00",
+  "evidence": [
+    "S-METADATA-ACCURACY-20260920"
+  ],
+  "claim": "索引version以降に投稿された新着2動画を固定IDで照合。snapshotは200で0件。各getthumbinfoは5/6タグとuser_idを返し、検索owner.idと2/2一致。欠落を空タグ・投稿者なしと扱う仮説は成立しない。",
+  "request": {
+    "method": "GET",
+    "endpoints": [
+      "https://snapshot.search.nicovideo.jp/api/v2/snapshot/version",
+      "https://nvapi.nicovideo.jp/v2/search/video",
+      "https://snapshot.search.nicovideo.jp/api/v2/snapshot/video/contents/search",
+      "https://ext.nicovideo.jp/api/getthumbinfo/{videoId}"
+    ],
+    "details": "METADATA-ACCURACY.md"
+  },
+  "response": {
+    "snapshot_requested": 2,
+    "snapshot_returned": 0,
+    "thumb_tags_count": [
+      5,
+      6
+    ],
+    "search_thumb_owner_matches": 2,
+    "snapshot_version_unchanged": true
+  },
+  "authentication": "None; no general-member login session tested",
+  "unconfirmed": [
+    "index inclusion time and exact missing cause",
+    "watch-page current tag equality",
+    "channel/hidden/deleted/private cases",
+    "general completeness and stable rate limits"
+  ],
+  "supersedes": [],
+  "related_document": "METADATA-ACCURACY.md"
+}

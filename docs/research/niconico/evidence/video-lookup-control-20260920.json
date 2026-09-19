@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-19T18:54:53.840181+00:00",
+  "endpoint": "https://nvapi.nicovideo.jp/v1/videos",
+  "method": "GET",
+  "headers": {
+    "User-Agent": "NicoNGResearch/20260920",
+    "Accept": "application/json",
+    "Accept-Encoding": "identity",
+    "X-Frontend-Id": "6",
+    "X-Frontend-Version": "0",
+    "Origin": "https://www.nicovideo.jp",
+    "Referer": "https://www.nicovideo.jp/"
+  },
+  "authentication": "none; no Cookie or login session",
+  "general_member_session_tested": false,
+  "public_research_video_ids": [
+    "sm15630734",
+    "sm1097445"
+  ],
+  "mode": "control",
+  "automatic_retries": 0,
+  "requests": [
+    {
+      "started_at": "2026-09-19T18:54:53.840181+00:00",
+      "url_ascii_bytes": 56,
+      "http_status": 200,
+      "cache_control": "private, no-cache",
+      "elapsed_ms": 222.17,
+      "response_body_bytes": 1812,
+      "response_sha256": "9d5c142427c116d32f82d710738ef7bc030b2b187121cedce5322dcbdf96dc39",
+      "body_status": 200,
+      "schema_valid": true,
+      "returned_items": 1,
+      "matched_watch_ids": 1,
+      "matched_video_ids": 1,
+      "returned_requested_positions": [
+        0
+      ],
+      "unexpected_watch_ids": 0,
+      "watch_video_id_disagreement": 0,
+      "video_null_or_missing": 0,
+      "owner_id_present": 1,
+      "owner_id_types": {
+        "str": 1
+      },
+      "owner_type": {
+        "user": 1
+      },
+      "tag_key_present": 0,
+      "tags_key_present": 0,
+      "known_video_fields_present": [
+        "contentType",
+        "count",
+        "duration",
+        "id",
+        "isChannelVideo",
+        "owner",
+        "registeredAt",
+        "thumbnail",
+        "title",
+        "type"
+      ],
+      "case": "single_a"
+    },
+    {
+      "started_at": "2026-09-19T18:54:55.062856+00:00",
+      "url_ascii_bytes": 55,
+      "http_status": 200,
+      "cache_control": "private, no-cache",
+      "elapsed_ms": 139.33,
+      "response_body_bytes": 1532,
+      "response_sha256": "87858ae028c091664d147b9eef462a535b61aa477a5bbdf81db71cdc55bb5f3d",
+      "body_status": 200,
+      "schema_valid": true,
+      "returned_items": 1,
+      "matched_watch_ids": 1,
+      "matched_video_ids": 1,
+      "returned_requested_positions": [
+        1
+      ],
+      "unexpected_watch_ids": 0,
+      "watch_video_id_disagreement": 0,
+      "video_null_or_missing": 0,
+      "owner_id_present": 1,
+      "owner_id_types": {
+        "str": 1
+      },
+      "owner_type": {
+        "user": 1
+      },
+      "tag_key_present": 0,
+      "tags_key_present": 0,
+      "known_video_fields_present": [
+        "contentType",
+        "count",
+        "duration",
+        "id",
+        "isChannelVideo",
+        "owner",
+        "registeredAt",
+        "thumbnail",
+        "title",
+        "type"
+      ],
+      "case": "single_b"
+    },
+    {
+      "started_at": "2026-09-19T18:54:56.202523+00:00",
+      "url_ascii_bytes": 75,
+      "http_status": 200,
+      "cache_control": "private, no-cache",
+      "elapsed_ms": 139.9,
+      "response_body_bytes": 1532,
+      "response_sha256": "87858ae028c091664d147b9eef462a535b61aa477a5bbdf81db71cdc55bb5f3d",
+      "body_status": 200,
+      "schema_valid": true,
+      "returned_items": 1,
+      "matched_watch_ids": 1,
+      "matched_video_ids": 1,
+      "returned_requested_positions": [
+        1
+      ],
+      "unexpected_watch_ids": 0,
+      "watch_video_id_disagreement": 0,
+      "video_null_or_missing": 0,
+      "owner_id_present": 1,
+      "owner_id_types": {
+        "str": 1
+      },
+      "owner_type": {
+        "user": 1
+      },
+      "tag_key_present": 0,
+      "tags_key_present": 0,
+      "known_video_fields_present": [
+        "contentType",
+        "count",
+        "duration",
+        "id",
+        "isChannelVideo",
+        "owner",
+        "registeredAt",
+        "thumbnail",
+        "title",
+        "type"
+      ],
+      "case": "repeated_forward",
+      "owner_equal_to_single": 1
+    }
+  ],
+  "stopped_reason": null
+}

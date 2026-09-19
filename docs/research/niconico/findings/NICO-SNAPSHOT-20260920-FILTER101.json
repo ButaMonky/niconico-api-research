@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "status": "traffic",
+  "evidence_level": "CONFIRMED-LIVE",
+  "platform": "public metadata API / Python urllib",
+  "app_version": "Python3.12.10; probe20260920",
+  "observed_at": "2026-09-20T02:54:35+09:00",
+  "evidence": [
+    "S-SNAPSHOT-BOUNDARY-20260920",
+    "S-SNAPSHOT-BOUNDARY-SOURCES-20260920"
+  ],
+  "authentication": "None; no logged-in general-member session tested",
+  "request": {
+    "method": "GET",
+    "endpoint": "https://snapshot.search.nicovideo.jp/api/v2/snapshot/video/contents/search",
+    "host": "snapshot.search.nicovideo.jp",
+    "path": "/api/v2/snapshot/video/contents/search",
+    "headers": {
+      "User-Agent": "NicoNGResearch/20260920",
+      "Accept": "application/json",
+      "Accept-Encoding": "identity"
+    },
+    "body": null,
+    "query": {
+      "q": "",
+      "targets": "title",
+      "fields": "contentId,tags,userId,channelId",
+      "_sort": "-viewCounter",
+      "_offset": 0,
+      "_limit": 100,
+      "_context": "NicoNGResearch",
+      "filters[contentId][0..n]": "one public video ID per indexed parameter"
+    }
+  },
+  "supersedes": [],
+  "related_document": "SNAPSHOT-BATCH-BOUNDARY-20260920.md",
+  "id": "NICO-SNAPSHOT-20260920-FILTER101",
+  "title": "101個のcontentIdフィルターは受理、2ページで101動画取得",
+  "claim": "101個の異なるIDを指定して_limit=100でHTTP200/totalCount101、offset0が100件・offset100が1件。和集合101・重複0。IDフィルター個数も最大100という仮説を否定。フィルター数の真の最大値は未確定。",
+  "response": {
+    "filter_ids": 101,
+    "page1_count": 100,
+    "page2_count": 1,
+    "offsets": [
+      0,
+      100
+    ],
+    "totalCount": 101,
+    "union_count": 101,
+    "duplicate_count": 0,
+    "maximum_tested_url_ascii_bytes": 4418,
+    "same_version_before_after": true,
+    "last_modified": "2026-09-19T07:07:12+09:00"
+  },
+  "unconfirmed": [
+    "More than101 filter IDs",
+    "Stable paging across an index refresh",
+    "Tie ordering across requests"
+  ],
+  "tested_request_overrides": {
+    "filter_id_count": 101,
+    "_offset": [
+      0,
+      100
+    ]
+  },
+  "rejected_hypothesis": "contentId filter count is limited to100"
+}

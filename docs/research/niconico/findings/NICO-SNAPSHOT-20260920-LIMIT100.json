@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "traffic",
+  "evidence_level": "CONFIRMED-LIVE",
+  "platform": "public metadata API / Python urllib",
+  "app_version": "Python3.12.10; probe20260920",
+  "observed_at": "2026-09-20T02:54:35+09:00",
+  "evidence": [
+    "S-SNAPSHOT-BOUNDARY-20260920",
+    "S-SNAPSHOT-BOUNDARY-SOURCES-20260920"
+  ],
+  "authentication": "None; no logged-in general-member session tested",
+  "request": {
+    "method": "GET",
+    "endpoint": "https://snapshot.search.nicovideo.jp/api/v2/snapshot/video/contents/search",
+    "host": "snapshot.search.nicovideo.jp",
+    "path": "/api/v2/snapshot/video/contents/search",
+    "headers": {
+      "User-Agent": "NicoNGResearch/20260920",
+      "Accept": "application/json",
+      "Accept-Encoding": "identity"
+    },
+    "body": null,
+    "query": {
+      "q": "",
+      "targets": "title",
+      "fields": "contentId,tags,userId,channelId",
+      "_sort": "-viewCounter",
+      "_offset": 0,
+      "_limit": 100,
+      "_context": "NicoNGResearch",
+      "filters[contentId][0..n]": "one public video ID per indexed parameter"
+    }
+  },
+  "supersedes": [],
+  "related_document": "SNAPSHOT-BATCH-BOUNDARY-20260920.md",
+  "id": "NICO-SNAPSHOT-20260920-LIMIT100",
+  "title": "_limit=101は範囲エラー、100件のページ上限を確認",
+  "claim": "短い2 ID指定で_limit=101はHTTP400/QUERY_PARSE_ERROR、理由は_limit is out of range. 100 < 101。同じセッションの_limit=100による100動画返却と合わせ、ページ返却数の100/101境界を確認。IDフィルター数の上限とは異なる。",
+  "response": {
+    "http_status": 400,
+    "errorCode": "QUERY_PARSE_ERROR",
+    "errorMessage": "_limit is out of range. 100 < 101",
+    "requested_filter_ids": 2,
+    "requested_limit": 101,
+    "url_ascii_bytes": 281
+  },
+  "unconfirmed": [
+    "Larger filter-count limit",
+    "Alternative request encodings",
+    "Future service changes"
+  ],
+  "tested_request_overrides": {
+    "_limit": 101,
+    "filter_id_count": 2
+  },
+  "rejected_hypothesis": "101 or more results in one page through _limit=101 under tested conditions"
+}

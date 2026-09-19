@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "NICO-NG-20260920-OWNER-INTEGRATION-GAPS",
+  "title": "NG現行コードのhidden正規化と投稿者ルールの詳細取得依存を確認",
+  "status": "offline-test",
+  "evidence_level": "CONFIRMED-CODE",
+  "platform": "local NG script, Node vm synthetic execution",
+  "app_version": "local Git c3d8625e50dc5215696a9cfd3007ae7047f0dcd7",
+  "observed_at": "2026-09-20T04:12:58+09:00",
+  "evidence": [
+    "S-NG-INTEGRATION-CONTRACT-20260920"
+  ],
+  "claim": "OwnerEvidence.normalizeは合成userを受け入れ、ownerType hidden/type user/idありをnullにする。contributorId一致の複合ルールはthumbInfoDone falseでnull、trueでtrue。この2点は取得済みownerの再利用に必要な開発検討点。実ブラウザでの不具合再現ではない。",
+  "request": {
+    "method": "none",
+    "scope": "offline execution of two local source files",
+    "inputs": "synthetic safe ID and owner objects; no network"
+  },
+  "response": {
+    "normal_user_accepted": true,
+    "hidden_user_accepted": false,
+    "owner_rule_before_details": null,
+    "owner_rule_after_details": true
+  },
+  "authentication": "none; offline",
+  "unconfirmed": [
+    "actual affected browser rows and manager conditions",
+    "safe field-level readiness integration across all NG rules",
+    "full product regression testing after future fix"
+  ],
+  "supersedes": [],
+  "related_document": "IMPLEMENTATION-HANDOFF.md"
+}

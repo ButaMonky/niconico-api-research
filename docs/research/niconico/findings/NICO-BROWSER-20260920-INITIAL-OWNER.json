@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "NICO-BROWSER-20260920-INITIAL-OWNER",
+  "title": "検索初期HTMLの32動画にowner ID・タグ一覧なし",
+  "status": "traffic",
+  "evidence_level": "CONFIRMED-LIVE",
+  "platform": "Web initial HTML fetched without browser execution",
+  "app_version": "nvpc_next manifest-baf86e63; entry.client-BDJkQFwJ; bridge-D5WxNeTE",
+  "observed_at": "2026-09-20T04:04:48+09:00",
+  "evidence": [
+    "S-BROWSER-INITIAL-20260920"
+  ],
+  "claim": "公開検索の初期HTMLを認証なしで取得し、server-response内data.response.$getSearchVideoV2.data.itemsの32動画にowner.idを確認。全32はuser/文字列ID。video直下tag/tagsなし。読み込み後DOMやuserscriptの取得タイミングは未実測。",
+  "request": {
+    "endpoint": "https://www.nicovideo.jp/tag/VOCALOID?sort=f&order=d",
+    "method": "GET",
+    "body": null,
+    "headers": {
+      "User-Agent": "NicoNGResearch/20260920",
+      "Accept-Encoding": "identity"
+    }
+  },
+  "response": {
+    "server_response_meta": 1,
+    "items": 32,
+    "owner_id_present": 32,
+    "tags_present": 0,
+    "html_watch_anchors": 0
+  },
+  "authentication": "None; logged-in general-member session not tested",
+  "unconfirmed": [
+    "runtime DOM after hydration",
+    "document-start capture timing and execution world",
+    "SPA response and stale-ID protection",
+    "hidden/channel cases on this current page"
+  ],
+  "supersedes": [],
+  "related_document": "BROWSER-DATA-REUSE.md"
+}

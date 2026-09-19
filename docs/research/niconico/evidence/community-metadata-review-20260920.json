@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-20",
+  "review_timezone": "Asia/Tokyo",
+  "evidence_level": "REPORTED",
+  "provider": "Claude / ZenzaWatch improvement project, supplied by user",
+  "archive": {
+    "filename": "niconico-knowledge-20260919-claude-contribution.zip",
+    "sha256": "c802cabf48df8dc568342a9a098d9cb4fabd43067b1ae54fc32b990ac207e362",
+    "publicly_distributed": false
+  },
+  "inputs": [
+    {
+      "member": "contributions/NICO-WEB-20260917-SEARCH-V2-PAGE-LIMIT.json",
+      "sha256": "6dde2b62d1c10cbedc8ab05993b107d47b207df7608209adf45fae434fc945db"
+    },
+    {
+      "member": "contributions/NICO-WEB-20260917-PAGESIZE-100.json",
+      "sha256": "cb459b9c976843b086458d16799c1be30b453f01e0d3ef1400c5350e4a57a022"
+    },
+    {
+      "member": "contributions/NICO-EXT-20260917-THUMBINFO-NO-OWNER.json",
+      "sha256": "dc20e69396764f5768a1c86302309d8ac305c99b5b624f000735b19fc8948e8a"
+    },
+    {
+      "member": "contributions/NICO-WEB-20260917-SNAPSHOT-VS-NVAPI.json",
+      "sha256": "3eba962b2d5bd6e01bfc9bf253525558c6aa9f56ce758c3aa7a67a8668e6fcc1"
+    },
+    {
+      "member": "contributions/NICO-WEB-20260917-SEARCH-V2-PARITY.json",
+      "sha256": "0a6a651ecb0dbf6a8766fd33876518ccff2938e23e70cad8f04c316bfef55de6"
+    },
+    {
+      "member": "evidence/claude-zenza-search-page-limit-20260917.json",
+      "sha256": "7dae19bd4205d509911b578dd3100754328b03e1a28e624d96477f7362b1da28"
+    },
+    {
+      "member": "evidence/claude-zenza-search-suggest-owner-20260917.json",
+      "sha256": "4cd07d7ad70b5f52f606f805795f46f2c56816930f26183d66d1c96a68cc1b1a"
+    }
+  ],
+  "source_observed_dates": [
+    "2026-09-16",
+    "2026-09-17"
+  ],
+  "source_client_version": "Web nvpc_next distribution dated 2026-09-16 per provider; build hash unavailable",
+  "live_requests_this_review": 0,
+  "raw_traffic_independently_verified": false,
+  "privacy": "Only API structure and aggregate results retained. No raw archive, request headers with credentials, owner IDs/names, search text, history, or local paths distributed. Archive hash proves input identity, not factual truth.",
+  "observations": [
+    {
+      "key": "search_page_size",
+      "source_finding": "NICO-WEB-20260917-PAGESIZE-100",
+      "endpoints": [
+        "https://nvapi.nicovideo.jp/v1/playlist/search",
+        "https://nvapi.nicovideo.jp/v2/search/video"
+      ],
+      "method": "GET",
+      "request": {
+        "pageSize": 100,
+        "page": "1..2 reported for playlist/search",
+        "tag_or_keyword": "research-selected search condition; values omitted"
+      },
+      "response": {
+        "returned_items_reported": 100
+      },
+      "authentication": "Cookie present in report; not established as necessary",
+      "classification": "additional report; existing 32-item observations are not contradicted"
+    },
+    {
+      "key": "search_page_boundary",
+      "source_finding": "NICO-WEB-20260917-SEARCH-V2-PAGE-LIMIT",
+      "endpoints": [
+        "https://nvapi.nicovideo.jp/v2/search/video"
+      ],
+      "method": "GET",
+      "request": {
+        "pageSize": [
+          100,
+          101
+        ],
+        "page": [
+          50,
+          51
+        ],
+        "sortKey": "hot",
+        "sortOrder": "none",
+        "sensitiveContents": "mask",
+        "headers": {
+          "X-Frontend-Id": "6"
+        }
+      },
+      "response": {
+        "page_50_size_100": "HTTP 200; hasNext=false",
+        "page_51": "HTTP 400 INVALID_PARAMETER",
+        "pageSize_101": "HTTP 400 INVALID_PARAMETER"
+      },
+      "authentication": "Reported without Cookie; logged-in boundary not established",
+      "classification": "accept conditional observations; defer universal 5000-item maximum"
+    },
+    {
+      "key": "decoration_partial",
+      "source_finding": "NICO-WEB-20260917-PAGESIZE-100",
+      "endpoints": [
+        "https://api.nicoad.nicovideo.jp/v1/contents/video/decoration"
+      ],
+      "method": "GET",
+      "request": {
+        "ids": "100 ten-character video IDs, raw comma separated",
+        "url_length_reported": 1164
+      },
+      "response": {
+        "http_status_reported": 200,
+        "requested_reported": 100,
+        "returned_reported": 62,
+        "difference": 38
+      },
+      "authentication": "credentials omit reported",
+      "classification": "partial response; missing reasons and distinct/existing requested IDs unverified; not a maximum"
+    },
+    {
+      "key": "missing_owner",
+      "source_finding": "NICO-EXT-20260917-THUMBINFO-NO-OWNER",
+      "endpoints": [
+        "https://ext.nicovideo.jp/api/getthumbinfo/{videoId}",
+        "https://www.nicovideo.jp/watch/{videoId}?responseType=json",
+        "https://api.nicoad.nicovideo.jp/v1/contents/video/{videoId}",
+        "https://nvapi.nicovideo.jp/v1/users/{userId}"
+      ],
+      "method": "GET",
+      "request": {
+        "sample": "one public video; video/uploader identity omitted from public review"
+      },
+      "response": {
+        "getthumbinfo": "status ok; user_id/user_nickname/user_icon_url and channel fields absent",
+        "watch": "owner/channel null",
+        "nicoad": "ownerId/ownerName/ownerIcon reported present",
+        "nvapi_user": "404 NOT_FOUND"
+      },
+      "authentication": "getthumbinfo/nicoad without login; watch/user requests with Cookie, according to report",
+      "classification": "possible supplemental identity; account deletion/suspension/hidden reason and current owner accuracy unproven"
+    },
+    {
+      "key": "snapshot_search_difference",
+      "source_finding": "NICO-WEB-20260917-SNAPSHOT-VS-NVAPI",
+      "endpoints": [
+        "https://nvapi.nicovideo.jp/v2/search/video",
+        "https://snapshot.search.nicovideo.jp/api/v2/snapshot/video/contents/search"
+      ],
+      "method": "GET",
+      "request": {
+        "pageSize_or_limit": 100,
+        "targets": "snapshot tagsExact or title,description,tags",
+        "sensitiveContents": "nvapi mask"
+      },
+      "response": {
+        "newest_top100_overlap_reported": 0,
+        "mylist_sorted_top100": "same IDs and order reported",
+        "view_sorted_top100": "same IDs; ordering differs from position 19 reported"
+      },
+      "authentication": "nvapi Cookie present; snapshot no Cookie via gateway reported",
+      "classification": "corroborates known index freshness concern; total-count differences do not identify cause or tag accuracy"
+    },
+    {
+      "key": "route_api_parity",
+      "source_finding": "NICO-WEB-20260917-SEARCH-V2-PARITY",
+      "endpoints": [
+        "https://www.nicovideo.jp/tag/{word}?responseType=json",
+        "https://www.nicovideo.jp/search/{word}?responseType=json",
+        "https://nvapi.nicovideo.jp/v2/search/video"
+      ],
+      "method": "GET",
+      "request": {
+        "headers": {
+          "X-Frontend-Id": "6",
+          "X-Frontend-Version": "0"
+        },
+        "parameters": [
+          "tag or keyword",
+          "sortKey",
+          "sortOrder",
+          "minDuration",
+          "maxDuration",
+          "minRegisteredAt",
+          "maxRegisteredAt",
+          "genres",
+          "sensitiveContents",
+          "page",
+          "pageSize"
+        ]
+      },
+      "response": {
+        "reported_conditions": 9,
+        "reported_items_each": 32,
+        "reported_match": "total count and ordered video IDs",
+        "fields_reported": [
+          "id",
+          "owner",
+          "registeredAt",
+          "count",
+          "thumbnail",
+          "duration",
+          "isChannelVideo",
+          "requireSensitiveMasking"
+        ],
+        "tags": "not established by this parity comparison"
+      },
+      "authentication": "Cookie present for comparison; report separately notes mask parity with/without login",
+      "classification": "conditional parity; not all filters, all sessions or arbitrary-video bulk lookup"
+    }
+  ],
+  "deferred": [
+    "six non-metadata contribution topics in archive and route sort persistence detail; do not interpret as approved",
+    "600/700 decoration original traffic remains unverified",
+    "Precise timings, response sizes, missing-ID cause, and service-wide upper bounds"
+  ]
+}
