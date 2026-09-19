@@ -29,3 +29,7 @@ NG実装向けの優先入口：[重要な確認結果](IMPORTANT-FINDINGS.md)�
 本選択版の公開先は[niconico-api-research](https://github.com/ButaMonky/niconico-api-research)。製品リポジトリとは分離した研究資料集で、READMEを入口とする。GitHub Pagesは使用しない。利用許諾の指定は保留し、過去の非公開保存段階の記録も履歴として残す。
 
 [投稿者モデルのWeb/iOS/Android比較](CLIENT-METADATA-DIFFERENCES.md)：hiddenのID、投稿者の種類、名前のnullを分離。過去記録の再集計と公開型宣言の照合で、新規実通信ではない。このworkは解析専用。本体開発は別workへ引き渡す。
+
+## 最新：R11広告比較・Zenzaの新規候補（2026-09-20）
+
+[広告一括の根拠比較](ADS-BATCH-EVIDENCE.md)と[Zenzaのnvapi・キャッシュ](ZENZA-NVAPI-AND-CACHE.md)。新規ニコニコ通信は匿名・キーなしタグGET1回で400。キャッシュのupdatedAtと取得日時の不一致をコード・合成実行で確認した。次はR21のplaylist/request。

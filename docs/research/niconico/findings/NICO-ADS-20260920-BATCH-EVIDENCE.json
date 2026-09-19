@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "NICO-ADS-20260920-BATCH-EVIDENCE",
+  "title": "広告一括の80実測と100・600・700報告を分離",
+  "status": "reported",
+  "platform": "Web / research-only",
+  "app_version": null,
+  "observed_at": "2026-09-20T05:17:33+09:00",
+  "claim": "過去の80異なるID全返却、100指定62返却報告、600指定成功/700 fetch失敗報告は上限比較の同条件試験ではない。装飾応答にtags/ownerはなく、任意100動画のmetadata補完の代用根拠なし。",
+  "evidence": [
+    "S-ADS-BATCH-REVIEW-20260920"
+  ],
+  "evidence_level": [
+    "historical traffic aggregate",
+    "REPORTED"
+  ],
+  "request": {
+    "method": "GET",
+    "endpoint": "https://api.nicoad.nicovideo.jp/v1/contents/video/decoration",
+    "query": {
+      "ids": "comma-separated video IDs"
+    },
+    "body": null
+  },
+  "response": {
+    "fields": [
+      "id",
+      "activePoint",
+      "totalPoint",
+      "decoration"
+    ],
+    "max_confirmed_unique_input_historical": 80,
+    "max_confirmed_returned_historical": 80,
+    "server_limit": null
+  },
+  "authentication": "Historical observed GETs contain Cookie; omit is a separate unverified provider report.",
+  "unconfirmed": [
+    "600/700 original traffic and returned counts",
+    "100 partial missing reasons",
+    "Anonymous/general-member conditions",
+    "Server limit and failure cause"
+  ],
+  "supersedes": []
+}

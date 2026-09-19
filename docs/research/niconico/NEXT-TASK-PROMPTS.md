@@ -29,3 +29,9 @@
 ## このworkの次解析：R09完了 → R11（Astra高、今回の設定）
 
 「最新Git/AGENTSとTASKS.md、CLIENT-METADATA-DIFFERENCES.mdを確認してください。このworkでは解析とまとめだけを行い、本体は変更しません。広告一括APIの80件全返却、100指定62返却、600成功/700失敗の報告を、既存資料と原根拠の有無から比較してください。指定数と返却数、タグ・投稿者フィールド、URL長、HTTP失敗とブラウザエラーを分け、大量の再通信や既知結果の重複を避けてADS-BATCH-EVIDENCE.mdへ保存してください。公開資料はniconico-api-research、共有概要は指定outputsへ反映し、最後に結果と次の解析指示文を示してください。」
+
+## 最新：R11・R20完了 → R21（Astra高）
+
+旧R11指示は完了履歴として保持する。次は新しい一括metadata候補を扱う。
+
+「最新Git/AGENTSとTASKS.md、ZENZA-NVAPI-AND-CACHE.mdを読み、R21のPOST /v1/playlist/requestを解析してください。正本のNICO-20260913-PLAYLIST-OWNER、NICO-FOLLOWUP-20260913-PLAYLIST-FORMを利用し、既知のAndroid JSON形式・Webフォーム形式の確認を繰り返さないでください。未解決の副作用・認証条件・任意ID集合への実応答を優先し、安全な一時要求と確認できる場合だけ公開動画2件の少数通信でowner/tags・指定/返却ID対応・欠落を調べてください。用途や状態変更が不明なら送信せず不足根拠を記録してください。既知の/v1/videos失敗・広告600/700試験は繰り返さず、本体は変更しません。解析資料・共有概要・次の解析指示文を更新してください。Astra高。」

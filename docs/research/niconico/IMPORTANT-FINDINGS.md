@@ -11,3 +11,9 @@
 - **現行NGの改善箇所を合成入力で特定**：hidden/type userのIDが正規化で落ちる。投稿者だけの複合ルールも詳細完了を待つ。[最優先の開発検討点](IMPLEMENTATION-HANDOFF.md)。
 
 - **IDが既知でも名前や種別が既知とは限らない。** 過去Web/iOSのhiddenは名前・画像がnull。Androidの限定モデルではtypeを保持する根拠が足りず、OSSの非null型も応答保証にならない。[owner比較と解釈条件](CLIENT-METADATA-DIFFERENCES.md)（R09、2026-09-20）。
+
+## 新規：Zenzaキャッシュの日時をタグ鮮度に使わない（2026-09-20）
+
+[watch-infoのタグ・投稿者保存経路とthumb-infoの期限判定](ZENZA-NVAPI-AND-CACHE.md)を確認。読出しでもupdatedAtが変わり、7日前の内容が24時間以内と判定されるコード経路を合成データで再現。追加0通信の候補だが、最新タグ保証には使えない。実ユーザーDB・実ブラウザは未確認。
+
+[R11広告比較](ADS-BATCH-EVIDENCE.md)：80全返却実測と100→62/600成功/700 fetch失敗報告を分離。decorationの応答項目にタグ・投稿者がないため、metadata一括補完の代用品と扱わない。

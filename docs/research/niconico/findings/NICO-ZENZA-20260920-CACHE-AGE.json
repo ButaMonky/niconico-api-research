@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "NICO-ZENZA-20260920-CACHE-AGE",
+  "title": "Zenzaの既取得metadataと鮮度日時の落とし穴",
+  "status": "offline-test",
+  "platform": "Web / research-only",
+  "app_version": "1dd027d324564f0c0299cc3242073623b633c5fc",
+  "observed_at": "2026-09-20T05:17:33+09:00",
+  "claim": "watch-infoにタグ・投稿者の保存経路。getがupdatedAtを更新し、thumb-infoの期限比較前にも日時が更新される。固定コードの合成再生では7日前の内容が24時間以内と判定された。実ブラウザ未確認。",
+  "evidence": [
+    "S-ZENZA-NVAPI-CACHE-20260920"
+  ],
+  "evidence_level": [
+    "CONFIRMED-CODE",
+    "OFFLINE-TEST"
+  ],
+  "request": {
+    "method": "local storage read",
+    "database": [
+      "watch-info",
+      "thumb-info"
+    ],
+    "key": "watchId",
+    "network_requests": 0
+  },
+  "response": {
+    "fields": [
+      "videoInfo.tagList",
+      "videoInfo.owner",
+      "videoInfo.videoId",
+      "videoInfo.watchId"
+    ],
+    "updatedAt": "access/write time, not metadata acquisition time",
+    "synthetic_result": {
+      "kind": "offline synthetic method replay",
+      "metadata_age_days": 7,
+      "ttl_hours": 24,
+      "before_hit": false,
+      "after_hit": true,
+      "before_updated_at": 1395200000,
+      "after_updated_at": 2000000000,
+      "tags_unchanged": true,
+      "writes": 1,
+      "missing_returns_null": true
+    }
+  },
+  "authentication": "No real profile inspected; local-origin/build/storage permissions remain untested.",
+  "unconfirmed": [
+    "Installed build and cache coverage",
+    "Browser/worker path execution",
+    "Metadata freshness and safe read-only projection"
+  ],
+  "supersedes": []
+}

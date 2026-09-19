@@ -48,3 +48,7 @@
 ## R09：owner型の追加照合（2026-09-20）
 
 niconico.py / niconicojsの対象commitはR03から変更なし。Ownerのnullable項目とtype/visibilityを追加確認し、コード宣言と過去通信の違いを[クライアント比較](CLIENT-METADATA-DIFFERENCES.md)へ記録した。参照行・ファイルhash・作者・revisionは同資料と集計証拠。ライブラリの導入や実行はしていない。
+
+## ZenzaWatchの固定ソース（2026-09-20）
+
+作者segabito / kphrx。URLは[本家](https://github.com/segabito/ZenzaWatch)と[派生版](https://github.com/kphrx/ZenzaWatch)。revisionはそれぞれ267bc5cabfa2dda635c28f91b208d9e3093f6fcf / 1dd027d324564f0c0299cc3242073623b633c5fc。NVApi.jsの比較と、派生版のplaylist・タグ・watch/キャッシュ経路を確認。[ファイル単位の台帳](evidence/zenza-nvapi-cache-20260920.json)にURL/hash/確認時刻。[解析結果](ZENZA-NVAPI-AND-CACHE.md)はCONFIRMED-CODE、合成再生、タグ匿名GET失敗を分離。利用者の導入版ではない。横断読解用のsparse cloneはローカルのみで配布しない。
