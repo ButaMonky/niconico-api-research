@@ -83,5 +83,21 @@
     "kind": "sanitized-reanalysis-and-static-review",
     "sha256": "c418779e6955a463b07ea9053bc9fb2fe99896a19da0b16c0c27fedf518324b5",
     "reviewed_at": "2026-09-20T04:54:34+09:00"
+  },
+  {
+    "id": "S-ZENZA-NVAPI-CACHE-20260920",
+    "file": "evidence/zenza-nvapi-cache-20260920.json",
+    "label": "zenza-nvapi-cache-20260920.json",
+    "kind": "sanitized-research-summary",
+    "sha256": "194e99cba1cd5e52d3eff2dac2c0b52ed0af7420d6c56bdc9eadd38da373acc8",
+    "reviewed_at": "2026-09-20T05:17:33+09:00"
+  },
+  {
+    "id": "S-ADS-BATCH-REVIEW-20260920",
+    "file": "evidence/ads-batch-review-20260920.json",
+    "label": "ads-batch-review-20260920.json",
+    "kind": "sanitized-research-summary",
+    "sha256": "360a71205c069945c3ada86f535b620369268ca66094545e6da45f7c40afd222",
+    "reviewed_at": "2026-09-20T05:17:33+09:00"
   }
 ]

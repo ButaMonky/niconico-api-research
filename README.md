@@ -33,7 +33,7 @@ NG本体については、取得済みownerを保持する正規化条件と、�
 
 `CONFIRMED-LIVE` は実通信、`CONFIRMED-CODE` は参照コード、`REPORTED` は報告、`LEGACY` は過去仕様、`HYPOTHESIS` は仮説、`FAILED` は記載条件での失敗です。値が返ることと、現在の正しい値であることを分けます。hiddenを退会済みとは断定しません。
 
-今回の選択版は11 findings / 12 evidence sources。過去の全研究を収録したものではありません。コメント・過去ログ・アプリ差・旧機種API等は、未確認の調査候補を含みます。[検証記録](docs/research/niconico/VERIFICATION-NG-HANDOFF-20260920.md)と各資料の制約も参照してください。
+今回の選択版は14 findings / 14 evidence sources。過去の全研究を収録したものではありません。コメント・過去ログ・アプリ差・旧機種API等は、未確認の調査候補を含みます。[検証記録](docs/research/niconico/VERIFICATION-NG-HANDOFF-20260920.md)と各資料の制約も参照してください。
 
 ## 検証と更新
 
@@ -48,3 +48,5 @@ python docs/research/niconico/tools/export.py
 実通信の診断は各ファイルの説明を読み、明示的に有効化した場合だけ実行します。認証値をコードへ埋め込まないでください。生応答・HAR・Cookie・一時キー・個人情報はIssueやPRにも貼らず、[公開資料ガイド](docs/research/niconico/PUBLICATION-GUIDE.md)と[更新手順](docs/research/niconico/UPDATE-GUIDE.md)に従って集計・匿名化した結果を提出してください。
 
 訂正は確認日・対象版・再現条件を添えてIssueまたはPRへ。外部資料は作者・URL・commit等を残し、大量転載せず要約しています。本リポジトリ独自の文書・診断コードのライセンスは未指定です。公開されていることを包括的な再配布・組み込みの許諾とは扱わず、外部資料は各配布元の条件を確認してください。
+
+追加：[Zenzaのnvapi・キャッシュと鮮度](docs/research/niconico/ZENZA-NVAPI-AND-CACHE.md)、[広告一括APIの根拠比較](docs/research/niconico/ADS-BATCH-EVIDENCE.md)。

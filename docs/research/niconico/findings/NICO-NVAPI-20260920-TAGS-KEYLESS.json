@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "NICO-NVAPI-20260920-TAGS-KEYLESS",
+  "title": "nvapiタグGETの匿名・キーなし条件は400",
+  "status": "traffic",
+  "platform": "Web / research-only",
+  "app_version": null,
+  "observed_at": "2026-09-20T05:17:33+09:00",
+  "claim": "GET /v2/videos/sm15630734/tagsをCookie・タグ編集キーなしで1回試験。HTTP400 INVALID_PARAMETER、55bytes。キー省略だけが原因とは確定しない。",
+  "evidence": [
+    "S-ZENZA-NVAPI-CACHE-20260920"
+  ],
+  "evidence_level": [
+    "CONFIRMED-LIVE",
+    "FAILED"
+  ],
+  "request": {
+    "method": "GET",
+    "endpoint": "https://nvapi.nicovideo.jp/v2/videos/sm15630734/tags",
+    "headers": {
+      "User-Agent": "NiconicoResearch/20260920",
+      "Accept": "application/json",
+      "Accept-Encoding": "identity",
+      "X-Frontend-Id": "6",
+      "X-Frontend-Version": "0",
+      "X-Request-With": "https://www.nicovideo.jp",
+      "X-Niconico-Language": "ja-jp",
+      "Origin": "https://www.nicovideo.jp"
+    },
+    "query": null,
+    "body": null
+  },
+  "response": {
+    "status": 400,
+    "errorCode": "INVALID_PARAMETER",
+    "bytes": 55,
+    "elapsed_ms": 342.62
+  },
+  "authentication": "none; Cookie/Authorization/X-Tag-Edit-Key absent",
+  "unconfirmed": [
+    "Key vs login requirement",
+    "Other videos/clients",
+    "Browser CORS and general-member conditions"
+  ],
+  "supersedes": []
+}

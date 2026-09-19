@@ -87,3 +87,7 @@ SPAではpageKeyに検索条件を含め、世代番号とvideoIdで応答を照
 ## R09の追補（2026-09-20）
 
 [ownerのクライアント比較](CLIENT-METADATA-DIFFERENCES.md)を追加。IDが保持できても、hiddenの名前nullを空文字の既知値へ変換せず、名前条件を判定できる状態と分離する。Androidの限定モデルからtype=userを推定しない。本資料の実装指示は別work向けで、この解析workでは本体を変更しない。
+
+## 追加候補：Zenzaの既取得metadata（2026-09-20、研究結果のみ）
+
+[Zenza解析](ZENZA-NVAPI-AND-CACHE.md)のwatch-infoは対象ID単位のタグ・投稿者再利用候補。ただしupdatedAtは読出し・再生位置更新でも変化し、取得日時ではない。ownerIdはlinkId形式になり得る。モデル全体には秘密値や履歴が入り得るので、明示した許可項目だけを同一ID照合して扱う。getは書込副作用があり、可視性・鮮度・実導入版の動作は未試験。今回本体へ採用していない。

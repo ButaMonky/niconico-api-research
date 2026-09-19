@@ -1,0 +1,280 @@
+{
+  "checked_at": "2026-09-20T05:17:33+09:00",
+  "new_niconico_requests": 1,
+  "source_files": [
+    {
+      "author": "segabito",
+      "repo": "segabito/ZenzaWatch",
+      "commit": "267bc5cabfa2dda635c28f91b208d9e3093f6fcf",
+      "commit_date": "2021-07-19T02:42:37Z",
+      "file": "packages/lib/src/nico/NVApi.js",
+      "url": "https://raw.githubusercontent.com/segabito/ZenzaWatch/267bc5cabfa2dda635c28f91b208d9e3093f6fcf/packages/lib/src/nico/NVApi.js",
+      "sha256": "2718141c1580d12d177ba66edd2edb14e9210ea2e174e76d421e211ddd93c745",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "packages/lib/src/nico/NVApi.js",
+      "url": "https://raw.githubusercontent.com/kphrx/ZenzaWatch/1dd027d324564f0c0299cc3242073623b633c5fc/packages/lib/src/nico/NVApi.js",
+      "sha256": "2718141c1580d12d177ba66edd2edb14e9210ea2e174e76d421e211ddd93c745",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "packages/lib/src/nico/PlaylistApiLoader.js",
+      "url": "https://raw.githubusercontent.com/kphrx/ZenzaWatch/1dd027d324564f0c0299cc3242073623b633c5fc/packages/lib/src/nico/PlaylistApiLoader.js",
+      "sha256": "52b7079fa5b7bef3e758e35e208d2065f6ae1e80fb5647ddbd2aaf420018b161",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "packages/lib/src/nico/VideoInfoLoader.js",
+      "url": "https://raw.githubusercontent.com/kphrx/ZenzaWatch/1dd027d324564f0c0299cc3242073623b633c5fc/packages/lib/src/nico/VideoInfoLoader.js",
+      "sha256": "d288cc7edbe45379c92f8d53418087c80ae7f6ec8fe707d23b6745afc64fa247",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "packages/lib/src/nico/TagEditApi.js",
+      "url": "https://raw.githubusercontent.com/kphrx/ZenzaWatch/1dd027d324564f0c0299cc3242073623b633c5fc/packages/lib/src/nico/TagEditApi.js",
+      "sha256": "39b23745e9c14297b549b77bf38b65837c66a0e1584ff58c3fe79cf1b9989b7f",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "packages/lib/src/nico/VideoSearch.js",
+      "url": "https://raw.githubusercontent.com/kphrx/ZenzaWatch/1dd027d324564f0c0299cc3242073623b633c5fc/packages/lib/src/nico/VideoSearch.js",
+      "sha256": "283440b406527e0cf6023a7834e46ce2d0099d06bf4c998c1c226ec41656bbd5",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "packages/lib/src/nico/NVWatchCaller.js",
+      "url": "https://raw.githubusercontent.com/kphrx/ZenzaWatch/1dd027d324564f0c0299cc3242073623b633c5fc/packages/lib/src/nico/NVWatchCaller.js",
+      "sha256": "961e477ca5184a43ea90a0ca47ba92ea7ec651c23d3271788c5910beaf6c5815",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "packages/lib/src/nico/ThumbInfoCacheDb.js",
+      "url": "https://raw.githubusercontent.com/kphrx/ZenzaWatch/1dd027d324564f0c0299cc3242073623b633c5fc/packages/lib/src/nico/ThumbInfoCacheDb.js",
+      "sha256": "941f3386134a033bf0f6172ca960cfbb9ed36a03938bf05241994f0a7ce186ab",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "packages/lib/src/nico/WatchInfoCacheDb.js",
+      "url": "https://raw.githubusercontent.com/kphrx/ZenzaWatch/1dd027d324564f0c0299cc3242073623b633c5fc/packages/lib/src/nico/WatchInfoCacheDb.js",
+      "sha256": "0ece594b905fae884f8c49f9a29a8a487ad9efe83fe1b383e866e409c8c44ac3",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "packages/lib/src/nico/NicoVideoApi.js",
+      "url": "https://raw.githubusercontent.com/kphrx/ZenzaWatch/1dd027d324564f0c0299cc3242073623b633c5fc/packages/lib/src/nico/NicoVideoApi.js",
+      "sha256": "419ce78ab6dbac0c1e45dffe03e00bd85a0404231d2d1947c3ce354ed6b666f6",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "packages/lib/src/infra/IndexedDbStorage.js",
+      "url": "https://raw.githubusercontent.com/kphrx/ZenzaWatch/1dd027d324564f0c0299cc3242073623b633c5fc/packages/lib/src/infra/IndexedDbStorage.js",
+      "sha256": "e1243c1b736ac76324dcd9bc3549e7d4ca9d585b381ac7aeeaaa0409120a3fea",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "src/VideoInfo.js",
+      "url": "https://raw.githubusercontent.com/kphrx/ZenzaWatch/1dd027d324564f0c0299cc3242073623b633c5fc/src/VideoInfo.js",
+      "sha256": "a55d536561f2e84d751d2f1248b759473c372a0075135e2761604456a4cbf7d7",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "packages/lib/src/nico/ThumbInfoLoader.js",
+      "url": "https://raw.githubusercontent.com/kphrx/ZenzaWatch/1dd027d324564f0c0299cc3242073623b633c5fc/packages/lib/src/nico/ThumbInfoLoader.js",
+      "sha256": "8749cbbccd60befada30dd9b15fb490511794f60b07b7a43ec3258e04efd3869",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "packages/lib/src/nico/loader.js",
+      "url": "https://raw.githubusercontent.com/kphrx/ZenzaWatch/1dd027d324564f0c0299cc3242073623b633c5fc/packages/lib/src/nico/loader.js",
+      "sha256": "72dd3e91d8a9de85e8cae09f31c8ab567090f00a0499ce8e0c7ac23292c402e7",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "packages/zenza/src/Playlist/PlayList.js",
+      "url": "https://raw.githubusercontent.com/kphrx/ZenzaWatch/1dd027d324564f0c0299cc3242073623b633c5fc/packages/zenza/src/Playlist/PlayList.js",
+      "sha256": "ca38d3ed78853fb3aa01bc14ebfefb01ddf3cef502e20f6116d2f4266cedad81",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "src/ZenzaWatchIndex.js",
+      "url": "https://raw.githubusercontent.com/kphrx/ZenzaWatch/1dd027d324564f0c0299cc3242073623b633c5fc/src/ZenzaWatchIndex.js",
+      "sha256": "8cc6688accd7e7089fe29bdc6deb090d8deea891196523916c8b23ae65e19f17",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; not current server execution"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "packages/lib/src/nico/GateAPI.js",
+      "url": "https://github.com/kphrx/ZenzaWatch/blob/1dd027d324564f0c0299cc3242073623b633c5fc/packages/lib/src/nico/GateAPI.js",
+      "sha256": "6d177c7bc83fd56177a059b235b2fa52464d4d1b1ea3097f856b7e633eb88d1d",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "src/_template.js",
+      "url": "https://github.com/kphrx/ZenzaWatch/blob/1dd027d324564f0c0299cc3242073623b633c5fc/src/_template.js",
+      "sha256": "fc4bb6979c4bcc934de402b3f0babd70a2e5fcd9c1cc49757f294ec1deab53ff",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "commit_date": "2026-04-23T15:04:29Z",
+      "file": "src/NicoVideoPlayerDialog.js",
+      "url": "https://github.com/kphrx/ZenzaWatch/blob/1dd027d324564f0c0299cc3242073623b633c5fc/src/NicoVideoPlayerDialog.js",
+      "sha256": "93aa6bc3b1b71ebc999a91137c6a0e0d391199b4da4a0a43c1d09bf6b490ca8a",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE"
+    },
+    {
+      "author": "kphrx",
+      "repo": "kphrx/ZenzaWatch",
+      "commit": "1dd027d324564f0c0299cc3242073623b633c5fc",
+      "file": "packages/lib/src/nico/ThreadLoader.js",
+      "url": "https://github.com/kphrx/ZenzaWatch/blob/1dd027d324564f0c0299cc3242073623b633c5fc/packages/lib/src/nico/ThreadLoader.js",
+      "sha256": "948676900b13be9b773dde5a52e672962295bf32b882a7a04f482a15d737f6b8",
+      "checked_at": "2026-09-20T05:17:33+09:00",
+      "verification": "CONFIRMED-CODE; no live key requests"
+    }
+  ],
+  "cache_probe": {
+    "revision": "1dd027d324564f0c0299cc3242073623b633c5fc",
+    "source_hashes": {
+      "packages/lib/src/infra/IndexedDbStorage.js": "e1243c1b736ac76324dcd9bc3549e7d4ca9d585b381ac7aeeaaa0409120a3fea",
+      "packages/lib/src/nico/GateAPI.js": "6d177c7bc83fd56177a059b235b2fa52464d4d1b1ea3097f856b7e633eb88d1d"
+    },
+    "result": {
+      "kind": "offline synthetic method replay",
+      "metadata_age_days": 7,
+      "ttl_hours": 24,
+      "before_hit": false,
+      "after_hit": true,
+      "before_updated_at": 1395200000,
+      "after_updated_at": 2000000000,
+      "tags_unchanged": true,
+      "writes": 1,
+      "missing_returns_null": true
+    }
+  },
+  "tag_keyless_probe": {
+    "checked_at": "2026-09-20T05:08:17+09:00",
+    "endpoint": "https://nvapi.nicovideo.jp/v2/videos/sm15630734/tags",
+    "method": "GET",
+    "request_headers": {
+      "User-Agent": "NiconicoResearch/20260920",
+      "Accept": "application/json",
+      "Accept-Encoding": "identity",
+      "X-Frontend-Id": "6",
+      "X-Frontend-Version": "0",
+      "X-Request-With": "https://www.nicovideo.jp",
+      "X-Niconico-Language": "ja-jp",
+      "Origin": "https://www.nicovideo.jp"
+    },
+    "authentication": "none; Cookie/Authorization/X-Tag-Edit-Key absent",
+    "http_status": 400,
+    "body_status": 400,
+    "error_code": "INVALID_PARAMETER",
+    "bytes": 55,
+    "elapsed_ms": 342.62,
+    "body_sha256": "46bc1abbb5dfff3e16553e68ae96f9e7dc1a0f790457200784d1bc15b83fcc94",
+    "response_top_keys": [
+      "meta"
+    ],
+    "data_keys": null,
+    "raw_body_saved": false,
+    "requests": 1,
+    "retries": 0,
+    "browser_cors_tested": false
+  },
+  "privacy": "No real user cache, browser profile, token, owner identity, raw response or history collected. Public source checkout is not distributed.",
+  "limits": [
+    "Selected kphrx fork is not evidence of the user-installed build.",
+    "Offline replay does not emulate IndexedDB/worker/browser execution.",
+    "One combined anonymous/keyless failure does not isolate authentication requirements."
+  ]
+}
