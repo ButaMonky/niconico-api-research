@@ -57,3 +57,7 @@ NG実装向けの優先入口：[重要な確認結果](IMPORTANT-FINDINGS.md)�
 ## R14追加：投稿仕様（2026-09-20）
 
 [COMMENTS-POST.md](COMMENTS-POST.md)へpostKey/threadKey、対象thread/fork、認証・エラー/再試行を独立整理。固定版コードと合成確認のみ、実投稿・キー発行なし。次はR15、[指示文](NEXT-TASK-PROMPTS.md)末尾を使用。
+
+## R15-A追加：描画時刻の境界
+
+[COMMENT-RENDERING.md](COMMENT-RENDERING.md)へ固定版0.4.1のvposMs切捨て・単一ue/shita/nakaのtimelineと衝突/画面内判定を整理。公開27 findings / 27 sources。pixel描画/公式比較なし。R15全体は限定完了、次Bの指示はNEXT-TASK-PROMPTS末尾。

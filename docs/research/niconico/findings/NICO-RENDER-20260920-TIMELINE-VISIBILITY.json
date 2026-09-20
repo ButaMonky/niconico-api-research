@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "static",
+  "evidence_level": [
+    "CONFIRMED-CODE",
+    "SYNTHETIC"
+  ],
+  "platform": "niconicomments isolated timing/geometry; not official player",
+  "app_version": "package 0.4.1; commit d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd",
+  "observed_at": "2026-09-20T13:33:42+09:00",
+  "authentication": "None; no API calls, real comments or keys",
+  "supersedes": [],
+  "unconfirmed": [
+    "Full input schema/command parsing and text measurement integration",
+    "Actual browser pixels, fonts, multi-comment collisions and official equivalence",
+    "Continuous-time boundaries for moving comments"
+  ],
+  "evidence": [
+    "S-COMMENT-RENDER-CODE-20260920",
+    "S-COMMENT-RENDER-OFFLINE-20260920"
+  ],
+  "id": "NICO-RENDER-20260920-TIMELINE-VISIBILITY",
+  "title": "描画対象・衝突登録・画面内判定の期間は別",
+  "claim": "同じ既定long300csでも単一固定コメントのtimeline300刻み/衝突登録281刻み。naka対照のtimeline588刻みに対し矩形が画面内と判定され_drawへ進む刻みは489。寸法依存の合成結果であり、longを全位置共通の可視時間とみなせない。",
+  "request": {
+    "source": "tools/probe_render_timing_offline.py",
+    "fixture": "one 300x60 synthetic comment; empty collision; 1920x1080 canvas",
+    "niconico_requests": 0
+  },
+  "response": {
+    "fixed_timeline_ticks": 300,
+    "fixed_collision_ticks": 281,
+    "naka_timeline_ticks": 588,
+    "naka_geometry_draw_ticks": 489
+  }
+}

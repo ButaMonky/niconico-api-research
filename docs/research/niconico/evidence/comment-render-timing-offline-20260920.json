@@ -1,0 +1,429 @@
+{
+  "kind": "SYNTHETIC pinned timeline and BaseComment.draw geometry; not pixel rendering",
+  "new_niconico_requests": 0,
+  "source_sha256": {
+    "src/@types/format.numeric.ts": "d5faa48f78d69777717f0acff951e693da1808e2adc541a83258bebb13ee6dc6",
+    "src/input/xmlDocument.ts": "2a5ea727bb05efb0466cec3171f929ba3b6750baac387161a7957a6295ab775d",
+    "src/input/v1.ts": "26978785de88019d5a6cbc4401e25e996e8f1e7210d05b16638043d5dfc8b62d",
+    "src/utils/array.ts": "281850cac503c2420b089223b34be70c97f49f3c006c8d760e75a7d188ae212f",
+    "src/utils/comment.ts": "ab03dd8728e86225da0edb8b96d79dd039923117f550ede0f9164e5fecc59226",
+    "src/comments/BaseComment.ts": "3e54b4eb3fb4df621ad5f4646c1a0319f6247ce0d0453686fb218944e0ee5094"
+  },
+  "fixture": {
+    "width": 300,
+    "height": 60,
+    "config": {
+      "canvasWidth": 1920,
+      "canvasHeight": 1080,
+      "commentDrawRange": 1530,
+      "commentDrawPadding": 195,
+      "nakaCommentSpeedOffset": 0.95,
+      "collisionRange": {
+        "left": 235,
+        "right": 1685
+      },
+      "collisionPadding": 5
+    },
+    "single_comment_per_case": true,
+    "schema_parser_executed": false,
+    "command_parser_executed": false,
+    "pixels_rendered": false
+  },
+  "case_count": 7,
+  "cases": [
+    {
+      "input_vpos_ms": 9999,
+      "loc": "ue",
+      "normalized_vpos_cs": 999,
+      "long_cs": 300,
+      "quantization_ms": 9,
+      "timeline": {
+        "first": 999,
+        "last": 1298,
+        "count": 300
+      },
+      "geometry_draw": {
+        "first": 999,
+        "last": 1298,
+        "count": 300
+      },
+      "fixed_collision": {
+        "first": 999,
+        "last": 1279,
+        "count": 281
+      },
+      "samples": [
+        {
+          "time_cs": 998,
+          "draw": null
+        },
+        {
+          "time_cs": 999,
+          "draw": {
+            "x": 810,
+            "y": 0
+          }
+        },
+        {
+          "time_cs": 1298,
+          "draw": {
+            "x": 810,
+            "y": 0
+          }
+        },
+        {
+          "time_cs": 1298.9,
+          "draw": {
+            "x": 810,
+            "y": 0
+          }
+        },
+        {
+          "time_cs": 1299,
+          "draw": null
+        }
+      ]
+    },
+    {
+      "input_vpos_ms": 9999,
+      "loc": "shita",
+      "normalized_vpos_cs": 999,
+      "long_cs": 300,
+      "quantization_ms": 9,
+      "timeline": {
+        "first": 999,
+        "last": 1298,
+        "count": 300
+      },
+      "geometry_draw": {
+        "first": 999,
+        "last": 1298,
+        "count": 300
+      },
+      "fixed_collision": {
+        "first": 999,
+        "last": 1279,
+        "count": 281
+      },
+      "samples": [
+        {
+          "time_cs": 998,
+          "draw": null
+        },
+        {
+          "time_cs": 999,
+          "draw": {
+            "x": 810,
+            "y": 1020
+          }
+        },
+        {
+          "time_cs": 1298,
+          "draw": {
+            "x": 810,
+            "y": 1020
+          }
+        },
+        {
+          "time_cs": 1298.9,
+          "draw": {
+            "x": 810,
+            "y": 1020
+          }
+        },
+        {
+          "time_cs": 1299,
+          "draw": null
+        }
+      ]
+    },
+    {
+      "input_vpos_ms": 10000,
+      "loc": "ue",
+      "normalized_vpos_cs": 1000,
+      "long_cs": 300,
+      "quantization_ms": 0,
+      "timeline": {
+        "first": 1000,
+        "last": 1299,
+        "count": 300
+      },
+      "geometry_draw": {
+        "first": 1000,
+        "last": 1299,
+        "count": 300
+      },
+      "fixed_collision": {
+        "first": 1000,
+        "last": 1280,
+        "count": 281
+      },
+      "samples": [
+        {
+          "time_cs": 999,
+          "draw": null
+        },
+        {
+          "time_cs": 1000,
+          "draw": {
+            "x": 810,
+            "y": 0
+          }
+        },
+        {
+          "time_cs": 1299,
+          "draw": {
+            "x": 810,
+            "y": 0
+          }
+        },
+        {
+          "time_cs": 1299.9,
+          "draw": {
+            "x": 810,
+            "y": 0
+          }
+        },
+        {
+          "time_cs": 1300,
+          "draw": null
+        }
+      ]
+    },
+    {
+      "input_vpos_ms": 10000,
+      "loc": "shita",
+      "normalized_vpos_cs": 1000,
+      "long_cs": 300,
+      "quantization_ms": 0,
+      "timeline": {
+        "first": 1000,
+        "last": 1299,
+        "count": 300
+      },
+      "geometry_draw": {
+        "first": 1000,
+        "last": 1299,
+        "count": 300
+      },
+      "fixed_collision": {
+        "first": 1000,
+        "last": 1280,
+        "count": 281
+      },
+      "samples": [
+        {
+          "time_cs": 999,
+          "draw": null
+        },
+        {
+          "time_cs": 1000,
+          "draw": {
+            "x": 810,
+            "y": 1020
+          }
+        },
+        {
+          "time_cs": 1299,
+          "draw": {
+            "x": 810,
+            "y": 1020
+          }
+        },
+        {
+          "time_cs": 1299.9,
+          "draw": {
+            "x": 810,
+            "y": 1020
+          }
+        },
+        {
+          "time_cs": 1300,
+          "draw": null
+        }
+      ]
+    },
+    {
+      "input_vpos_ms": 10009,
+      "loc": "ue",
+      "normalized_vpos_cs": 1000,
+      "long_cs": 300,
+      "quantization_ms": 9,
+      "timeline": {
+        "first": 1000,
+        "last": 1299,
+        "count": 300
+      },
+      "geometry_draw": {
+        "first": 1000,
+        "last": 1299,
+        "count": 300
+      },
+      "fixed_collision": {
+        "first": 1000,
+        "last": 1280,
+        "count": 281
+      },
+      "samples": [
+        {
+          "time_cs": 999,
+          "draw": null
+        },
+        {
+          "time_cs": 1000,
+          "draw": {
+            "x": 810,
+            "y": 0
+          }
+        },
+        {
+          "time_cs": 1299,
+          "draw": {
+            "x": 810,
+            "y": 0
+          }
+        },
+        {
+          "time_cs": 1299.9,
+          "draw": {
+            "x": 810,
+            "y": 0
+          }
+        },
+        {
+          "time_cs": 1300,
+          "draw": null
+        }
+      ]
+    },
+    {
+      "input_vpos_ms": 10009,
+      "loc": "shita",
+      "normalized_vpos_cs": 1000,
+      "long_cs": 300,
+      "quantization_ms": 9,
+      "timeline": {
+        "first": 1000,
+        "last": 1299,
+        "count": 300
+      },
+      "geometry_draw": {
+        "first": 1000,
+        "last": 1299,
+        "count": 300
+      },
+      "fixed_collision": {
+        "first": 1000,
+        "last": 1280,
+        "count": 281
+      },
+      "samples": [
+        {
+          "time_cs": 999,
+          "draw": null
+        },
+        {
+          "time_cs": 1000,
+          "draw": {
+            "x": 810,
+            "y": 1020
+          }
+        },
+        {
+          "time_cs": 1299,
+          "draw": {
+            "x": 810,
+            "y": 1020
+          }
+        },
+        {
+          "time_cs": 1299.9,
+          "draw": {
+            "x": 810,
+            "y": 1020
+          }
+        },
+        {
+          "time_cs": 1300,
+          "draw": null
+        }
+      ]
+    },
+    {
+      "input_vpos_ms": 10000,
+      "loc": "naka",
+      "normalized_vpos_cs": 1000,
+      "long_cs": 300,
+      "quantization_ms": 0,
+      "timeline": {
+        "first": 837,
+        "last": 1424,
+        "count": 588
+      },
+      "geometry_draw": {
+        "first": 858,
+        "last": 1346,
+        "count": 489
+      },
+      "fixed_collision": null,
+      "samples": [
+        {
+          "time_cs": 999,
+          "draw": {
+            "x": 1275.7875,
+            "y": 0
+          }
+        },
+        {
+          "time_cs": 1000,
+          "draw": {
+            "x": 1271.25,
+            "y": 0
+          }
+        },
+        {
+          "time_cs": 1299,
+          "draw": {
+            "x": -85.46249999999986,
+            "y": 0
+          }
+        },
+        {
+          "time_cs": 1299.9,
+          "draw": {
+            "x": -89.54625000000033,
+            "y": 0
+          }
+        },
+        {
+          "time_cs": 1300,
+          "draw": {
+            "x": -89.99999999999977,
+            "y": 0
+          }
+        }
+      ]
+    }
+  ],
+  "checked_at": "2026-09-20T13:33:42+09:00",
+  "environment": {
+    "python": "3.12.10",
+    "node": "v24.19.0"
+  },
+  "limitations": [
+    "Not pixels, font measurement, browser/full renderer integration or official player comparison",
+    "fromV1 helper executed directly; valibot schema validation bypassed; fixture is a helper input, not a validated full API response",
+    "loc supplied as parsed ue/shita/naka; command parser and NicoScript disabled",
+    "Single comment per case; no multi-comment collision/layer test",
+    "Grid scan uses centiseconds; no continuous/subframe visibility boundary proof"
+  ],
+  "line_ending_verification": {
+    "checked_at": "2026-09-20T13:39:36+09:00",
+    "inputs": [
+      "original CRLF checkout",
+      "separate exact LF Git blob files"
+    ],
+    "results_identical": true,
+    "normalization": "CRLF to LF before hash and execution; no other content changes"
+  }
+}

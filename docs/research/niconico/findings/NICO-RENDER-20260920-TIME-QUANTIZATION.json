@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "status": "static",
+  "evidence_level": [
+    "CONFIRMED-CODE",
+    "SYNTHETIC"
+  ],
+  "platform": "niconicomments isolated timing/geometry; not official player",
+  "app_version": "package 0.4.1; commit d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd",
+  "observed_at": "2026-09-20T13:33:42+09:00",
+  "authentication": "None; no API calls, real comments or keys",
+  "supersedes": [],
+  "unconfirmed": [
+    "Full input schema/command parsing and text measurement integration",
+    "Actual browser pixels, fonts, multi-comment collisions and official equivalence",
+    "Continuous-time boundaries for moving comments"
+  ],
+  "evidence": [
+    "S-COMMENT-RENDER-CODE-20260920",
+    "S-COMMENT-RENDER-OFFLINE-20260920"
+  ],
+  "id": "NICO-RENDER-20260920-TIME-QUANTIZATION",
+  "title": "vposMs切捨てと固定位置の表示終了境界",
+  "claim": "固定niconicomments0.4.1のfromV1はfloor(vposMs/10)。単一300x60合成コメントのue/shitaは既定300cs、開始を含み終了を含まないtimeline。10000/10009msは同じ1000cs。x810、ue y0/shita y1020。7条件は座標処理の合成確認で公式互換・pixel描画ではない。",
+  "request": {
+    "source": "tools/probe_render_timing_offline.py",
+    "fixture": "one 300x60 synthetic comment; empty collision; 1920x1080 canvas",
+    "niconico_requests": 0
+  },
+  "response": {
+    "fixed_duration_cs": 300,
+    "quantization": "floor(vposMs / 10)",
+    "fixed_xy": {
+      "ue": [
+        810,
+        0
+      ],
+      "shita": [
+        810,
+        1020
+      ]
+    }
+  }
+}

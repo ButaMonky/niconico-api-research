@@ -68,3 +68,7 @@ R12と同じnndownload/comments.tsのhashを確認し、[when境界の合成確�
 ## R14：投稿と共通HTTPの固定出典
 
 作者kongyo2ほか、niconicojs commit `e15fc91920567804685a6c45ebc08c2a8639f52e`。R12のcomments.tsを再利用し、src/http.ts・src/errors.ts・test/comments.test.tsを同commitで追加取得。URL/時刻/hashは[出典台帳](evidence/comment-post-fixed-sources-20260920.json)。[8合成条件](evidence/comment-post-offline-20260920.json)をCONFIRMED-CODE/SYNTHETICとして保存。現行公式クライアント・実投稿は未確認。
+
+## R15-A：niconicomments固定版
+
+作者xpadev（xpadev-net）ほか。commit `d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd`、package0.4.1、2026-09-20確認。上表の未取得は過去の状態。[11ファイルの固定台帳](evidence/comment-render-fixed-sources-20260920.json)、[7合成条件](evidence/comment-render-timing-offline-20260920.json)。描画時刻/座標のコード確認であり、API通信・pixel描画・公式互換の確認ではない。部分cloneはローカルのみ。

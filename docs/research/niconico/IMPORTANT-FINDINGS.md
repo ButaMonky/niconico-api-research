@@ -41,3 +41,7 @@
 ## R14：投稿の結果不明を自動再送しない
 
 固定niconicojsで、投稿POSTは1回、キーGET・読取POSTは再試行という差を合成確認。HTTP200/meta403と503詳細欠落も区別した。上位層の一律retryによる二重投稿を避ける設計根拠。**実投稿/現行サービス成功ではない**。[投稿仕様と8ケース](COMMENTS-POST.md)。
+
+## R15-A：表示期間と衝突期間は別
+
+固定niconicommentsの単一コメントで、ue/shitaのtimeline300刻みに対し衝突表281刻み。naka対照はtimeline588/画面内矩形489刻み。longを一律の可視秒数としない。vposMs切捨ても含め[条件・制約](COMMENT-RENDERING.md)を参照。合成座標確認で公式互換・実pixel描画ではない。
