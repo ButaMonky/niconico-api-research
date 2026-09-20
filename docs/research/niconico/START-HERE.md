@@ -53,3 +53,7 @@ NG実装向けの優先入口：[重要な確認結果](IMPORTANT-FINDINGS.md)�
 ## 最新追補：R13過去ログの境界
 
 [COMMENTS-HISTORY.md](COMMENTS-HISTORY.md)を参照。公開選択版23 findings / 23 sources。既存要求の範囲確認と4合成条件、ニコニコ新規通信0。会員条件は未確認。次はR14、投稿せず公開コードを解析する。
+
+## R14追加：投稿仕様（2026-09-20）
+
+[COMMENTS-POST.md](COMMENTS-POST.md)へpostKey/threadKey、対象thread/fork、認証・エラー/再試行を独立整理。固定版コードと合成確認のみ、実投稿・キー発行なし。次はR15、[指示文](NEXT-TASK-PROMPTS.md)末尾を使用。

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "platform": "Pinned niconicojs with synthetic fetch; not official Web/iOS/Android",
+  "app_version": "e15fc91920567804685a6c45ebc08c2a8639f52e",
+  "observed_at": "2026-09-20T13:17:26+09:00",
+  "authentication": "Synthetic session only; live posting and key issuance not performed",
+  "supersedes": [],
+  "unconfirmed": [
+    "Current service authentication and general-member posting permissions",
+    "Thread/video/key binding and main/owner/easy selection",
+    "Key expiry, server rate limits and accepted commands"
+  ],
+  "status": "static",
+  "evidence_level": [
+    "CONFIRMED-CODE",
+    "SYNTHETIC"
+  ],
+  "evidence": [
+    "S-COMMENT-POST-CODE-20260920",
+    "S-COMMENT-POST-OFFLINE-20260920"
+  ],
+  "id": "NICO-COMMENTS-20260920-POST-KEY-TARGET",
+  "title": "投稿用postKeyとthread指定を読取キーから分離",
+  "claim": "固定niconicojsはthreadIdでpostKeyを取得し、threadIdの投稿URLへvideoId/body/commands/vposMs/postKeyを送る。投稿fork引数なし。ライブラリ戻り値はid/noのみ。実投稿・ゲスト成功・serverのfork既定値は未確認。",
+  "request": {
+    "endpoints": [
+      "GET /v1/comment/keys/post?threadId=...",
+      "POST /v1/threads/{threadId}/comments"
+    ],
+    "posting_body": [
+      "videoId",
+      "body",
+      "commands",
+      "vposMs",
+      "postKey"
+    ]
+  },
+  "response": {
+    "wrapper_return": [
+      "id",
+      "no"
+    ],
+    "fork_in_post_body": false
+  }
+}

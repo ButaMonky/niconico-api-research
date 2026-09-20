@@ -59,3 +59,7 @@ R23終了後の指示は「channelを少数混在させ、snapshotとのowner型
 ## 最新：R13完了 → R14（Astra高）
 
 「Astra高でR14のコメント投稿仕様を整理してください。Git/AGENTSとCOMMENTS-READ.md、COMMENTS-HISTORY.md、固定出典を確認し、postKey取得・投稿endpoint・body/vposMs/commands/thread/forkの関係を公開コード中心に調べてください。読取用threadKeyとpostKey、API応答とライブラリ戻り値を区別し、既知コードの再読だけで終わらず認証・対象指定・エラー処理の未整理点を1つ選んで根拠を残してください。今回はコメントを実投稿せず、認証値や本文・userIdの実値を保存しません。本体/Zenza固有コードを変更せず、解析資料・指定outputs・次の指示文を更新し、GitHub反映は最後にしてください。」
+
+## 最新：R14完了 → R15（Astra高）
+
+「Astra高でR15のコメント描画を進めてください。Git/AGENTS、TASKS.md、COMMENTS-READ.md、COMMENTS-POST.mdを確認し、xpadev-net/niconicommentsの公開コードをcommit固定で調べてください。まずvpos/vposMsの時刻変換とue/shita/nakaの表示期間・位置の関係から1条件を選び、個人の本文を使わず小さな合成入力で確認してください。API取得・投稿と描画を分離し、公式プレイヤー完全互換と断定しないでください。別の重要条件は次候補へ記録し、実投稿・NG本体・Zenza固有コードの解析や変更は行わず、資料・指定outputs・次の指示文を更新してください。GitHub反映は最後にしてください。」

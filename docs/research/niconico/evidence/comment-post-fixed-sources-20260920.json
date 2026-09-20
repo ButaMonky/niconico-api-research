@@ -1,0 +1,128 @@
+{
+  "checked_at": "2026-09-20T13:17:26+09:00",
+  "evidence_level": "CONFIRMED-CODE; not CONFIRMED-LIVE",
+  "repository": "https://github.com/kongyo2/niconicojs",
+  "author": "kongyo2 and contributors",
+  "revision": "e15fc91920567804685a6c45ebc08c2a8639f52e",
+  "sources": [
+    {
+      "author": "kongyo2 and contributors",
+      "revision": "e15fc91920567804685a6c45ebc08c2a8639f52e",
+      "file": "src/comments.ts",
+      "url": "https://raw.githubusercontent.com/kongyo2/niconicojs/e15fc91920567804685a6c45ebc08c2a8639f52e/src/comments.ts",
+      "checked_at": "2026-09-20T13:17:26+09:00",
+      "sha256": "d239cae7e10a3f6fa601bb5f1d2f8e9ae8862ec796af8f70943e016a828e508f",
+      "bytes": 11147,
+      "evidence_level": "CONFIRMED-CODE",
+      "acquisition": "R12 pinned file reused and hash checked; not fetched again"
+    },
+    {
+      "author": "kongyo2 and contributors",
+      "revision": "e15fc91920567804685a6c45ebc08c2a8639f52e",
+      "file": "src/http.ts",
+      "url": "https://raw.githubusercontent.com/kongyo2/niconicojs/e15fc91920567804685a6c45ebc08c2a8639f52e/src/http.ts",
+      "http_status": 200,
+      "checked_at": "2026-09-20T13:08:29+09:00",
+      "bytes": 13969,
+      "sha256": "acfeeccc812e6de3722f7de38c7999546ffb44a6266a5507be598c715852e8a3",
+      "evidence_level": "CONFIRMED-CODE; not live service verification"
+    },
+    {
+      "author": "kongyo2 and contributors",
+      "revision": "e15fc91920567804685a6c45ebc08c2a8639f52e",
+      "file": "src/errors.ts",
+      "url": "https://raw.githubusercontent.com/kongyo2/niconicojs/e15fc91920567804685a6c45ebc08c2a8639f52e/src/errors.ts",
+      "http_status": 200,
+      "checked_at": "2026-09-20T13:08:29+09:00",
+      "bytes": 2717,
+      "sha256": "08de584fb004a63fadc5a9bfc58489735c6d3e7358d38647f311a2f933a75436",
+      "evidence_level": "CONFIRMED-CODE; not live service verification"
+    },
+    {
+      "author": "kongyo2 and contributors",
+      "revision": "e15fc91920567804685a6c45ebc08c2a8639f52e",
+      "file": "test/comments.test.ts",
+      "url": "https://raw.githubusercontent.com/kongyo2/niconicojs/e15fc91920567804685a6c45ebc08c2a8639f52e/test/comments.test.ts",
+      "http_status": 200,
+      "checked_at": "2026-09-20T13:08:30+09:00",
+      "bytes": 11877,
+      "sha256": "76d1e91313f53050f62430f003d87f5698bd6fac175adb403737d7bf77189a37",
+      "evidence_level": "CONFIRMED-CODE; not live service verification"
+    }
+  ],
+  "new_niconico_requests": 0,
+  "scope": "Pinned comments API and its common HTTP/errors chain, not latest HEAD or official client",
+  "contracts": [
+    {
+      "endpoint": "https://nvapi.nicovideo.jp/v1/comment/keys/post",
+      "method": "GET",
+      "request": {
+        "query": [
+          "threadId"
+        ]
+      },
+      "response": {
+        "fields": [
+          "meta.status",
+          "meta.errorCode",
+          "data.postKey"
+        ]
+      },
+      "authentication": "Optional session in wrapper; service login requirement unverified",
+      "status": "CONFIRMED-CODE",
+      "first_confirmed": "2026-09-20T13:17:26+09:00",
+      "last_confirmed": "2026-09-20T13:17:26+09:00"
+    },
+    {
+      "endpoint": "https://public.nvcomment.nicovideo.jp/v1/threads/{threadId}/comments",
+      "method": "POST",
+      "request": {
+        "headers": [
+          "Content-Type",
+          "X-Client-Os-Type",
+          "X-Frontend-Id",
+          "X-Frontend-Version",
+          "X-Niconico-Language",
+          "Referer",
+          "User-Agent",
+          "Cookie (only if session configured)"
+        ],
+        "body": [
+          "videoId",
+          "body",
+          "commands",
+          "vposMs",
+          "postKey"
+        ]
+      },
+      "response": {
+        "fields_read": [
+          "meta.status",
+          "meta.errorCode",
+          "data.id",
+          "data.no"
+        ],
+        "wrapper_return": [
+          "id",
+          "no"
+        ]
+      },
+      "authentication": "postKey supplied or fetched; optional session added by wrapper; guest/member permissions unverified",
+      "status": "CONFIRMED-CODE",
+      "first_confirmed": "2026-09-20T13:17:26+09:00",
+      "last_confirmed": "2026-09-20T13:17:26+09:00"
+    }
+  ],
+  "observations": [
+    "Read threadKey uses videoId query; postKey uses threadId query. Posting has no threadKey field.",
+    "PostCommentParams has no fork; threadId and videoId supplied separately. This does not establish server fork selection.",
+    "GET and read POST may retry; postComment POST has no idempotent flag and maxAttempts=1 in this HTTP implementation.",
+    "Transient HTTP status path loses response meta errorCode before JSON parsing.",
+    "HTTP tests in upstream test/comments.test.ts use mock fetch, not live posting."
+  ],
+  "limitations": [
+    "No key issuance or actual posting",
+    "Not an exhaustive server API or official Web/iOS/Android specification",
+    "Authentication, thread/video/key binding, fork authorization and expiry unverified"
+  ]
+}

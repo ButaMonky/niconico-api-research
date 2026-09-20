@@ -1,0 +1,389 @@
+{
+  "kind": "SYNTHETIC fixed-code HTTP chain; no actual posting",
+  "new_niconico_requests": 0,
+  "source_sha256": [
+    "d239cae7e10a3f6fa601bb5f1d2f8e9ae8862ec796af8f70943e016a828e508f",
+    "acfeeccc812e6de3722f7de38c7999546ffb44a6266a5507be598c715852e8a3",
+    "08de584fb004a63fadc5a9bfc58489735c6d3e7358d38647f311a2f933a75436"
+  ],
+  "case_count": 8,
+  "mock_request_count": 12,
+  "cases": [
+    {
+      "label": "supplied_key_no_session",
+      "calls": [
+        {
+          "method": "POST",
+          "route": "post-comment",
+          "body_keys": [
+            "body",
+            "commands",
+            "postKey",
+            "videoId",
+            "vposMs"
+          ],
+          "header_names": [
+            "Content-Type",
+            "Referer",
+            "User-Agent",
+            "X-Client-Os-Type",
+            "X-Frontend-Id",
+            "X-Frontend-Version",
+            "X-Niconico-Language"
+          ],
+          "cookie_present": false,
+          "content_type": "application/json",
+          "fork_present": false,
+          "thread_key_present": false,
+          "post_key_present": true
+        }
+      ],
+      "result_keys": [
+        "id",
+        "no"
+      ],
+      "result_is_array": false,
+      "error": null
+    },
+    {
+      "label": "absent_key_with_synthetic_session",
+      "calls": [
+        {
+          "method": "GET",
+          "route": "post-key",
+          "body_keys": [],
+          "header_names": [
+            "Cookie",
+            "Referer",
+            "User-Agent",
+            "X-Frontend-Id",
+            "X-Frontend-Version",
+            "X-Niconico-Language"
+          ],
+          "cookie_present": true,
+          "content_type": null,
+          "fork_present": false,
+          "thread_key_present": false,
+          "post_key_present": false
+        },
+        {
+          "method": "POST",
+          "route": "post-comment",
+          "body_keys": [
+            "body",
+            "commands",
+            "postKey",
+            "videoId",
+            "vposMs"
+          ],
+          "header_names": [
+            "Content-Type",
+            "Cookie",
+            "Referer",
+            "User-Agent",
+            "X-Client-Os-Type",
+            "X-Frontend-Id",
+            "X-Frontend-Version",
+            "X-Niconico-Language"
+          ],
+          "cookie_present": true,
+          "content_type": "application/json",
+          "fork_present": false,
+          "thread_key_present": false,
+          "post_key_present": true
+        }
+      ],
+      "result_keys": [
+        "id",
+        "no"
+      ],
+      "result_is_array": false,
+      "error": null
+    },
+    {
+      "label": "posting_http503_no_retry",
+      "calls": [
+        {
+          "method": "POST",
+          "route": "post-comment",
+          "body_keys": [
+            "body",
+            "commands",
+            "postKey",
+            "videoId",
+            "vposMs"
+          ],
+          "header_names": [
+            "Content-Type",
+            "Referer",
+            "User-Agent",
+            "X-Client-Os-Type",
+            "X-Frontend-Id",
+            "X-Frontend-Version",
+            "X-Niconico-Language"
+          ],
+          "cookie_present": false,
+          "content_type": "application/json",
+          "fork_present": false,
+          "thread_key_present": false,
+          "post_key_present": true
+        }
+      ],
+      "result_keys": null,
+      "result_is_array": false,
+      "error": {
+        "name": "NiconicoApiError",
+        "status": 503,
+        "error_code": null,
+        "attempts": null
+      }
+    },
+    {
+      "label": "posting_network_failure_no_retry",
+      "calls": [
+        {
+          "method": "POST",
+          "route": "post-comment",
+          "body_keys": [
+            "body",
+            "commands",
+            "postKey",
+            "videoId",
+            "vposMs"
+          ],
+          "header_names": [
+            "Content-Type",
+            "Referer",
+            "User-Agent",
+            "X-Client-Os-Type",
+            "X-Frontend-Id",
+            "X-Frontend-Version",
+            "X-Niconico-Language"
+          ],
+          "cookie_present": false,
+          "content_type": "application/json",
+          "fork_present": false,
+          "thread_key_present": false,
+          "post_key_present": true
+        }
+      ],
+      "result_keys": null,
+      "result_is_array": false,
+      "error": {
+        "name": "NiconicoNetworkError",
+        "status": null,
+        "error_code": null,
+        "attempts": 1
+      }
+    },
+    {
+      "label": "posting_http200_meta403",
+      "calls": [
+        {
+          "method": "POST",
+          "route": "post-comment",
+          "body_keys": [
+            "body",
+            "commands",
+            "postKey",
+            "videoId",
+            "vposMs"
+          ],
+          "header_names": [
+            "Content-Type",
+            "Referer",
+            "User-Agent",
+            "X-Client-Os-Type",
+            "X-Frontend-Id",
+            "X-Frontend-Version",
+            "X-Niconico-Language"
+          ],
+          "cookie_present": false,
+          "content_type": "application/json",
+          "fork_present": false,
+          "thread_key_present": false,
+          "post_key_present": true
+        }
+      ],
+      "result_keys": null,
+      "result_is_array": false,
+      "error": {
+        "name": "NiconicoApiError",
+        "status": 403,
+        "error_code": "INVALID_TOKEN",
+        "attempts": null
+      }
+    },
+    {
+      "label": "posting_success_missing_fields",
+      "calls": [
+        {
+          "method": "POST",
+          "route": "post-comment",
+          "body_keys": [
+            "body",
+            "commands",
+            "postKey",
+            "videoId",
+            "vposMs"
+          ],
+          "header_names": [
+            "Content-Type",
+            "Referer",
+            "User-Agent",
+            "X-Client-Os-Type",
+            "X-Frontend-Id",
+            "X-Frontend-Version",
+            "X-Niconico-Language"
+          ],
+          "cookie_present": false,
+          "content_type": "application/json",
+          "fork_present": false,
+          "thread_key_present": false,
+          "post_key_present": true
+        }
+      ],
+      "result_keys": null,
+      "result_is_array": false,
+      "error": {
+        "name": "NiconicoError",
+        "status": null,
+        "error_code": null,
+        "attempts": null
+      }
+    },
+    {
+      "label": "key_get_retries_then_one_post",
+      "calls": [
+        {
+          "method": "GET",
+          "route": "post-key",
+          "body_keys": [],
+          "header_names": [
+            "Referer",
+            "User-Agent",
+            "X-Frontend-Id",
+            "X-Frontend-Version",
+            "X-Niconico-Language"
+          ],
+          "cookie_present": false,
+          "content_type": null,
+          "fork_present": false,
+          "thread_key_present": false,
+          "post_key_present": false
+        },
+        {
+          "method": "GET",
+          "route": "post-key",
+          "body_keys": [],
+          "header_names": [
+            "Referer",
+            "User-Agent",
+            "X-Frontend-Id",
+            "X-Frontend-Version",
+            "X-Niconico-Language"
+          ],
+          "cookie_present": false,
+          "content_type": null,
+          "fork_present": false,
+          "thread_key_present": false,
+          "post_key_present": false
+        },
+        {
+          "method": "POST",
+          "route": "post-comment",
+          "body_keys": [
+            "body",
+            "commands",
+            "postKey",
+            "videoId",
+            "vposMs"
+          ],
+          "header_names": [
+            "Content-Type",
+            "Referer",
+            "User-Agent",
+            "X-Client-Os-Type",
+            "X-Frontend-Id",
+            "X-Frontend-Version",
+            "X-Niconico-Language"
+          ],
+          "cookie_present": false,
+          "content_type": "application/json",
+          "fork_present": false,
+          "thread_key_present": false,
+          "post_key_present": true
+        }
+      ],
+      "result_keys": [
+        "id",
+        "no"
+      ],
+      "result_is_array": false,
+      "error": null
+    },
+    {
+      "label": "read_post_is_retryable",
+      "calls": [
+        {
+          "method": "POST",
+          "route": "read-threads",
+          "body_keys": [
+            "additionals",
+            "params",
+            "threadKey"
+          ],
+          "header_names": [
+            "Content-Type",
+            "Referer",
+            "User-Agent",
+            "X-Frontend-Id",
+            "X-Frontend-Version",
+            "X-Niconico-Language"
+          ],
+          "cookie_present": false,
+          "content_type": "application/json",
+          "fork_present": false,
+          "thread_key_present": true,
+          "post_key_present": false
+        },
+        {
+          "method": "POST",
+          "route": "read-threads",
+          "body_keys": [
+            "additionals",
+            "params",
+            "threadKey"
+          ],
+          "header_names": [
+            "Content-Type",
+            "Referer",
+            "User-Agent",
+            "X-Frontend-Id",
+            "X-Frontend-Version",
+            "X-Niconico-Language"
+          ],
+          "cookie_present": false,
+          "content_type": "application/json",
+          "fork_present": false,
+          "thread_key_present": true,
+          "post_key_present": false
+        }
+      ],
+      "result_keys": null,
+      "result_is_array": true,
+      "error": null
+    }
+  ],
+  "checked_at": "2026-09-20T13:17:26+09:00",
+  "environment": {
+    "python": "Python 3.12.10",
+    "node": "v24.19.0"
+  },
+  "limitations": [
+    "Fake fetch and immediate fake timers; no performance/rate-limit measurement",
+    "No real keys, comments or session; successful mocks do not prove guest or member service access",
+    "No timeout or cancellation experiment",
+    "Fixed TypeScript modules with imports/exports removed, not complete library integration"
+  ]
+}
