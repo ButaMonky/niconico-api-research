@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-20 JST",
+  "supersedes": [],
+  "related_document": "HOVER-PREVIEW-HANDOFF.md",
+  "id": "NICO-WEB-20260920-HOVER-HISTORICAL",
+  "title": "保存previewの1標本とHLSキー・コメントparamsを値非公開で照合",
+  "status": "traffic",
+  "evidence_level": "CONFIRMED-LIVE (historical capture only)",
+  "platform": "historical Web capture",
+  "app_version": "capture 2026-09-13; browser version unverified",
+  "evidence": [
+    "S-HOVER-HISTORICAL-20260920"
+  ],
+  "claim": "保存preview60件は59成功/1件403。選択したpreviewとHLSのwatch ID/access key一致、コメント要求のthread key/params一致を確認。コメント応答は3 thread/242要素。ただし同じホバー操作の時系列とは確認していない。",
+  "request": {
+    "preview_count": 60,
+    "matched_hls_samples": 1,
+    "matched_comment_samples": 1,
+    "new_requests": 0
+  },
+  "response": {
+    "preview_status_counts": {
+      "200": 59,
+      "403": 1
+    },
+    "matched_hls_status": 201,
+    "matched_comment_status": 200,
+    "matched_comment_items": 242
+  },
+  "authentication": "All 60 preview requests contain Cookie; selected comment has no Cookie and contains threadKey. Necessity untested",
+  "unconfirmed": [
+    "Hover event attribution",
+    "Minimal authentication",
+    "Failure reason for 403",
+    "Expiry experiment",
+    "Generalized schema guarantees"
+  ]
+}

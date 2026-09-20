@@ -65,3 +65,7 @@ NG実装向けの優先入口：[重要な確認結果](IMPORTANT-FINDINGS.md)�
 ## 最新R15-B：2件の固定コメント
 
 [COMMENT-RENDERING.mdのB](COMMENT-RENDERING.md)に281cs差の残存矩形重なり、280/300cs対照を追加。公開28 findings / 28 sources。次Cは文字計測を含む1組の確認。通信読取は許可済みで、追加根拠が得られる調査に利用する。
+
+## 一覧ホバープレビューの引継ぎ（2026-09-20）
+
+[到達点と未確認](HOVER-PREVIEW-HANDOFF.md)。保存公式コードで一覧→preview→HLS/コメントを追跡。現在の実ブラウザは制限で未観測。導入候補の指定Zenza版は合成7ケースを確認。本体変更なし。

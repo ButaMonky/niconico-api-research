@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-20 JST",
+  "supersedes": [],
+  "related_document": "HOVER-PREVIEW-HANDOFF.md",
+  "id": "NICO-WEB-20260920-HOVER-STATIC",
+  "title": "保存公式コードで一覧カードからpreview映像・コメント・共有ミュートへの接続を確認",
+  "status": "static",
+  "evidence_level": "CONFIRMED-CODE",
+  "platform": "official Web client; saved assets",
+  "app_version": "2026-09-13 capture; fixed asset SHA256s",
+  "evidence": [
+    "S-HOVER-STATIC-20260920",
+    "S-HOVER-FIXTURE-20260920"
+  ],
+  "claim": "保存版の検索リスト/タイル・通常/広告カードは共通プレビューへ接続し、GET previewからHLS権限とnvComment読取を使う。既定は0秒開始/上限30秒、ミュートはroot共有。離脱pauseとcache evictionによるdisposeを区別する。現在の実ブラウザは安全ポリシーで未観測。",
+  "request": {
+    "preview": "GET /v1/watch/{videoId}/preview",
+    "hls": "POST /v1/watch/{videoId}/access-rights/hls",
+    "comments": "POST /v1/threads",
+    "new_requests": 0
+  },
+  "response": {
+    "fields": [
+      "domand",
+      "comment.nvComment",
+      "video.duration",
+      "player"
+    ],
+    "runtime_observations": 0
+  },
+  "authentication": "Code includes credentials for nvapi and omits them for keyed comment POST; minimum requirements untested",
+  "unconfirmed": [
+    "Current official runtime and keyword route",
+    "Required headers/authentication/expiry/CDN CORS",
+    "Pixel collision and lifecycle edge cases",
+    "Exact browser installation"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "evidence_level": "OFFLINE-TEST: extracted fixed functions; synthetic data",
+  "real_requests": 0,
+  "user_db_reads": 0,
+  "cases": [
+    {
+      "case": "current_owner_kept",
+      "passed": true,
+      "ad_mock_calls": 0,
+      "snapshot_mock_calls": 0,
+      "old_name_selected": false,
+      "old_icon_selected": false
+    },
+    {
+      "case": "existing_id_missing_name_not_backfilled",
+      "passed": true,
+      "ad_mock_calls": 0,
+      "snapshot_mock_calls": 0,
+      "old_name_selected": false,
+      "old_icon_selected": false
+    },
+    {
+      "case": "ads_fields_selected",
+      "passed": true,
+      "ad_mock_calls": 1,
+      "snapshot_mock_calls": 0,
+      "old_name_selected": false,
+      "old_icon_selected": false
+    },
+    {
+      "case": "wrong_video_ad_rejected",
+      "passed": true,
+      "ad_mock_calls": 1,
+      "snapshot_mock_calls": 1,
+      "old_name_selected": false,
+      "old_icon_selected": false
+    },
+    {
+      "case": "ads_missing_name_icon_does_not_use_old_cache",
+      "passed": true,
+      "ad_mock_calls": 1,
+      "snapshot_mock_calls": 0,
+      "old_name_selected": false,
+      "old_icon_selected": false
+    },
+    {
+      "case": "all_missing_does_not_use_old_cache",
+      "passed": true,
+      "ad_mock_calls": 1,
+      "snapshot_mock_calls": 1,
+      "old_name_selected": false,
+      "old_icon_selected": false
+    },
+    {
+      "case": "channel_skips_user_supplement",
+      "passed": true,
+      "ad_mock_calls": 0,
+      "snapshot_mock_calls": 0,
+      "old_name_selected": false,
+      "old_icon_selected": false
+    }
+  ],
+  "tested_inputs": [
+    "provided source functions",
+    "provided dist functions"
+  ],
+  "dist_cases_match": true
+}
