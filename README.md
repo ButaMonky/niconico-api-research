@@ -33,7 +33,7 @@ NG本体については、取得済みownerを保持する正規化条件と、�
 
 `CONFIRMED-LIVE` は実通信、`CONFIRMED-CODE` は参照コード、`REPORTED` は報告、`LEGACY` は過去仕様、`HYPOTHESIS` は仮説、`FAILED` は記載条件での失敗です。値が返ることと、現在の正しい値であることを分けます。hiddenを退会済みとは断定しません。
 
-今回の選択版は27 findings / 27 evidence sources。過去の全研究を収録したものではありません。コメント・過去ログ・アプリ差・旧機種API等は、未確認の調査候補を含みます。[検証記録](docs/research/niconico/VERIFICATION-NG-HANDOFF-20260920.md)と各資料の制約も参照してください。
+今回の選択版は28 findings / 28 evidence sources。過去の全研究を収録したものではありません。コメント・過去ログ・アプリ差・旧機種API等は、未確認の調査候補を含みます。[検証記録](docs/research/niconico/VERIFICATION-NG-HANDOFF-20260920.md)と各資料の制約も参照してください。
 
 ## 検証と更新
 
@@ -64,3 +64,5 @@ R13：[過去ログのwhen境界と全件取得の限界](docs/research/niconico
 R14：[コメント投稿のキー・対象・認証・再試行](docs/research/niconico/COMMENTS-POST.md)。固定公開コードの8合成条件で確認し、実投稿・キー発行は行っていません。
 
 R15-A：[描画時刻・位置と表示/衝突の境界](docs/research/niconico/COMMENT-RENDERING.md)。固定版の7合成条件、pixel描画・公式比較は未実施。
+
+R15-B：[固定2コメントの残存矩形と衝突](docs/research/niconico/COMMENT-RENDERING.md)。281cs差の重なりを合成確認。pixel描画・公式比較は未実施。

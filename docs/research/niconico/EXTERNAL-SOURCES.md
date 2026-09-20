@@ -72,3 +72,7 @@ R12と同じnndownload/comments.tsのhashを確認し、[when境界の合成確�
 ## R15-A：niconicomments固定版
 
 作者xpadev（xpadev-net）ほか。commit `d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd`、package0.4.1、2026-09-20確認。上表の未取得は過去の状態。[11ファイルの固定台帳](evidence/comment-render-fixed-sources-20260920.json)、[7合成条件](evidence/comment-render-timing-offline-20260920.json)。描画時刻/座標のコード確認であり、API通信・pixel描画・公式互換の確認ではない。部分cloneはローカルのみ。
+
+## R15-B：同じ固定出典で2件の衝突を確認
+
+niconicomments commit `d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd`は変更なし。Aの11ファイル台帳を再利用し、processFixedComment/getFixedPosY/getPosY/BaseComment.drawの2件連鎖を[6合成条件](evidence/comment-render-pair-collision-20260920.json)で追加確認。新たな最新版取得・公式比較ではない。

@@ -203,5 +203,13 @@
     "kind": "offline-pinned-code-experiment",
     "reviewed_at": "2026-09-20T13:33:42+09:00",
     "sha256": "56d4ddd3de5e68965448206b9df3f1242908dd7ed853f4c4063c5d5c771dfb52"
+  },
+  {
+    "id": "S-COMMENT-RENDER-PAIR-20260920",
+    "file": "evidence/comment-render-pair-collision-20260920.json",
+    "label": "Two fixed comments: collision boundary synthetic results",
+    "kind": "offline-pinned-code-experiment",
+    "reviewed_at": "2026-09-20T13:53:34+09:00",
+    "sha256": "6e0f57d6a6d5ebcd0d2f49fbe47bb38e2e7e2c1f9c10f1fffd3218c09f2c02c4"
   }
 ]

@@ -67,3 +67,7 @@ R23終了後の指示は「channelを少数混在させ、snapshotとのowner型
 ## 最新：R15-A限定完了 → R15-B（Astra高）
 
 「Astra高でR15-Bを進めてください。Git/AGENTSとCOMMENT-RENDERING.mdを確認し、同じ固定版niconicommentsでue/shitaの単一コメントの再検証は繰り返さず、2件目の開始を1件目から+281csと+300csにした合成条件を比較してください。残存描画と衝突表の期間差が位置や重なりにどう影響するか、同一layer・同一寸法で1条件として確認してください。pixel描画や公式互換を検証していなければ明示し、実投稿・NG本体・Zenza固有コードの解析や変更は行わず、資料・指定outputs・次の指示文を更新してください。GitHub反映は最後にしてください。」
+
+## 最新：R15-B完了 → R15-C（Astra高）
+
+「Astra高でR15-Cを進めてください。Git/AGENTSとCOMMENT-RENDERING.mdのR15-A/Bを読み、同じ固定版niconicommentsで、合成本文のschema/command parserと文字計測を含む描画経路から1組を確認してください。R15-Bの寸法注入・矩形記録と区別し、ueまたはshitaの2.81秒差で同じ結論になるかを調べてください。実ブラウザのpixel描画や公式比較を行った範囲だけ明示し、認証された読取通信が追加根拠になる場合は少数で利用してください。実投稿・NG本体・Zenza固有コードの解析や変更は行わず、秘密値・個人本文を保存せず、資料・指定outputs・次の指示文を更新してください。GitHub反映は最後にしてください。」

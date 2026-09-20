@@ -1,0 +1,769 @@
+{
+  "kind": "SYNTHETIC two-comment collision and geometry; not pixels or official player",
+  "new_niconico_requests": 0,
+  "source_sha256": {
+    "src/@types/format.numeric.ts": "d5faa48f78d69777717f0acff951e693da1808e2adc541a83258bebb13ee6dc6",
+    "src/input/xmlDocument.ts": "2a5ea727bb05efb0466cec3171f929ba3b6750baac387161a7957a6295ab775d",
+    "src/input/v1.ts": "26978785de88019d5a6cbc4401e25e996e8f1e7210d05b16638043d5dfc8b62d",
+    "src/utils/array.ts": "281850cac503c2420b089223b34be70c97f49f3c006c8d760e75a7d188ae212f",
+    "src/utils/comment.ts": "ab03dd8728e86225da0edb8b96d79dd039923117f550ede0f9164e5fecc59226",
+    "src/comments/BaseComment.ts": "3e54b4eb3fb4df621ad5f4646c1a0319f6247ce0d0453686fb218944e0ee5094"
+  },
+  "fixture": {
+    "comments_per_case": 2,
+    "first_vpos_cs": 1000,
+    "long_cs": 300,
+    "width": 300,
+    "height": 60,
+    "layer": -1,
+    "processing_order": "ascending vpos, unique index0/index1",
+    "lazy": false,
+    "config": {
+      "canvasWidth": 1920,
+      "canvasHeight": 1080,
+      "commentDrawRange": 1530,
+      "commentDrawPadding": 195,
+      "nakaCommentSpeedOffset": 0.95,
+      "collisionRange": {
+        "left": 235,
+        "right": 1685
+      },
+      "collisionPadding": 5
+    },
+    "schema_parser_executed": false,
+    "command_parser_executed": false,
+    "pixels_rendered": false
+  },
+  "case_count": 6,
+  "cases": [
+    {
+      "loc": "ue",
+      "gap_cs": 280,
+      "indexes": [
+        0,
+        1
+      ],
+      "layers": [
+        -1,
+        -1
+      ],
+      "layout_pos_y": [
+        0,
+        60
+      ],
+      "first_in_collision_at_second_start": true,
+      "coactive": {
+        "first": 1280,
+        "last": 1299,
+        "count": 20
+      },
+      "rectangle_overlap": {
+        "first": null,
+        "last": null,
+        "count": 0
+      },
+      "samples": [
+        {
+          "time_cs": 1279,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1280,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            },
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 60,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1299,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            },
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 60,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1299.9,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            },
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 60,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1300,
+          "draw": [
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 60,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1579,
+          "draw": [
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 60,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1580,
+          "draw": [],
+          "overlap": false
+        }
+      ]
+    },
+    {
+      "loc": "ue",
+      "gap_cs": 281,
+      "indexes": [
+        0,
+        1
+      ],
+      "layers": [
+        -1,
+        -1
+      ],
+      "layout_pos_y": [
+        0,
+        0
+      ],
+      "first_in_collision_at_second_start": false,
+      "coactive": {
+        "first": 1281,
+        "last": 1299,
+        "count": 19
+      },
+      "rectangle_overlap": {
+        "first": 1281,
+        "last": 1299,
+        "count": 19
+      },
+      "samples": [
+        {
+          "time_cs": 1280,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1281,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            },
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": true
+        },
+        {
+          "time_cs": 1299,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            },
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": true
+        },
+        {
+          "time_cs": 1299.9,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            },
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": true
+        },
+        {
+          "time_cs": 1300,
+          "draw": [
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1580,
+          "draw": [
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1581,
+          "draw": [],
+          "overlap": false
+        }
+      ]
+    },
+    {
+      "loc": "ue",
+      "gap_cs": 300,
+      "indexes": [
+        0,
+        1
+      ],
+      "layers": [
+        -1,
+        -1
+      ],
+      "layout_pos_y": [
+        0,
+        0
+      ],
+      "first_in_collision_at_second_start": false,
+      "coactive": {
+        "first": null,
+        "last": null,
+        "count": 0
+      },
+      "rectangle_overlap": {
+        "first": null,
+        "last": null,
+        "count": 0
+      },
+      "samples": [
+        {
+          "time_cs": 1299,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1299.9,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1300,
+          "draw": [
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1599,
+          "draw": [
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 0,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1600,
+          "draw": [],
+          "overlap": false
+        }
+      ]
+    },
+    {
+      "loc": "shita",
+      "gap_cs": 280,
+      "indexes": [
+        0,
+        1
+      ],
+      "layers": [
+        -1,
+        -1
+      ],
+      "layout_pos_y": [
+        0,
+        60
+      ],
+      "first_in_collision_at_second_start": true,
+      "coactive": {
+        "first": 1280,
+        "last": 1299,
+        "count": 20
+      },
+      "rectangle_overlap": {
+        "first": null,
+        "last": null,
+        "count": 0
+      },
+      "samples": [
+        {
+          "time_cs": 1279,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1280,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            },
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 960,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1299,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            },
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 960,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1299.9,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            },
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 960,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1300,
+          "draw": [
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 960,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1579,
+          "draw": [
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 960,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1580,
+          "draw": [],
+          "overlap": false
+        }
+      ]
+    },
+    {
+      "loc": "shita",
+      "gap_cs": 281,
+      "indexes": [
+        0,
+        1
+      ],
+      "layers": [
+        -1,
+        -1
+      ],
+      "layout_pos_y": [
+        0,
+        0
+      ],
+      "first_in_collision_at_second_start": false,
+      "coactive": {
+        "first": 1281,
+        "last": 1299,
+        "count": 19
+      },
+      "rectangle_overlap": {
+        "first": 1281,
+        "last": 1299,
+        "count": 19
+      },
+      "samples": [
+        {
+          "time_cs": 1280,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1281,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            },
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": true
+        },
+        {
+          "time_cs": 1299,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            },
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": true
+        },
+        {
+          "time_cs": 1299.9,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            },
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": true
+        },
+        {
+          "time_cs": 1300,
+          "draw": [
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1580,
+          "draw": [
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1581,
+          "draw": [],
+          "overlap": false
+        }
+      ]
+    },
+    {
+      "loc": "shita",
+      "gap_cs": 300,
+      "indexes": [
+        0,
+        1
+      ],
+      "layers": [
+        -1,
+        -1
+      ],
+      "layout_pos_y": [
+        0,
+        0
+      ],
+      "first_in_collision_at_second_start": false,
+      "coactive": {
+        "first": null,
+        "last": null,
+        "count": 0
+      },
+      "rectangle_overlap": {
+        "first": null,
+        "last": null,
+        "count": 0
+      },
+      "samples": [
+        {
+          "time_cs": 1299,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1299.9,
+          "draw": [
+            {
+              "slot": 0,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1300,
+          "draw": [
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1599,
+          "draw": [
+            {
+              "slot": 1,
+              "x": 810,
+              "y": 1020,
+              "width": 300,
+              "height": 60
+            }
+          ],
+          "overlap": false
+        },
+        {
+          "time_cs": 1600,
+          "draw": [],
+          "overlap": false
+        }
+      ]
+    }
+  ],
+  "checked_at": "2026-09-20T13:53:34+09:00",
+  "evidence_level": [
+    "CONFIRMED-CODE",
+    "SYNTHETIC"
+  ],
+  "revision": "d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd",
+  "package_version": "0.4.1",
+  "author": "xpadev-net and contributors",
+  "repository": "https://github.com/xpadev-net/niconicomments",
+  "environment": {
+    "python": "3.12.10",
+    "node": "v24.19.0"
+  },
+  "source_registry": "S-COMMENT-RENDER-CODE-20260920",
+  "source_loader_sha256": "85e7f7d2ee6f9a2ba54fe9a8c783cd089e7b90bbaadeebac693d09989d323c01",
+  "line_endings": {
+    "CRLF_checkout_and_LF_blob_fixture": "All emitted fields identical; CRLF normalized before fixed source hash check"
+  },
+  "limitations": [
+    "Geometry rectangles only; no glyph/pixel rendering or official player comparison",
+    "Bypasses schema and command parser; loc and 300x60 dimensions injected",
+    "Chronological eager layout, same layer -1, unique indexes0/1; different layers/order/lazy untested",
+    "No new network; authorized browser/account read was not needed for deterministic synthetic condition",
+    "Not a claim of intent, regression or service bug"
+  ]
+}

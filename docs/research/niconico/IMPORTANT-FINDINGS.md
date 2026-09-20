@@ -45,3 +45,7 @@
 ## R15-A：表示期間と衝突期間は別
 
 固定niconicommentsの単一コメントで、ue/shitaのtimeline300刻みに対し衝突表281刻み。naka対照はtimeline588/画面内矩形489刻み。longを一律の可視秒数としない。vposMs切捨ても含め[条件・制約](COMMENT-RENDERING.md)を参照。合成座標確認で公式互換・実pixel描画ではない。
+
+## R15-B：同一layerでも残存描画の矩形が重なる条件
+
+固定版のue/shita2件は281cs差で19刻み同位置。対照280cs差は別段、300cs差は共存なし。[条件・証拠](COMMENT-RENDERING.md)。衝突表の不在を表示終了とみなせない。合成矩形の結果で、pixel描画・公式挙動は未確認。

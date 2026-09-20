@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "NICO-RENDER-20260920-FIXED-PAIR-OVERLAP",
+  "title": "2.81秒差の固定2コメントは残存期間に同位置の矩形となる",
+  "status": "static",
+  "evidence_level": [
+    "CONFIRMED-CODE",
+    "SYNTHETIC"
+  ],
+  "platform": "Pinned niconicomments isolated functions; no pixel/official comparison",
+  "app_version": "0.4.1; d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd",
+  "observed_at": "2026-09-20T13:53:34+09:00",
+  "claim": "同一layer/300x60/long300のueとshitaで、281cs差は同位置かつ19刻み矩形重なり。300cs差は共存なし。境界対照280cs差は段を避け共存20刻みでも重なり0。R15-Aの未検証仮説を限定した合成条件で確認。",
+  "evidence": [
+    "S-COMMENT-RENDER-PAIR-20260920",
+    "S-COMMENT-RENDER-CODE-20260920"
+  ],
+  "request": {
+    "method": "local function execution",
+    "endpoint": null,
+    "gap_cs": [
+      280,
+      281,
+      300
+    ],
+    "loc": [
+      "ue",
+      "shita"
+    ],
+    "layer": -1,
+    "unique_indexes": [
+      0,
+      1
+    ],
+    "lazy": false
+  },
+  "response": {
+    "cases": 6,
+    "overlap_ticks_by_gap": {
+      "280": 0,
+      "281": 19,
+      "300": 0
+    },
+    "coactive_ticks_by_gap": {
+      "280": 20,
+      "281": 19,
+      "300": 0
+    }
+  },
+  "authentication": "None; synthetic input only",
+  "unconfirmed": [
+    "Pixels, fonts and full renderer integration",
+    "Official player equivalence",
+    "Different dimensions/layers/order/lazy modes",
+    "Whether behavior is intentional or a defect"
+  ],
+  "supersedes": [],
+  "clarifies": [
+    "NICO-RENDER-20260920-TIMELINE-VISIBILITY"
+  ]
+}

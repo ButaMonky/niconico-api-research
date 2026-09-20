@@ -61,3 +61,7 @@ NG実装向けの優先入口：[重要な確認結果](IMPORTANT-FINDINGS.md)�
 ## R15-A追加：描画時刻の境界
 
 [COMMENT-RENDERING.md](COMMENT-RENDERING.md)へ固定版0.4.1のvposMs切捨て・単一ue/shita/nakaのtimelineと衝突/画面内判定を整理。公開27 findings / 27 sources。pixel描画/公式比較なし。R15全体は限定完了、次Bの指示はNEXT-TASK-PROMPTS末尾。
+
+## 最新R15-B：2件の固定コメント
+
+[COMMENT-RENDERING.mdのB](COMMENT-RENDERING.md)に281cs差の残存矩形重なり、280/300cs対照を追加。公開28 findings / 28 sources。次Cは文字計測を含む1組の確認。通信読取は許可済みで、追加根拠が得られる調査に利用する。
