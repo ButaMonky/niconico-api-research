@@ -53,3 +53,11 @@ GitHub上の追加研究はPR単位で公開し、mainへの反映と区別す�
 ## R14の確認範囲
 
 [コメント投稿](COMMENTS-POST.md)：固定niconicojsのpostKey/要求/HTTP連鎖をCONFIRMED-CODE、8ケースをSYNTHETICとして確認。現在の一般会員・fork権限・キー期限・投稿成功/全エラー一覧は未確認。公式Web/iOS/AndroidやZenza固有コードの調査はしていない。
+
+## R15-Aの範囲
+
+[コメント描画](COMMENT-RENDERING.md)に7合成条件。時刻変換・timeline・幾何座標を確認し、フォント・文字計測・複数衝突・pixel描画・公式互換は未検証。API取得/投稿とは独立した研究で、新しい通信endpointの発見ではない。
+
+## R15-Bの範囲
+
+固定ue/shita2件の合成6条件を確認。同一layer・別index・時刻順での矩形重なりを記録。schema/command parser・文字計測・pixel描画・公式比較・lazyや別layerは未確認。[詳細](COMMENT-RENDERING.md)。

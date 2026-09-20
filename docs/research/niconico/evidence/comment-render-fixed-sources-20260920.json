@@ -1,0 +1,142 @@
+{
+  "checked_at": "2026-09-20T13:33:42+09:00",
+  "author": "xpadev (xpadev-net) and contributors",
+  "url": "https://github.com/xpadev-net/niconicomments",
+  "revision": "d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd",
+  "commit_date": "2026-09-14T15:14:55Z",
+  "package_version": "0.4.1",
+  "version_scope": "develop HEAD resolved then detached at commit; release tag not independently checked",
+  "license": "MIT (source LICENSE); no external source redistributed",
+  "acquisition": "Partial shallow git clone for cross-file timing/geometry analysis; local ignored storage only",
+  "evidence_level": "CONFIRMED-CODE; SYNTHETIC experiment; not official client equivalence",
+  "new_niconico_requests": 0,
+  "files": [
+    {
+      "file": "src/@types/format.numeric.ts",
+      "url": "https://github.com/xpadev-net/niconicomments/blob/d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd/src/@types/format.numeric.ts",
+      "sha256": "d5faa48f78d69777717f0acff951e693da1808e2adc541a83258bebb13ee6dc6",
+      "bytes": 2084,
+      "observed_checkout_sha256": "e0899dce1ee3c7aabbbb56ef75036ffd83809d6b9cd6c8712f1958baee7a3942",
+      "observed_checkout_bytes": 2152,
+      "hash_basis": "Git blob bytes (LF); checkout CRLF normalizes to identical LF"
+    },
+    {
+      "file": "src/input/xmlDocument.ts",
+      "url": "https://github.com/xpadev-net/niconicomments/blob/d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd/src/input/xmlDocument.ts",
+      "sha256": "2a5ea727bb05efb0466cec3171f929ba3b6750baac387161a7957a6295ab775d",
+      "bytes": 3023,
+      "observed_checkout_sha256": "8d29ef61189f111f5cb04674b9cca259a61b8c47c71f33a2a1266da47b5789f4",
+      "observed_checkout_bytes": 3123,
+      "hash_basis": "Git blob bytes (LF); checkout CRLF normalizes to identical LF"
+    },
+    {
+      "file": "src/input/v1.ts",
+      "url": "https://github.com/xpadev-net/niconicomments/blob/d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd/src/input/v1.ts",
+      "sha256": "26978785de88019d5a6cbc4401e25e996e8f1e7210d05b16638043d5dfc8b62d",
+      "bytes": 1987,
+      "observed_checkout_sha256": "67bd532b37e6dd3e76eae2a059e826921a116c2633de064efd0c5269935fa799",
+      "observed_checkout_bytes": 2055,
+      "hash_basis": "Git blob bytes (LF); checkout CRLF normalizes to identical LF"
+    },
+    {
+      "file": "src/utils/array.ts",
+      "url": "https://github.com/xpadev-net/niconicomments/blob/d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd/src/utils/array.ts",
+      "sha256": "281850cac503c2420b089223b34be70c97f49f3c006c8d760e75a7d188ae212f",
+      "bytes": 777,
+      "observed_checkout_sha256": "fde6c672a07017cd81d32ec54fb8bfe6ab981b29cc16f236cb1d0950d314adb1",
+      "observed_checkout_bytes": 812,
+      "hash_basis": "Git blob bytes (LF); checkout CRLF normalizes to identical LF"
+    },
+    {
+      "file": "src/utils/comment.ts",
+      "url": "https://github.com/xpadev-net/niconicomments/blob/d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd/src/utils/comment.ts",
+      "sha256": "ab03dd8728e86225da0edb8b96d79dd039923117f550ede0f9164e5fecc59226",
+      "bytes": 46428,
+      "observed_checkout_sha256": "70533c8955f95b1d0efd975e55583b1307f5ac97c235249792f114b98408a929",
+      "observed_checkout_bytes": 48014,
+      "hash_basis": "Git blob bytes (LF); checkout CRLF normalizes to identical LF"
+    },
+    {
+      "file": "src/comments/BaseComment.ts",
+      "url": "https://github.com/xpadev-net/niconicomments/blob/d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd/src/comments/BaseComment.ts",
+      "sha256": "3e54b4eb3fb4df621ad5f4646c1a0319f6247ce0d0453686fb218944e0ee5094",
+      "bytes": 15875,
+      "observed_checkout_sha256": "1641b94f8fac9b477034914ae01d47615e352fa9633558e56c557e443b159b8a",
+      "observed_checkout_bytes": 16425,
+      "hash_basis": "Git blob bytes (LF); checkout CRLF normalizes to identical LF"
+    },
+    {
+      "file": "src/definition/initConfig.ts",
+      "url": "https://github.com/xpadev-net/niconicomments/blob/d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd/src/definition/initConfig.ts",
+      "sha256": "31f8e746a7c8a06d20c0f65d42701366fd676be0dfc2509c337bc78a98b44b27",
+      "bytes": 10022,
+      "observed_checkout_sha256": "4ea370407b4d626cb440a2a839961de03935c6bd47ea734fbc680a3c9b8f0c23",
+      "observed_checkout_bytes": 10414,
+      "hash_basis": "Git blob bytes (LF); checkout CRLF normalizes to identical LF"
+    },
+    {
+      "file": "src/main.ts",
+      "url": "https://github.com/xpadev-net/niconicomments/blob/d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd/src/main.ts",
+      "sha256": "4f0e5887a2df5b092c6d01230da009e7649690131524488e9fa1b1087369508c",
+      "bytes": 31608,
+      "observed_checkout_sha256": "f62070fd4b41ee318e639bd999ec1e7fe570f2d6eeff4dc43db27693168aef8c",
+      "observed_checkout_bytes": 32638,
+      "hash_basis": "Git blob bytes (LF); checkout CRLF normalizes to identical LF"
+    },
+    {
+      "file": "package.json",
+      "url": "https://github.com/xpadev-net/niconicomments/blob/d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd/package.json",
+      "sha256": "26e3ec56ba16a366a972ed64fa4ba59ddd6e739aa845e2f076fe6fc46fae9750",
+      "bytes": 2949,
+      "observed_checkout_sha256": "c410487862d199f2f7417a72b108d20a3c312bc70cf535d7dd488c6d0dc106dc",
+      "observed_checkout_bytes": 3028,
+      "hash_basis": "Git blob bytes (LF); checkout CRLF normalizes to identical LF"
+    },
+    {
+      "file": "README.md",
+      "url": "https://github.com/xpadev-net/niconicomments/blob/d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd/README.md",
+      "sha256": "128481b186ee310173b9e168f827450685ee32531f580c757dbb962ce650ab2d",
+      "bytes": 3251,
+      "observed_checkout_sha256": "18747abda1439f57caa2dd1d22f91db8fa023dc990caadd05e962655622bcd8a",
+      "observed_checkout_bytes": 3340,
+      "hash_basis": "Git blob bytes (LF); checkout CRLF normalizes to identical LF"
+    },
+    {
+      "file": "LICENSE",
+      "url": "https://github.com/xpadev-net/niconicomments/blob/d3eb388197b9e40c6e9c592e83a37ecc6ab39fcd/LICENSE",
+      "sha256": "624269a49d89eb5e59335e2fd8021902716a46ef57ad66db0cece27ce4d56d91",
+      "bytes": 1067,
+      "observed_checkout_sha256": "4353dd8e811c5cdb4000e26cafb6a26c7c683c012d51ebc0a8d2afc2149b4367",
+      "observed_checkout_bytes": 1088,
+      "hash_basis": "Git blob bytes (LF); checkout CRLF normalizes to identical LF"
+    }
+  ],
+  "functions": {
+    "src/input/v1.ts": [
+      "fromV1",
+      "date2time"
+    ],
+    "src/utils/comment.ts": [
+      "normalizeCommentLong",
+      "processFixedComment",
+      "processMovableComment",
+      "getFixedPosY",
+      "getMovablePosY",
+      "getPosX"
+    ],
+    "src/comments/BaseComment.ts": [
+      "BaseComment.draw",
+      "isOutsideStage"
+    ],
+    "src/main.ts": [
+      "drawCanvas uses Math.floor(vpos) for timeline lookup"
+    ]
+  },
+  "next_candidates": [
+    "Two fixed comments with second at +281cs versus +300cs: collision and display overlap hypothesis",
+    "Command parser/measurement/pixel renderer integration",
+    "Fonts, line breaks, scale, Flash/HTML5 and owner/layer differences",
+    "NicoCommentDL remains outside this unit"
+  ],
+  "reproducibility_correction": "Before first publication: Windows core.autocrlf=true changed checkout bytes only. Original checkout hash preserved; primary SHA256 is pinned Git blob LF. Probe normalizes CRLF to LF before checking. All 11 files verified equal after normalization."
+}

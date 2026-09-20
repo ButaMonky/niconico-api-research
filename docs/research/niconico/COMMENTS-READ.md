@@ -142,3 +142,7 @@ R12は要求・応答・出力変換の区別を整理できたので終了。�
 ## R14との境界（2026-09-20追補）
 
 [投稿仕様](COMMENTS-POST.md)ではpostKey・threadIdを用いる。読取threadKeyやtargetのfork、読取用キーエラー処理と投稿の認証・権限を同一視しない。固定共通HTTPでは読取POSTだけretry許可、投稿は許可なし。実投稿による確認ではない。
+
+## R15-A：描画側の時刻変換（2026-09-20）
+
+固定niconicomments0.4.1では`floor(vposMs/10)`で内部vposへ変換する。[描画資料](COMMENT-RENDERING.md)へ切捨てと位置別境界を記録。これは当該rendererの変換であり、APIの元値を変更する規則や公式プレイヤー保証ではない。
