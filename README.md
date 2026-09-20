@@ -33,7 +33,7 @@ NG本体については、取得済みownerを保持する正規化条件と、�
 
 `CONFIRMED-LIVE` は実通信、`CONFIRMED-CODE` は参照コード、`REPORTED` は報告、`LEGACY` は過去仕様、`HYPOTHESIS` は仮説、`FAILED` は記載条件での失敗です。値が返ることと、現在の正しい値であることを分けます。hiddenを退会済みとは断定しません。
 
-今回の選択版は21 findings / 21 evidence sources。過去の全研究を収録したものではありません。コメント・過去ログ・アプリ差・旧機種API等は、未確認の調査候補を含みます。[検証記録](docs/research/niconico/VERIFICATION-NG-HANDOFF-20260920.md)と各資料の制約も参照してください。
+今回の選択版は23 findings / 23 evidence sources。過去の全研究を収録したものではありません。コメント・過去ログ・アプリ差・旧機種API等は、未確認の調査候補を含みます。[検証記録](docs/research/niconico/VERIFICATION-NG-HANDOFF-20260920.md)と各資料の制約も参照してください。
 
 ## 検証と更新
 
@@ -58,3 +58,5 @@ R22：[投稿者100件を匿名1 POSTで全取得](docs/research/niconico/PLAYLI
 R23〜R25：[新着・チャンネルID・不正ID・部分返却](docs/research/niconico/PLAYLIST-ACCURACY-AND-FAILURES.md)。[ランキングNGの更新着手判断](docs/research/niconico/NG-UPDATE-READINESS.md)を追加しました。本体は変更していません。
 
 R12：[nvcommentの要求・応答とクライアント保存形式](docs/research/niconico/COMMENTS-READ.md)。保存100成功と固定OSSを整理し、今回はニコニコへの再通信をしていません。
+
+R13：[過去ログのwhen境界と全件取得の限界](docs/research/niconico/COMMENTS-HISTORY.md)。既存要求と固定コードの合成確認、現在の実通信なし。

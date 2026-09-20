@@ -45,3 +45,7 @@ GitHub上の追加研究はPR単位で公開し、mainへの反映と区別す�
 ## R12追補
 
 [コメント取得構造](COMMENTS-READ.md)を独立収録。旧100成功記録の許可項目だけ再集計し、固定4出典と照合。公開21 findings / 21 sources。正本は旧記録を保持して2 findings / 2 sources追加する。NG実装着手の判定はR25時点から変更なし。
+
+## R13追補
+
+[過去ログの範囲・完全性](COMMENTS-HISTORY.md)を追加。公開23 findings / 23 sources。100要求のadditionals空と、固定コードの境界依存を別根拠で確認。NG更新着手判断は変更なし。一般会員/実サーバー境界は未解決。

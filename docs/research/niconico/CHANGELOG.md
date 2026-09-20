@@ -75,3 +75,7 @@ playlist/requestへ20→100の2 POST、全件返却・owner IDありを確認。
 ## 2026-09-20 — R12コメント取得構造
 
 COMMENTS-READを追加。旧100成功の再集計、Web/iOS Content-Type差、voltageZone項目55応答、OSS保存形式とAPI生構造の区別。固定commit/revisionとhashを登録し、旧未固定参照を訂正可能な形で追記。新規ニコニコ通信0、キー実値保存0、本体/Zenza変更0。別開発タスク向け指示文をローカル共有先へ保存（個人パスを含むため公開版には収録しない）。
+
+## 2026-09-20 — R13過去ログ境界
+
+既存100要求のadditionals空を新確認。過去ログ成功への一般化を防ぐ追補。固定nndownload/niconicojsの実コードを偽HTTPで実行し、同秒境界2種×2実装の4条件を保存。診断2本・匿名化証拠2件・findings2件を追加。キー実値保存0、ニコニコ通信0、本体変更0。

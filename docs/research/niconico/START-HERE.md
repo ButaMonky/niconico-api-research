@@ -49,3 +49,7 @@ NG実装向けの優先入口：[重要な確認結果](IMPORTANT-FINDINGS.md)�
 ## 最新追補：R12コメント取得
 
 [COMMENTS-READ.md](COMMENTS-READ.md)に要求・応答・固定出典・クライアントの出力変換を整理。公開選択版21 findings / 21 sources。100保存成功を再利用し、新規ニコニコ通信0。次はR13。NG別開発には引き続きNG-UPDATE-READINESS.mdから着手する。
+
+## 最新追補：R13過去ログの境界
+
+[COMMENTS-HISTORY.md](COMMENTS-HISTORY.md)を参照。公開選択版23 findings / 23 sources。既存要求の範囲確認と4合成条件、ニコニコ新規通信0。会員条件は未確認。次はR14、投稿せず公開コードを解析する。

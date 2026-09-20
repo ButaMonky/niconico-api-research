@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "platform": "historical supplied captures and pinned public clients",
+  "app_version": "R12 fixed source revisions; historical iOS 12.37 context",
+  "observed_at": "2026-09-20T12:55:39+09:00",
+  "authentication": "No new login or network. Old key existence only; values not retained. Current general-member and guest history access unverified.",
+  "supersedes": [],
+  "unconfirmed": [
+    "Actual server when boundary inclusion and response order.",
+    "General-member/guest history access and key lifetime.",
+    "Complete history retrieval and same-second overflow."
+  ],
+  "id": "NICO-COMMENTS-20260920-HISTORY-CURSOR",
+  "title": "同秒境界の合成ページで全件取得の限界を確認",
+  "status": "static",
+  "evidence_level": [
+    "CONFIRMED-CODE",
+    "SYNTHETIC"
+  ],
+  "claim": "固定nndownload/niconicojsを4件・ページ2件の合成サーバーで実行。when同秒を含む条件は両者とも古い2件へ未到達。nndownloadは保存4/unique2、niconicojsは保存2/unique2。除外境界では両者4/unique4。実サーバー境界は未確認。",
+  "evidence": [
+    "S-COMMENT-HISTORY-OFFLINE-20260920",
+    "S-NVCOMMENT-CODE-20260920"
+  ],
+  "request": {
+    "endpoint": "POST /v1/threads (fake transport only)",
+    "when": "Unix seconds from postedAt, not vposMs",
+    "res_from": -1000
+  },
+  "response": {
+    "fixture_unique": 4,
+    "mock_page_cap": 2,
+    "inclusive_missing_unique": 2,
+    "exclusive_missing_unique": 0
+  },
+  "clarifies": [
+    "NICO-COMMENTS-20260920-CLIENT-OUTPUT-SHAPES"
+  ]
+}

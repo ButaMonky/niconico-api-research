@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-09-20T12:55:39+09:00",
+  "evidence_level": "CONFIRMED-CODE with SYNTHETIC execution; not CONFIRMED-LIVE",
+  "new_niconico_requests": 0,
+  "fixture": {
+    "unique_comments": 4,
+    "same_second_newer_comments": 2,
+    "older_second_comments": 2,
+    "mock_page_cap": 2,
+    "response_sort": "ascending no within each newest selected page",
+    "comment_count_field": 4,
+    "real_comment_data_used": false,
+    "real_key_used": false
+  },
+  "nndownload": {
+    "source_sha256": "85dd4c7e6937bd03edb4cc275af2e909c0ea45f6322d0cd09887c51c7ba218f5",
+    "kind": "SYNTHETIC actual isolated pinned function; server replaced",
+    "new_niconico_requests": 0,
+    "mock_page_cap": 2,
+    "cases": [
+      {
+        "boundary": "inclusive",
+        "mock_post_calls": 2,
+        "cursor_offsets_from_T": [
+          1,
+          0
+        ],
+        "available_unique": 4,
+        "saved_count": 4,
+        "unique_saved": 2,
+        "duplicate_saved": 2,
+        "missing_unique": 2
+      },
+      {
+        "boundary": "exclusive",
+        "mock_post_calls": 2,
+        "cursor_offsets_from_T": [
+          1,
+          0
+        ],
+        "available_unique": 4,
+        "saved_count": 4,
+        "unique_saved": 4,
+        "duplicate_saved": 0,
+        "missing_unique": 0
+      }
+    ]
+  },
+  "niconicojs": {
+    "source_sha256": "d239cae7e10a3f6fa601bb5f1d2f8e9ae8862ec796af8f70943e016a828e508f",
+    "kind": "SYNTHETIC fixed TypeScript module with imports removed and fake HTTP; not server",
+    "new_niconico_requests": 0,
+    "mock_page_cap": 2,
+    "cases": [
+      {
+        "boundary": "inclusive",
+        "mock_post_calls": 2,
+        "cursor_offsets_from_T": [
+          1,
+          0
+        ],
+        "available_unique": 4,
+        "saved_count": 2,
+        "unique_saved": 2,
+        "missing_unique": 2
+      },
+      {
+        "boundary": "exclusive",
+        "mock_post_calls": 3,
+        "cursor_offsets_from_T": [
+          1,
+          0,
+          -1
+        ],
+        "available_unique": 4,
+        "saved_count": 4,
+        "unique_saved": 4,
+        "missing_unique": 0
+      }
+    ]
+  },
+  "sources_reference": "nvcomment-fixed-sources-20260920.json",
+  "reviewed_lines": {
+    "nndownload": "2064-2137",
+    "niconicojs": "246-310"
+  },
+  "limits": [
+    "Inclusive/exclusive behavior is a simulated alternative, not observed server behavior.",
+    "Page cap 2 is a fixture setting, not Niconico maximum.",
+    "nndownload progress object is simulated; predicate completed>=total models normal completion.",
+    "No library login/media/file-saving module entrypoint executed.",
+    "No service-wide loss/bug, key lifetime or membership behavior claimed."
+  ]
+}
