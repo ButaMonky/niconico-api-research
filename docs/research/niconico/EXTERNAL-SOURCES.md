@@ -60,3 +60,7 @@ niconicolibs/apiは既参照commit 7ee4782f7f4f7c351da4b00145b361291e22544aのsp
 ## R12：コメント取得の固定出典（2026-09-20）
 
 [COMMENTS-READ.mdの固定出典](COMMENTS-READ.md#固定出典)と[機械可読台帳](evidence/nvcomment-fixed-sources-20260920.json)へyt-dlp、nndownload、otya128 Gist、niconicojsを登録。上記「今回未取得」は登録当初の履歴。今回、前3者は参照revisionを新たに固定し、niconicojsは既存固定版のcomments.tsを追加読解。過去masterとの正確な変更差は不明、コード稼働確認なし。外部コードのコピーは共有しない。
+
+## R13：固定コードの限定実行
+
+R12と同じnndownload/comments.tsのhashを確認し、[when境界の合成確認](COMMENTS-HISTORY.md)を実施。実ネットワーク・ライブラリ全体の実行ではない。新規版取得やサービス境界の再現とは区別し、4ケースの期待値と結果を[証拠](evidence/comment-history-offline-20260920.json)へ保存した。

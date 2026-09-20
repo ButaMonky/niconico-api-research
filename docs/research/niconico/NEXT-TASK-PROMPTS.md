@@ -55,3 +55,7 @@ R23終了後の指示は「channelを少数混在させ、snapshotとのowner型
 ## 最新：R12完了 → R13（Astra高）
 
 「Astra高でR13を進めてください。Git状態・適用AGENTS・COMMENTS-READ.md・TASKS.mdを確認し、既存記録とR12で固定した公開コードから、additionals.whenを使う過去ログ取得とthreadKeyの条件を1つに絞って整理してください。niconicojsのゲスト制限メッセージやnndownloadのall-commentsを現行サービス保証としないでください。過去時刻・投稿時刻とvposMsを区別し、重複・停止条件・一般会員の取得範囲を確認してください。必要な根拠が既存資料にあれば再通信せず、新規試験が必要なら正当な取得条件の1動画・少数読取だけに留め、キー実値・Cookie・コメント本文・userIdを保存しないでください。投稿・大量過去ログ取得・本体/Zenza固有コード変更は行いません。資料・指定outputs・次の指示文を更新し、GitHub反映は最後にしてください。」
+
+## 最新：R13完了 → R14（Astra高）
+
+「Astra高でR14のコメント投稿仕様を整理してください。Git/AGENTSとCOMMENTS-READ.md、COMMENTS-HISTORY.md、固定出典を確認し、postKey取得・投稿endpoint・body/vposMs/commands/thread/forkの関係を公開コード中心に調べてください。読取用threadKeyとpostKey、API応答とライブラリ戻り値を区別し、既知コードの再読だけで終わらず認証・対象指定・エラー処理の未整理点を1つ選んで根拠を残してください。今回はコメントを実投稿せず、認証値や本文・userIdの実値を保存しません。本体/Zenza固有コードを変更せず、解析資料・指定outputs・次の指示文を更新し、GitHub反映は最後にしてください。」

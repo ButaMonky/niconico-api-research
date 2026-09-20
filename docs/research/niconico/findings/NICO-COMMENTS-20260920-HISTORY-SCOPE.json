@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "platform": "historical supplied captures and pinned public clients",
+  "app_version": "R12 fixed source revisions; historical iOS 12.37 context",
+  "observed_at": "2026-09-20T12:55:39+09:00",
+  "authentication": "No new login or network. Old key existence only; values not retained. Current general-member and guest history access unverified.",
+  "supersedes": [],
+  "unconfirmed": [
+    "Actual server when boundary inclusion and response order.",
+    "General-member/guest history access and key lifetime.",
+    "Complete history retrieval and same-second overflow."
+  ],
+  "id": "NICO-COMMENTS-20260920-HISTORY-SCOPE",
+  "title": "既存100成功要求は全てadditionals空：過去ログ成功の証明ではない",
+  "status": "traffic",
+  "evidence_level": [
+    "CONFIRMED-LIVE (historical request structure, reexamined locally)"
+  ],
+  "claim": "既存3記録の100コメントPOSTを要求側だけ再集計し、additionalsは100/100空、when/res_from指定0。通常取得の成功を過去ログ・一般会員全件取得へ一般化できない。",
+  "evidence": [
+    "S-COMMENT-HISTORY-SCOPE-20260920"
+  ],
+  "request": {
+    "endpoint": "https://public.nvcomment.nicovideo.jp/v1/threads",
+    "method": "POST",
+    "additionals_empty_count": 100,
+    "when_present_count": 0
+  },
+  "response": {
+    "http_200_count": 100,
+    "response_bodies_read_this_unit": false
+  },
+  "clarifies": [
+    "NICO-COMMENTS-20260920-READ-CONTRACT"
+  ]
+}
