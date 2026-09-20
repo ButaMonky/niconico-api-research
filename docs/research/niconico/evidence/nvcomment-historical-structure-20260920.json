@@ -1,0 +1,131 @@
+{
+  "reviewed_at": "2026-09-20T12:34:48+09:00",
+  "evidence_level": "CONFIRMED-LIVE (historical supplied captures, reviewed 2026-09-14; reaggregated, not new live traffic)",
+  "input_document": "evidence/community2-capture-check-20260914.json (local historical source; not included)",
+  "input_document_sha256": "522981140efe8cc2b20889bd60143f308ec570ed6e185c24f680e967c5df8105",
+  "new_niconico_requests": 0,
+  "raw_capture_read_this_unit": false,
+  "method": "Allowlist aggregate of existing sanitized summaries; no raw capture, key values, cookies, body text, user IDs or local paths exported.",
+  "records": 100,
+  "endpoint": "https://public.nvcomment.nicovideo.jp/v1/threads",
+  "method_observed": "POST",
+  "http_status_counts": {
+    "200": 100
+  },
+  "meta_status_counts": {
+    "200": 100
+  },
+  "content_type_counts": {
+    "text/plain;charset=UTF-8": 76,
+    "application/json": 24
+  },
+  "cookie_presence_counts": {
+    "False": 76,
+    "True": 24
+  },
+  "thread_key_presence_counts": {
+    "True": 100
+  },
+  "content_type_cookie_pairs": [
+    {
+      "content_type": "text/plain;charset=UTF-8",
+      "cookie_present": false,
+      "requests": 76
+    },
+    {
+      "content_type": "application/json",
+      "cookie_present": true,
+      "requests": 24
+    }
+  ],
+  "response_thread_count_histogram": {
+    "3": 93,
+    "4": 7
+  },
+  "comment_items_sum_including_duplicates": 38635,
+  "empty_comment_responses": 17,
+  "response_data_key_occurrences": {
+    "globalComments": 100,
+    "threads": 100,
+    "voltageZone": 55
+  },
+  "comment_key_occurrences_by_response": [
+    {
+      "field_name": "body",
+      "response_count": 83
+    },
+    {
+      "field_name": "commands",
+      "response_count": 83
+    },
+    {
+      "field_name": "id",
+      "response_count": 83
+    },
+    {
+      "field_name": "isMyPost",
+      "response_count": 83
+    },
+    {
+      "field_name": "isPremium",
+      "response_count": 83
+    },
+    {
+      "field_name": "nicoruCount",
+      "response_count": 83
+    },
+    {
+      "field_name": "nicoruId",
+      "response_count": 83
+    },
+    {
+      "field_name": "no",
+      "response_count": 83
+    },
+    {
+      "field_name": "postedAt",
+      "response_count": 83
+    },
+    {
+      "field_name": "score",
+      "response_count": 83
+    },
+    {
+      "field_name": "source",
+      "response_count": 83
+    },
+    {
+      "field_name": "userId",
+      "response_count": 83
+    },
+    {
+      "field_name": "vposMs",
+      "response_count": 83
+    }
+  ],
+  "request_json_keys": [
+    "additionals",
+    "params",
+    "threadKey"
+  ],
+  "request_params_keys": [
+    "language",
+    "targets"
+  ],
+  "query_key_occurrences": {
+    "pc": 76,
+    "_clientOsType": 24
+  },
+  "watch_model_count": 38,
+  "watch_model_thread_key_present": 38,
+  "watch_model_server_hosts": {
+    "public.nvcomment.nicovideo.jp": 38
+  },
+  "limits": [
+    "Original capture dates/clients are described in prior summary; this is not a 2026-09-20 live test.",
+    "Key/target matching between watch and request was not verified one-to-one.",
+    "Per-value types, forks, commands, voltageZone contents and item uniqueness cannot be recovered from field-name summaries.",
+    "No response size or timing measurement retained here.",
+    "No general-member/guest/current historical-log behavior established."
+  ]
+}
