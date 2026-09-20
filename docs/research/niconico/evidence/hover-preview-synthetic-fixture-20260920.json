@@ -1,0 +1,55 @@
+{
+  "kind": "SYNTHETIC STRUCTURAL FIXTURE; not a recorded DOM; not a playable template",
+  "tree": {
+    "data-name": "stage",
+    "children": [
+      {
+        "data-name": "inner",
+        "children": [
+          {
+            "data-name": "content",
+            "children": [
+              {
+                "tag": "video",
+                "data-name": "video-content",
+                "attributes": {
+                  "playsinline": "",
+                  "preload": "metadata"
+                },
+                "src_omitted": true
+              },
+              {
+                "data-name": "overlay-icon"
+              },
+              {
+                "data-name": "storyboard-content"
+              },
+              {
+                "data-name": "supporter-content"
+              }
+            ]
+          },
+          {
+            "data-name": "comment",
+            "style": {
+              "pointer-events": "none"
+            },
+            "children": [
+              {
+                "tag": "canvas",
+                "width": 640,
+                "height": 360
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    "Synthetic dimensions; not a resolution requirement.",
+    "No URL, video ID, title, owner, browser extension node or authentication value.",
+    "Supplied outerHTML was not saved to Git.",
+    "Markup carries neither event handlers nor React state nor MediaSource buffers nor canvas pixels."
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "review_date": "2026-09-20 JST",
+  "evidence_level": "CONFIRMED-CODE: saved official assets and provided local source only",
+  "research_base": "352b676325b3559b73eb93f8560e1b76bdbe89a7",
+  "capture_date": "2026-09-13 JST",
+  "capture_sha256": "2c19e31b64211c9667a5ae1c6150bcf3abfdeeee3b94ae56d1798164741a6bab",
+  "offset_unit": "UTF-8 decoded Unicode codepoint index; zero based; offsets point to search anchors, not full function ranges",
+  "official_assets": [
+    {
+      "entry": "77-meta.json",
+      "asset": "root-CjfV1eB4.js",
+      "author": "Niconico official Web client",
+      "sha256": "c22c66c96c4358e77bc99df66c4ffa869113213fe70ccc26ab257a3f8d6d158d",
+      "anchors": [
+        {
+          "name": "Ce=class",
+          "offset": 4598
+        },
+        {
+          "name": "fetchPreviewWatch:",
+          "offset": 13240
+        }
+      ]
+    },
+    {
+      "entry": "80-meta.json",
+      "asset": "enum-BosOBCSL.js",
+      "author": "Niconico official Web client",
+      "sha256": "c6dc831a69761c31163f37f62309bca43f7fee88acb556a59b8ab0ab6a1dcffe",
+      "anchors": [
+        {
+          "name": "/preview",
+          "offset": 17160
+        },
+        {
+          "name": "/access-rights/hls",
+          "offset": 16253
+        }
+      ]
+    },
+    {
+      "entry": "82-meta.json",
+      "asset": "Button-CIFaV_zK.js",
+      "author": "Niconico official Web client",
+      "sha256": "6d6e7eb176f20845e3e45314354525f2e1f3a85f2d961b8f4689b2b6573bcb4d",
+      "anchors": [
+        {
+          "name": "function ce(",
+          "offset": 11498
+        },
+        {
+          "name": "defaultPrevented",
+          "offset": 13447
+        }
+      ]
+    },
+    {
+      "entry": "85-meta.json",
+      "asset": "dist-Bo2hHWqU.js",
+      "author": "Niconico official Web client",
+      "sha256": "14ef74902284b8a861723a6c9f72c13bad4a587ad296f1f71ccfa784373c9016",
+      "anchors": [
+        {
+          "name": "function L(",
+          "offset": 4631
+        },
+        {
+          "name": "var q=L",
+          "offset": 7341
+        }
+      ]
+    },
+    {
+      "entry": "86-meta.json",
+      "asset": "normalize-props-petU7wSV.js",
+      "author": "Niconico official Web client",
+      "sha256": "c1ab4941fedd6614c6452c5cdea29d7eb5604fe8153091ba7d289c7cea8fa650",
+      "anchors": [
+        {
+          "name": "function Pe(",
+          "offset": 14837
+        }
+      ]
+    },
+    {
+      "entry": "105-meta.json",
+      "asset": "usePreviewVideoStatus-BPrRwKaf.js",
+      "author": "Niconico official Web client",
+      "sha256": "86755b3c0ec4ba1549b88b7fbfc1eb877a883940436319b3781acafac7d156f0",
+      "anchors": [
+        {
+          "name": "function Yt(",
+          "offset": 33006
+        }
+      ]
+    },
+    {
+      "entry": "113-meta.json",
+      "asset": "PlayerSeekBar-dUxtfLwS.js",
+      "author": "Niconico official Web client",
+      "sha256": "446d727f213f7101f54188553d3daed20b9665cb4e6d9666e6221baf387f6e02",
+      "anchors": [
+        {
+          "name": "function PM(",
+          "offset": 1332530
+        },
+        {
+          "name": "var Xi=",
+          "offset": 51672
+        },
+        {
+          "name": "var Oi=",
+          "offset": 45358
+        },
+        {
+          "name": "yi=",
+          "offset": 43873
+        },
+        {
+          "name": "this.hlsjs.attachMedia",
+          "offset": 1322039
+        },
+        {
+          "name": "self.URL.createObjectURL(i)",
+          "offset": 947425
+        },
+        {
+          "name": "new Ny(",
+          "offset": 1383277
+        },
+        {
+          "name": "this.previewPlayerStagingFilter=",
+          "offset": 1376179
+        },
+        {
+          "name": "lN=class",
+          "offset": 1354783
+        },
+        {
+          "name": "sN=class",
+          "offset": 1353073
+        }
+      ]
+    },
+    {
+      "entry": "120-meta.json",
+      "asset": "MutedVideoThumbnail-Dn_nJCWz.js",
+      "author": "Niconico official Web client",
+      "sha256": "463e97aa9c88bf07d9e0aa496a36aea2b9f05dc28239e9e2a98a77890f2efea4",
+      "anchors": [
+        {
+          "name": "Re=400",
+          "offset": 17534
+        },
+        {
+          "name": "Ee=e=>",
+          "offset": 5992
+        },
+        {
+          "name": "De=e=>",
+          "offset": 6886
+        },
+        {
+          "name": "latestCommentSummary.split",
+          "offset": 18834
+        },
+        {
+          "name": "onPress:D",
+          "offset": 23121
+        }
+      ]
+    },
+    {
+      "entry": "125-meta.json",
+      "asset": "VideoCard-DdhgWBOM.js",
+      "author": "Niconico official Web client",
+      "sha256": "095d613406152b974caa246c38886198f3c5c6d63280946f4573fce6373bbfcc",
+      "anchors": [
+        {
+          "name": "debounce:200",
+          "offset": 2363
+        },
+        {
+          "name": "isPreviewVideoEnabled:",
+          "offset": 2152
+        }
+      ]
+    },
+    {
+      "entry": "148-meta.json",
+      "asset": "VideoMediaObject-ClJhanT-.js",
+      "author": "Niconico official Web client",
+      "sha256": "af1337d9b56a42e62bd63006790deb2511165c8cb07bf46a960cb3b6394ad024",
+      "anchors": [
+        {
+          "name": "debounce:200",
+          "offset": 2233
+        },
+        {
+          "name": "isPreviewVideoEnabled:",
+          "offset": 2039
+        }
+      ]
+    },
+    {
+      "entry": "157-meta.json",
+      "asset": "NicoadVideoCard-D_kzhTPE.js",
+      "author": "Niconico official Web client",
+      "sha256": "1b9de31efe21a45526bb1030f066c960d8d2f6df6547971b1b238d96fc97f3a7",
+      "anchors": [
+        {
+          "name": "debounce:200",
+          "offset": 1532
+        },
+        {
+          "name": "onNavigate:k",
+          "offset": 2439
+        }
+      ]
+    },
+    {
+      "entry": "162-meta.json",
+      "asset": "_web._search.tag._keyword._-main-B9qqky87.js",
+      "author": "Niconico official Web client",
+      "sha256": "e0d677b2a2eda97d9c1d0a23061cb3d124d75a212c80796660cda372d3a5e6f2",
+      "anchors": [
+        {
+          "name": "SearchVideoListSkeleton",
+          "offset": 1194
+        },
+        {
+          "name": "displayType:e.displayType",
+          "offset": 5673
+        }
+      ]
+    },
+    {
+      "entry": "168-meta.json",
+      "asset": "SearchVideoListSkeleton-DnEPDg6a.js",
+      "author": "Niconico official Web client",
+      "sha256": "5bd931c5dd159284a76c0a8e24b79d39f51d72004243e9cccd5d2c8f7e6f4899",
+      "anchors": [
+        {
+          "name": "isPreviewVideoEnabled:!0",
+          "offset": 12546
+        },
+        {
+          "name": "displayType===`media`",
+          "offset": 12472
+        }
+      ]
+    },
+    {
+      "entry": "171-meta.json",
+      "asset": "NicoadVideoMediaObjectResponsive-DJW4SJtq.js",
+      "author": "Niconico official Web client",
+      "sha256": "8da23ac0c714c6a791ffdc80f8840983ff6e77f896b9ba1597516e8c16e9e532",
+      "anchors": [
+        {
+          "name": "isPreviewVideoEnabled:",
+          "offset": 778
+        }
+      ]
+    },
+    {
+      "entry": "172-meta.json",
+      "asset": "PreviewVideoPlayer-CJLnYdm7.js",
+      "author": "Niconico official Web client",
+      "sha256": "d05584cfa22e6512fc659f606e565813af27c2a338d8248a197eb29846273184",
+      "anchors": [
+        {
+          "name": "O=30",
+          "offset": 924
+        },
+        {
+          "name": "S({size:3})",
+          "offset": 931
+        },
+        {
+          "name": "L.setCurrentTime(0)",
+          "offset": 3286
+        },
+        {
+          "name": "setMuted",
+          "offset": 3667
+        },
+        {
+          "name": "interactive:!1",
+          "offset": 4489
+        }
+      ]
+    }
+  ],
+  "provided_zenza": {
+    "source": "User-designated local checkout; browser installation bytes not independently verified",
+    "commit": "27674297960fbd73bde8512e57300448d85ebdd3",
+    "branch": "develop",
+    "dist_version": "2.7.21-task081",
+    "files": [
+      {
+        "file": "dist/ZenzaWatch-dev.user.js",
+        "sha256": "845d51d39c8275bb37bc32f0d96122d0060bb694b8cd92ace8f6a2f94a98db8c"
+      },
+      {
+        "file": "packages/lib/src/nico/VideoInfoLoader.js",
+        "sha256": "0489665eafd8f79ea4a796f3f8f1b0d82de95c56a07ee3ec05dbb56dbed6e643"
+      },
+      {
+        "file": "src/VideoInfo.js",
+        "sha256": "0a52d59e5764ca929b1150032e101c973526fe0a722a2f50f6d4f565a8c404e2"
+      },
+      {
+        "file": "packages/lib/src/nico/OwnerSupplement.js",
+        "sha256": "ce43734aa8d2e14b41e010b305a7d53456d5933c6a357179c777a8a138f5d025"
+      },
+      {
+        "file": "packages/lib/src/nico/WatchInfoCacheDb.js",
+        "sha256": "0ece594b905fae884f8c49f9a29a8a487ad9efe83fe1b383e866e409c8c44ac3"
+      },
+      {
+        "file": "src/NicoVideoPlayerDialog.js",
+        "sha256": "3185c1175e6d1311f7af58d8559af1212e1122e49ec1ce315e25fe1334103e0b"
+      }
+    ]
+  },
+  "prior_shared_documents": [
+    {
+      "file": "ニコニコ解析の概要.md",
+      "sha256": "44d01912114ac10d5ad42d68d3aceff0082a79f376c80029f7752321b72542a8"
+    },
+    {
+      "file": "ブラウザ通信記録3の解析結果.md",
+      "sha256": "7abaea2e07cd0e93bd58864fbe5daa69cf56b37222e4567249d109940ce2eafd"
+    },
+    {
+      "file": "Zenza改良で判明した追加解析・20260917.md",
+      "sha256": "39d8c8229555ba7f4cd60959d9fe67cdcc271887fec8e6b091655b882c5380f1"
+    },
+    {
+      "file": "コメント取得構造R12・20260920.md",
+      "sha256": "b60f29b2e04a97db4c8183024cc80069239fb85a290e97a28efb91281a0bda6a"
+    },
+    {
+      "file": "コメント描画R15A・時刻と表示境界・20260920.md",
+      "sha256": "6e41c99356050ee4c1764eba5bff022c9e632bebbde5f38dad88d8872af69f1b"
+    },
+    {
+      "file": "コメント描画R15B・固定2件の衝突境界・20260920.md",
+      "sha256": "644e853321d28508c2e362e651bd64f7ac38e6275d758bc97d1dd14b82f38483"
+    }
+  ],
+  "browser": {
+    "attempted_public_navigation_count": 1,
+    "permitted_niconico_browser_observations": 0,
+    "result": "site-safety policy rejection; no workaround"
+  },
+  "limitations": [
+    "Saved 2026-09-13 assets are not asserted current on 2026-09-20.",
+    "Provided checkout has unrelated modified artifacts; no files were changed.",
+    "No installed userscript or user history database collected.",
+    "Code source bodies not redistributed."
+  ]
+}

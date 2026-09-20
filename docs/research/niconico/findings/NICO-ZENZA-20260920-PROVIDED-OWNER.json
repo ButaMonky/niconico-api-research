@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-20 JST",
+  "supersedes": [],
+  "related_document": "HOVER-PREVIEW-HANDOFF.md",
+  "id": "NICO-ZENZA-20260920-PROVIDED-OWNER",
+  "title": "指定ローカルZenza版の名前・アイコン優先順を合成7ケースで確認",
+  "status": "offline-test",
+  "evidence_level": "CONFIRMED-CODE and OFFLINE-TEST",
+  "platform": "provided local Zenza checkout, fake network only",
+  "app_version": "2.7.21-task081; commit 27674297960fbd73bde8512e57300448d85ebdd3",
+  "evidence": [
+    "S-HOVER-STATIC-20260920",
+    "S-HOVER-OWNER-OFFLINE-20260920"
+  ],
+  "claim": "通常視聴のowner ID既知なら補完せず、未知なら同一動画広告owner、失敗時snapshot IDを使用する対象経路を確認。表示getterは古いcacheの名前・画像を参照しない。DB読取0、実ブラウザの導入bytesは未照合。",
+  "request": {
+    "real_requests": 0,
+    "user_db_reads": 0,
+    "synthetic_cases": 7
+  },
+  "response": {
+    "passed_cases": 7,
+    "old_cache_name_selected_cases": 0,
+    "old_cache_icon_selected_cases": 0
+  },
+  "authentication": "No authentication or user history used; all requests replaced with mocks",
+  "unconfirmed": [
+    "Installed userscript byte equality",
+    "Whole application and other UI paths",
+    "Current service behavior"
+  ]
+}

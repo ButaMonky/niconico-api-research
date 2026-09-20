@@ -211,5 +211,33 @@
     "kind": "offline-pinned-code-experiment",
     "reviewed_at": "2026-09-20T13:53:34+09:00",
     "sha256": "6e0f57d6a6d5ebcd0d2f49fbe47bb38e2e7e2c1f9c10f1fffd3218c09f2c02c4"
+  },
+  {
+    "id": "S-HOVER-STATIC-20260920",
+    "file": "evidence/hover-preview-fixed-sources-20260920.json",
+    "kind": "saved-official-code-and-provided-local-code",
+    "observed_at": "2026-09-20 JST",
+    "sha256": "9b65287a70e64775be77d67a10086e2916d525ec4ba1a083eb19aeaeada7cc30"
+  },
+  {
+    "id": "S-HOVER-HISTORICAL-20260920",
+    "file": "evidence/hover-preview-historical-20260920.json",
+    "kind": "historical-provided-capture-allowlist",
+    "observed_at": "2026-09-20 JST",
+    "sha256": "0a0237fc247ec9379561be9643b98087b77cb81f71563a925760f2835cf1cc8b"
+  },
+  {
+    "id": "S-HOVER-OWNER-OFFLINE-20260920",
+    "file": "evidence/hover-owner-offline-20260920.json",
+    "kind": "synthetic-extracted-function-execution",
+    "observed_at": "2026-09-20 JST",
+    "sha256": "15a51c381a57ca3b9decbd7a342f0ad794d08a20ea0050bf0f7215bd8b820924"
+  },
+  {
+    "id": "S-HOVER-FIXTURE-20260920",
+    "file": "evidence/hover-preview-synthetic-fixture-20260920.json",
+    "kind": "synthetic-structural-fixture",
+    "observed_at": "2026-09-20 JST",
+    "sha256": "3324f1860e69b88623b177669cec63c2c03a260b2d063fd1072ab0d8584d8c15"
   }
 ]
