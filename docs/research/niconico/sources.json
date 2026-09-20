@@ -171,5 +171,21 @@
     "kind": "offline-pinned-code-experiment",
     "reviewed_at": "2026-09-20T12:55:39+09:00",
     "sha256": "259686230b1e706eb53c407814f49e2844891d8d3efca3adae2d268b98287da8"
+  },
+  {
+    "id": "S-COMMENT-POST-CODE-20260920",
+    "file": "evidence/comment-post-fixed-sources-20260920.json",
+    "label": "comment-post-fixed-sources-20260920.json",
+    "kind": "fixed-public-source-review",
+    "reviewed_at": "2026-09-20T13:17:26+09:00",
+    "sha256": "10defad5c58ff8629f34df75bc4729dd03c7678185dc1e209bfd2adbf82fabbe"
+  },
+  {
+    "id": "S-COMMENT-POST-OFFLINE-20260920",
+    "file": "evidence/comment-post-offline-20260920.json",
+    "label": "comment-post-offline-20260920.json",
+    "kind": "offline-pinned-code-experiment",
+    "reviewed_at": "2026-09-20T13:17:26+09:00",
+    "sha256": "c99aaf2b68ac5832e2333f18df2b314e33252575a34cea6d24cb1e35b227a111"
   }
 ]

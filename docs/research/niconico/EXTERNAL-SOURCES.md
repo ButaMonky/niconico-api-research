@@ -64,3 +64,7 @@ niconicolibs/apiは既参照commit 7ee4782f7f4f7c351da4b00145b361291e22544aのsp
 ## R13：固定コードの限定実行
 
 R12と同じnndownload/comments.tsのhashを確認し、[when境界の合成確認](COMMENTS-HISTORY.md)を実施。実ネットワーク・ライブラリ全体の実行ではない。新規版取得やサービス境界の再現とは区別し、4ケースの期待値と結果を[証拠](evidence/comment-history-offline-20260920.json)へ保存した。
+
+## R14：投稿と共通HTTPの固定出典
+
+作者kongyo2ほか、niconicojs commit `e15fc91920567804685a6c45ebc08c2a8639f52e`。R12のcomments.tsを再利用し、src/http.ts・src/errors.ts・test/comments.test.tsを同commitで追加取得。URL/時刻/hashは[出典台帳](evidence/comment-post-fixed-sources-20260920.json)。[8合成条件](evidence/comment-post-offline-20260920.json)をCONFIRMED-CODE/SYNTHETICとして保存。現行公式クライアント・実投稿は未確認。

@@ -49,3 +49,7 @@ GitHub上の追加研究はPR単位で公開し、mainへの反映と区別す�
 ## R13追補
 
 [過去ログの範囲・完全性](COMMENTS-HISTORY.md)を追加。公開23 findings / 23 sources。100要求のadditionals空と、固定コードの境界依存を別根拠で確認。NG更新着手判断は変更なし。一般会員/実サーバー境界は未解決。
+
+## R14の確認範囲
+
+[コメント投稿](COMMENTS-POST.md)：固定niconicojsのpostKey/要求/HTTP連鎖をCONFIRMED-CODE、8ケースをSYNTHETICとして確認。現在の一般会員・fork権限・キー期限・投稿成功/全エラー一覧は未確認。公式Web/iOS/AndroidやZenza固有コードの調査はしていない。

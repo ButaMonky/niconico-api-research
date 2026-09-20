@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "platform": "Pinned niconicojs with synthetic fetch; not official Web/iOS/Android",
+  "app_version": "e15fc91920567804685a6c45ebc08c2a8639f52e",
+  "observed_at": "2026-09-20T13:17:26+09:00",
+  "authentication": "Synthetic session only; live posting and key issuance not performed",
+  "supersedes": [],
+  "unconfirmed": [
+    "Current service authentication and general-member posting permissions",
+    "Thread/video/key binding and main/owner/easy selection",
+    "Key expiry, server rate limits and accepted commands"
+  ],
+  "status": "static",
+  "evidence_level": [
+    "CONFIRMED-CODE",
+    "SYNTHETIC"
+  ],
+  "evidence": [
+    "S-COMMENT-POST-CODE-20260920",
+    "S-COMMENT-POST-OFFLINE-20260920"
+  ],
+  "id": "NICO-COMMENTS-20260920-POST-RETRY",
+  "title": "取得と投稿の再試行・エラー経路を区別",
+  "claim": "固定HTTP連鎖の8合成条件で、投稿POSTは503/通信失敗でも1回、キーGETと読取POSTは再試行。HTTP200/meta403はエラー、503のmeta詳細は失われる。新規ニコニコ通信0。再送による重複防止の設計根拠で、サービス障害の実証ではない。",
+  "request": {
+    "diagnostic": "tools/probe_comment_post_offline.py",
+    "synthetic_cases": 8
+  },
+  "response": {
+    "mock_requests": 12,
+    "new_niconico_requests": 0,
+    "posting_503_attempts": 1,
+    "posting_network_failure_attempts": 1
+  }
+}
