@@ -56,3 +56,7 @@ niconico.py / niconicojsの対象commitはR03から変更なし。Ownerのnullab
 ## R21の外部資料確認（2026-09-20）
 
 niconicolibs/apiは既参照commit 7ee4782f7f4f7c351da4b00145b361291e22544aのspec/nvapi/nvapi.yamlにplaylist/request項目なし。API不存在の根拠にはしない。今回の契約は既存の公式Web/Android静的記録と新規実通信から確認。[証拠](evidence/playlist-request-20260920.json)に固定URL/hash・入力findingを記録。GitHubの完全一致公開コード検索も0件だったが、網羅検索とは扱わない。
+
+## R12：コメント取得の固定出典（2026-09-20）
+
+[COMMENTS-READ.mdの固定出典](COMMENTS-READ.md#固定出典)と[機械可読台帳](evidence/nvcomment-fixed-sources-20260920.json)へyt-dlp、nndownload、otya128 Gist、niconicojsを登録。上記「今回未取得」は登録当初の履歴。今回、前3者は参照revisionを新たに固定し、niconicojsは既存固定版のcomments.tsを追加読解。過去masterとの正確な変更差は不明、コード稼働確認なし。外部コードのコピーは共有しない。

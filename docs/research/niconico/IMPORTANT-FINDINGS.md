@@ -29,3 +29,7 @@
 ## R23〜R25：一括ownerを安全に利用する新条件
 
 **200・totalCount=2でも返却は1件だった。** 全返却はID集合で確認する。channel owner.idの`ch`とsnapshot数値ID、重複2行/1動画、不正ID混在で全体400、新着3件補完も確認。[根拠と条件](PLAYLIST-ACCURACY-AND-FAILURES.md)。[ランキングNGの更新着手に必要な解析は揃った](NG-UPDATE-READINESS.md)が、製品・ブラウザ検証は別。
+
+## R12：コメント取得の再利用条件
+
+[コメント取得資料](COMMENTS-READ.md)を追加。params.targets階層を古いGist直下targetsと混ぜない。CookieなしでもthreadKeyが必要な保存記録だった。yt-dlpの平坦化配列やnndownload独自の件数項目をAPI生応答として扱わない。任意複数動画の一括metadata取得を示すものではない。

@@ -139,5 +139,21 @@
     "kind": "sanitized-live-probes-and-conditional-failures",
     "reviewed_at": "2026-09-20T06:13:51+09:00",
     "sha256": "8354ce8111e2e82582301ab3efd1229c4385f4fd2e6ee680020c2e337b6e5c59"
+  },
+  {
+    "id": "S-NVCOMMENT-HISTORY-20260920",
+    "file": "evidence/nvcomment-historical-structure-20260920.json",
+    "label": "nvcomment-historical-structure-20260920.json",
+    "kind": "sanitized-historical-aggregate",
+    "reviewed_at": "2026-09-20T12:34:48+09:00",
+    "sha256": "5aa5e7d52c67e46d0fb595e92dcb0d8872b172a0218a1f281d18f516253c7fc1"
+  },
+  {
+    "id": "S-NVCOMMENT-CODE-20260920",
+    "file": "evidence/nvcomment-fixed-sources-20260920.json",
+    "label": "nvcomment-fixed-sources-20260920.json",
+    "kind": "fixed-public-source-review",
+    "reviewed_at": "2026-09-20T12:34:48+09:00",
+    "sha256": "5fe941f02fc3a29b4c3f4d45996b31ea55ce6ba688f4502c409650f432fe101e"
   }
 ]

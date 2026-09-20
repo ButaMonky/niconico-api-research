@@ -41,3 +41,7 @@ GitHub上の追加研究はPR単位で公開し、mainへの反映と区別す�
 ## R25時点の更新
 
 公開選択版19 findings / 19 sources、正本の統合予定は102 / 75（統合結果は検証記録参照）。R22時点で未確認だった新着3件・channel2件を[限定検証](PLAYLIST-ACCURACY-AND-FAILURES.md)した。新着は同系統owner一致、channelは型付き表記変換一致であり、広い精度保証ではない。200部分返却・不正ID全体失敗・重複も新しく確認。[NG実装着手に十分と判断](NG-UPDATE-READINESS.md)。上記「次はR23」は履歴、現在の次解析はR12。
+
+## R12追補
+
+[コメント取得構造](COMMENTS-READ.md)を独立収録。旧100成功記録の許可項目だけ再集計し、固定4出典と照合。公開21 findings / 21 sources。正本は旧記録を保持して2 findings / 2 sources追加する。NG実装着手の判定はR25時点から変更なし。

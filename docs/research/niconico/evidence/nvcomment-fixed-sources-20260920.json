@@ -1,0 +1,117 @@
+{
+  "reviewed_at": "2026-09-20T12:34:48+09:00",
+  "new_niconico_requests": 0,
+  "sources": [
+    {
+      "name": "yt-dlp",
+      "author": "yt-dlp contributors",
+      "revision": "c7fb478d21e9e59524befbe23f7801bb267fb880",
+      "file": "yt_dlp/extractor/niconico.py",
+      "url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/c7fb478d21e9e59524befbe23f7801bb267fb880/yt_dlp/extractor/niconico.py",
+      "checked_at": "2026-09-20T12:31:04+09:00",
+      "http_status": 200,
+      "bytes": 47815,
+      "sha256": "9a31000cb9e2fe67a17bc59b592d3d91fa3a82bfc5113bd43cb139fd9e162048",
+      "evidence_level": "CONFIRMED-CODE",
+      "live_verified_this_unit": false,
+      "public_copy_of_source": false,
+      "reviewed_lines": [
+        "48-51",
+        "534-559"
+      ],
+      "findings": [
+        "Uses server/params/threadKey from watch comment.nvComment.",
+        "POST serialized JSON with text/plain header, additionals empty; all supplied targets together.",
+        "Traverses data.threads[*].comments[*] into one flat subtitle list; parent thread/fork not preserved in this output."
+      ]
+    },
+    {
+      "name": "nndownload",
+      "author": "AlexAplin and contributors",
+      "revision": "7a9b6a68980ca5e9558df346468fff1a9a1b663a",
+      "file": "nndownload/nndownload.py",
+      "url": "https://raw.githubusercontent.com/AlexAplin/nndownload/7a9b6a68980ca5e9558df346468fff1a9a1b663a/nndownload/nndownload.py",
+      "checked_at": "2026-09-20T12:31:05+09:00",
+      "http_status": 200,
+      "bytes": 106566,
+      "sha256": "85dd4c7e6937bd03edb4cc275af2e909c0ea45f6322d0cd09887c51c7ba218f5",
+      "evidence_level": "CONFIRMED-CODE",
+      "live_verified_this_unit": false,
+      "public_copy_of_source": false,
+      "reviewed_lines": [
+        "66",
+        "83",
+        "105-121",
+        "146-150",
+        "1909-1913",
+        "1995-2151",
+        "2392-2393"
+      ],
+      "findings": [
+        "One worker per target; each request has params.targets=[thread], not one combined request.",
+        "additionals res_from=-1000/when and loop are client behavior, not server max/full-history guarantee.",
+        "Writes own globalComments object plus retrievedCount; not unmodified API response.",
+        "Refreshes threadKey from nvapi comment/keys/thread, handles INVALID_TOKEN/EXPIRED_TOKEN/TOO_MANY_REQUESTS; live authentication untested."
+      ]
+    },
+    {
+      "name": "nvcomment-gist",
+      "author": "otya128",
+      "revision": "755bb1f4b4a7152ec80518d11d030837d6d6ab85",
+      "file": "nicovideo-nvcomment.md",
+      "url": "https://gist.githubusercontent.com/otya128/9c7499cf667e75964b43d46c8c567e37/raw/755bb1f4b4a7152ec80518d11d030837d6d6ab85/nicovideo-nvcomment.md",
+      "checked_at": "2026-09-20T12:31:05+09:00",
+      "http_status": 200,
+      "bytes": 3281,
+      "sha256": "c90e1ef9de9b30d6545b2ffe377dbcbb2b7ffdd737a83041533816304dd54c21",
+      "evidence_level": "REPORTED/LEGACY example",
+      "live_verified_this_unit": false,
+      "public_copy_of_source": false,
+      "reviewed_sections": [
+        "nvapi",
+        "POST /v1/threads"
+      ],
+      "findings": [
+        "Example uses nvcomment.nicovideo.jp with targets/language at root, unlike retained successful requests.",
+        "Reports vpos centiseconds to vposMs milliseconds and command string to array; not current runtime verification.",
+        "Mentions main/owner/easy and nicoru/source. Key format descriptions not needed for replay; no real key or payload sample retained."
+      ],
+      "gist_file_raw_revision_from_api": "ce4313d1275c2da9064deeb2adf6023b574fe567"
+    },
+    {
+      "name": "niconicojs",
+      "author": "kongyo2 and contributors",
+      "revision": "e15fc91920567804685a6c45ebc08c2a8639f52e",
+      "file": "src/comments.ts",
+      "url": "https://raw.githubusercontent.com/kongyo2/niconicojs/e15fc91920567804685a6c45ebc08c2a8639f52e/src/comments.ts",
+      "checked_at": "2026-09-20T12:32:47+09:00",
+      "bytes": 11147,
+      "sha256": "d239cae7e10a3f6fa601bb5f1d2f8e9ae8862ec796af8f70943e016a828e508f",
+      "http_status": 200,
+      "evidence_level": "CONFIRMED-CODE",
+      "live_verified_this_unit": false,
+      "public_copy_of_source": false,
+      "reviewed_lines": [
+        "8-46",
+        "95-117",
+        "133-173",
+        "176-231",
+        "233-250"
+      ],
+      "findings": [
+        "Typed response includes string comment ID, commands array, vposMs and optional fields. Types are code contracts, not live type verification.",
+        "fetchCommentsWithKey forwards targets together; returns threads array, dropping globalComments at this wrapper boundary.",
+        "Unknown fork normalization defaults to main in this library; not a safe general API rule.",
+        "Post-key and posting route appear but are outside R12; no writes performed."
+      ],
+      "revision_policy": "Reused R03/R09 pinned revision; not asserting latest repository HEAD."
+    }
+  ],
+  "prior_comparison": {
+    "document": "evidence/community2-public-sources-20260914.json",
+    "sha256": "6d347dc5912fa8049d8320a48542724a38ac98d34e39d17097e64f1e0bb4d589",
+    "state": "Prior yt-dlp/nndownload references were unpinned master. No trustworthy commit-to-commit code delta is claimed."
+  },
+  "code_executed": false,
+  "privacy": "Only public source URLs/revisions/hashes/line ranges and original analysis. No copied source bodies, example commenter IDs, comments or tokens."
+}

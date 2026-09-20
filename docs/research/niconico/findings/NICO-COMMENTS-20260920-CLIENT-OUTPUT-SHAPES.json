@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "platform": "Web/iOS historical captures; public clients",
+  "app_version": "historical iOS 12.37; public source commits pinned in evidence",
+  "observed_at": "2026-09-20T12:34:48+09:00",
+  "authentication": "All 100 historical requests carried nonempty threadKey; 76 without Cookie, 24 with Cookie. Current guest/general-member behavior not tested.",
+  "supersedes": [],
+  "unconfirmed": [
+    "Current live success: no Niconico requests in R12.",
+    "All-comments limits and guest/history permissions.",
+    "Arbitrary cross-video batching.",
+    "Rendering semantics and effective key lifetime."
+  ],
+  "id": "NICO-COMMENTS-20260920-CLIENT-OUTPUT-SHAPES",
+  "title": "コメントクライアントの返却・保存形式はAPI応答と異なる",
+  "status": "static",
+  "evidence_level": [
+    "CONFIRMED-CODE"
+  ],
+  "claim": "yt-dlpは親thread/fork階層を落としてコメント配列化。nndownloadはtargetごとの通信と独自globalComments/retrievedCount保存。niconicojs取得wrapperはthreads配列を返す。いずれも生レスポンスと混同しない。",
+  "evidence": [
+    "S-NVCOMMENT-CODE-20260920"
+  ],
+  "request": {
+    "endpoint": "{watch.comment.nvComment.server}/v1/threads",
+    "method": "POST",
+    "multi_target": "yt-dlp and niconicojs forward multiple targets; nndownload requests one per worker"
+  },
+  "response": {
+    "yt_dlp": "flat subtitle comments list",
+    "nndownload": "client-owned globalComments object and retrievedCount",
+    "niconicojs": "CommentThread[]"
+  }
+}

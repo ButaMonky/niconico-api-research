@@ -45,3 +45,7 @@ NG実装向けの優先入口：[重要な確認結果](IMPORTANT-FINDINGS.md)�
 ## 最新追補：R23〜R25
 
 [一括ownerの新着・channel・失敗条件](PLAYLIST-ACCURACY-AND-FAILURES.md)、[NG更新着手の判断](NG-UPDATE-READINESS.md)、[検証記録](VERIFICATION-R23-R25-20260920.md)。公開選択版は19 findings / 19 sources。過去の件数表示は当時の履歴。次の解析はR12、本体変更・Zenza追加解析は行わない。
+
+## 最新追補：R12コメント取得
+
+[COMMENTS-READ.md](COMMENTS-READ.md)に要求・応答・固定出典・クライアントの出力変換を整理。公開選択版21 findings / 21 sources。100保存成功を再利用し、新規ニコニコ通信0。次はR13。NG別開発には引き続きNG-UPDATE-READINESS.mdから着手する。

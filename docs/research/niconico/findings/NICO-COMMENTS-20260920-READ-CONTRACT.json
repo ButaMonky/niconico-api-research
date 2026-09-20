@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "platform": "Web/iOS historical captures; public clients",
+  "app_version": "historical iOS 12.37; public source commits pinned in evidence",
+  "observed_at": "2026-09-20T12:34:48+09:00",
+  "authentication": "All 100 historical requests carried nonempty threadKey; 76 without Cookie, 24 with Cookie. Current guest/general-member behavior not tested.",
+  "supersedes": [],
+  "unconfirmed": [
+    "Current live success: no Niconico requests in R12.",
+    "All-comments limits and guest/history permissions.",
+    "Arbitrary cross-video batching.",
+    "Rendering semantics and effective key lifetime."
+  ],
+  "id": "NICO-COMMENTS-20260920-READ-CONTRACT",
+  "title": "nvcommentの取得契約：params階層とWeb/iOS Content-Type差",
+  "status": "traffic",
+  "evidence_level": [
+    "CONFIRMED-LIVE (historical records)",
+    "CONFIRMED-CODE",
+    "REPORTED (older Gist example)"
+  ],
+  "claim": "保存100成功要求はparams.targets/languageとthreadKeyを使用。76 text/plain、24 application/json。固定OSSと構造が一致するが現在の新規再現ではない。応答voltageZoneも55件に項目名があり意味は未確認。",
+  "evidence": [
+    "S-NVCOMMENT-HISTORY-20260920",
+    "S-NVCOMMENT-CODE-20260920"
+  ],
+  "request": {
+    "endpoint": "https://public.nvcomment.nicovideo.jp/v1/threads",
+    "method": "POST",
+    "body_fields": [
+      "params.targets",
+      "params.language",
+      "threadKey",
+      "additionals"
+    ]
+  },
+  "response": {
+    "fields": [
+      "data.threads[].comments",
+      "data.globalComments",
+      "data.voltageZone (55/100 field presence only)"
+    ],
+    "record_count": 100,
+    "comment_items_sum_including_duplicates": 38635,
+    "empty_responses": 17
+  }
+}

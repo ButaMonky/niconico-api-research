@@ -51,3 +51,7 @@ R23終了後の指示は「channelを少数混在させ、snapshotとのowner型
 ### 最新：R25完了 → R12
 
 「最新Git/AGENTS、START-HERE.md、NG-UPDATE-READINESS.md、TASKS.mdを読んでください。R23〜R25の結果を再通信で繰り返さず、R12として現行nvcommentの取得要求・応答を独立資料化してください。既存コメント資料と出典台帳から重複を除き、otya128のGist、yt-dlpのNiconico extractor等の参照revisionを固定して差分と新規項目を確認してください。thread/fork/vposMs/commands/userId/nicoruを整理し、コード確認・外部報告・現在の実通信を分けてください。有効なthreadKey/postKeyやCookie、本文・個人識別値を共有しないでください。既存記録で足りれば再通信せず、必要時だけ少数の読取を検討し、投稿や大量過去ログ取得はしません。Zenza固有コード・NG本体を変更せず、解析資料・指定共有outputs・次の指示文を更新してください。Astra高、GitHub反映は最後。」
+
+## 最新：R12完了 → R13（Astra高）
+
+「Astra高でR13を進めてください。Git状態・適用AGENTS・COMMENTS-READ.md・TASKS.mdを確認し、既存記録とR12で固定した公開コードから、additionals.whenを使う過去ログ取得とthreadKeyの条件を1つに絞って整理してください。niconicojsのゲスト制限メッセージやnndownloadのall-commentsを現行サービス保証としないでください。過去時刻・投稿時刻とvposMsを区別し、重複・停止条件・一般会員の取得範囲を確認してください。必要な根拠が既存資料にあれば再通信せず、新規試験が必要なら正当な取得条件の1動画・少数読取だけに留め、キー実値・Cookie・コメント本文・userIdを保存しないでください。投稿・大量過去ログ取得・本体/Zenza固有コード変更は行いません。資料・指定outputs・次の指示文を更新し、GitHub反映は最後にしてください。」
