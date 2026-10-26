@@ -37,3 +37,9 @@ python -m unittest discover -s docs/research/niconico/tools -p "test_*.py"
 ```
 
 ??????????????????????????????????ID????????????????????????????
+
+## 2026-10-27 追補：HARの深掘り
+
+前回の投稿動画HARと追加提出された `投稿動画一覧(1).har` は同一SHA-256で、新規通信はありません。その同じ通信の再解析により、[初期HTML内の100件と後続GETが完全一致](findings/NICO-USERVIDEOS-20261027-SSR-PAGE1-PARITY.json)、[6シリーズのorderが1始まり連続](findings/NICO-USERVIDEOS-20261027-SERIES-ORDER-1BASED.json)、[listingUrlとmiddleUrlが587件一致](findings/NICO-USERVIDEOS-20261027-THUMBNAIL-LISTING-URL.json)することを確認しました。元のHARや署名付き画像URLは公開していません。[匿名化した根拠](evidence/user-uploaded-ssr-thumbnail-har-20261027.md)を参照してください。
+
+この追補を含む公開収録数は**92 findings / 37 evidence sources**です。上記の「89/36」は追補前の履歴的な値です。ランキング関連の2候補は未検証で非公開のままです。4つの既存証拠の出典SHAは、Git blobのLFに対応する値に訂正し、元のCRLFハッシュは `original_sha256` に保存しました。

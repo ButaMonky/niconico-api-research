@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "traffic",
+  "platform": "web / user-provided HAR",
+  "app_version": "official Niconico Web user page observed 2026-10-26; exact deployed JS version not independently confirmed",
+  "observed_at": "2026-10-26T23:57:59.755+09:00",
+  "recorded_on": "2026-10-27",
+  "evidence": [
+    "S-USERVIDEOS-HAR-20261027-SSR-DETAIL"
+  ],
+  "source_har_sha256": "2860b91bfcfc186cd5cfdc82f378ae381e6c6950200d0c566149cc321c5952c0",
+  "authentication": "Official page capture supplied by user; authenticated-account context and credential requirements not independently verified. No cookies, identifiers, query signatures or headers copied.",
+  "supersedes": [],
+  "integration_status": "isolated contribution confirmed against one supplied HAR; subject to publisher review",
+  "id": "NICO-USERVIDEOS-20261027-THUMBNAIL-LISTING-URL",
+  "title": "投稿者動画v3のlistingUrlとmiddleUrlは587件すべて一致",
+  "claim": "公式Web投稿動画HARの587件についてessential.thumbnail.listingUrlとmiddleUrlが全件一致し、HAR内で取得された一覧サムネイル107件もすべて対応するlistingUrlと一致した。",
+  "request": {
+    "video_pages": "GET /v3/users/{userId}/videos",
+    "thumbnail_get": "GET nicovideo.cdn.nimg.jp/thumbnails/{...}",
+    "query": {
+      "selectContentType": "long",
+      "pageSize": 100,
+      "page": "1..6"
+    }
+  },
+  "response": {
+    "video_count": 587,
+    "listingUrl_equals_middleUrl": 587,
+    "thumbnail_gets": 107,
+    "distinct_thumbnail_get_urls": 107,
+    "thumbnail_get_matched_listingUrl": 107,
+    "thumbnail_fields": [
+      "url",
+      "middleUrl",
+      "largeUrl",
+      "listingUrl",
+      "nHdUrl",
+      "shortUrl"
+    ],
+    "nHdUrl_present": 587,
+    "nHdUrl_signed_query_key_present": 587,
+    "shortUrl_null": 587,
+    "nHdUrl_requested_during_capture": 0,
+    "har_base64_json_page_responses": 4,
+    "har_plain_json_page_responses": 2
+  },
+  "unconfirmed": [
+    "一覧画像GETが107件だった理由はスクロール範囲やブラウザキャッシュと切り離して確定できない。",
+    "nHdUrlの署名鍵や有効期間、実際の画像の再生マークは検証していない。",
+    "他投稿者、ショート動画、今後のAPIでlistingUrl==middleUrlが保たれる保証はない。",
+    "HAR内のBase64保存はHARシリアライズ形式でありAPI暗号化の意味ではない。"
+  ],
+  "related_findings": [
+    "NICO-USERVIDEOS-20261027-WEB-PAGES-587",
+    "NICO-THUMBNAIL-20261001-ZENZA"
+  ]
+}
