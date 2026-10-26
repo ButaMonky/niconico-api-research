@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "traffic",
+  "platform": "web / user-provided HAR",
+  "app_version": "official Niconico Web user page observed 2026-10-26; exact deployed JS version not independently confirmed",
+  "observed_at": "2026-10-26T23:57:59.755+09:00",
+  "recorded_on": "2026-10-27",
+  "evidence": [
+    "S-USERVIDEOS-HAR-20261027-SSR-DETAIL"
+  ],
+  "source_har_sha256": "2860b91bfcfc186cd5cfdc82f378ae381e6c6950200d0c566149cc321c5952c0",
+  "authentication": "Official page capture supplied by user; authenticated-account context and credential requirements not independently verified. No cookies, identifiers, query signatures or headers copied.",
+  "supersedes": [],
+  "integration_status": "isolated contribution confirmed against one supplied HAR; subject to publisher review",
+  "id": "NICO-USERVIDEOS-20261027-SERIES-ORDER-1BASED",
+  "title": "投稿者動画一覧のseries.orderは標本6シリーズで1始まりの欠番なし",
+  "claim": "提供HARの587動画中430件に付くseriesの6系列について、series.orderは各系列で1..itemsCountの全整数が重複・欠番なく出現し、registeredAt降順の投稿一覧ではシリーズ内の順序もorder降順だった。",
+  "request": {
+    "video_pages": "GET /v3/users/{userId}/videos",
+    "series_list": "GET /v1/users/{userId}/series",
+    "query": {
+      "pageSize": 100,
+      "sortKey": "registeredAt",
+      "sortOrder": "desc",
+      "selectContentType": "long",
+      "sensitiveContents": "mask"
+    }
+  },
+  "response": {
+    "total_videos": 587,
+    "series_assigned": 430,
+    "series_null": 157,
+    "series_count": 6,
+    "series_sizes_desc": [
+      258,
+      52,
+      41,
+      38,
+      23,
+      18
+    ],
+    "order_min_per_series": 1,
+    "order_max_equals_itemsCount_all": true,
+    "order_unique_and_no_gap_all": true,
+    "order_descending_within_registeredAt_desc_all": true,
+    "independent_series_itemsCount_matches": true
+  },
+  "unconfirmed": [
+    "公式UIのシリーズ再生順とorderが常に一致するかはこのHARでは直接確認していない。",
+    "他の投稿者・削除や限定動画があるシリーズ・複数シリーズ所属の仕様は未確認。",
+    "ページング中に投稿・編集が行われた場合の安定性も未確認。"
+  ],
+  "related_findings": [
+    "NICO-USERVIDEOS-20261027-SERIES-430"
+  ]
+}

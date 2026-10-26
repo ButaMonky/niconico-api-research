@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "traffic",
+  "platform": "web / user-provided HAR",
+  "app_version": "official Niconico Web user page observed 2026-10-26; exact deployed JS version not independently confirmed",
+  "observed_at": "2026-10-26T23:57:59.755+09:00",
+  "recorded_on": "2026-10-27",
+  "evidence": [
+    "S-USERVIDEOS-HAR-20261027-SSR-DETAIL"
+  ],
+  "source_har_sha256": "2860b91bfcfc186cd5cfdc82f378ae381e6c6950200d0c566149cc321c5952c0",
+  "authentication": "Official page capture supplied by user; authenticated-account context and credential requirements not independently verified. No cookies, identifiers, query signatures or headers copied.",
+  "supersedes": [],
+  "integration_status": "isolated contribution confirmed against one supplied HAR; subject to publisher review",
+  "id": "NICO-USERVIDEOS-20261027-SSR-PAGE1-PARITY",
+  "title": "投稿者動画ページ初期HTMLの100件が後続v3 API第1ページと一致",
+  "claim": "提供された公式Web投稿者ページHTMLの #js-initial-userpage-data の data-initial-data.nvapi[0].body.data は100件（totalCount587）を保持し、約10秒後の /v3/users/{userId}/videos page=1 GETの100件と、動画ID・順序・各series/essentialオブジェクトが全100件で一致した。",
+  "request": {
+    "initial_html": "GET /user/{userId}/video",
+    "api": "GET /v3/users/{userId}/videos",
+    "query": {
+      "page": 1,
+      "pageSize": 100,
+      "sortKey": "registeredAt",
+      "sortOrder": "desc",
+      "selectContentType": "long",
+      "sensitiveContents": "mask"
+    },
+    "initial_data_location": "div#js-initial-userpage-data[data-initial-data].nvapi[0].body.data"
+  },
+  "response": {
+    "html_http_status": 200,
+    "api_http_status": 200,
+    "initial_items": 100,
+    "initial_total_count": 587,
+    "api_items": 100,
+    "api_total_count": 587,
+    "full_objects_equal": 100,
+    "video_id_and_order_equal": true,
+    "between_request_starts_seconds_approx": 10.1,
+    "initial_nvapi_templatePath": "/v3/users/{userId}/videos"
+  },
+  "unconfirmed": [
+    "初期HTMLと後続GETが常に一致するとは限らない。更新・ページ切替・キャッシュ条件未確認。",
+    "後続GETの再取得理由やスキップ可能性は実装レベルで未確定。",
+    "別の投稿者、ユーザー状態、ショートタブ、未ログイン時の初期データ有無は未検証。"
+  ],
+  "related_findings": [
+    "NICO-USERVIDEOS-20261027-WEB-PAGES-587"
+  ]
+}

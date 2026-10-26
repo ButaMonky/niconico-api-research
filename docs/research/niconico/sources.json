@@ -105,24 +105,30 @@
     "file": "evidence/commons-autofetch-20261002/API_FACTS.json",
     "label": "Commons automatic full scan: API_FACTS.json",
     "kind": "traffic",
-    "sha256": "a39946c7397c12abaaa301dd2669eda806c20b06c5cb14d1c1aa3f9fb4b80b74",
-    "recorded_on": "2026-10-02"
+    "sha256": "1ce29ae24fb2cb5fcd6f843dd2ca25a381f04a1c8d1c715dc7b5171863332b42",
+    "recorded_on": "2026-10-02",
+    "original_sha256": "a39946c7397c12abaaa301dd2669eda806c20b06c5cb14d1c1aa3f9fb4b80b74",
+    "normalization": "Windows working-copy CRLF SHA256 was recorded in source ledger; canonical Git blob is LF due to .gitattributes, so published sha256 now hashes LF bytes. The original SHA256 is preserved as original_sha256."
   },
   {
     "id": "S-COMMONS-AUTO-20261002-CODE",
     "file": "evidence/commons-autofetch-20261002/CURRENT_CODE_FACTS.json",
     "label": "Commons automatic full scan: CURRENT_CODE_FACTS.json",
     "kind": "offline-test",
-    "sha256": "d6bda595d11a493d2404151b74e293461bfe28a2db0928feff63bd8866981251",
-    "recorded_on": "2026-10-02"
+    "sha256": "c7ceee4748f2cf576947b48f430ea3af7d6d1a9b3c9aeac8af4ef4cd02153723",
+    "recorded_on": "2026-10-02",
+    "original_sha256": "d6bda595d11a493d2404151b74e293461bfe28a2db0928feff63bd8866981251",
+    "normalization": "Windows working-copy CRLF SHA256 was recorded in source ledger; canonical Git blob is LF due to .gitattributes, so published sha256 now hashes LF bytes. The original SHA256 is preserved as original_sha256."
   },
   {
     "id": "S-COMMONS-AUTO-20261002-PROBE",
     "file": "evidence/commons-autofetch-20261002/characterize-current.mjs",
     "label": "Commons automatic full scan: characterize-current.mjs",
     "kind": "offline-probe-source",
-    "sha256": "d61b2fa30d099babde250ae885690da7a7a17645888bcc2b387e6f7992ad5b40",
-    "recorded_on": "2026-10-02"
+    "sha256": "ecc031583f95b5d0c3c5d28ee133ffbe9f0d82dcbe22f3cae4a7206e870d5876",
+    "recorded_on": "2026-10-02",
+    "original_sha256": "d61b2fa30d099babde250ae885690da7a7a17645888bcc2b387e6f7992ad5b40",
+    "normalization": "Windows working-copy CRLF SHA256 was recorded in source ledger; canonical Git blob is LF due to .gitattributes, so published sha256 now hashes LF bytes. The original SHA256 is preserved as original_sha256."
   },
   {
     "id": "S-COMMONS-AUTO-20261002-SUMMARY",
@@ -244,8 +250,10 @@
     "label": "Task153〜157匿名化互換性追補",
     "file": "evidence/zenza-compatibility-20261001.md",
     "kind": "runtime-and-development-evidence",
-    "sha256": "4005040387754eb6fe063a1b598b6e4ae4a928059b69c59d9054bdf3da797864",
-    "original": "Task153-156 committed design records + Task157 browser GET probe; no raw captures included"
+    "sha256": "b91baaf560ab362512a10a4ff5b3adc86e2740b8b9319404768d787eb589b0dd",
+    "original": "Task153-156 committed design records + Task157 browser GET probe; no raw captures included",
+    "original_sha256": "4005040387754eb6fe063a1b598b6e4ae4a928059b69c59d9054bdf3da797864",
+    "normalization": "Windows working-copy CRLF SHA256 was recorded in source ledger; canonical Git blob is LF due to .gitattributes, so published sha256 now hashes LF bytes. The original SHA256 is preserved as original_sha256."
   },
   {
     "id": "S-ZENZA-FOLLOWUP-20260925",
@@ -292,5 +300,15 @@
     "sha256": "e263b0bc3066787162fc90c7fe8d7c072d37a92a461aeae0aa0b28282da7b9a8",
     "recorded_on": "2026-10-01",
     "original": "Prior Watch V4 audit v2; no new server traffic"
+  },
+  {
+    "id": "S-USERVIDEOS-HAR-20261027-SSR-DETAIL",
+    "file": "evidence/user-uploaded-ssr-thumbnail-har-20261027.md",
+    "label": "2026-10-26 uploader HAR: initial SSR page1 parity, series order, thumbnail URL structure and mixed HAR encoding",
+    "kind": "user-provided-har-sanitized-structural-audit",
+    "sha256": "f8c550d775db5dab6514e53c819af083d50c00cf1d5b6b321ddeb387dc72563a",
+    "original_har_sha256": "2860b91bfcfc186cd5cfdc82f378ae381e6c6950200d0c566149cc321c5952c0",
+    "observed_at": "2026-10-26",
+    "privacy": "No original HAR, uploader/video IDs, account metadata, headers, signed thumbnail URL or credential values included"
   }
 ]
