@@ -1,0 +1,228 @@
+{
+  "source": {
+    "name": "検索画面.har",
+    "sha256": "49d16fffc218706df1d5e869dc3040ee06a0995e23207b997938cf4b23703a08",
+    "bytes": 41238198,
+    "entries": 367,
+    "valid_json": true,
+    "observed_at": "2026-10-01T17:32:18.050+09:00/17:33:12.720+09:00",
+    "environment": "logged-in Web; userscripts and fetch wrappers active; credentials not reused"
+  },
+  "initial_search": {
+    "entries": [
+      0,
+      190
+    ],
+    "wrapper": "data.response.$getSearchVideoV2.data",
+    "items_per_page": [
+      32,
+      32
+    ],
+    "duplicate_ids": 0,
+    "totalCount": 10831317,
+    "hasNext": [
+      true,
+      true
+    ],
+    "pageSize": 32,
+    "maxPage": 157,
+    "watch_anchors": [
+      0,
+      0
+    ],
+    "metadata_fields": [
+      "9d091f87",
+      "acf68865",
+      "contentType",
+      "count",
+      "duration",
+      "id",
+      "isChannelVideo",
+      "isMuted",
+      "isPaymentRequired",
+      "latestCommentSummary",
+      "owner",
+      "playbackPosition",
+      "registeredAt",
+      "requireSensitiveMasking",
+      "shortDescription",
+      "thumbnail",
+      "title",
+      "type",
+      "videoLive"
+    ],
+    "owner_fields": [
+      "iconUrl",
+      "id",
+      "name",
+      "ownerType",
+      "type",
+      "visibility"
+    ],
+    "count_fields": [
+      "like",
+      "view",
+      "comment",
+      "mylist"
+    ],
+    "all_owners": "visible/user",
+    "video_tags_present": false
+  },
+  "playlist_context": {
+    "type": "search",
+    "context": {
+      "keyword": "sm",
+      "sortKey": "hot",
+      "sortOrder": "none",
+      "page": 1,
+      "pageSize": 32,
+      "channelVideoListingStatus": "included",
+      "selectContentType": "long"
+    }
+  },
+  "shorts": {
+    "entry": 90,
+    "query": {
+      "selectContentType": "short",
+      "sortKey": "hot",
+      "sortOrder": "none",
+      "keyword": "sm",
+      "pageSize": "2",
+      "page": "1",
+      "searchByUser": "false"
+    },
+    "count": 2,
+    "totalCount": 14770
+  },
+  "series": {
+    "entry": 88,
+    "query": {
+      "keyword": "sm",
+      "types": "series",
+      "sortKey": "_hotTotalScore",
+      "page": 1,
+      "pageSize": 3,
+      "searchByUser": false
+    },
+    "count": 3,
+    "sampleItems_lengths": [
+      0,
+      0,
+      0
+    ]
+  },
+  "channels": {
+    "entry": 89,
+    "path": "public-api.ch.nicovideo.jp/v1/open/search/channels",
+    "count": 3,
+    "query": {
+      "query": "sm",
+      "searchType": "keyword",
+      "limit": 3,
+      "sort": "popularity",
+      "responseGroup": "detail"
+    }
+  },
+  "advertising": {
+    "entry": 87,
+    "frameId": 14,
+    "count": 4,
+    "organic_intersection": 0,
+    "batch_entries": [
+      155,
+      156,
+      191
+    ],
+    "batch_input_output": [
+      [
+        30,
+        30
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "fields": [
+      "id",
+      "activePoint",
+      "totalPoint",
+      "decoration"
+    ],
+    "ng_single_entries": [
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199
+    ],
+    "ng_single_caller": "Nico Nico Ranking NG / _applyAdDecoration",
+    "ng_version": "not established"
+  },
+  "page2_initiator": {
+    "entry": 190,
+    "caller": "Nico Nico Ranking NG / fetchPageItems / fetchMoreCandidates"
+  },
+  "preview": {
+    "entries": [
+      203,
+      229,
+      254,
+      279,
+      317,
+      342
+    ],
+    "caller": "official PreviewVideoPlayer-FvPTM-4O.js",
+    "hls_create_entries": [
+      205,
+      231,
+      256,
+      281,
+      319,
+      344
+    ],
+    "hls_status": 201,
+    "thread_entries": [
+      216,
+      244,
+      269,
+      294,
+      330,
+      357
+    ],
+    "thread_status": 200,
+    "media_transfer_bytes": 19037755,
+    "media_entries": 114,
+    "default_max_sec_static": 30,
+    "lifecycle_static": [
+      "AbortSignal",
+      "dispose",
+      "unmount pause"
+    ],
+    "keys_exported": false,
+    "captured_media_or_credentials_included": false
+  },
+  "non_search_errors": {
+    "status0_entries": [
+      38,
+      97,
+      99,
+      164
+    ],
+    "404_entry": 154,
+    "404_kind": "channel icon"
+  },
+  "boundaries": [
+    "Not an incognito/control comparison",
+    "No date of rollout established",
+    "No proof of rendered DOM state or duplicate audio",
+    "Anonymous API access not tested",
+    "Source JSON/malformed-page probes are not actual server failure observations"
+  ]
+}

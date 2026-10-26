@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "NICO-WEB-20261005-PAGER-RANGE-WRAP",
+  "title": "範囲ページラベルは公式の小さい数字枠と折返し指定をそのまま継承すると分割され得る",
+  "status": "offline-test",
+  "platform": "web",
+  "app_version": "NicoNG160.28; before fbcd33d / after dd50b6f; public CSS asset version in evidence",
+  "observed_at": "2026-10-04T15:50:50.115Z",
+  "claim": "公開CSSのoverflow-wrap:anywhereとflex圧縮を合成で再現すると、追加した処理済み範囲ラベル2–20は幅520/font16の条件で2行になった。ページャーに限定したnowrapと縮小防止で、斜線やnative寸法/矢印を維持しつつ一行にできた。実サイトの全viewportでの保証ではない。",
+  "evidence": [
+    "S-NRN-PAGER-RANGE-WRAP-20261005"
+  ],
+  "request": {
+    "scope": "no new NicoNico requests"
+  },
+  "response": {
+    "scope": "locally generated anonymous fixture"
+  },
+  "authentication": "none",
+  "unconfirmed": [
+    "Captured CSS is version-specific, not a public NicoNico API contract.",
+    "The uploaded SingleFile HTML contained only a root/template shell, not the rendered pager.",
+    "Only pager label wrapping was corrected; responsive summary placement was not redesigned."
+  ],
+  "supersedes": [],
+  "related_code": [
+    "src/ui/card-enhancements.js",
+    "scripts/test-pager-native-style.mjs"
+  ],
+  "next_step": "新しいCSS/viewport条件が変わった場合は同じラベル幅回帰を確認。状態説明の配置変更は別UI依頼で扱う。",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

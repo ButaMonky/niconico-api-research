@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "NICO-NICODIC-BATCH-20261001-ZENZA",
+  "title": "大百科10タグを1 GETで照合",
+  "status": "runtime",
+  "platform": "web",
+  "app_version": "ZenzaWatch 2.7.85-task156; Task157 API probe",
+  "observed_at": "2026-10-01T00:00:00+09:00",
+  "observed_at_precision": "analysis date; preceding tasks observed overnight",
+  "claim": "titles[]反復で10タグ中9記事が返り、request_titleは入力表記を保持した。",
+  "evidence": [
+    "S-ZENZA-COMPATIBILITY-20261001"
+  ],
+  "request": {
+    "method": "GET",
+    "host": "api.dic.nicovideo.jp",
+    "path": "/v1/articles/article",
+    "query": "titles[] repeated"
+  },
+  "response": {
+    "status": 200,
+    "shape": "array",
+    "mapping": "request_title"
+  },
+  "authentication": "Public unauthenticated browser verification; encyclopedia credentials omit",
+  "unconfirmed": [
+    "サーバー最大件数",
+    "全不存在のみの応答"
+  ],
+  "supersedes": [],
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

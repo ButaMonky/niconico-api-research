@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "NICO-SEARCH-20261001-SPLIT-PROVIDERS",
+  "title": "通常動画と補助ショート・シリーズ・チャンネルを別取得",
+  "status": "traffic",
+  "platform": "web",
+  "app_version": "Captured nvpc_next manifest-5c85ef30; baseline Zenza Task171 d4d1f789; executing NG version unconfirmed",
+  "observed_at": "2026-10-01T17:33:12.720+09:00",
+  "observed_at_precision": "capture end; per-request times in raw HAR",
+  "claim": "提供HARでは通常検索本体と別に、short動画2件、series entity3件、channel entity3件を補助APIで取得する。シリーズ3件のsampleItemsは全て空だった。",
+  "evidence": [
+    "S-SEARCH-20261001-CAPTURE",
+    "S-SEARCH-20261001-TESTS"
+  ],
+  "request": {
+    "method": "GET",
+    "paths": [
+      "/v2/search/video?selectContentType=short",
+      "/v1/search/list?types=series",
+      "/v1/open/search/channels"
+    ]
+  },
+  "response": {
+    "short": 2,
+    "series": 3,
+    "channel": 3,
+    "series_sample_lengths": [
+      0,
+      0,
+      0
+    ]
+  },
+  "authentication": "Capture page was logged in; userscripts/fetch wrappers active. No real credentials replayed. Offline tests use mocks only.",
+  "unconfirmed": [
+    "仕様の変更日と全アカウント・全検索条件での同一挙動。",
+    "ログアウト/シークレット対照、描画後DOM、UIの症状・実装後E2E。",
+    "実行中Claude Codeの別環境の修正状況。"
+  ],
+  "supersedes": [],
+  "related_findings": [
+    "NICO-WEB-20260925-LIST-ENTITY-SEARCH"
+  ],
+  "next_step": "別モデル・別件数として扱い、seriesの動画は選択後に展開する。",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "previous_integration_status": "contributions; pending canonical maintainer review",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

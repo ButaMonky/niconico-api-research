@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "status": "traffic",
+  "platform": "web",
+  "app_version": "ニコニコ公式ユーザーページ（HARにクライアントの正確なリリース番号なし）",
+  "observed_at": "2026-10-26T23:58:09+09:00",
+  "recorded_on": "2026-10-27",
+  "source": "user-provided 投稿動画一覧.har; evidence/uploaded-user-videos-har-20261027-sanitized.md",
+  "source_sha256": "2860b91bfcfc186cd5cfdc82f378ae381e6c6950200d0c566149cc321c5952c0",
+  "evidence": [
+    "S-USERVIDEOS-HAR-20261027-SANITIZED"
+  ],
+  "evidence_path": "evidence/uploaded-user-videos-har-20261027-sanitized.md",
+  "evidence_sha256": "6ea4ecc197a50347eb95d16b3da87f5783181187f1adf681198afd643b14d751",
+  "authentication": "提供HARはWebページ操作中の通信。匿名アクセスで同じ応答を返すかは未確認。Cookie・認証・識別子の値を記録・共有しない。",
+  "supersedes": [],
+  "integration_status": "contributions only / maintainer review pending; sources.json is concurrently modified and remains untouched; validation/export/push not run",
+  "id": "NICO-USERVIDEOS-20261027-WEB-PAGES-587",
+  "title": "公式投稿動画一覧v3はlong・mask指定で100件ずつページ取得",
+  "claim": "2026-10-26の公式WebユーザーページHARで GET /v3/users/{userId}/videos がpage=1〜6に呼ばれ、各ページのtotalCount=587、実件数100/100/100/100/100/87、動画ID587件重複なし・登録日の降順を確認。",
+  "request": {
+    "method": "GET",
+    "host": "nvapi.nicovideo.jp",
+    "path": "/v3/users/{userId}/videos",
+    "query": {
+      "selectContentType": "long",
+      "sensitiveContents": "mask",
+      "sortKey": "registeredAt",
+      "sortOrder": "desc",
+      "pageSize": 100,
+      "page": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  "response": {
+    "http_status": 200,
+    "meta_status": 200,
+    "reported_totalCount": 587,
+    "counts": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      87
+    ],
+    "combined_count": 587,
+    "unique_video_ids": 587,
+    "empty_video_ids": 0,
+    "registeredAt_descending": true,
+    "item_fields": [
+      "essential",
+      "series"
+    ]
+  },
+  "unconfirmed": [
+    "HARではpage=7以降を未要求。API全体の最大件数・ページ制限は未試験。",
+    "selectContentType=shortの一覧、未公開・削除済み動画、別ユーザーでの同一件数契約は未検証。",
+    "sensitiveContents=mask未指定時との差は、このHAR内に同一対象の対照要求がないため未検証。",
+    "HARのログイン状態、API認証要求の必須性は未検証。",
+    "ZenzaWatchの500件問題は別系統 /v1/playlist/user-uploaded の未ページングであり、このHARの結果ではない。"
+  ],
+  "clarifies": [
+    "NICO-COMMUNITY2-20260914-USER-LISTS"
+  ],
+  "related_code": [
+    "tools/typescript-stage1/nico-src/VideoSearch.ts",
+    "tools/typescript-stage1/nico-src/PlaylistApiLoader.ts"
+  ]
+}

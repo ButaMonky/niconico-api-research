@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "NICO-WEB-20260925-SUPPORTER-BG-POSITION",
+  "title": "提供画面背景用の bgVideoPosition の現行挙動",
+  "status": "traffic",
+  "platform": "web",
+  "app_version": "2026-09-25 current web",
+  "observed_at": "2026-09-25T19:00:00+09:00",
+  "claim": "pickup_supporters の supporters.adTopSupporter.auxiliary.bgVideoPosition は現行提供画面の背景に使う動画位置として扱われる観測があり、sm8628149 では 103 を確認した。旧Knowledgeは同フィールドをintとして記録済みだが、単位・用途は未確定だった。",
+  "evidence": [
+    "S-ZENZA-FOLLOWUP-20260925"
+  ],
+  "request": {
+    "method": "GET",
+    "path": "/v2/contents/video/{id}/pickup_supporters"
+  },
+  "response": {
+    "example_video": "sm8628149",
+    "path": "data.supporters.adTopSupporter.auxiliary.bgVideoPosition",
+    "value": 103
+  },
+  "authentication": "公開GET。",
+  "unconfirmed": [
+    "将来も秒単位・同じ用途が維持される保証",
+    "全supporter種別での扱い"
+  ],
+  "supersedes": [],
+  "related_code": [
+    "packages/zenza/src/videoPlayer/SupporterCredit.js"
+  ],
+  "next_step": "値欠落・キャプチャ失敗時のfallbackを残し、再生中のvideo要素をseekせず別capture経路で指定位置を取得する。",
+  "original_status": "traffic+code-observation",
+  "evidence_modes": [
+    "traffic",
+    "code-observation"
+  ],
+  "integration_note": "Canonical status records the supplied traffic observation; associated static/code observation remains separately labeled.",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

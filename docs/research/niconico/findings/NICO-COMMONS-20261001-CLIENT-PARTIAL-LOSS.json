@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "NICO-COMMONS-20261001-CLIENT-PARTIAL-LOSS",
+  "title": "後続ページ失敗で同じ側の取得済み一覧が消える",
+  "status": "offline-test",
+  "platform": "web",
+  "app_version": "ZenzaWatch 2.7.100-task171 / d4d1f7892d6960b76610aea20b78f0c7a032666c",
+  "observed_at": "2026-10-01T18:28:25.781+09:00",
+  "observed_at_precision": "Exact probe execution timestamp",
+  "claim": "子の先頭100件成功後に次ページ503を返すと、load()の子結果はtotal0/works[]/failed:trueになった。成功した親側は保持された。",
+  "evidence": [
+    "S-COMMONS-20261001-CAPTURE",
+    "S-COMMONS-20261001-SOURCE",
+    "S-COMMONS-20261001-SUMMARY"
+  ],
+  "request": {
+    "operation": "unmodified extracted loader / synthetic HTTP",
+    "new_live_requests": false
+  },
+  "response": {
+    "audit_issues": [
+      "F03",
+      "COM-02"
+    ],
+    "probes": [
+      "C04"
+    ]
+  },
+  "authentication": "Logged-in capture. Anonymous and www-origin with_meta behavior not retested. Offline tests use dummy data only.",
+  "unconfirmed": [
+    "No live test of current 100-slot no-metadata child requests.",
+    "Reason for total/returned gap, maximum limit, behavior introduction date, registration writes and playability of every candidate are unconfirmed."
+  ],
+  "supersedes": [],
+  "related_code": [
+    "packages/lib/src/nico/CommonsTreeLoader.js",
+    "src/NicoVideoPlayerDialog.js"
+  ],
+  "next_step": "成功済みデータと失敗offsetを保持して部分取得を通知する。",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "previous_integration_status": "contribution pending maintainer review",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

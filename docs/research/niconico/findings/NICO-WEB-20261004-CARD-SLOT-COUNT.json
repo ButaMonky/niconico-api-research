@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "NICO-WEB-20261004-CARD-SLOT-COUNT",
+  "title": "広告の表示枠と動画IDの一意件数を混同しない",
+  "status": "offline-test",
+  "platform": "web",
+  "app_version": "NicoNG f975134; see evidence for browser version",
+  "observed_at": "2026-10-04T09:45:16.783Z",
+  "claim": "NicoNG f975134のオフライン合成ページでは、通常36枠に同じ動画の広告5枠を加えると実表示41枠に対して内部件数36となった。初期化後の広告5枠でも同じ差が出た。実表示上限の計数は物理カード枠で行い、通信・NGモデルの重複除去は動画IDで別に行う必要がある。この結果は現行ニコニコの広告配信件数や公式API仕様を規定しない。",
+  "evidence": [
+    "S-NRN-CARD-SLOTS-20261004"
+  ],
+  "request": {
+    "scope": "isolated synthetic browser; no live NicoNico requests"
+  },
+  "response": {
+    "scope": "locally generated fixture responses"
+  },
+  "authentication": "none; no account session used",
+  "unconfirmed": [
+    "ユーザーの実ページ上の全広告DOM型と時刻依存条件",
+    "160.28実ブラウザ導入後の36枠確認"
+  ],
+  "supersedes": [],
+  "related_code": [
+    "NicoNG src/autofill/legacy-controller.js",
+    "NicoNG src/autofill/initialize.js",
+    "NicoNG src/nico/list-page.js"
+  ],
+  "next_step": "物理枠回帰試験を通常枠・同一動画広告・遅延広告・追加補充で維持し、実ページで確認する。",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

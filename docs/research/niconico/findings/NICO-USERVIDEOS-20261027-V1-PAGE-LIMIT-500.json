@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "traffic",
+  "platform": "web / public API GET",
+  "app_version": null,
+  "observed_at": "2026-10-26",
+  "evidence": [
+    "S-USERVIDEOS-PUBLIC-GET-20261026"
+  ],
+  "authentication": "Contemporaneous public direct GET checks without Cookie or Authorization. Actual logged-in browser parity is not proven.",
+  "supersedes": [],
+  "id": "NICO-USERVIDEOS-20261027-V1-PAGE-LIMIT-500",
+  "title": "Uploader playlist v1 has a 500-items-per-GET boundary and accepts paging",
+  "claim": "In a public uploader with reported totalCount 1082, the default v1 playlist user-uploaded request returns 500 items. PageSize=500 with pages 1/2/3 returns 500/500/82, giving 1082 unique IDs in registeredAt-descending order; pageSize=501 or 1000 returns HTTP 400.",
+  "request": {
+    "method": "GET",
+    "host": "nvapi.nicovideo.jp",
+    "path": "/v1/playlist/user-uploaded/{userId}",
+    "query": {
+      "sortKey": "registeredAt",
+      "sortOrder": "desc",
+      "pageSize": [
+        499,
+        500,
+        501,
+        1000
+      ],
+      "page": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "response": {
+    "reported_totalCount": 1082,
+    "default_page_items": 500,
+    "paged_500_item_counts": [
+      500,
+      500,
+      82,
+      0
+    ],
+    "unique_watch_ids": 1082,
+    "watchIds_missing": 0,
+    "content_missing": 0,
+    "descending_registeredAt": true,
+    "pageSize_499": "HTTP 200; 499 items",
+    "pageSize_500": "HTTP 200; 500 items",
+    "pageSize_501": "HTTP 400",
+    "pageSize_1000": "HTTP 400"
+  },
+  "unconfirmed": [
+    "Request size boundary is observed for one public uploader and cannot establish a universal API maximum or all-client behavior.",
+    "No authenticated browser CORS test or rate-limit stress test.",
+    "Total counts during concurrent uploads, huge counts, or other listing categories require separate checks.",
+    "The source is a sanitized contemporaneous probe transcript, not the raw HTTP response body."
+  ],
+  "related_code": [
+    "tools/typescript-stage1/nico-src/PlaylistApiLoader.ts",
+    "tools/typescript-stage1/nico-src/PlayList.ts"
+  ],
+  "integration_status": "isolated research branch; requires maintainer review before merging/publishing"
+}

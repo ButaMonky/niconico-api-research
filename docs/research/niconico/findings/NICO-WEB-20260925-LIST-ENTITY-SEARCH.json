@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "NICO-WEB-20260925-LIST-ENTITY-SEARCH",
+  "title": "シリーズ・マイリスト検索は /v1/search/list の別entity検索",
+  "status": "traffic",
+  "platform": "web",
+  "app_version": "2026-09-25 current web",
+  "observed_at": "2026-09-25T19:00:00+09:00",
+  "claim": "現行Webの /series_search/{keyword} と /mylist_search/{keyword} は nvapi /v1/search/list を types=series または mylist で使う。結果は動画ではなくentityで、id/title/description/thumbnailUrl/videoCount/owner等を返す。entity内動画一覧の取得は /v1/playlist/series/{id} と /v1/playlist/mylist/{id} で別に行う。",
+  "evidence": [
+    "S-ZENZA-FOLLOWUP-20260925"
+  ],
+  "request": {
+    "method": "GET",
+    "path": "/v1/search/list",
+    "params": [
+      "keyword",
+      "types",
+      "sortKey",
+      "sortOrder",
+      "pageSize",
+      "page",
+      "searchByUser"
+    ]
+  },
+  "response": {
+    "item_fields": [
+      "id",
+      "type",
+      "title",
+      "description",
+      "thumbnailUrl",
+      "videoCount",
+      "owner",
+      "isMuted",
+      "isFollowing",
+      "followerCount",
+      "lastVideoAddedAt",
+      "sampleItems"
+    ],
+    "owner_fields": [
+      "ownerType",
+      "type",
+      "visibility",
+      "id",
+      "name",
+      "iconUrl"
+    ]
+  },
+  "authentication": "公開GET。X-Frontend-Id:6 / X-Frontend-Version:0 で成功。",
+  "unconfirmed": [
+    "sampleItemsは公式SSRでは入る一方、匿名の直接API試験では空配列だった理由",
+    "公式UI外のページング上限"
+  ],
+  "supersedes": [],
+  "related_code": [
+    "PlaylistApiLoader.js"
+  ],
+  "next_step": "ZenzaではVideoListItemに直接混ぜず、検索entityモデル→選択時に既存PlaylistApiLoaderで動画列へ展開する二段階UIを検討する。",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

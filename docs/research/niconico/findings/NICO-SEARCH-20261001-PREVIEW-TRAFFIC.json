@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "NICO-SEARCH-20261001-PREVIEW-TRAFFIC",
+  "title": "検索プレビューはHLS作成・コメント読込を伴う",
+  "status": "traffic",
+  "platform": "web",
+  "app_version": "Captured nvpc_next manifest-5c85ef30; baseline Zenza Task171 d4d1f789; executing NG version unconfirmed",
+  "observed_at": "2026-10-01T17:33:12.720+09:00",
+  "observed_at_precision": "capture end; per-request times in raw HAR",
+  "claim": "提供HARでは公式PreviewVideoPlayer由来のpreview GET6回に対し、HLS作成POST201とコメント読込POST200を6組ずつ観測した。単なる画像取得ではない。",
+  "evidence": [
+    "S-SEARCH-20261001-CAPTURE"
+  ],
+  "request": {
+    "operations": [
+      "preview GET",
+      "access-rights/hls POST",
+      "threads POST"
+    ]
+  },
+  "response": {
+    "preview_count": 6,
+    "hls_created": 6,
+    "comment_reads": 6,
+    "related_media_transfer_bytes": 19037755
+  },
+  "authentication": "Capture page was logged in; userscripts/fetch wrappers active. No real credentials replayed. Offline tests use mocks only.",
+  "unconfirmed": [
+    "仕様の変更日と全アカウント・全検索条件での同一挙動。",
+    "ログアウト/シークレット対照、描画後DOM、UIの症状・実装後E2E。",
+    "実行中Claude Codeの別環境の修正状況。"
+  ],
+  "supersedes": [],
+  "related_findings": [],
+  "next_step": "NGカード/SPA/本再生との所有範囲・中断を確認する。HARだけで二重再生を再現したとしない。",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "previous_integration_status": "contributions; pending canonical maintainer review",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

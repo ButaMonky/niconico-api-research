@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "NICO-POCKET-20261001-ZENZA",
+  "title": "Pocket受信登録の順序",
+  "status": "implementation",
+  "platform": "web",
+  "app_version": "ZenzaWatch 2.7.85-task156; Task157 API probe",
+  "observed_at": "2026-10-01T00:00:00+09:00",
+  "observed_at_precision": "analysis date; preceding tasks observed overnight",
+  "claim": "初回MessagePort要求を失う製品内の順序を修正した。サーバー仕様変更ではない。",
+  "evidence": [
+    "S-ZENZA-COMPATIBILITY-20261001"
+  ],
+  "request": {
+    "operation": "iframe ready then message"
+  },
+  "response": {
+    "first_request": "received after fix"
+  },
+  "authentication": "Public unauthenticated browser verification; encyclopedia credentials omit",
+  "unconfirmed": [
+    "ログインしたマイリスト編集"
+  ],
+  "supersedes": [],
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

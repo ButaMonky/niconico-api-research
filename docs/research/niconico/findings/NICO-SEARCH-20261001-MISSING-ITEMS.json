@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "NICO-SEARCH-20261001-MISSING-ITEMS",
+  "title": "items欠落を正常0件として返す条件",
+  "status": "offline-test",
+  "platform": "web",
+  "app_version": "Captured nvpc_next manifest-5c85ef30; baseline Zenza Task171 d4d1f789; executing NG version unconfirmed",
+  "observed_at": "2026-10-01T17:40:16.478+09:00",
+  "observed_at_precision": "probe run timestamp",
+  "claim": "人工meta200/data.totalCount100でitemsだけ欠落させた場合、実searchはrejectせず空の成功結果へ進んだ。公式が実際にその形を返したとは未確認。",
+  "evidence": [
+    "S-SEARCH-20261001-TESTS"
+  ],
+  "request": {
+    "operation": "search with malformed synthetic data",
+    "cases": [
+      "S10"
+    ]
+  },
+  "response": {
+    "missing_items_rejected": false
+  },
+  "authentication": "Capture page was logged in; userscripts/fetch wrappers active. No real credentials replayed. Offline tests use mocks only.",
+  "unconfirmed": [
+    "仕様の変更日と全アカウント・全検索条件での同一挙動。",
+    "ログアウト/シークレット対照、描画後DOM、UIの症状・実装後E2E。",
+    "実行中Claude Codeの別環境の修正状況。"
+  ],
+  "supersedes": [],
+  "related_findings": [],
+  "next_step": "正常0件と応答欠落を分け、必要schemaを検証する。",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "previous_integration_status": "contributions; pending canonical maintainer review",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

@@ -1,0 +1,684 @@
+{
+  "schema_version": 1,
+  "basis": "Authorized local full HAR; summary of bounded read-only extraction results. Not a new live API test.",
+  "capture_time_jst": [
+    "2026-10-01T18:07:30.564+09:00",
+    "2026-10-01T18:09:37.282+09:00"
+  ],
+  "raw_sha256": "6316322f7318a3fe8580cef8801051a92397895ea4bbb51c7c328f7c8e88ca9b",
+  "public_api": {
+    "host": "public-api.commons.nicovideo.jp",
+    "requests": 120,
+    "methods": {
+      "GET": 60,
+      "OPTIONS": 60
+    },
+    "tree_gets": 57,
+    "work_gets": 2,
+    "other_gets": 1,
+    "registration_write_observed": false
+  },
+  "root_work": {
+    "entry": 27,
+    "repeat_entry": 147,
+    "endpoint": "/v1/works/sm8628149?with_meta=1",
+    "http_status": 200,
+    "response_path": "data.node",
+    "fields": [
+      "globalId",
+      "contentId",
+      "contentKind",
+      "id",
+      "updated",
+      "parentsCount",
+      "childrenCount",
+      "kind",
+      "isTreeRegistrable",
+      "title",
+      "logoURL",
+      "watchURL",
+      "treeURL",
+      "treeEditURL",
+      "thumbnailURL",
+      "description",
+      "userId",
+      "isEditable"
+    ],
+    "observed_counts": {
+      "parentsCount": 1,
+      "childrenCount": 1060
+    },
+    "isEditable": false
+  },
+  "parents": {
+    "no_meta": {
+      "entry": 55,
+      "offset": 0,
+      "limit": 300,
+      "sort": "-id",
+      "total": 1,
+      "returned": 1,
+      "fields": [
+        "kind",
+        "id",
+        "globalId",
+        "contentId",
+        "contentKind",
+        "visibleStatus",
+        "created",
+        "updated"
+      ]
+    },
+    "with_meta": {
+      "entry": 57,
+      "offset": 0,
+      "limit": 20,
+      "sort": "-id",
+      "total": 1,
+      "returned": 1,
+      "fields": [
+        "kind",
+        "id",
+        "globalId",
+        "contentId",
+        "contentKind",
+        "visibleStatus",
+        "created",
+        "updated",
+        "title",
+        "logoURL",
+        "watchURL",
+        "treeURL",
+        "treeEditURL",
+        "thumbnailURL",
+        "description",
+        "userId",
+        "parentsCount",
+        "childrenCount",
+        "isEditable"
+      ]
+    },
+    "same_parent_globalId": "nm3601701",
+    "numeric_contentId": 3601701,
+    "limit_300_interpretation": "300 was requested successfully but only 1 work existed; this does not prove 300 returned in one response or the server maximum."
+  },
+  "authentication": {
+    "context": "Logged-in browser capture. Authentication-free reproduction not tested. HAR sanitization may omit Cookie; absent export headers do not establish anonymity.",
+    "request_header_names_sample": [
+      "x-frontend-id",
+      "x-frontend-version",
+      "x-requested-with",
+      "origin",
+      "referer"
+    ],
+    "sample_response_cors": {
+      "access-control-allow-origin": "https://commons.nicovideo.jp",
+      "access-control-allow-credentials": "true"
+    },
+    "www_origin_with_meta_not_retested": true
+  },
+  "unconfirmed": [
+    "Why total=1060 yields only 1046 returned works. No deleted/private/muted diagnosis without further evidence.",
+    "Current children responses with metadata omitted and page size 100.",
+    "Maximum _limit; only 20-slot child responses were captured.",
+    "only_mine=1 and user-specific edit permission behavior.",
+    "Any registration POST/PUT/DELETE request or success.",
+    "When the observed behavior/fields were introduced."
+  ],
+  "input_integrity": {
+    "original_bytes": 56796533,
+    "original_entries": 2102,
+    "original_valid_json": true,
+    "received_bytes": 2517256,
+    "received_is_exact_prefix": true,
+    "received_sha256": "32b8a684f6d1f0d5ab9f4375b2a07ea29fe9ce8efa7fde2781b578d3a05bb9c6",
+    "received_valid_json": false
+  },
+  "children": {
+    "duplicate_page_entries": [
+      58,
+      167
+    ],
+    "duplicate_page_bodies_equal": true,
+    "scanned_offsets_without_duplicate": [
+      0,
+      20,
+      40,
+      60,
+      80,
+      100,
+      120,
+      140,
+      160,
+      180,
+      200,
+      220,
+      240,
+      260,
+      280,
+      300,
+      320,
+      340,
+      360,
+      380,
+      400,
+      420,
+      440,
+      460,
+      480,
+      500,
+      520,
+      540,
+      560,
+      580,
+      600,
+      620,
+      640,
+      660,
+      680,
+      700,
+      720,
+      740,
+      760,
+      780,
+      800,
+      820,
+      840,
+      860,
+      880,
+      900,
+      920,
+      940,
+      960,
+      980,
+      1000,
+      1020,
+      1040,
+      1060
+    ],
+    "unique_nonempty_offset_pages": 53,
+    "returned_rows_after_removing_duplicate_page": 1046,
+    "unique_global_ids": 1046,
+    "total_reported_on_all_pages": 1060,
+    "difference_reason_unknown": 14,
+    "content_kind_counts": {
+      "video": 996,
+      "live": 38,
+      "illust": 10,
+      "commons": 2
+    },
+    "visible_status_counts": {
+      "visible": 1046
+    },
+    "metadata_fields_present_and_non_null_in_all_1046": [
+      "title",
+      "watchURL",
+      "treeURL",
+      "treeEditURL",
+      "thumbnailURL",
+      "description",
+      "userId",
+      "parentsCount",
+      "childrenCount",
+      "isEditable"
+    ],
+    "fields_not_present_in_any_item": [
+      "duration",
+      "tags",
+      "count"
+    ],
+    "optional_field_seen": "commonsMaterialKind",
+    "strict_descending_returned_item_id": false,
+    "order_interpretation": "The server received _sort=-id; the meaning of its sort id is not established. Do not re-sort or paginate by returned item.id/globalId.",
+    "page_columns": [
+      "entry",
+      "offset",
+      "requested_limit",
+      "returned",
+      "total",
+      "http_status"
+    ],
+    "pages": [
+      [
+        58,
+        0,
+        20,
+        19,
+        1060,
+        200
+      ],
+      [
+        167,
+        0,
+        20,
+        19,
+        1060,
+        200
+      ],
+      [
+        233,
+        20,
+        20,
+        19,
+        1060,
+        200
+      ],
+      [
+        276,
+        40,
+        20,
+        16,
+        1060,
+        200
+      ],
+      [
+        306,
+        60,
+        20,
+        18,
+        1060,
+        200
+      ],
+      [
+        345,
+        80,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        384,
+        100,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        422,
+        120,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        464,
+        140,
+        20,
+        19,
+        1060,
+        200
+      ],
+      [
+        505,
+        160,
+        20,
+        17,
+        1060,
+        200
+      ],
+      [
+        537,
+        180,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        576,
+        200,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        609,
+        220,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        642,
+        240,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        682,
+        260,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        719,
+        280,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        755,
+        300,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        795,
+        320,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        831,
+        340,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        873,
+        360,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        914,
+        380,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        950,
+        400,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        986,
+        420,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1018,
+        440,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1058,
+        460,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1100,
+        480,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1141,
+        500,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1177,
+        520,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1212,
+        540,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1247,
+        560,
+        20,
+        19,
+        1060,
+        200
+      ],
+      [
+        1281,
+        580,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1312,
+        600,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1346,
+        620,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1377,
+        640,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1409,
+        660,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1451,
+        680,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1484,
+        700,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1522,
+        720,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1555,
+        740,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1592,
+        760,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1628,
+        780,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1663,
+        800,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1706,
+        820,
+        20,
+        19,
+        1060,
+        200
+      ],
+      [
+        1741,
+        840,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1769,
+        860,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1804,
+        880,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1836,
+        900,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1875,
+        920,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1910,
+        940,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1941,
+        960,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        1973,
+        980,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        2004,
+        1000,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        2030,
+        1020,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        2060,
+        1040,
+        20,
+        20,
+        1060,
+        200
+      ],
+      [
+        2095,
+        1060,
+        20,
+        0,
+        1060,
+        200
+      ]
+    ]
+  }
+}

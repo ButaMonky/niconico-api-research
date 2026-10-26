@@ -1,0 +1,39 @@
+{
+  "observed_at": "2026-10-04T15:50:50.115Z",
+  "status": "offline-test + captured public stylesheet static analysis",
+  "scope": "Desktop search pager; user supplied capture, not current live page validation",
+  "public_sources": [
+    {
+      "asset": "root-Dq4xXJwn.css",
+      "decoded_sha256": "cbbbb85d6defd4e5daddd5de238a104125273f4c819008b6fa6b2436bf8c0a1e",
+      "observation": "Base overflow-wrap:anywhere is inherited."
+    },
+    {
+      "asset": "Pagination-FpvyUjEl.js",
+      "sha256": "11d1888b9013df6d66e654119a65bdea11048c83535e819bea6ee9de611be5d4",
+      "observation": "Flex pager; item minimum32px, height32px, padding4px; no nowrap in item styles."
+    }
+  ],
+  "synthetic_case": {
+    "source_before": "fbcd33df9369cf822be688611a692b4f3b47531c",
+    "source_after": "dd50b6f1915d078cb0a74974861989b867ea569f",
+    "label": "2–20",
+    "parent_width": 520,
+    "font_size": 16,
+    "lines_before": 2,
+    "lines_after": 1,
+    "additional_labels": [
+      "22–28",
+      "157",
+      "100–120",
+      "122–156"
+    ],
+    "test": "scripts/test-pager-native-style.mjs"
+  },
+  "limits": [
+    "Captured CSS is version-specific, not a public NicoNico API contract.",
+    "The uploaded SingleFile HTML contained only a root/template shell, not the rendered pager.",
+    "Only pager label wrapping was corrected; responsive summary placement was not redesigned."
+  ],
+  "privacy": "No raw HTML/HAR, account information, media keys or navigation history copied."
+}
