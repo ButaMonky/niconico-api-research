@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "NICO-COMMONS-20261001-MIXED-KINDS",
+  "title": "子作品には動画以外も50件含まれる",
+  "status": "traffic",
+  "platform": "web",
+  "app_version": "Captured Commons web / Chrome 154",
+  "observed_at": "2026-10-01T18:07:30.564+09:00",
+  "observed_at_precision": "Capture start; exact offsets and entry indices in evidence",
+  "claim": "返却子作品1046件のcontentKindはvideo996/live38/illust10/commons2。全1046はvisibleだったが、全videoの再生可否は検証していない。",
+  "evidence": [
+    "S-COMMONS-20261001-CAPTURE",
+    "S-COMMONS-20261001-SUMMARY"
+  ],
+  "request": {
+    "operation": "captured read-only GETs",
+    "new_live_requests": false
+  },
+  "response": {
+    "audit_issues": [
+      "COM-03",
+      "COM-04"
+    ],
+    "probes": [
+      "C08"
+    ]
+  },
+  "authentication": "Logged-in capture. Anonymous and www-origin with_meta behavior not retested. Offline tests use dummy data only.",
+  "unconfirmed": [
+    "No live test of current 100-slot no-metadata child requests.",
+    "Reason for total/returned gap, maximum limit, behavior introduction date, registration writes and playability of every candidate are unconfirmed."
+  ],
+  "supersedes": [],
+  "related_code": [
+    "packages/lib/src/nico/CommonsTreeLoader.js",
+    "src/NicoVideoPlayerDialog.js"
+  ],
+  "next_step": "全作品の表示と動画プレイリスト候補を分ける。",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "previous_integration_status": "contribution pending maintainer review",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

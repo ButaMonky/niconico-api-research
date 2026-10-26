@@ -1,0 +1,132 @@
+{
+  "baseline_head": "d4d1f7892d6960b76610aea20b78f0c7a032666c",
+  "sourceHashes": {
+    "packages/lib/src/nico/VideoSearch.js": "8275d9539b912f11476767f4e7d646d6014b847e41878620a780dd80232fdf05",
+    "packages/lib/src/nico/NicoQuery.js": "cc751f41067243b95baa0248abb623fb416cd41f88da232fe17ade9708cc730c"
+  },
+  "observed_at": "2026-10-01T08:40:16.478Z",
+  "tests": [
+    {
+      "id": "S01",
+      "name": "Explicit long content filter survives buildQuery",
+      "expectationMet": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'long'\n"
+    },
+    {
+      "id": "S02",
+      "name": "Explicit short content filter survives buildQuery",
+      "expectationMet": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'short'\n"
+    },
+    {
+      "id": "S03",
+      "name": "Explicit channel listing context survives buildQuery",
+      "expectationMet": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'included'\n"
+    },
+    {
+      "id": "S04",
+      "name": "URL kind=user differs from kind=any",
+      "expectationMet": false,
+      "error": "Expected \"actual\" not to be strictly deep-equal to:\n\n{\n  keyword: 'sm',\n  sensitiveContents: 'mask',\n  sortKey: 'hot',\n  sortOrder: 'none'\n}\n"
+    },
+    {
+      "id": "S05",
+      "name": "NicoQuery carries page/genre/content/kind to query stage",
+      "expectationMet": false,
+      "error": "Expected values to be strictly equal:\n\nundefined !== 2\n"
+    },
+    {
+      "id": "S06",
+      "name": "Existing hot mapping and one-year filter remain valid",
+      "expectationMet": true,
+      "observed": {
+        "sortKey": "hot",
+        "sortOrder": "none",
+        "keyword": "sm",
+        "minRegisteredAt": "2025-10-01T00:00:00.000Z",
+        "sensitiveContents": "mask"
+      }
+    },
+    {
+      "id": "S07",
+      "name": "Existing sensitive mask behavior is not silently removed",
+      "expectationMet": true,
+      "observed": {
+        "sensitiveContents": "mask",
+        "liveNecessityNotTested": true
+      }
+    },
+    {
+      "id": "S08",
+      "name": "hasNext=false stops even when totalCount exceeds current page",
+      "expectationMet": false,
+      "error": "pages requested: 1,2\n\n2 !== 1\n"
+    },
+    {
+      "id": "S09",
+      "name": "Later-page failure is marked as partial in returned result",
+      "expectationMet": false,
+      "error": "returned status=ok; count=200; length=100; no partial marker"
+    },
+    {
+      "id": "S10",
+      "name": "Missing items must not become a valid empty search",
+      "expectationMet": false,
+      "error": "Missing expected rejection."
+    },
+    {
+      "id": "S11",
+      "name": "Normal two-page result retains page order and legacy metadata",
+      "expectationMet": true,
+      "observed": {
+        "requests": 2,
+        "length": 200
+      }
+    },
+    {
+      "id": "S12",
+      "name": "Direct search page2 correctly starts at 32-item offset",
+      "expectationMet": true,
+      "observed": {
+        "firstId": "sm33",
+        "length": 10
+      }
+    }
+  ],
+  "summary": {
+    "total": 12,
+    "met": 4,
+    "unmet": 8
+  },
+  "network": "mock-only",
+  "productSourceChanged": false,
+  "source_findings": {
+    "buildQuery_omits": [
+      "selectContentType",
+      "channelVideoListingStatus",
+      "kind"
+    ],
+    "NicoQuery_searchParams_omits": [
+      "page",
+      "genre",
+      "selectContentType",
+      "kind"
+    ],
+    "known_controls": [
+      "hotLikeAndMylist -> hot/none",
+      "f_range5 -> one year",
+      "mask retained",
+      "normal 2-page order",
+      "direct page2 -> sm33"
+    ],
+    "NG_reference": "local development e1804ed dist version160.11; not assumed to match capture"
+  },
+  "historical_related": [
+    "NICO-BROWSER-20260920-INITIAL-OWNER",
+    "NICO-20260913-SEARCH-TAGS",
+    "NICO-WEB-20260925-LIST-ENTITY-SEARCH",
+    "NICO-ADS-20260920-BATCH-EVIDENCE"
+  ],
+  "reproduction": "Full analysis handoff search-probes.mjs; rerun only in a copy, needs repo test/helpers/extractSource.js. Test runner exit1 signifies unmet expectations, not repaired product."
+}

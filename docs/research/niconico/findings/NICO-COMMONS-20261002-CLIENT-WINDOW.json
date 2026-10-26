@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "NICO-COMMONS-20261002-CLIENT-WINDOW",
+  "title": "Task192は操作300枠と再開位置を保持",
+  "status": "offline-test",
+  "platform": "web",
+  "app_version": "ZenzaWatch 2.7.121-task192 / 62eb0107b3cf60217ffc4ef6504111f83e793f7b / Node v24.19.0",
+  "observed_at": "2026-10-02T00:40:56.826+09:00",
+  "recorded_on": "2026-10-02",
+  "claim": "Task192の既定loadRelativesは100枠3要求で300行・nextOffset300を返した。同じ未改変関数にmaxItems1060/pageSize300を渡す人工試験は4要求で全範囲を完了した。",
+  "evidence": [
+    "S-COMMONS-AUTO-20261002-CODE",
+    "S-COMMONS-AUTO-20261002-PROBE",
+    "S-COMMONS-AUTO-20261002-SUMMARY"
+  ],
+  "request": {
+    "operation": "unmodified production functions; network/UI mocked",
+    "probes": [
+      "A01",
+      "A02"
+    ],
+    "details": "evidence/commons-autofetch-20261002/CURRENT_CODE_FACTS.json"
+  },
+  "response": {
+    "record_kind": "observed conditions only",
+    "probes": [
+      "A01",
+      "A02"
+    ]
+  },
+  "authentication": "Live GETs did not send cookies/authentication. Origin header was www.nicovideo.jp. Offline cases are synthetic and do not verify server authentication.",
+  "unconfirmed": [
+    "ブラウザー内CORS・実動画再生・全件表示の速度は未検証。",
+    "省略されたメタ情報の理由、API最大offset・レート上限は未確認。",
+    "今回製品を修正・ビルド・公開していない。"
+  ],
+  "supersedes": [],
+  "related_findings": [],
+  "related_code": [
+    "packages/lib/src/nico/CommonsTreeLoader.js",
+    "packages/zenza/src/Playlist/PlayList.js",
+    "packages/zenza/src/Playlist/VideoListItem.js"
+  ],
+  "next_step": "全範囲の自動ID取得と補完・反映・取消・容量・保存を分離する。REPORT_COMMONS_AUTOFETCH.mdとNEXT_CLAUDE_CODE_PROMPT.txtを参照。",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "previous_integration_status": "contribution pending maintainer review",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

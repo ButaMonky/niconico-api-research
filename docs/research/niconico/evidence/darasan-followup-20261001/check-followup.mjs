@@ -1,0 +1,35 @@
+// Offline diagnostic only. Product sources are read; all network calls are stubs.
+import fs from 'node:fs'; import path from 'node:path'; import assert from 'node:assert/strict'; import crypto from 'node:crypto'; import {createRequire} from 'node:module'; import {fileURLToPath} from 'node:url';
+const dir=path.dirname(fileURLToPath(import.meta.url)), root=process.argv[2]|| process.cwd();
+const req=createRequire(path.join(root,'package.json')); const {beginSection,createContext,run,extract}=req('./test/helpers/extractSource');
+const quiet=Object.fromEntries(['log','warn','error','info','debug','time','timeEnd'].map(x=>[x,()=>{}]));
+const files=['packages/lib/src/nico/VideoInfoLoader.js','src/VideoInfo.js','packages/lib/src/nico/VideoSessionWorker.js','packages/lib/src/nico/ThreadLoader.js','src/_hls.js'];
+const hashes=()=>Object.fromEntries(files.map(p=>[p,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex')])); const before=hashes(); const results=[];
+async function test(id,name,fn){try{const observed=await fn();results.push({id,name,passed:true,observed});}catch(e){results.push({id,name,passed:false,error:e.message});}}
+const fixture=JSON.parse(fs.readFileSync(path.join(dir,'darasan-legacy.sanitized.json'),'utf8'));
+// Reconstruct the four public target pairs from the recorded threads, not identity/token data.
+fixture.data.response.comment.nvComment.params.targets=fixture.data.response.comment.threads.map(t=>({id:String(t.id),fork:t.forkLabel}));
+fs.writeFileSync(path.join(dir,'darasan-legacy.sanitized.json'),JSON.stringify(fixture));
+const calls=[]; const c=createContext({console:quiet,CacheStorage:class{setItem(){}},sessionStorage:{},nicoUtil:{hasLargeThumbnail:()=>true},textUtil:{},Config:{getValue:()=>false},emitter:{emitAsync(){}},debug:{},netUtil:{fetch:async(url,options)=>{calls.push({url,options});if(!String(url).includes('/watch/so46839011?responseType=json'))throw Error('unexpected mock request');return {json:async()=>structuredClone(fixture)};}}});
+run(beginSection('packages/lib/src/nico/VideoInfoLoader.js')+';globalThis.loader=VideoInfoLoader;',c);
+run(beginSection('src/VideoInfo.js')+';globalThis.Model=VideoInfoModel;',c); let data,model;
+await test('D01','Captured legacy structure parses without lazy fetch',async()=>{data=await c.loader.load('so46839011',{});assert.equal(data.isPlayable,true);assert.equal(data.isNeedPayment,false);assert.equal(calls.length,1);model=new c.Model(data);return {isPlayable:data.isPlayable,networkCalls:calls.length};});
+await test('D02','Legacy channel, tree, series and comment layers are retained',()=>{assert.equal(model.isChannel,true);assert.equal(model.owner.id,'ch2650171');assert.equal(model.hasParentVideo,true);assert.equal(model.prevVideo.id,'so46799380');assert.equal(model.nextVideo,null);assert.equal(data.msgInfo.defaultThread.id,1790214593);assert.equal(data.msgInfo.defaultThread.is184Forced,true);assert.deepEqual(Array.from(data.msgInfo.threads,t=>t.layer.index),[0,2,1,1]);return {channel:true,tree:true,defaultPostThread:data.msgInfo.threadId,layers:Array.from(data.msgInfo.threads,t=>t.layer.index)};});
+await test('D03','Unavailable 1080p/320kbps are excluded',()=>{assert.deepEqual(Array.from(model.domandInfo.availableVideoIds),['video-h264-720p','video-h264-480p','video-h264-360p','video-h264-144p']);assert.deepEqual(Array.from(model.domandInfo.availableAudioIds),['audio-aac-192kbps','audio-aac-64kbps']);return {videos:Array.from(model.domandInfo.availableVideoIds),audios:Array.from(model.domandInfo.availableAudioIds)};});
+const sent=[];let response={meta:{status:201},data:{contentUrl:'https://delivery.example.invalid/master.m3u8',expireTime:'2026-10-02T00:00:00Z'}};
+Object.assign(c,{VideoSession:class{},util:{fetch:async(url,options)=>{sent.push({url,body:JSON.parse(options.body)});return {json:async()=>response};}}});
+run(extract('packages/lib/src/nico/VideoSessionWorker.js','DomandSession')+';globalThis.DS=DomandSession;',c);
+const session=Object.create(c.DS.prototype);Object.assign(session,{_videoInfo:model,_domandInfo:model.domandInfo,_useHLS:true,_videoQuality:'auto'});
+await test('D04','HLS request pairs preserve available formats and captured track identity',async()=>{const v=await session._createSession();assert.equal(v.url,response.data.contentUrl);assert.equal(sent[0].body.outputs.length,4);assert(sent[0].body.outputs.every(p=>p[1]==='audio-aac-192kbps'));assert.equal(new URL(sent[0].url).searchParams.get('actionTrackId'),'fixture-track');return {pairCount:sent[0].body.outputs.length,usesHighestAvailableAudio:true};});
+const keyCalls=[];const k=createContext({console:quiet,logSafe:{redact:()=>({})},netUtil:{fetch:async(url,options)=>{keyCalls.push({url,options});return {json:async()=>({meta:{status:200},data:{postKey:'fixture'}})};}}});
+run(beginSection('packages/lib/src/nico/ThreadLoader.js')+';globalThis.subject=ThreadLoader;',k);
+await test('D05','Post-key request preserves the passed language in the header',async()=>{await k.subject.getPostKey('1790214593',{language:'en-us'});const header=keyCalls[0].options.headers['X-Niconico-Language'];assert.equal(header,'en-us','X-Niconico-Language missing although language was passed');return {header};});
+const h=createContext({console:quiet,HTMLElement:class{},Hls:{isSupported:()=>true}});
+run(`const PLAYER_MODE=${extract('src/_hls.js','PLAYER_MODE','var')}; ${extract('src/_hls.js','ZenzaVideoElement')};globalThis.Subject=ZenzaVideoElement;`,h);
+for(const [id,code,time,expected] of [['D06',4,0,true],['D07',3,0,true],['D08',2,0,false],['D09',4,12,false]]){
+ await test(id,`Native startup fallback contract code=${code}, time=${time}`,()=>{const p=Object.create(h.Subject.prototype);let starts=0;Object.assign(p,{_src:'https://example.invalid/master.m3u8',_video:{error:{code},currentTime:time},_resetPlayingStatus(){},_initHLSJS(){starts++;}});Object.defineProperty(p,'playerMode',{value:'HLS-N',writable:true});let stopped=0;assert.equal(p._onNativeHLSError({stopImmediatePropagation(){stopped++;}}),expected);return {code,time,fallback:expected,starts,stopped};});
+}
+await test('D10','Optional legacy keyloader override is not enabled',()=>{const text=fs.readFileSync(path.join(root,'src/_hls.js'),'utf8');assert(text.includes('// overrideKeyloader(hls);'));return {legacyOverrideActive:false};});
+const after=hashes();assert.deepEqual(after,before);
+const report={schema:1,observedAt:new Date().toISOString(),kind:'offline actual-source tests with sanitized captured-shape fixture',network:'stub only; no live requests',root,sourceHashes:before,productionSourceChanged:false,fixtureSha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(dir,'darasan-legacy.sanitized.json'))).digest('hex'),summary:{total:results.length,passed:results.filter(r=>r.passed).length,failed:results.filter(r=>!r.passed).length},results};
+fs.writeFileSync(path.join(dir,'followup-test-results.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));process.exitCode=report.summary.failed?1:0;

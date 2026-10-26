@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "NICO-COMMONS-20261001-CLIENT-CAP",
+  "title": "現Loaderは親子各300枠まで取得し再開offsetを返さない",
+  "status": "offline-test",
+  "platform": "web",
+  "app_version": "ZenzaWatch 2.7.100-task171 / d4d1f7892d6960b76610aea20b78f0c7a032666c",
+  "observed_at": "2026-10-01T18:28:25.781+09:00",
+  "observed_at_precision": "Exact probe execution timestamp",
+  "claim": "総数1060で毎回100件を返す人工条件では、既定loadRelatives()は3要求・300件で終了し、total1060を保持するがnextOffsetは返さなかった。300はクライアントの上限でありサーバーの制限ではない。",
+  "evidence": [
+    "S-COMMONS-20261001-CAPTURE",
+    "S-COMMONS-20261001-SOURCE",
+    "S-COMMONS-20261001-SUMMARY"
+  ],
+  "request": {
+    "operation": "unmodified extracted loader / synthetic HTTP",
+    "new_live_requests": false
+  },
+  "response": {
+    "audit_issues": [
+      "COM-03"
+    ],
+    "probes": [
+      "C03"
+    ]
+  },
+  "authentication": "Logged-in capture. Anonymous and www-origin with_meta behavior not retested. Offline tests use dummy data only.",
+  "unconfirmed": [
+    "No live test of current 100-slot no-metadata child requests.",
+    "Reason for total/returned gap, maximum limit, behavior introduction date, registration writes and playability of every candidate are unconfirmed."
+  ],
+  "supersedes": [],
+  "related_code": [
+    "packages/lib/src/nico/CommonsTreeLoader.js",
+    "src/NicoVideoPlayerDialog.js"
+  ],
+  "next_step": "上限を保ちながら途中状態・走査完了・続きの取得を区別する。",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "previous_integration_status": "contribution pending maintainer review",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

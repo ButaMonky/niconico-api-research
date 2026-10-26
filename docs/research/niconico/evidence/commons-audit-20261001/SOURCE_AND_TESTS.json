@@ -1,0 +1,148 @@
+{
+  "basis": "Previously executed unmodified production functions; not a rerun at recording",
+  "source_head": "d4d1f7892d6960b76610aea20b78f0c7a032666c",
+  "source_sha256": "77669c5c2f149b2aebd23daae46c55c2f98ce9724aca3a22a2467c91faaae9ea",
+  "probe_script_sha256": "804335f159c6d41f52c6838176b2b0bc44f2c8b7a27ddc7f92476eff373bfbf9",
+  "probe_result_sha256": "42eab6bb8a9186ab46415b7729ae1f42999141c7a461fa3b0f24fdbb875b0d21",
+  "result": {
+    "schema": 1,
+    "observedAt": "2026-10-01T09:28:25.781Z",
+    "node": "v24.19.0",
+    "sourceFile": "packages/lib/src/nico/CommonsTreeLoader.js",
+    "sourceSha256": "77669c5c2f149b2aebd23daae46c55c2f98ce9724aca3a22a2467c91faaae9ea",
+    "productSourceChanged": false,
+    "network": "mock only; no live requests",
+    "scope": "Unmodified extracted current loader. Sparse-page probe uses synthetic 100-slot pages; captured official pages use 20 slots and with_meta=1. No live no-metadata 100-slot response was tested.",
+    "summary": {
+      "total": 13,
+      "met": 6,
+      "unmet": 7
+    },
+    "results": [
+      {
+        "id": "C01",
+        "name": "Normal 250-item pagination preserves offsets and global IDs",
+        "classification": "control",
+        "expectationMet": true,
+        "observed": {
+          "fetched": 250,
+          "offsets": [
+            0,
+            100,
+            200
+          ]
+        }
+      },
+      {
+        "id": "C02",
+        "name": "Short nonterminal page must not stop the scan",
+        "classification": "defect-under-synthetic-condition-supported-by-real-sparse-pages",
+        "expectationMet": false,
+        "error": "fetched=99; offsets=0; total=240\n\n99 !== 239\n"
+      },
+      {
+        "id": "C03",
+        "name": "Default cap is 300 raw works, not server total or guaranteed playable count",
+        "classification": "control",
+        "expectationMet": true,
+        "observed": {
+          "fetched": 300,
+          "total": 1060,
+          "requests": 3,
+          "hasContinuationField": false
+        }
+      },
+      {
+        "id": "C04",
+        "name": "A later error must preserve already fetched same-side results",
+        "classification": "defect-under-synthetic-condition",
+        "expectationMet": false,
+        "error": "children length=0, total=0, failed=true; successful parents=1\n\n0 !== 100\n"
+      },
+      {
+        "id": "C05",
+        "name": "Missing required data must reject, not become zero items",
+        "classification": "defect-under-synthetic-condition",
+        "expectationMet": false,
+        "error": "Missing expected rejection."
+      },
+      {
+        "id": "C06",
+        "name": "HTTP 200 with API meta failure must not become empty success",
+        "classification": "defect-under-synthetic-condition",
+        "expectationMet": false,
+        "error": "Missing expected rejection."
+      },
+      {
+        "id": "C07",
+        "name": "globalId rather than numeric contentId preserves legacy nm video identity",
+        "classification": "control",
+        "expectationMet": true,
+        "observed": {
+          "id": "nm3601701"
+        }
+      },
+      {
+        "id": "C08",
+        "name": "Only visible videos are playlist candidates; live/illust/materials are not",
+        "classification": "control",
+        "expectationMet": true,
+        "observed": {
+          "allWorks": 6,
+          "videoCandidates": 1
+        }
+      },
+      {
+        "id": "C09",
+        "name": "Duplicate global IDs must not inflate unique result count",
+        "classification": "defect-under-synthetic-condition",
+        "expectationMet": false,
+        "error": "returned=200; unique=100\n\n200 !== 100\n"
+      },
+      {
+        "id": "C10",
+        "name": "Missing globalId must not be accepted as a playable candidate",
+        "classification": "defect-under-synthetic-condition",
+        "expectationMet": false,
+        "error": "Expected values to be strictly equal:\n\n1 !== 0\n"
+      },
+      {
+        "id": "C11",
+        "name": "Later 404 must not silently reset an already positive server total",
+        "classification": "defect-under-synthetic-condition",
+        "expectationMet": false,
+        "error": "total=100; works=100; notFound=true\n\n100 !== 240\n"
+      },
+      {
+        "id": "C12",
+        "name": "Both sides failing remains an explicit failure",
+        "classification": "control",
+        "expectationMet": true,
+        "observed": {
+          "explicitFailure": true
+        }
+      },
+      {
+        "id": "C13",
+        "name": "Current mapper discards optional rich metadata (optimization baseline)",
+        "classification": "baseline-not-a-new-bug",
+        "expectationMet": true,
+        "observed": {
+          "withMetaRequested": null,
+          "retainedFields": [
+            "contentId",
+            "isVideo",
+            "contentKind",
+            "visibleStatus"
+          ]
+        }
+      }
+    ]
+  },
+  "notes": [
+    "Current loader requests 100 slots without with_meta; real captured children requests use 20 slots with with_meta.",
+    "Default cap 300 per side is intentional protection; current successful-add UI already displays total/fetched.",
+    "C05/C06 reconfirm previous F03. C13 records metadata loss, not behavior to preserve after optimization.",
+    "No product changes, live playback, full suite, build, registration or deletion performed."
+  ]
+}

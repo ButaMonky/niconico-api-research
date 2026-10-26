@@ -1,0 +1,124 @@
+{
+  "at": "2026-10-04T09:36:20.343Z",
+  "ref": "f975134",
+  "browser": "154.0.4258.53",
+  "scope": "Offline synthetic parent-document animation and control DOM changes, not actual ZenzaWatch. 384 available candidates, tag NG 90%, target36. Ignore variant changes only the instrumented in-memory source, not the repository.",
+  "results": [
+    {
+      "round": 0,
+      "variant": "baseline",
+      "settledMs": 4937,
+      "wire": {
+        "detail": 372,
+        "page": 11,
+        "other": 0
+      },
+      "parse": 53,
+      "parseMs": 67,
+      "rectReads": 1545,
+      "styleReads": 1818,
+      "longTaskCount": 13,
+      "longTaskMaxMs": 186,
+      "longTaskSumMs": 1470,
+      "frameGapP95Ms": 134,
+      "frameGapMaxMs": 301,
+      "frameGapsOver50": 28,
+      "idleParsePerSecond": 30,
+      "metrics": {
+        "LayoutCount": 199,
+        "RecalcStyleCount": 580,
+        "LayoutDuration": 0.038811,
+        "RecalcStyleDuration": 0.40005399999999997,
+        "ScriptDuration": 3.284949,
+        "TaskDuration": 4.657502
+      }
+    },
+    {
+      "round": 0,
+      "variant": "ignore-synthetic-player",
+      "settledMs": 4278,
+      "wire": {
+        "detail": 372,
+        "page": 11,
+        "other": 0
+      },
+      "parse": 11,
+      "parseMs": 11,
+      "rectReads": 1541,
+      "styleReads": 1810,
+      "longTaskCount": 12,
+      "longTaskMaxMs": 216,
+      "longTaskSumMs": 1196,
+      "frameGapP95Ms": 134,
+      "frameGapMaxMs": 317,
+      "frameGapsOver50": 24,
+      "idleParsePerSecond": 0,
+      "metrics": {
+        "LayoutCount": 193,
+        "RecalcStyleCount": 572,
+        "LayoutDuration": 0.037258,
+        "RecalcStyleDuration": 0.361047,
+        "ScriptDuration": 2.796018,
+        "TaskDuration": 3.997576
+      }
+    },
+    {
+      "round": 1,
+      "variant": "ignore-synthetic-player",
+      "settledMs": 4246,
+      "wire": {
+        "detail": 372,
+        "page": 11,
+        "other": 0
+      },
+      "parse": 11,
+      "parseMs": 13,
+      "rectReads": 1546,
+      "styleReads": 1816,
+      "longTaskCount": 12,
+      "longTaskMaxMs": 203,
+      "longTaskSumMs": 1211,
+      "frameGapP95Ms": 134,
+      "frameGapMaxMs": 267,
+      "frameGapsOver50": 27,
+      "idleParsePerSecond": 0,
+      "metrics": {
+        "LayoutCount": 194,
+        "RecalcStyleCount": 573,
+        "LayoutDuration": 0.034877,
+        "RecalcStyleDuration": 0.374388,
+        "ScriptDuration": 2.793375,
+        "TaskDuration": 3.9630539999999996
+      }
+    },
+    {
+      "round": 1,
+      "variant": "baseline",
+      "settledMs": 4445,
+      "wire": {
+        "detail": 372,
+        "page": 11,
+        "other": 0
+      },
+      "parse": 53,
+      "parseMs": 60,
+      "rectReads": 1547,
+      "styleReads": 1826,
+      "longTaskCount": 14,
+      "longTaskMaxMs": 199,
+      "longTaskSumMs": 1349,
+      "frameGapP95Ms": 134,
+      "frameGapMaxMs": 300,
+      "frameGapsOver50": 26,
+      "idleParsePerSecond": 30,
+      "metrics": {
+        "LayoutCount": 196,
+        "RecalcStyleCount": 579,
+        "LayoutDuration": 0.035861,
+        "RecalcStyleDuration": 0.381581,
+        "ScriptDuration": 2.9354,
+        "TaskDuration": 4.173147
+      }
+    }
+  ]
+}

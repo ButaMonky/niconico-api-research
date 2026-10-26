@@ -1,0 +1,196 @@
+{
+  "at": "2026-10-01T15:40:56.826Z",
+  "repoHead": "62eb0107b3cf60217ffc4ef6504111f83e793f7b",
+  "mode": "characterization of unmodified current functions; not fix verification",
+  "network": "mock only",
+  "productUnchanged": true,
+  "sourceHashes": {
+    "packages/lib/src/nico/CommonsTreeLoader.js": "bb2ee1fb0bc75b177fa25e2d4bb0b549186fbc744c5f13d2ea4abb305b664919",
+    "packages/lib/src/nico/ThumbInfoLoader.js": "8749cbbccd60befada30dd9b15fb490511794f60b07b7a43ec3258e04efd3869",
+    "packages/zenza/src/Playlist/PlayList.js": "f0a0d1ca23f29429daf234bc39897552f96417ec4520439ee79e89634f43266b",
+    "packages/zenza/src/Playlist/PlayListModel.js": "e04444b8a1ff3ea624b74e6ac6a2bf221e820d2434cd6bb715443cf660aa7fb1",
+    "packages/zenza/src/Playlist/VideoListModel.js": "04b17cf62b5dafb5d4a6215a913c91be850d93c2bac42d24f589784fc41232ac",
+    "packages/zenza/src/Playlist/VideoListView.js": "48ef0857f4510fbd50b03302406d2f5959a215400fc776ae28b1914caea3278e",
+    "packages/zenza/src/Playlist/VideoListItem.js": "5e926fad7ed2f4dc5e35dd4993d740f1cc15895b01c8537e71bb15721a90429d",
+    "src/NicoVideoPlayerDialog.js": "0914d6d2fb29b1e3cc171282da50a845c5030324088487b44907f2c8a546419e",
+    "test/helpers/extractSource.js": "d55301c569c8665a381548718f264252c07588810c54e3339464693e8b4804b6",
+    "test/helpers/playlistHarness.js": "450d0b9c2fd6d46221529dda52b41846ded2e6274d9e49bbf1d1cf4f875eb50b"
+  },
+  "summary": {
+    "total": 8,
+    "passed": 8
+  },
+  "results": [
+    {
+      "id": "A01",
+      "name": "Default 300 is a client scan window, not API page size",
+      "characterizationPassed": true,
+      "observed": {
+        "works": 300,
+        "nextOffset": 300,
+        "requests": [
+          {
+            "kind": "children",
+            "offset": 0,
+            "limit": 100,
+            "withMeta": null,
+            "hasSignal": false
+          },
+          {
+            "kind": "children",
+            "offset": 100,
+            "limit": 100,
+            "withMeta": null,
+            "hasSignal": false
+          },
+          {
+            "kind": "children",
+            "offset": 200,
+            "limit": 100,
+            "withMeta": null,
+            "hasSignal": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "A02",
+      "name": "Existing low-level loader can scan 1060 slots with four <=300 requests",
+      "characterizationPassed": true,
+      "observed": {
+        "works": 1060,
+        "scanComplete": true,
+        "requests": [
+          {
+            "kind": "children",
+            "offset": 0,
+            "limit": 300,
+            "withMeta": null,
+            "hasSignal": false
+          },
+          {
+            "kind": "children",
+            "offset": 300,
+            "limit": 300,
+            "withMeta": null,
+            "hasSignal": false
+          },
+          {
+            "kind": "children",
+            "offset": 600,
+            "limit": 300,
+            "withMeta": null,
+            "hasSignal": false
+          },
+          {
+            "kind": "children",
+            "offset": 900,
+            "limit": 160,
+            "withMeta": null,
+            "hasSignal": false
+          }
+        ],
+        "productionChanged": false
+      }
+    },
+    {
+      "id": "A03",
+      "name": "Hints do NOT suppress per-video thumb-info loads",
+      "characterizationPassed": true,
+      "observed": {
+        "items": 997,
+        "thumbInfoLoaderCalls": 997,
+        "peakConcurrent": 8,
+        "actualNetwork": "mock; cache misses determine live traffic",
+        "hintUsedBeforeFetch": false
+      }
+    },
+    {
+      "id": "A04",
+      "name": "Playlist cap is 10000; excess is dropped by the model",
+      "characterizationPassed": true,
+      "observed": {
+        "maxItems": 10000,
+        "input": 10005,
+        "kept": 10000,
+        "dropped": 5
+      }
+    },
+    {
+      "id": "A05",
+      "name": "Repeated insert batches behind active item reverse the batch order",
+      "characterizationPassed": true,
+      "observed": {
+        "order": [
+          "sm9",
+          "sm3",
+          "sm4",
+          "sm1",
+          "sm2"
+        ],
+        "intendedAutomaticScanOrder": [
+          "sm9",
+          "sm1",
+          "sm2",
+          "sm3",
+          "sm4"
+        ],
+        "naiveHandlerLoopIsUnsafe": true
+      }
+    },
+    {
+      "id": "A06",
+      "name": "Cancellation option is not carried into the Commons HTTP call",
+      "characterizationPassed": true,
+      "observed": {
+        "alreadyAbortedSignalIgnored": true,
+        "fetchCalls": 3,
+        "note": "Current signature has no signal support; UI stale-result protection is separate"
+      }
+    },
+    {
+      "id": "A07",
+      "name": "Rich metadata option has not been wired through load()",
+      "characterizationPassed": true,
+      "observed": {
+        "calls": [
+          {
+            "kind": "parents",
+            "offset": 0,
+            "limit": 100,
+            "withMeta": null,
+            "hasSignal": false
+          },
+          {
+            "kind": "children",
+            "offset": 0,
+            "limit": 100,
+            "withMeta": null,
+            "hasSignal": false
+          }
+        ],
+        "note": "withMeta is supported by loadRelatives only; proposed loadAll must propagate it explicitly"
+      }
+    },
+    {
+      "id": "A08",
+      "name": "Incomplete-item marker is lost across serialize/restore",
+      "characterizationPassed": true,
+      "observed": {
+        "beforeBlank": true,
+        "serializedFormat": null,
+        "restoredBlank": false,
+        "titleAfterFullInfo": "hint(動画情報不明)",
+        "durationAfterFullInfo": 0,
+        "note": "Lazy metadata design must preserve incomplete status across persistence"
+      }
+    }
+  ],
+  "source_notes": {
+    "thumb_api": "https://ext.nicovideo.jp/api/getthumbinfo/{id}",
+    "thumb_cache_option_ms": 86400000,
+    "view_all_items": "VideoListView._buildList maps all items; DOM/rendering performance not measured",
+    "withMetaDefault": false,
+    "production_status": "No product modification, full suite, build or commit performed in this research"
+  }
+}

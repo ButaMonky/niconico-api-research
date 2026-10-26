@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "observed_date_jst": "2026-10-02",
+  "subject": "sm8628149",
+  "method": "13 public GET requests from Python 3.12.10 on Windows; no cookies/authentication; Origin=https://www.nicovideo.jp; no server writes; HTTP CORS headers only, not browser-enforced CORS E2E",
+  "requests": [
+    {
+      "kind": "children",
+      "offset": 0,
+      "limit": 1001,
+      "with_meta": false,
+      "status": 400,
+      "total": null,
+      "returned": 0,
+      "bytes": 128,
+      "elapsed_ms": 438,
+      "cors_origin": "https://www.nicovideo.jp",
+      "error_envelope": null,
+      "error": null
+    },
+    {
+      "kind": "children",
+      "offset": 0,
+      "limit": 1000,
+      "with_meta": false,
+      "status": 400,
+      "total": null,
+      "returned": 0,
+      "bytes": 128,
+      "elapsed_ms": 140,
+      "cors_origin": "https://www.nicovideo.jp",
+      "error_envelope": {
+        "meta": {
+          "status": 400
+        },
+        "data": {
+          "code": "BAD_REQUEST",
+          "message": "specified `_limit` value is over limit. _limit: 1000, max: 300"
+        }
+      },
+      "error": null
+    },
+    {
+      "kind": "children",
+      "offset": 0,
+      "limit": 101,
+      "with_meta": false,
+      "status": 200,
+      "total": 1060,
+      "returned": 101,
+      "bytes": 19388,
+      "elapsed_ms": 172,
+      "cors_origin": "https://www.nicovideo.jp",
+      "error_envelope": null,
+      "error": null
+    },
+    {
+      "kind": "children",
+      "offset": 0,
+      "limit": 300,
+      "with_meta": false,
+      "status": 200,
+      "total": 1060,
+      "returned": 300,
+      "bytes": 57408,
+      "elapsed_ms": 578,
+      "cors_origin": "https://www.nicovideo.jp",
+      "error_envelope": null,
+      "error": null
+    },
+    {
+      "kind": "children",
+      "offset": 0,
+      "limit": 301,
+      "with_meta": false,
+      "status": 400,
+      "total": null,
+      "returned": 0,
+      "bytes": 127,
+      "elapsed_ms": 250,
+      "cors_origin": "https://www.nicovideo.jp",
+      "error_envelope": {
+        "meta": {
+          "status": 400
+        },
+        "data": {
+          "code": "BAD_REQUEST",
+          "message": "specified `_limit` value is over limit. _limit: 301, max: 300"
+        }
+      },
+      "error": null
+    },
+    {
+      "kind": "children",
+      "offset": 0,
+      "limit": 300,
+      "with_meta": true,
+      "status": null,
+      "total": null,
+      "returned": null,
+      "bytes": null,
+      "elapsed_ms": null,
+      "cors_origin": null,
+      "error_envelope": null,
+      "error": "The read operation timed out"
+    },
+    {
+      "kind": "children",
+      "offset": 300,
+      "limit": 300,
+      "with_meta": false,
+      "status": 200,
+      "total": 1060,
+      "returned": 300,
+      "bytes": 57367,
+      "elapsed_ms": 328,
+      "cors_origin": "https://www.nicovideo.jp",
+      "error_envelope": null,
+      "error": null
+    },
+    {
+      "kind": "children",
+      "offset": 600,
+      "limit": 300,
+      "with_meta": false,
+      "status": 200,
+      "total": 1060,
+      "returned": 300,
+      "bytes": 57336,
+      "elapsed_ms": 203,
+      "cors_origin": "https://www.nicovideo.jp",
+      "error_envelope": null,
+      "error": null
+    },
+    {
+      "kind": "children",
+      "offset": 900,
+      "limit": 300,
+      "with_meta": false,
+      "status": 200,
+      "total": 1060,
+      "returned": 160,
+      "bytes": 30546,
+      "elapsed_ms": 156,
+      "cors_origin": "https://www.nicovideo.jp",
+      "error_envelope": null,
+      "error": null
+    },
+    {
+      "kind": "children",
+      "offset": 0,
+      "limit": 301,
+      "with_meta": true,
+      "status": 400,
+      "total": null,
+      "returned": 0,
+      "bytes": 127,
+      "elapsed_ms": 125,
+      "cors_origin": "https://www.nicovideo.jp",
+      "error_envelope": {
+        "meta": {
+          "status": 400
+        },
+        "data": {
+          "code": "BAD_REQUEST",
+          "message": "specified `_limit` value is over limit. _limit: 301, max: 300"
+        }
+      },
+      "error": null
+    },
+    {
+      "kind": "parents",
+      "offset": 0,
+      "limit": 300,
+      "with_meta": true,
+      "status": 200,
+      "total": 1,
+      "returned": 1,
+      "bytes": 1149,
+      "elapsed_ms": 156,
+      "cors_origin": "https://www.nicovideo.jp",
+      "error_envelope": null,
+      "error": null
+    },
+    {
+      "kind": "parents",
+      "offset": 0,
+      "limit": 301,
+      "with_meta": true,
+      "status": 400,
+      "total": null,
+      "returned": 0,
+      "bytes": 127,
+      "elapsed_ms": 110,
+      "cors_origin": "https://www.nicovideo.jp",
+      "error_envelope": {
+        "meta": {
+          "status": 400
+        },
+        "data": {
+          "code": "BAD_REQUEST",
+          "message": "specified `_limit` value is over limit. _limit: 301, max: 300"
+        }
+      },
+      "error": null
+    },
+    {
+      "kind": "children",
+      "offset": 0,
+      "limit": 100,
+      "with_meta": true,
+      "status": 200,
+      "total": 1060,
+      "returned": 92,
+      "bytes": 97372,
+      "elapsed_ms": 750,
+      "cors_origin": "https://www.nicovideo.jp",
+      "error_envelope": null,
+      "error": null
+    }
+  ],
+  "scan_summary": {
+    "declared_total": 1060,
+    "rows": 1060,
+    "unique": 1060,
+    "kinds": {
+      "video": 996,
+      "live": 50,
+      "illust": 12,
+      "commons": 2
+    },
+    "statuses": {
+      "visible": 1060
+    },
+    "offsets": [
+      0,
+      300,
+      600,
+      900
+    ],
+    "returns": [
+      300,
+      300,
+      300,
+      160
+    ],
+    "body_bytes": 202657,
+    "metadata_first100": {
+      "raw": 100,
+      "enriched": 92,
+      "omitted": 8,
+      "omitted_kinds": {
+        "live": 8
+      },
+      "enriched_ids_are_subset": true
+    }
+  },
+  "source_detail_sha256": "d9e5db6e8efd5c7a869a6d0cd9598aba300df529bd67a2583e865c0be601513f",
+  "limitations": [
+    "Initial 1001 rejection body was not retained",
+    "metadata 300 request reached a 15-second socket read timeout; no HTTP status was retained",
+    "response body byte lengths are not guaranteed wire transfer lengths",
+    "Origin header and ACAO checked; browser-enforced CORS end-to-end is not tested",
+    "Server-wide offset maximum and rate limit are not measured"
+  ]
+}

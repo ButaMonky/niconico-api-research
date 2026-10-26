@@ -75,5 +75,222 @@
     "kind": "local-product-code-and-offline-synthetic-check",
     "observed_at": "2026-09-20",
     "sha256": "3db27bd87bfcbaea2906807a84e8ddd19fc049ff894b0cb4861782b70736d48a"
+  },
+  {
+    "id": "S-COMMONS-20261001-CAPTURE",
+    "file": "evidence/commons-audit-20261001/CAPTURE_FACTS.json",
+    "label": "Bad Apple sparse paging, counts, metadata and capture integrity",
+    "kind": "sanitized-capture-summary",
+    "sha256": "e7c37c2232282f6c8b41b38ed3fe8a8a191bec2cf646da3497d9b5ae45cfca39",
+    "acquisition": "Sanitized summary of authorized capture or prior offline probe; no new API traffic"
+  },
+  {
+    "id": "S-COMMONS-20261001-SOURCE",
+    "file": "evidence/commons-audit-20261001/SOURCE_AND_TESTS.json",
+    "label": "Unmodified source and 13 offline cases",
+    "kind": "offline-source-probe",
+    "sha256": "6ed1bc503eb05b0777f77a195f8ae5f80abb77f39ab7266d17b9bd4a30a975c7",
+    "acquisition": "Sanitized summary of authorized capture or prior offline probe; no new API traffic"
+  },
+  {
+    "id": "S-COMMONS-20261001-SUMMARY",
+    "file": "evidence/commons-audit-20261001/SUMMARY.md",
+    "label": "Claim index and boundaries",
+    "kind": "audit-summary",
+    "sha256": "42a9e1b95b569640e93327a8cb35031e6eac7887d62d4c2b93258bf3b4db358d",
+    "acquisition": "Sanitized summary of authorized capture or prior offline probe; no new API traffic"
+  },
+  {
+    "id": "S-COMMONS-AUTO-20261002-API",
+    "file": "evidence/commons-autofetch-20261002/API_FACTS.json",
+    "label": "Commons automatic full scan: API_FACTS.json",
+    "kind": "traffic",
+    "sha256": "a39946c7397c12abaaa301dd2669eda806c20b06c5cb14d1c1aa3f9fb4b80b74",
+    "recorded_on": "2026-10-02"
+  },
+  {
+    "id": "S-COMMONS-AUTO-20261002-CODE",
+    "file": "evidence/commons-autofetch-20261002/CURRENT_CODE_FACTS.json",
+    "label": "Commons automatic full scan: CURRENT_CODE_FACTS.json",
+    "kind": "offline-test",
+    "sha256": "d6bda595d11a493d2404151b74e293461bfe28a2db0928feff63bd8866981251",
+    "recorded_on": "2026-10-02"
+  },
+  {
+    "id": "S-COMMONS-AUTO-20261002-PROBE",
+    "file": "evidence/commons-autofetch-20261002/characterize-current.mjs",
+    "label": "Commons automatic full scan: characterize-current.mjs",
+    "kind": "offline-probe-source",
+    "sha256": "d61b2fa30d099babde250ae885690da7a7a17645888bcc2b387e6f7992ad5b40",
+    "recorded_on": "2026-10-02"
+  },
+  {
+    "id": "S-COMMONS-AUTO-20261002-SUMMARY",
+    "file": "evidence/commons-autofetch-20261002/SUMMARY.md",
+    "label": "Commons automatic full scan: SUMMARY.md",
+    "kind": "synthesis",
+    "sha256": "01b849542e0105ca59fe03236a2de5d49b00b88dd847dfa06fd37a79d36f861d",
+    "recorded_on": "2026-10-02"
+  },
+  {
+    "id": "S-DARASAN-20261001-CAPTURE",
+    "file": "evidence/darasan-followup-20261001/CAPTURE_NOTES.md",
+    "label": "Darasan followup CAPTURE_NOTES.md",
+    "kind": "sanitized-user-capture-observation",
+    "sha256": "d01723d7a2ea5d5d977470e7a05bb96be513c2a771737272ca8c5cf18c3d0717",
+    "recorded_on": "2026-10-01",
+    "original": "Private user attachments or local offline diagnostic; no raw credentials included"
+  },
+  {
+    "id": "S-DARASAN-20261001-FIXTURE",
+    "file": "evidence/darasan-followup-20261001/darasan-legacy.sanitized.json",
+    "label": "Darasan followup darasan-legacy.sanitized.json",
+    "kind": "offline-diagnostic-evidence",
+    "sha256": "75a0b3c02c609664e06ee586f8b7d6e292949d32d9ab1ed3911dccec98d9963f",
+    "recorded_on": "2026-10-01",
+    "original": "Private user attachments or local offline diagnostic; no raw credentials included"
+  },
+  {
+    "id": "S-DARASAN-20261001-PROBES",
+    "file": "evidence/darasan-followup-20261001/check-followup.mjs",
+    "label": "Darasan followup check-followup.mjs",
+    "kind": "offline-diagnostic-evidence",
+    "sha256": "0ad02bca1e94667ede41edfa6914e1ab1176e21cb058728a09f6a8cbe625b771",
+    "original_sha256": "980fee87be3bfa86222e4b9221865ce44783ce4313a100ae574756eef8f72fd1",
+    "normalization": "Remove machine-specific local project root; original retained offline outside Git",
+    "recorded_on": "2026-10-01",
+    "original": "Private user attachments or local offline diagnostic; no raw credentials included"
+  },
+  {
+    "id": "S-DARASAN-20261001-RESULTS",
+    "file": "evidence/darasan-followup-20261001/followup-test-results.json",
+    "label": "Darasan followup followup-test-results.json",
+    "kind": "offline-diagnostic-evidence",
+    "sha256": "d40bee2a5464a6bb240034072ccd153b5572d035a309d5adce8d472786eda230",
+    "original_sha256": "a6b5eb471ede43748fdddbbd88dd82f3025a1db36e506ad369176e992ae8bf7d",
+    "normalization": "Remove machine-specific local project root; original retained offline outside Git",
+    "recorded_on": "2026-10-01",
+    "original": "Private user attachments or local offline diagnostic; no raw credentials included"
+  },
+  {
+    "id": "S-DARASAN-20261001-SUMMARY",
+    "file": "evidence/darasan-followup-20261001/SUMMARY.md",
+    "label": "Darasan followup SUMMARY.md",
+    "kind": "offline-diagnostic-evidence",
+    "sha256": "0e9c5583917644ff408e3d0f9bf0e80879837414218a042b0b45fe844234a965",
+    "recorded_on": "2026-10-01",
+    "original": "Private user attachments or local offline diagnostic; no raw credentials included"
+  },
+  {
+    "id": "S-NRN-CARD-SLOTS-20261004",
+    "label": "広告の表示枠と動画IDの一意件数を混同しない",
+    "file": "evidence/card-slots-20261004.json",
+    "kind": "offline-synthetic-browser",
+    "sha256": "0a5af52c8229508a2b40797097d8de0723b56383437acc03689ace1e6bfa1ffc",
+    "original": "NicoNG _ai-sync/handoff/COUNT-PROBE-20261004.json",
+    "normalization": "Synthetic identifiers and local intercepted network only; measurement JSON copied unchanged; not a live-site capture."
+  },
+  {
+    "id": "S-NRN-PAGER-RANGE-WRAP-20261005",
+    "label": "検索ページ番号・範囲の折返し条件",
+    "file": "evidence/pager-range-wrap-20261005.json",
+    "kind": "offline-synthetic-and-captured-public-stylesheet",
+    "sha256": "0e108d7606a4abf6618e4d3d8923b53da1740f87f702a3e63800185b90c2e096",
+    "normalization": "Only public asset names/hashes and synthetic conditions; no raw capture."
+  },
+  {
+    "id": "S-NRN-PARENT-DOM-20261004",
+    "label": "無関係な親documentのUI更新がNG検索の再解析を誘発する合成再現",
+    "file": "evidence/parent-dom-observer-cost-20261004.json",
+    "kind": "offline-synthetic-browser",
+    "sha256": "23b9534feca115cac74428dfbf9ef026d990d3582fac1ae410658dc35173fb66",
+    "original": "NicoNG _ai-sync/handoff/NG-RENDER-PROFILE-20261004.json",
+    "normalization": "Synthetic identifiers and local intercepted network only; measurement JSON copied unchanged; not a live-site capture."
+  },
+  {
+    "id": "S-SEARCH-20261001-CAPTURE",
+    "file": "evidence/search-audit-20261001/CAPTURE_FACTS.json",
+    "sha256": "419284c9e2e1a5a6d0292819dec471e52ef6bddd1cf8eae858a0418b7cd64f1f",
+    "kind": "sanitized-user-capture-and-offline-source-observations",
+    "label": "CAPTURE_FACTS.json"
+  },
+  {
+    "id": "S-SEARCH-20261001-TESTS",
+    "file": "evidence/search-audit-20261001/SOURCE_AND_TESTS.json",
+    "sha256": "fda1da4639ff5259df1f1ddad8226cef1695720e8189f085611e881df031b3fa",
+    "kind": "sanitized-user-capture-and-offline-source-observations",
+    "label": "SOURCE_AND_TESTS.json"
+  },
+  {
+    "id": "S-USERVIDEOS-HAR-20261027-SANITIZED",
+    "file": "evidence/uploaded-user-videos-har-20261027-sanitized.md",
+    "label": "Sanitized verification of supplied NicoNico Web uploader HAR (6 pages, 587 videos, series match)",
+    "kind": "user-provided-har-sanitized-summary",
+    "sha256": "6ea4ecc197a50347eb95d16b3da87f5783181187f1adf681198afd643b14d751",
+    "observed_at": "2026-10-26T23:58:09+09:00",
+    "privacy": "Raw HAR, user and video IDs, credentials, cookies and tracking identifiers are not bundled; no new API requests"
+  },
+  {
+    "id": "S-USERVIDEOS-PUBLIC-GET-20261026",
+    "file": "evidence/user-uploaded-public-get-pagination-20261026.md",
+    "label": "Sanitized direct public GET observations of v1 uploader playlist paging and v3 sensitiveContents differences",
+    "kind": "sanitized-direct-public-get-audit-transcript",
+    "sha256": "56502c64cea3c979bc90c40b0fdc174cf05381bae9f977fea5b9f264d7ce417a",
+    "observed_at": "2026-10-26",
+    "privacy": "Anonymized user and watch IDs, no cookies or authorization data; reconstructed from contemporaneous probe results"
+  },
+  {
+    "id": "S-ZENZA-COMPATIBILITY-20261001",
+    "label": "Task153〜157匿名化互換性追補",
+    "file": "evidence/zenza-compatibility-20261001.md",
+    "kind": "runtime-and-development-evidence",
+    "sha256": "4005040387754eb6fe063a1b598b6e4ae4a928059b69c59d9054bdf3da797864",
+    "original": "Task153-156 committed design records + Task157 browser GET probe; no raw captures included"
+  },
+  {
+    "id": "S-ZENZA-FOLLOWUP-20260925",
+    "file": "evidence/zenza-followup-20260925.json",
+    "label": "ZenzaWatch follow-up: access badges and list-entity search",
+    "kind": "sanitized-live-public-metadata-and-current-web-static-review",
+    "reviewed_at": "2026-09-25T19:00:00+09:00",
+    "sha256": "ee92afa363c33111ce5c1a3867ab5ba57acb293f6236d41ef571e3a8ae4b0e30"
+  },
+  {
+    "id": "S-ZENZA-V4-AUDITV2-20261001-PROBES",
+    "file": "evidence/zenza-v4-audit-v2-20261001/audit-probes.mjs",
+    "label": "Original probe source; evidence only, copy before execution",
+    "kind": "original-audit-code-copy",
+    "sha256": "524c26269a562114eda761f46697cb2229559343d287eb7fe9a63fadb7f5ce0d",
+    "original_sha256": "fae9ff579199f338af790d8d4b713161c80ea0066a640b63134ec9e8fdc3da41",
+    "normalization": "Remove machine-specific local project root; original retained offline outside Git",
+    "recorded_on": "2026-10-01",
+    "original": "Prior Watch V4 audit v2; no new server traffic"
+  },
+  {
+    "id": "S-ZENZA-V4-AUDITV2-20261001-RESULTS",
+    "file": "evidence/zenza-v4-audit-v2-20261001/probe-results.json",
+    "label": "Final original 27-case result; 10 met / 17 unmet",
+    "kind": "original-offline-probe-output-copy",
+    "sha256": "82fa40781db96dbf12267fef35e289f6168bc6e179f5dbe5eea57381a74ccd26",
+    "recorded_on": "2026-10-01",
+    "original": "Prior Watch V4 audit v2; no new server traffic"
+  },
+  {
+    "id": "S-ZENZA-V4-AUDITV2-20261001-STATIC-TAG",
+    "file": "evidence/zenza-v4-audit-v2-20261001/STATIC-TAG-KEY.md",
+    "label": "TagEditApi legacy dependency; current endpoint health unobserved",
+    "kind": "transcribed-static-reference",
+    "sha256": "30bb7948fcc656a342c61e968f101a4d9a5eff67bdcc74da0486555aa4a6e5a8",
+    "recorded_on": "2026-10-01",
+    "original": "Prior Watch V4 audit v2; no new server traffic"
+  },
+  {
+    "id": "S-ZENZA-V4-AUDITV2-20261001-SUMMARY",
+    "file": "evidence/zenza-v4-audit-v2-20261001/SUMMARY.md",
+    "label": "audit synthesis; explicit client/server and evidence boundaries",
+    "kind": "synthesis-of-prior-offline-audit",
+    "sha256": "e263b0bc3066787162fc90c7fe8d7c072d37a92a461aeae0aa0b28282da7b9a8",
+    "recorded_on": "2026-10-01",
+    "original": "Prior Watch V4 audit v2; no new server traffic"
   }
 ]

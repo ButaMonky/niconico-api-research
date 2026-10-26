@@ -1,0 +1,70 @@
+{
+  "at": "2026-10-04T09:23:32.049Z",
+  "ref": "f975134",
+  "scope": "offline synthetic only; no live NicoNico",
+  "records": [
+    {
+      "mode": "duplicate-ads",
+      "state": {
+        "initialized": true,
+        "fetching": false,
+        "phase": "completed",
+        "total": 36,
+        "original": 36,
+        "injected": 0,
+        "originalTracked": 36,
+        "tracked": 41
+      },
+      "wire": {
+        "page": 0,
+        "detail": 0,
+        "other": 0
+      },
+      "displayedCards": 41,
+      "displayedAds": 5,
+      "errors": []
+    },
+    {
+      "mode": "late-ads",
+      "state": {
+        "initialized": true,
+        "fetching": false,
+        "phase": "completed",
+        "total": 36,
+        "original": 36,
+        "injected": 0,
+        "originalTracked": 36,
+        "tracked": 41
+      },
+      "wire": {
+        "page": 0,
+        "detail": 5,
+        "other": 0
+      },
+      "displayedCards": 41,
+      "displayedAds": 5,
+      "errors": []
+    },
+    {
+      "mode": "unique-ads",
+      "state": {
+        "initialized": true,
+        "fetching": false,
+        "phase": "completed",
+        "total": 41,
+        "original": 41,
+        "injected": 0,
+        "originalTracked": 41,
+        "tracked": 41
+      },
+      "wire": {
+        "page": 0,
+        "detail": 5,
+        "other": 0
+      },
+      "displayedCards": 41,
+      "displayedAds": 5,
+      "errors": []
+    }
+  ]
+}

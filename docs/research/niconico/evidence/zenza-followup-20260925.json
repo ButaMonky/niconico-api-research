@@ -1,0 +1,63 @@
+{
+  "observed_at": "2026-09-25T19:00:00+09:00",
+  "platform": "web",
+  "authentication": "public GET probes; no authenticated user data recorded",
+  "access_badge": {
+    "first_party_asset": "https://resource.video.nimg.jp/web/scripts/nvpc_next/assets/VideoMediaObject-BOojlWvQ.js",
+    "render_condition": "acf68865 ? limited-label : isPaymentRequired ? paid-label : no-label",
+    "limited_text": "限定",
+    "limited_style": "serviceColor.premium",
+    "paid_text": "有料",
+    "paid_style": "serviceColor.paid",
+    "precedence": "acf68865 takes precedence when both booleans are true",
+    "watch_cross_checks": {
+      "acf68865_true_sample_count": 12,
+      "all_isPremium_true": true,
+      "ppv_also_true_count": 1,
+      "admission_true_count": 0,
+      "note": "Observed correlation does not prove acf68865 is semantically identical to isPremium."
+    },
+    "isPaymentRequired_examples": [
+      {"mode":"channel-admission","watch_payment":{"isAdmission":true,"isPpv":false,"isPremium":false},"watchableUserTypeForPayment":"member"},
+      {"mode":"ppv","watch_payment":{"isAdmission":false,"isPpv":true,"isPremium":false},"watchableUserTypeForPayment":"purchaser"}
+    ],
+    "opaque_9d091f87": "Not referenced by the currently loaded VideoMediaObject/search UI assets checked in this probe; do not infer an access label from it."
+  },  "entity_search": {
+    "routes": {
+      "series": "/series_search/{keyword}",
+      "mylist": "/mylist_search/{keyword}"
+    },
+    "endpoint": "https://nvapi.nicovideo.jp/v1/search/list",
+    "request": {
+      "keyword": "string",
+      "types": ["series","mylist"],
+      "sortKey": ["_hotTotalScore","videoCount","startTime","lastAddedTime"],
+      "sortOrder": ["desc","asc"],
+      "pageSize_official_ui": 32,
+      "page": "1-based",
+      "searchByUser": false
+    },
+    "item_fields": ["id","type","title","description","thumbnailUrl","videoCount","owner","isMuted","isFollowing","followerCount","lastVideoAddedAt","sampleItems"],
+    "owner_fields": ["ownerType","type","visibility","id","name","iconUrl"],
+    "sample_items_note": "Official SSR data contained sampleItems with essential video objects; direct anonymous API probes returned sampleItems as an empty array, so clients should not depend on it.",
+    "expand": {
+      "series": "/v1/playlist/series/{seriesId}",
+      "mylist": "/v1/playlist/mylist/{mylistId}"
+    },
+    "not_the_same_api": "/v1/playlist/search returns a playlist of video-search results; it is not mylist/series entity search."
+  },
+  "content_type_default": {
+    "video_search_v2": "Omitting selectContentType matched selectContentType=long for the tested keyword; selectContentType=short returned ss IDs.",
+    "playlist_search_v1": "Omitting selectContentType matched selectContentType=long for the tested keyword; selectContentType=short returned ss IDs.",
+    "scope": "Observed for keyword=東方 on 2026-09-25; do not generalize beyond current API behavior without retest."
+  },
+  "supporter_credit_background": {
+    "endpoint": "https://api.nicoad.nicovideo.jp/v2/contents/video/{id}/pickup_supporters",
+    "example_video": "sm8628149",
+    "observed_bgVideoPosition": 103,
+    "observed_bgColor": "#000000",
+    "existing_prior_evidence": "Older knowledge already recorded bgVideoPosition as an integer field, but its unit/use was not confirmed.",
+    "current_interpretation": "Official end-credit behavior and the observed value are consistent with using this as the source-video position for the credit background frame. Zenza currently tests only for numeric presence and then captures the current/end frame instead of using the value.",
+    "caution": "Treat the semantic as observed current behavior; retain fallback when the field is absent or capture fails."
+  }
+}

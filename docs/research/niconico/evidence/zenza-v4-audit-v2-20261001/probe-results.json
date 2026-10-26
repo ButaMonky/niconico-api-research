@@ -1,0 +1,178 @@
+{
+  "schema": 1,
+  "observedAt": "2026-10-01T05:01:00.224Z",
+  "kind": "offline_extracted_production_source_probes",
+  "network": "mock_only",
+  "productionSourceChanged": false,
+  "sourceHashes": {
+    "src/initializer.js": "7933e62bc59d379d5dbfaf6f3c0b7bf1e81b09b0c08180adeb94d0068363d436",
+    "src/VideoInfo.js": "0a52d59e5764ca929b1150032e101c973526fe0a722a2f50f6d4f565a8c404e2",
+    "src/VideoInfoPanel.js": "9a659d45bd7353bc14fad2f55b985eb4471a445161bcefb00c4cfff3f4fc0472",
+    "src/NicoVideoPlayerDialog.js": "3087afc7cb57cc1e2c0404461300caa8d22bbf4bda37c175d1ca5322b2d71392",
+    "packages/lib/src/nico/VideoInfoLoader.js": "ff61cbec2ece461c16297dfa473d5dff62b80d865375399ca9827f7bf74ed3d3",
+    "packages/lib/src/nico/ThreadLoader.js": "ef5508cdfccd1ef44fe47b63421ea3e4af33cb9af60c54a20ed9951193f33f8e",
+    "packages/lib/src/nico/PlaybackPosition.js": "f9888dcc946fa2abb44501f8e8e994a1ae432c77299a6804a929d69a169040b5",
+    "packages/lib/src/nico/CommonsTreeLoader.js": "77669c5c2f149b2aebd23daae46c55c2f98ce9724aca3a22a2467c91faaae9ea",
+    "packages/lib/src/infra/netUtil.js": "23f7d1bd280ca3fa219eb1e2feb0121833422e120af1bfb4f449173dcebc2112",
+    "packages/zenza/src/heatMap/HeatMapWorker.js": "f7894fd132780c2088495103d1b4a162fcaefec97a9ef95be2a85e25e36c19ed"
+  },
+  "summary": {
+    "total": 27,
+    "met": 10,
+    "unmet": 17
+  },
+  "results": [
+    {
+      "id": "V2-P01",
+      "name": "V4 missing tree flag must remain unknown, not false",
+      "expectationMet": false,
+      "error": "Expected \"actual\" to be strictly unequal to: false"
+    },
+    {
+      "id": "V2-P02",
+      "name": "V4 watch-page metadata must be recognized",
+      "expectationMet": false,
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "id": "V2-P03",
+      "name": "Initial channel metadata survives absent lazy metadata",
+      "expectationMet": false,
+      "error": "Expected values to be strictly equal:\n\nundefined !== 'ch9'\n"
+    },
+    {
+      "id": "V2-P04",
+      "name": "No post target must not crash playable video parsing",
+      "expectationMet": false,
+      "error": "Cannot read properties of undefined (reading 'id')"
+    },
+    {
+      "id": "V2-P05",
+      "name": "Partial series object must not throw in nextVideo getter",
+      "expectationMet": false,
+      "error": "Got unwanted exception.\nActual message: \"Cannot read properties of undefined (reading 'next')\""
+    },
+    {
+      "id": "V2-P06",
+      "name": "Unsorted Domand qualities are sorted descending",
+      "expectationMet": false,
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   1,\n    3,\n    2,\n-   1\n  ]\n"
+    },
+    {
+      "id": "V2-P07",
+      "name": "Commons malformed success body must not become empty success",
+      "expectationMet": false,
+      "error": "Missing expected rejection."
+    },
+    {
+      "id": "V2-P08",
+      "name": "Commons partial failure must be disclosed, not reported as zero",
+      "expectationMet": false,
+      "error": "notification=コンテンツツリーを取得中...|親作品・子作品は0件でした"
+    },
+    {
+      "id": "V2-P09",
+      "name": "Old Commons result must not append to a new video playlist",
+      "expectationMet": false,
+      "error": "[{\"ids\":[\"smParentA\"],\"options\":{\"watchId\":\"smB\",\"insert\":false}}]\n\n1 !== 0\n"
+    },
+    {
+      "id": "V2-P10",
+      "name": "PlaybackPosition rejects HTTP 403 instead of resolving",
+      "expectationMet": false,
+      "error": "Missing expected rejection."
+    },
+    {
+      "id": "V2-P11",
+      "name": "Short and mismatched videos do not send resume writes",
+      "expectationMet": true
+    },
+    {
+      "id": "V2-P12",
+      "name": "Terminal zero is not dropped by the shared 1-second throttle",
+      "expectationMet": false,
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    75,\n-   0\n  ]\n"
+    },
+    {
+      "id": "V2-P13",
+      "name": "Ended position zero is actually sent when not throttled",
+      "expectationMet": true
+    },
+    {
+      "id": "V2-P14",
+      "name": "Post-key HTTP rejection clears posting state without posting",
+      "expectationMet": true
+    },
+    {
+      "id": "V2-P15",
+      "name": "Incomplete comment success acknowledgement is not accepted",
+      "expectationMet": false,
+      "error": "Missing expected rejection."
+    },
+    {
+      "id": "V2-P16",
+      "name": "Valid comment acknowledgement produces one post and one history entry",
+      "expectationMet": true
+    },
+    {
+      "id": "V2-P17",
+      "name": "Ambiguous transport failure never creates a second post",
+      "expectationMet": true
+    },
+    {
+      "id": "V2-P18",
+      "name": "Post response-body wait retains a finite timeout",
+      "expectationMet": false,
+      "error": "{\"posted\":true,\"settled\":false,\"posting\":true,\"timers\":0}\n\nfalse !== true\n"
+    },
+    {
+      "id": "V2-P19",
+      "name": "Caller input JSON remains unchanged by V4 conversion",
+      "expectationMet": true
+    },
+    {
+      "id": "V2-P20",
+      "name": "No login does not trigger a playback-position write",
+      "expectationMet": true
+    },
+    {
+      "id": "V2-P21",
+      "name": "Real V4 adapter -> comment loading -> posting keeps thread/video/vpos",
+      "expectationMet": true
+    },
+    {
+      "id": "V2-P22",
+      "name": "Real token retry refreshes comments and post key exactly once",
+      "expectationMet": true
+    },
+    {
+      "id": "V2-P23",
+      "name": "Permanent comment rejection does not repost or save history",
+      "expectationMet": true
+    },
+    {
+      "id": "V2-P24",
+      "name": "Missing post key is rejected before POST is sent",
+      "expectationMet": false,
+      "error": "Expected values to be strictly equal:\n\n1 !== 0\n"
+    },
+    {
+      "id": "V2-P25",
+      "name": "Unavailable-video logs do not contain fixture authentication key",
+      "expectationMet": false,
+      "error": "synthetic key escaped into console.error\n\ntrue !== false\n"
+    },
+    {
+      "id": "V2-P26",
+      "name": "Heatmap export completing after reset does not emit stale update",
+      "expectationMet": false,
+      "error": "[[\"heatMapUpdate\",{\"map\":[],\"duration\":-1,\"dataURL\":\"data:image/png;base64,fixture\"}]]\n\n1 !== 0\n"
+    },
+    {
+      "id": "V2-P27",
+      "name": "Playback-position body-level failure is not silently resolved",
+      "expectationMet": false,
+      "error": "Missing expected rejection."
+    }
+  ]
+}

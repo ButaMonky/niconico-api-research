@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "NICO-ZENZA-20261001-AUDITV2-TAG-KEY-V3",
+  "title": "タグ編集キー更新に旧v3専用参照が残る",
+  "status": "static",
+  "platform": "web",
+  "app_version": "ZenzaWatch 2.7.100-task171; develop d4d1f7892d6960b76610aea20b78f0c7a032666c; Node.js v24.19.0",
+  "observed_at": "2026-10-01",
+  "observed_at_precision": "original audit date; not re-executed at recording",
+  "recorded_on": "2026-10-01",
+  "claim": "監査時のTagEditApi._refreshEditKeyは/api/watch/v3/{id}からjson.data.tag.edit.editKeyを読む。旧APIが現時点で廃止・故障しているかは未確認である。",
+  "evidence": [
+    "S-ZENZA-V4-AUDITV2-20261001-SUMMARY",
+    "S-ZENZA-V4-AUDITV2-20261001-STATIC-TAG"
+  ],
+  "request": {
+    "operation": "prior static source inspection",
+    "network": "none (not a live API request)",
+    "probes": []
+  },
+  "response": {
+    "observations": [],
+    "source_contract": {
+      "method": "GET",
+      "path": "/api/watch/v3/{id}",
+      "field": "json.data.tag.edit.editKey",
+      "current_http_status": "unobserved"
+    }
+  },
+  "authentication": "No real login/cookie/authentication key used. Any login state and keys in tests are synthetic; actual server authentication requirements were not rechecked.",
+  "unconfirmed": [
+    "旧v3 APIの現行稼働・成功応答、公式プレイヤーが使う新旧更新経路。",
+    "この検証で扱っていない入力・入口・会員状態での動作。",
+    "ログイン済み実ブラウザーE2E、実投稿、公式視聴履歴の登録前後・再開位置の再読込。",
+    "今回の記録作業では製品修正・プローブ再実行・実API検証を行っていない。"
+  ],
+  "supersedes": [],
+  "related_findings": [
+    "NICO-WATCHV4-20261001-ZENZA"
+  ],
+  "related_code": [
+    "packages/lib/src/nico/TagEditApi.js"
+  ],
+  "audit_issue_ids": [
+    "F06"
+  ],
+  "next_step": "公式更新要求と成功応答を確認するまでv3→v4の機械的URL置換をしない。",
+  "classification": "client-static-risk",
+  "server_spec_confirmed": false,
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "previous_integration_status": "pending canonical maintainer review; contributions only",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "NICO-WEB-20261004-PARENT-DOM-OBSERVER-COST",
+  "title": "無関係な親documentのUI更新がNG検索の再解析を誘発する合成再現",
+  "status": "offline-test",
+  "platform": "web",
+  "app_version": "NicoNG f975134; see evidence for browser version",
+  "observed_at": "2026-10-04T09:45:16.783Z",
+  "claim": "NicoNG f975134のbody全体MutationObserverは、検索結果外の合成プレイヤーUIを毎フレーム更新するとNG完了後も毎秒30回のページ解析を行った。その合成UIだけを観測判定から除外するin-memory対照では毎秒0回となった（各2回、順序反転）。ただしNG中の約200ms級long taskと約134msのrAF間隔p95は残り、観測対象の限定だけで描画停止が解消したとはいえない。実ZenzaWatchのFPS測定ではない。",
+  "evidence": [
+    "S-NRN-PARENT-DOM-20261004"
+  ],
+  "request": {
+    "scope": "isolated synthetic browser; no live NicoNico requests"
+  },
+  "response": {
+    "scope": "locally generated fixture responses"
+  },
+  "authentication": "none; no account session used",
+  "unconfirmed": [
+    "実際のZenzaWatch併用時のCPUプロファイルと親documentイベント頻度",
+    "long taskの関数別寄与と低負荷分割後の再測定",
+    "iframe内コメントDOMは親documentのMutationObserver対象ではない。Zenza固定commit5c0704aではcommentLayerFrameを使用するため、コメント1件ごとの直接再解析という説明はしない"
+  ],
+  "supersedes": [],
+  "related_code": [
+    "NicoNG src/autofill/legacy-controller.js",
+    "NicoNG src/autofill/initialize.js",
+    "NicoNG src/nico/list-page.js"
+  ],
+  "next_step": "検索カード追加・公式レイアウト変更を見落とさない観測境界、DOM計測のread/write分離、時間予算付きyieldを別Taskで比較する。",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

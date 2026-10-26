@@ -1,0 +1,136 @@
+{
+  "schema": 1,
+  "observedAt": "2026-10-01T06:03:46.905Z",
+  "kind": "offline actual-source tests with sanitized captured-shape fixture",
+  "network": "stub only; no live requests",
+  "root": "<LOCAL_PROJECT_ROOT_REDACTED>",
+  "sourceHashes": {
+    "packages/lib/src/nico/VideoInfoLoader.js": "ff61cbec2ece461c16297dfa473d5dff62b80d865375399ca9827f7bf74ed3d3",
+    "src/VideoInfo.js": "0a52d59e5764ca929b1150032e101c973526fe0a722a2f50f6d4f565a8c404e2",
+    "packages/lib/src/nico/VideoSessionWorker.js": "728823a4f7cf149bdac16bf53a83b1d94286a593321cfe021195098b885010b4",
+    "packages/lib/src/nico/ThreadLoader.js": "ef5508cdfccd1ef44fe47b63421ea3e4af33cb9af60c54a20ed9951193f33f8e",
+    "src/_hls.js": "1cc81515c1f33366cb2226af513abd869f1080f615087f3a32d5405ad482760b"
+  },
+  "productionSourceChanged": false,
+  "fixtureSha256": "75a0b3c02c609664e06ee586f8b7d6e292949d32d9ab1ed3911dccec98d9963f",
+  "summary": {
+    "total": 10,
+    "passed": 9,
+    "failed": 1
+  },
+  "results": [
+    {
+      "id": "D01",
+      "name": "Captured legacy structure parses without lazy fetch",
+      "passed": true,
+      "observed": {
+        "isPlayable": true,
+        "networkCalls": 1
+      }
+    },
+    {
+      "id": "D02",
+      "name": "Legacy channel, tree, series and comment layers are retained",
+      "passed": true,
+      "observed": {
+        "channel": true,
+        "tree": true,
+        "defaultPostThread": 1790214593,
+        "layers": [
+          0,
+          2,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "D03",
+      "name": "Unavailable 1080p/320kbps are excluded",
+      "passed": true,
+      "observed": {
+        "videos": [
+          "video-h264-720p",
+          "video-h264-480p",
+          "video-h264-360p",
+          "video-h264-144p"
+        ],
+        "audios": [
+          "audio-aac-192kbps",
+          "audio-aac-64kbps"
+        ]
+      }
+    },
+    {
+      "id": "D04",
+      "name": "HLS request pairs preserve available formats and captured track identity",
+      "passed": true,
+      "observed": {
+        "pairCount": 4,
+        "usesHighestAvailableAudio": true
+      }
+    },
+    {
+      "id": "D05",
+      "name": "Post-key request preserves the passed language in the header",
+      "passed": false,
+      "error": "X-Niconico-Language missing although language was passed\n+ actual - expected\n\n+ undefined\n- 'en-us'\n"
+    },
+    {
+      "id": "D06",
+      "name": "Native startup fallback contract code=4, time=0",
+      "passed": true,
+      "observed": {
+        "code": 4,
+        "time": 0,
+        "fallback": true,
+        "starts": 1,
+        "stopped": 1
+      }
+    },
+    {
+      "id": "D07",
+      "name": "Native startup fallback contract code=3, time=0",
+      "passed": true,
+      "observed": {
+        "code": 3,
+        "time": 0,
+        "fallback": true,
+        "starts": 1,
+        "stopped": 1
+      }
+    },
+    {
+      "id": "D08",
+      "name": "Native startup fallback contract code=2, time=0",
+      "passed": true,
+      "observed": {
+        "code": 2,
+        "time": 0,
+        "fallback": false,
+        "starts": 0,
+        "stopped": 0
+      }
+    },
+    {
+      "id": "D09",
+      "name": "Native startup fallback contract code=4, time=12",
+      "passed": true,
+      "observed": {
+        "code": 4,
+        "time": 12,
+        "fallback": false,
+        "starts": 0,
+        "stopped": 0
+      }
+    },
+    {
+      "id": "D10",
+      "name": "Optional legacy keyloader override is not enabled",
+      "passed": true,
+      "observed": {
+        "legacyOverrideActive": false
+      }
+    }
+  ]
+}

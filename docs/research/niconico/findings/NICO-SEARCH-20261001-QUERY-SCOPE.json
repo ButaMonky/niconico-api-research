@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "NICO-SEARCH-20261001-QUERY-SCOPE",
+  "title": "Zenza検索queryが明示した動画種別条件を落とす",
+  "status": "offline-test",
+  "platform": "web",
+  "app_version": "Captured nvpc_next manifest-5c85ef30; baseline Zenza Task171 d4d1f789; executing NG version unconfirmed",
+  "observed_at": "2026-10-01T17:40:16.478+09:00",
+  "observed_at_precision": "probe run timestamp",
+  "claim": "基準HEADのNicoSearchNvapi.buildQueryは明示selectContentType=long/shortとchannelVideoListingStatus=includedを出力せず、kind=userとanyの生成結果も同一になる条件をS01〜S04で再現した。",
+  "evidence": [
+    "S-SEARCH-20261001-TESTS"
+  ],
+  "request": {
+    "operation": "buildQuery, mock-only",
+    "cases": [
+      "S01",
+      "S02",
+      "S03",
+      "S04"
+    ]
+  },
+  "response": {
+    "scope_keys_omitted": true
+  },
+  "authentication": "Capture page was logged in; userscripts/fetch wrappers active. No real credentials replayed. Offline tests use mocks only.",
+  "unconfirmed": [
+    "仕様の変更日と全アカウント・全検索条件での同一挙動。",
+    "ログアウト/シークレット対照、描画後DOM、UIの症状・実装後E2E。",
+    "実行中Claude Codeの別環境の修正状況。"
+  ],
+  "supersedes": [],
+  "related_findings": [],
+  "next_step": "条件モデルと公式contextを正規化し、一覧/件数/連続再生へ同じ範囲を渡す。",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "previous_integration_status": "contributions; pending canonical maintainer review",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

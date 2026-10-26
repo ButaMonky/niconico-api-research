@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "NICO-SEARCH-20261001-SSR-METADATA",
+  "title": "検索HTML2ページの64動画metadataを再確認",
+  "status": "traffic",
+  "platform": "web",
+  "app_version": "Captured nvpc_next manifest-5c85ef30; baseline Zenza Task171 d4d1f789; executing NG version unconfirmed",
+  "observed_at": "2026-10-01T17:33:12.720+09:00",
+  "observed_at_precision": "capture end; per-request times in raw HAR",
+  "claim": "提供HARのHTML #0/#190はdata.response.$getSearchVideoV2.data.itemsに32件ずつ、重複なし64動画を含む。全件にownerとcount.like等があり、動画別tagsはない。HTML中のwatchリンクは0件だった。",
+  "evidence": [
+    "S-SEARCH-20261001-CAPTURE",
+    "S-SEARCH-20261001-TESTS"
+  ],
+  "request": {
+    "method": "GET",
+    "paths": [
+      "/search/sm",
+      "/search/sm?page=2"
+    ]
+  },
+  "response": {
+    "main_items": 64,
+    "owners": "all visible/user",
+    "per_video_tags": false
+  },
+  "authentication": "Capture page was logged in; userscripts/fetch wrappers active. No real credentials replayed. Offline tests use mocks only.",
+  "unconfirmed": [
+    "仕様の変更日と全アカウント・全検索条件での同一挙動。",
+    "ログアウト/シークレット対照、描画後DOM、UIの症状・実装後E2E。",
+    "実行中Claude Codeの別環境の修正状況。"
+  ],
+  "supersedes": [],
+  "related_findings": [
+    "NICO-BROWSER-20260920-INITIAL-OWNER",
+    "NICO-20260913-SEARCH-TAGS"
+  ],
+  "next_step": "初期metadataをNG・一覧情報へ再利用する。related tagsを動画タグに流用しない。",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "previous_integration_status": "contributions; pending canonical maintainer review",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

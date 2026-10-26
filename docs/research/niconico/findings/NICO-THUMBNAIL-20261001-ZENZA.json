@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "NICO-THUMBNAIL-20261001-ZENZA",
+  "title": "v4サムネイルのキー",
+  "status": "runtime",
+  "platform": "web",
+  "app_version": "ZenzaWatch 2.7.85-task156; Task157 API probe",
+  "observed_at": "2026-10-01T00:00:00+09:00",
+  "observed_at_precision": "analysis date; preceding tasks observed overnight",
+  "claim": "normal/middle/largeを従来画像形式へ変換する必要があった。",
+  "evidence": [
+    "S-ZENZA-COMPATIBILITY-20261001"
+  ],
+  "request": {
+    "operation": "watch v4 response"
+  },
+  "response": {
+    "thumbnail_keys": [
+      "normal",
+      "middle",
+      "large"
+    ]
+  },
+  "authentication": "Public unauthenticated browser verification; encyclopedia credentials omit",
+  "unconfirmed": [
+    "全動画種別"
+  ],
+  "supersedes": [],
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

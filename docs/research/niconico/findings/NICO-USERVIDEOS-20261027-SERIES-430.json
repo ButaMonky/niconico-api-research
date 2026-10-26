@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "traffic",
+  "platform": "web",
+  "app_version": "ニコニコ公式ユーザーページ（HARにクライアントの正確なリリース番号なし）",
+  "observed_at": "2026-10-26T23:58:09+09:00",
+  "recorded_on": "2026-10-27",
+  "source": "user-provided 投稿動画一覧.har; evidence/uploaded-user-videos-har-20261027-sanitized.md",
+  "source_sha256": "2860b91bfcfc186cd5cfdc82f378ae381e6c6950200d0c566149cc321c5952c0",
+  "evidence": [
+    "S-USERVIDEOS-HAR-20261027-SANITIZED"
+  ],
+  "evidence_path": "evidence/uploaded-user-videos-har-20261027-sanitized.md",
+  "evidence_sha256": "6ea4ecc197a50347eb95d16b3da87f5783181187f1adf681198afd643b14d751",
+  "authentication": "提供HARはWebページ操作中の通信。匿名アクセスで同じ応答を返すかは未確認。Cookie・認証・識別子の値を記録・共有しない。",
+  "supersedes": [],
+  "integration_status": "contributions only / maintainer review pending; sources.json is concurrently modified and remains untouched; validation/export/push not run",
+  "id": "NICO-USERVIDEOS-20261027-SERIES-430",
+  "title": "公式投稿動画v3のseries所属をユーザーシリーズ一覧GETと照合",
+  "claim": "公式Web投稿動画HARの587件中430件にseries{id,title,order}があり、異なるシリーズID6種は /v1/users/{userId}/series の6件と一致し、各seriesの動画数もitemsCountと完全一致。",
+  "request": {
+    "method": "GET",
+    "hosts": [
+      "nvapi.nicovideo.jp"
+    ],
+    "paths": [
+      "/v3/users/{userId}/videos",
+      "/v1/users/{userId}/series"
+    ],
+    "series_query": {
+      "page": 1,
+      "pageSize": 100
+    },
+    "video_query": {
+      "selectContentType": "long",
+      "sensitiveContents": "mask",
+      "pageSize": 100,
+      "page_range": "1..6"
+    }
+  },
+  "response": {
+    "http_status": 200,
+    "meta_status": 200,
+    "video_total": 587,
+    "series_non_null_items": 430,
+    "series_null_items": 157,
+    "series_distinct_ids": 6,
+    "series_per_video_fields": [
+      "id",
+      "title",
+      "order"
+    ],
+    "series_get_totalCount": 6,
+    "series_get_items_length": 6,
+    "per_series_video_counts_sorted": [
+      258,
+      52,
+      41,
+      38,
+      23,
+      18
+    ],
+    "series_get_itemsCount_sorted": [
+      258,
+      52,
+      41,
+      38,
+      23,
+      18
+    ],
+    "all_series_ids_match": true
+  },
+  "unconfirmed": [
+    "series.orderが公式UIの再生順を意味するかは本HARでは直接実機確認していない。",
+    "他の投稿者や動画が複数シリーズに所属できるか、隠し動画のシリーズ件数とどう整合するか未確認。",
+    "新規API発明ではなく既存APIの現行Web通信での追加検証。"
+  ],
+  "related_findings": [
+    "NICO-COMMUNITY2-20260914-USER-LISTS"
+  ],
+  "related_code": [
+    "packages/zenza/src/Playlist/PlayList.js",
+    "tools/typescript-stage1/nico-src/VideoSearch.ts"
+  ]
+}

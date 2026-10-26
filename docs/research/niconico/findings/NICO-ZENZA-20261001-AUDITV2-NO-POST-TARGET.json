@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "NICO-ZENZA-20261001-AUDITV2-NO-POST-TARGET",
+  "title": "投稿対象なしで動画情報の解析が例外になる",
+  "status": "offline-test",
+  "platform": "web",
+  "app_version": "ZenzaWatch 2.7.100-task171; develop d4d1f7892d6960b76610aea20b78f0c7a032666c; Node.js v24.19.0",
+  "observed_at": "2026-10-01T14:01:00.224+09:00",
+  "observed_at_precision": "exact final probe timestamp; not re-executed at recording",
+  "recorded_on": "2026-10-01",
+  "claim": "isPostTargetを持たないスレッド構成を渡すと、動画情報解析がdefaultThread.id参照でTypeErrorになった。",
+  "evidence": [
+    "S-ZENZA-V4-AUDITV2-20261001-RESULTS",
+    "S-ZENZA-V4-AUDITV2-20261001-PROBES",
+    "S-ZENZA-V4-AUDITV2-20261001-SUMMARY"
+  ],
+  "request": {
+    "operation": "extracted production functions under controlled fixture",
+    "network": "none (not a live API request)",
+    "probes": [
+      "V2-P04"
+    ]
+  },
+  "response": {
+    "observations": [
+      {
+        "probe": "V2-P04",
+        "expectation_met": false,
+        "diagnostic": "Cannot read properties of undefined (reading 'id')"
+      }
+    ]
+  },
+  "authentication": "No real login/cookie/authentication key used. Any login state and keys in tests are synthetic; actual server authentication requirements were not rechecked.",
+  "unconfirmed": [
+    "公式がこの人工応答・欠落形を実際に返すか、発生頻度。",
+    "ログイン済み実ブラウザーE2E、実投稿、公式視聴履歴の登録前後・再開位置の再読込。",
+    "今回の記録作業では製品修正・プローブ再実行・実API検証を行っていない。"
+  ],
+  "supersedes": [],
+  "related_findings": [
+    "NICO-WATCHV4-20261001-ZENZA"
+  ],
+  "related_code": [
+    "packages/lib/src/nico/VideoInfoLoader.js",
+    "packages/lib/src/nico/ThreadLoader.js"
+  ],
+  "audit_issue_ids": [
+    "F07"
+  ],
+  "next_step": "読込可能・投稿不可・壊れた応答を区別し、先頭スレッドへの代替投稿をしない。",
+  "classification": "client-defect-under-tested-condition",
+  "server_spec_confirmed": false,
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "previous_integration_status": "pending canonical maintainer review; contributions only",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

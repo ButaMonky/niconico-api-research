@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "NICO-COMMONS-20261002-META-DEADLINE",
+  "title": "メタあり300の読取りが期限に到達",
+  "status": "traffic",
+  "platform": "web",
+  "app_version": "Public Commons API / Python 3.12.10",
+  "observed_at": "2026-10-02",
+  "recorded_on": "2026-10-02",
+  "claim": "今回with_meta=1・子limit300の1試行は15秒socket読取り期限に達した。HTTP状態は未取得。100枠の試行は200だった。一般的な性能やサーバー障害とは断定しない。",
+  "evidence": [
+    "S-COMMONS-AUTO-20261002-API",
+    "S-COMMONS-AUTO-20261002-SUMMARY"
+  ],
+  "request": {
+    "operation": "public read-only GET; no cookies/authentication",
+    "probes": [],
+    "details": "evidence/commons-autofetch-20261002/API_FACTS.json"
+  },
+  "response": {
+    "record_kind": "observed conditions only",
+    "probes": []
+  },
+  "authentication": "Live GETs did not send cookies/authentication. Origin header was www.nicovideo.jp. Offline cases are synthetic and do not verify server authentication.",
+  "unconfirmed": [
+    "ブラウザー内CORS・実動画再生・全件表示の速度は未検証。",
+    "省略されたメタ情報の理由、API最大offset・レート上限は未確認。",
+    "今回製品を修正・ビルド・公開していない。"
+  ],
+  "supersedes": [],
+  "related_findings": [],
+  "related_code": [
+    "packages/lib/src/nico/CommonsTreeLoader.js",
+    "packages/zenza/src/Playlist/PlayList.js",
+    "packages/zenza/src/Playlist/VideoListItem.js"
+  ],
+  "next_step": "全範囲の自動ID取得と補完・反映・取消・容量・保存を分離する。REPORT_COMMONS_AUTOFETCH.mdとNEXT_CLAUDE_CODE_PROMPT.txtを参照。",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "previous_integration_status": "contribution pending maintainer review",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}

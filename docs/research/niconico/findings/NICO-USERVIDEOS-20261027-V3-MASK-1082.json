@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "traffic",
+  "platform": "web / public API GET",
+  "app_version": null,
+  "observed_at": "2026-10-26",
+  "evidence": [
+    "S-USERVIDEOS-PUBLIC-GET-20261026"
+  ],
+  "authentication": "Contemporaneous public direct GET checks without Cookie or Authorization. Actual logged-in browser parity is not proven.",
+  "supersedes": [],
+  "id": "NICO-USERVIDEOS-20261027-V3-MASK-1082",
+  "title": "v3 uploader video count changes with sensitiveContents=mask, matching v1 item order in tested account",
+  "claim": "On the same public uploader, v3 users/{userId}/videos reports 1056 with default options, versus 1082 with sensitiveContents=mask. The 11 masked pages return 1082 unique IDs, matching the 1082 IDs and complete ordering of v1 playlist/user-uploaded.",
+  "request": {
+    "method": "GET",
+    "host": "nvapi.nicovideo.jp",
+    "path": "/v3/users/{userId}/videos",
+    "query": {
+      "sortKey": "registeredAt",
+      "sortOrder": "desc",
+      "pageSize": 100,
+      "page": "1..11",
+      "sensitiveContents": [
+        "unspecified",
+        "mask"
+      ]
+    }
+  },
+  "response": {
+    "totalCount_default": 1056,
+    "totalCount_mask": 1082,
+    "mask_pages_count": 11,
+    "mask_page_sizes": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      82
+    ],
+    "unique_ids_mask": 1082,
+    "identical_ids_and_order_to_v1": true,
+    "empty_essential": 0
+  },
+  "unconfirmed": [
+    "The semantics of the 26-item difference are not established: do not classify the difference as hidden/private videos.",
+    "The default 1056 result was not independently fetched through all pages for exact set comparison.",
+    "Different accounts, membership states, short-video listings and cache conditions are untested.",
+    "The user-provided HAR separately confirms the presence of the mask query for a different uploader, not these totals.",
+    "This finding does not permit bypassing access control or obtaining non-public content."
+  ],
+  "related_findings": [
+    "NICO-USERVIDEOS-20261027-WEB-PAGES-587",
+    "NICO-USERVIDEOS-20261027-V1-PAGE-LIMIT-500"
+  ],
+  "related_code": [
+    "tools/typescript-stage1/nico-src/VideoSearch.ts",
+    "tools/typescript-stage1/nico-src/PlaylistApiLoader.ts"
+  ],
+  "integration_status": "isolated research branch; requires maintainer review before merging/publishing"
+}

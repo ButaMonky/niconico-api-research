@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "NICO-WEB-20260925-ACCESS-BADGES",
+  "title": "検索動画カードの「限定」「有料」表示条件",
+  "status": "traffic",
+  "platform": "web",
+  "app_version": "2026-09-25 current web asset",
+  "observed_at": "2026-09-25T19:00:00+09:00",
+  "claim": "現行WebのVideoMediaObjectは acf68865=true を「限定」(premium色)として最優先表示し、false時だけ isPaymentRequired=true を「有料」と表示する。isPaymentRequired はWatch側でCH入会必須(isAdmission)とPPV購入必須(isPpv)の双方に現れ、一覧値だけでは両者を区別できない。",
+  "evidence": [
+    "S-ZENZA-FOLLOWUP-20260925"
+  ],
+  "request": {
+    "method": "GET",
+    "paths": [
+      "/v2/search/video",
+      "/watch/{id}"
+    ]
+  },
+  "response": {
+    "list_fields": [
+      "acf68865",
+      "isPaymentRequired",
+      "9d091f87"
+    ],
+    "watch_fields": [
+      "payment.video.isAdmission",
+      "payment.video.isPpv",
+      "payment.video.isPremium",
+      "video.watchableUserTypeForPayment"
+    ]
+  },
+  "authentication": "公開GET。認証Cookieを証拠へ保存していない。",
+  "unconfirmed": [
+    "acf68865という難読化名の正式な意味・安定性",
+    "9d091f87の意味"
+  ],
+  "supersedes": [],
+  "related_code": [
+    "VideoMediaObject-BOojlWvQ.js"
+  ],
+  "next_step": "フィールド名変更に備え、表示側は1箇所のaccessorへ隔離し、一覧では本家同様「限定」「有料」だけを使う。",
+  "original_status": "traffic+static",
+  "evidence_modes": [
+    "traffic",
+    "static"
+  ],
+  "integration_note": "Canonical status records the supplied traffic observation; associated static/code observation remains separately labeled.",
+  "integration_status": "locally catalogued on 2026-10-27; source-reference existence and SHA-256 checked; historical claim only, not fresh live confirmation or public publication",
+  "integration_review": {
+    "review_date": "2026-10-27",
+    "scope": "evidence linkage, provenance hash, schema and duplicate checks; static privacy scan",
+    "does_not_certify": "live API continuity, underlying raw evidence, product correctness, or publication safety"
+  }
+}
