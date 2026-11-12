@@ -310,5 +310,12 @@
     "original_har_sha256": "2860b91bfcfc186cd5cfdc82f378ae381e6c6950200d0c566149cc321c5952c0",
     "observed_at": "2026-10-26",
     "privacy": "No original HAR, uploader/video IDs, account metadata, headers, signed thumbnail URL or credential values included"
+  },
+  {
+    "id": "S-COMMON-HEADER-CLICK-20261112",
+    "file": "evidence/common-header-click-20261112.json",
+    "kind": "sanitized-provided-har-code-analysis",
+    "observed_at": "2026-11-12",
+    "sha256": "5fe332c858d07eb858312352fd1761b3bce860fd1a8de6929f074243400875d4"
   }
 ]

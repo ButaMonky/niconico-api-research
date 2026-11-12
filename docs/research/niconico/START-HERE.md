@@ -38,3 +38,5 @@ NG実装向けの優先入口：[重要な確認結果](IMPORTANT-FINDINGS.md)�
 ## 2026-10-27：投稿者HTMLの初期100動画を解析
 
 [公開範囲の追補](PUBLICATION-20261027-SELECTED-OCTOBER.md#2026-10-27-追補harの深掘り)、[初期100件と後続GETの一致](findings/NICO-USERVIDEOS-20261027-SSR-PAGE1-PARITY.json)、[シリーズorderの連番](findings/NICO-USERVIDEOS-20261027-SERIES-ORDER-1BASED.json)、[一覧サムネイルURL](findings/NICO-USERVIDEOS-20261027-THUMBNAIL-LISTING-URL.json)を追加しました。公開収録は**92 findings / 37 evidence sources**です。従来の9月・10月初回公開件数は当時の履歴です。
+
+- 2026-11-12: [フォロー新着のクリック遷移](COMMON-HEADER-CLICK-ROUTING-20261112.md)。提供コード・通信開始経路の解析。
