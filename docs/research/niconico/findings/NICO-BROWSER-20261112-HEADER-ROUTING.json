@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "NICO-BROWSER-20261112-HEADER-ROUTING",
+  "title": "フォロー新着のSPA遷移はdefaultPreventedを確認しない",
+  "status": "static",
+  "evidence_level": "CONFIRMED-CODE",
+  "platform": "Official Web client captured code",
+  "app_version": "CommonHeader3.13.4 / Layout-BxKlN5K9 / Panel-QWHtNi15",
+  "observed_at": "2026-11-12",
+  "claim": "独自イベントから公式SPAルーターへ進むためpreventDefaultだけでは二重起動を防げない。一般カードとは別経路。",
+  "evidence": [
+    "S-COMMON-HEADER-CLICK-20261112"
+  ],
+  "request": {
+    "kind": "DOM event, not API",
+    "event": "commonHeader:linkClick"
+  },
+  "response": {
+    "behavior": "Independent watch loader navigation"
+  },
+  "authentication": "Provided logged-in capture; necessity not independently tested",
+  "unconfirmed": [
+    "Live adapter behavior",
+    "Future versions",
+    "Third-party persistence"
+  ],
+  "supersedes": [],
+  "related_document": "COMMON-HEADER-CLICK-ROUTING-20261112.md"
+}

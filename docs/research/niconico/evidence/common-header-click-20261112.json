@@ -1,0 +1,31 @@
+{
+  "observed_at": "2026-11-12",
+  "method": "Provided HAR static code and initiator analysis; offline reproduction, not new live access",
+  "artifacts": {
+    "CommonHeader.min.js 3.13.4": "3165b1845cf0bb84690f194114cbe10ae7d65e90a1c7aa00949af5c2759c9a84",
+    "Layout-BxKlN5K9.js": "5a628a69f752d9c3e10a87c1d1568a84f8725d0f36b667108de2fae663a2b9cd",
+    "Panel-QWHtNi15.js": "e04766b44974bc24610eae4e5f5f80e9e4e43de38060a0701dfb33534193a8d6"
+  },
+  "route": [
+    "CommonHeader root click",
+    "commonHeader:linkClick with nativeEvent",
+    "Layout callback without defaultPrevented check",
+    "Panel SPA router",
+    "watch loader fetch"
+  ],
+  "capture_stacks": {
+    "official": "CommonHeader emit -> Layout line0 column5978 -> Panel line0 column3172 -> router -> bridge fetch",
+    "player": "ClickNavigationTrial.begin -> _open -> open -> fetchWatchResponse"
+  },
+  "offline_results": {
+    "ordinary": "router called",
+    "already_canceled": "router called",
+    "ctrl": "not called",
+    "auxclick": "not called",
+    "target_blank": "not called"
+  },
+  "limits": [
+    "Raw capture and bundles not distributed; hashes only allow comparison",
+    "Live userscript timing and third-party persistence unconfirmed"
+  ]
+}

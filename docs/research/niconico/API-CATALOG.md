@@ -6,6 +6,7 @@ findings JSONから生成。staticは実通信確認ではありません。
 |---|---|---|---|
 | [検索初期HTMLの32動画にowner ID・タグ一覧なし](findings/NICO-BROWSER-20260920-INITIAL-OWNER.json) | traffic | Web initial HTML fetched without browser execution | 公開検索の初期HTMLを認証なしで取得し、server-response内data.response.$getSearchVideoV2.data.itemsの32動画にowner.idを確認。全32はuser/文字列ID。video直下tag/tagsなし。読み込み後DOMやuserscriptの取得タイミングは未実測。 |
 | [現行検索loaderは初期metaを消費し、その後route JSONを要求するコード](findings/NICO-BROWSER-20260920-SEARCH-LOADER.json) | static | official Web client static JavaScript | タグ検索loaderから直接bridge Biへ接続。server-responseはJSON化後remove、読めなければ要求URLにresponseType=jsonを付ける。汎用Promise cache factoryは別であり、この検索loaderにshortsのTTLやpathnameキーを適用する根拠はない。実ブラウザ遷移は環境制約で未確認。 |
+| [フォロー新着のSPA遷移はdefaultPreventedを確認しない](findings/NICO-BROWSER-20261112-HEADER-ROUTING.json) | static | Official Web client captured code | 独自イベントから公式SPAルーターへ進むためpreventDefaultだけでは二重起動を防げない。一般カードとは別経路。 |
 | [途中404で既知の総数が取得件数へ置き換わる](findings/NICO-COMMONS-20261001-CLIENT-404-RESET.json) | offline-test | web | 総数240の先頭100件成功後に404を返すと、loadRelatives()はtotal100/works100/notFound:trueになった。初回未登録と途中の失敗が区別されない。 |
 | [現Loaderは親子各300枠まで取得し再開offsetを返さない](findings/NICO-COMMONS-20261001-CLIENT-CAP.json) | offline-test / 後続の訂正あり | web | 総数1060で毎回100件を返す人工条件では、既定loadRelatives()は3要求・300件で終了し、total1060を保持するがnextOffsetは返さなかった。300はクライアントの上限でありサーバーの制限ではない。 |
 | [Loader内で重複したglobalIdが残る](findings/NICO-COMMONS-20261001-CLIENT-DUPLICATES.json) | offline-test | web | 同じ100作品が2ページに返る人工条件では、Loaderは200行を返し、globalId相当の一意数は100だった。今回実HARのページ間には重複を確認していない。 |
